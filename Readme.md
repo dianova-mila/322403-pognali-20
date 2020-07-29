@@ -1,7 +1,7 @@
 # Личный проект «Погнали» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Мила Дианова](https://up.htmlacademy.ru/adaptive/20/user/322403).
-* Наставник: `Неизвестно`.
+* Наставник: [Ирина Шашева](https://htmlacademy.ru/profile/id130615).
 
 ---
 
