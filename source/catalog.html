@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="ru" class="page">
+<html lang="ru" class="pagination">
 <head>
   <meta charset="UTF-8">
   <title>Попутчики</title>
 </head>
-<body class="page__body">
+<body class="pagination__body">
 
 
 <header class="header">
   <a href="index.html" class="site-logo header__logo">
-    <img  src="https://via.placeholder.com/100x15" width="100" height="15" alt="Погнали">
+    <img src="https://via.placeholder.com/100x15" width="100" height="15" alt="Погнали">
   </a>
 
   <nav class="main-nav header__nav">
@@ -26,7 +26,7 @@
 
   <ul class="contact header__contact">
     <li class="contact__item"><a href="tel:88005558628">8 800 555-86-28</a></li>
-    <li class="contact__item">mail@htmlacademy.ru</li>
+    <li class="contact__item"><a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></li>
   </ul>
 </header>
 
@@ -37,9 +37,11 @@
   <section class="catalog">
     <ul class="catalog__list">
       <li class="catalog__item">
-        <img src="https://via.placeholder.com/70x70" alt="Фото попутчика" width="70" height="70" class="catalog__img">
-        <p class="catalog__name">Таня Фирсова</p>
-        <p class="catalog__tags">&#35;ЗОЖ &#35;ПП &#35;Фитнес &#35;пляж &#35;авокадо	&#35;смузи</p>
+        <a href="#" class="catalog__img">
+          <img src="https://via.placeholder.com/70x70" alt="Фото попутчика" width="70" height="70">
+        </a>
+        <a class="catalog__name">Таня Фирсова</a>
+        <p class="catalog__tags">&#35;ЗОЖ &#35;ПП &#35;Фитнес &#35;пляж &#35;авокадо &#35;смузи</p>
         <h3 class="catalog__title">хочет посетить:</h3>
         <ul class="catalog-countries catalog__countries">
           <li class="catalog-countries__item">Шри-ланка</li>
@@ -62,9 +64,11 @@
 
 
       <li class="catalog__item">
-        <img src="https://via.placeholder.com/70x70" alt="Фото попутчика" width="70" height="70" class="catalog__img">
-        <p class="catalog__name">Петя Демин</p>
-        <p class="catalog__tags">&#35;бургер &#35;бар	&#35;футбол	&#35;концерт &#35;крафт</p>
+        <a href="#" class="catalog__img">
+          <img src="https://via.placeholder.com/70x70" alt="Фото попутчика" width="70" height="70">
+        </a>
+        <a class="catalog__name">Петя Демин</a>
+        <p class="catalog__tags">&#35;бургер &#35;бар &#35;футбол &#35;концерт &#35;крафт</p>
         <h3 class="catalog__title">хочет посетить:</h3>
         <ul class="catalog-countries catalog__countries">
           <li class="catalog-countries__item">Бельгия</li>
@@ -86,8 +90,10 @@
 
 
       <li class="catalog__item">
-        <img src="https://via.placeholder.com/70x70" alt="Фото попутчика" width="70" height="70" class="catalog__img">
-        <p class="catalog__name">Марк Смолов</p>
+        <a href="#" class="catalog__img">
+          <img src="https://via.placeholder.com/70x70" alt="Фото попутчика" width="70" height="70">
+        </a>
+        <a class="catalog__name">Марк Смолов</a>
         <p class="catalog__tags">&#35;рэп &#35;тату &#35;хайпбист &#35;кроссовки &#35;суприм</p>
         <h3 class="catalog__title">хочет посетить:</h3>
         <ul class="catalog-countries catalog__countries">
@@ -111,8 +117,10 @@
 
 
       <li class="catalog__item">
-        <img src="https://via.placeholder.com/70x70" alt="Фото попутчика" width="70" height="70" class="catalog__img">
-        <p class="catalog__name">Лариса Роговая</p>
+        <a href="#" class="catalog__img">
+          <img src="https://via.placeholder.com/70x70" alt="Фото попутчика" width="70" height="70">
+        </a>
+        <a class="catalog__name">Лариса Роговая</a>
         <p class="catalog__tags">&#35;образование &#35;карьера &#35;учеба &#35;линкедин</p>
         <h3 class="catalog__title">хочет посетить:</h3>
         <ul class="catalog-countries catalog__countries">
@@ -135,11 +143,11 @@
       </li>
     </ul>
 
-    <button type="button" class="catalog__show-more">Показать еще</button>
+    <a href="#" class="catalog__show-more">Показать еще</a>
 
-    <div class="page">
-      <a href="#" class="page__button page__button--back"><span class="visually-hidden">Назад</span></a>
-      <a href="#" class="page__button page__button--forward"><span class="visually-hidden">Вперед</span></a>
+    <div class="pagination">
+      <a href="#" class="pagination__button pagination__button--back"><span class="visually-hidden">Назад</span></a>
+      <a href="#" class="pagination__button pagination__button--forward"><span class="visually-hidden">Вперед</span></a>
     </div>
   </section>
 </main>
@@ -177,7 +185,12 @@
     <p class="footer-copyright__text">Разработано</p>
 
     <a href="https://htmlacademy.ru/intensive/adaptive" class="footer-copyright__link">
-      <img src="https://via.placeholder.com/27x33" width="27" height="33" alt="Html Academy" class="footer-copyright__img">
+      <img
+        src="https://via.placeholder.com/27x33"
+        width="27"
+        height="33"
+        alt="Html Academy"
+        class="footer-copyright__img">
     </a>
   </div>
 </footer>
