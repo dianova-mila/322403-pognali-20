@@ -34,25 +34,30 @@
 <main class="main">
   <h1 class="big-title">Направления</h1>
 
-  <section class="personal-info">
+  <form action="https://echo.htmlacademy.ru" method="post" class="personal-info">
     <h2 class="visually-hidden">Личная информация</h2>
     <div class="personal-level personal-info__level">
       <span class="personal-level__number">80</span>
       <span class="personal-level__level">level</span>
     </div>
 
-    <img src="https://via.placeholder.com/100x100" alt="Ваше фото" class="personal-info__avatar">
+    <p class="personal-info__item">
+      <img src="https://via.placeholder.com/100x100" alt="Ваше фото" class="personal-info__avatar">
 
-    <a href="#" class="personal-info__button">Cменить фото</a>
+      <input type="file" class="personal-info__button" name="photo" id="photo-field" accept="image/*,image/jpeg">
+      <label for="photo-field">Cменить фото</label>
+    </p>
 
-    <label for="tags-field" class="personal-info__title">Тэги</label>
-    <textarea
-      class="personal-info__tags"
-      id="tags-field"
-      name="tags"
-      placeholder="Коротко о себе в виде 5-8 хештэгов">
+    <p class="personal-info__item">
+      <label for="tags-field" class="personal-info__title">Тэги</label>
+      <textarea
+        class="personal-info__tags"
+        id="tags-field"
+        name="tags"
+        placeholder="Коротко о себе в виде 5-8 хештэгов">
       &#35;бургер &#35;бар &#35;футбол &#35;концерт &#35;крафт
     </textarea>
+    </p>
 
     <ul class="transport personal-info__transport">
       <li class="transport__item">Авиаперелет</li>
@@ -60,7 +65,7 @@
       <li class="transport__item">Велосипед</li>
       <li class="transport__item">Пешком</li>
     </ul>
-  </section>
+  </form>
 
   <section class="my-plans">
     <h2 class="my-plans__title">Мои планы:</h2>
@@ -85,19 +90,18 @@
     <h2 class="plan__title">Добавить план:</h2>
 
     <ul class="plan__markers">
-      <li class="plan__marker"></li>
-      <li class="plan__marker"></li>
-      <li class="plan__marker"></li>
+      <li class="plan__marker"><span class="visually-hidden">Шаг 1</span></li>
+      <li class="plan__marker"><span class="visually-hidden">Шаг 2</span></li>
+      <li class="plan__marker"><span class="visually-hidden">Шаг 3</span></li>
     </ul>
 
-    <fieldset class="plan__step">
+    <section class="plan__step">
       <h3 class="plan__title">Шаг 1. Даты пребывания</h3>
 
       <p class="plan__text">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку
         и ее предполагаемую длительность.</p>
 
       <fieldset class="plan__item">
-
         <label for="companions-field">Ищу попутчиков:</label>
         <span class="plan__unit">чел.</span>
 
@@ -115,7 +119,10 @@
             <span class="visually-hidden">Плюс</span>
           </button>
         </div>
+      </fieldset>
 
+
+      <fieldset class="plan__item">
         <input
           type="checkbox"
           name="with-children"
@@ -126,7 +133,6 @@
       </fieldset>
 
       <fieldset class="plan__item">
-
         <label for="duration-field">Длительность:</label>
         <span class="plan__unit">дн.</span>
 
@@ -149,8 +155,7 @@
       <fieldset class="plan-calendar plan__calendar">
         <div class="plan-calendar__month">
           <button class="plan-calendar__button plan-calendar__button--back">Назад</button>
-          <label for="month" class="visually-hidden">Месяц</label>
-          <input type="text" name="month" id="month" placeholder="Март 2019" class="plan-calendar__input">
+          <p class="plan-calendar__month-and-year">Март 2019</p>
           <button class="plan-calendar__button plan-calendar__button--forward">Вперед</button>
         </div>
 
@@ -563,68 +568,62 @@
       </fieldset>
 
       <a href="#" class="plan__button-next-step">Следующий шаг</a>
-    </fieldset>
-    <fieldset class="plan__step">
+    </section>
+    <section class="plan__step">
       <h3 class="plan__title">Шаг 2. Маршрут</h3>
 
       <p class="plan-text">Укажите страны, которые вы хотели посетить. Это может быть одна или сразу несколько.</p>
 
-      <ul class="plan-countries plan__countries">
-        <li>
+      <div class="plan-countries plan__countries">
+        <div class="plan-countries__add-countries">
           <button class="plan-countries__button">Босния и Герцеговина</button>
-          <span class="plan-countries__marker plan-countries__marker--active"></span>
           <span class="plan-countries__flag"></span>
           <button class="plan-countries__delete"><span class="visually-hidden">Удалить</span></button>
-        </li>
-        <li>
+        </div>
+        <div class="plan-countries__add-countries">
           <button class="plan-countries__button">Чехия</button>
-          <span class="plan-countries__marker plan-countries__marker--active"></span>
           <span class="plan-countries__flag"></span>
           <button class="plan-countries__delete"><span class="visually-hidden">Удалить</span></button>
-        </li>
-        <li>
+        </div>
+        <div class="plan-countries__add-countries">
           <button class="plan-countries__button">Выберите страну</button>
-          <span class="plan-countries__marker"></span>
           <button class="plan-countries__delete"><span class="visually-hidden">Удалить</span></button>
-        </li>
-        <li>
+        </div>
+        <div class="plan-countries__add-countries">
           <button class="plan-countries__button">Добавить страну</button>
-          <span class="plan-countries__marker"></span>
-        </li>
-      </ul>
+        </div>
+      </div>
 
       <div class="plan-countries plan__countries">
-        <ul class="countries">
-          <li><a href="#" class="countries__item">А</a></li>
-          <li><a href="#" class="countries__item">Б</a></li>
-          <li><a href="#" class="countries__item">В</a></li>
-          <li><a href="#" class="countries__item">Г</a></li>
-          <li><a href="#" class="countries__item">Д</a></li>
-          <li><a href="#" class="countries__item">Е</a></li>
-          <li><a href="#" class="countries__item">З</a></li>
-          <li><a href="#" class="countries__item">И</a></li>
-          <li><a href="#" class="countries__item">К</a></li>
-          <li><a href="#" class="countries__item">Л</a></li>
-          <li><a href="#" class="countries__item">М</a></li>
-          <li><a href="#" class="countries__item">Н</a></li>
-          <li><a href="#" class="countries__item">О</a></li>
-          <li><a href="#" class="countries__item">П</a></li>
-          <li><a href="#" class="countries__item">Р</a></li>
-          <li><a href="#" class="countries__item">С</a></li>
-          <li><a href="#" class="countries__item">Т</a></li>
-          <li><a href="#" class="countries__item">У</a></li>
-          <li><a href="#" class="countries__item">Ф</a></li>
-          <li><a href="#" class="countries__item">Х</a></li>
-          <li><a href="#" class="countries__item">Ч</a></li>
-          <li><a href="#" class="countries__item">Ш</a></li>
-          <li><a href="#" class="countries__item">Э</a></li>
-          <li><a href="#" class="countries__item">Ю</a></li>
-          <li><a href="#" class="countries__item">Я</a></li>
+        <ul class="countries-alphabet plan__countries-alphabet">
+          <li><a href="#" class="countries-alphabet__item">А</a></li>
+          <li><a href="#" class="countries-alphabet__item">Б</a></li>
+          <li><a href="#" class="countries-alphabet__item">В</a></li>
+          <li><a href="#" class="countries-alphabet__item">Г</a></li>
+          <li><a href="#" class="countries-alphabet__item">Д</a></li>
+          <li><a href="#" class="countries-alphabet__item">Е</a></li>
+          <li><a href="#" class="countries-alphabet__item">З</a></li>
+          <li><a href="#" class="countries-alphabet__item">И</a></li>
+          <li><a href="#" class="countries-alphabet__item">К</a></li>
+          <li><a href="#" class="countries-alphabet__item">Л</a></li>
+          <li><a href="#" class="countries-alphabet__item">М</a></li>
+          <li><a href="#" class="countries-alphabet__item">Н</a></li>
+          <li><a href="#" class="countries-alphabet__item">О</a></li>
+          <li><a href="#" class="countries-alphabet__item">П</a></li>
+          <li><a href="#" class="countries-alphabet__item">Р</a></li>
+          <li><a href="#" class="countries-alphabet__item">С</a></li>
+          <li><a href="#" class="countries-alphabet__item">Т</a></li>
+          <li><a href="#" class="countries-alphabet__item">У</a></li>
+          <li><a href="#" class="countries-alphabet__item">Ф</a></li>
+          <li><a href="#" class="countries-alphabet__item">Х</a></li>
+          <li><a href="#" class="countries-alphabet__item">Ч</a></li>
+          <li><a href="#" class="countries-alphabet__item">Ш</a></li>
+          <li><a href="#" class="countries-alphabet__item">Э</a></li>
+          <li><a href="#" class="countries-alphabet__item">Ю</a></li>
+          <li><a href="#" class="countries-alphabet__item">Я</a></li>
         </ul>
 
         <div class="countries-item plan-countries__item">
-          <h3><a href="#" class="countries-item__title">А</a></h3>
-
           <ul class="countries-list">
             <li><a href="#" class="countries-list__link">Австралия</a></li>
             <li><a href="#" class="countries-list__link">Австрия</a></li>
@@ -640,8 +639,6 @@
           </ul>
         </div>
         <div class="countries-item plan-countries__item">
-          <h3><a href="#" class="countries-item__title">Б</a></h3>
-
           <ul class="countries-list">
             <li><a href="#" class="countries-list__link">Багамские Острова</a></li>
             <li><a href="#" class="countries-list__link">Бангладеш</a></li>
@@ -663,8 +660,6 @@
           </ul>
         </div>
         <div class="countries-item plan-countries__item">
-          <h3><a href="#" class="countries-item__title">В</a></h3>
-
           <ul class="countries-list">
             <li><a href="#" class="countries-list__link">Вануату</a></li>
             <li><a href="#" class="countries-list__link">Великобритания</a></li>
@@ -675,8 +670,6 @@
           </ul>
         </div>
         <div class="countries-item plan-countries__item">
-          <h3><a href="#" class="countries-item__title">Г</a></h3>
-
           <ul class="countries-list">
             <li><a href="#" class="countries-list__link">Габон</a></li>
             <li><a href="#" class="countries-list__link">Гаити</a></li>
@@ -694,8 +687,6 @@
           </ul>
         </div>
         <div class="countries-item plan-countries__item">
-          <h3><a href="#" class="countries-item__title">Д</a></h3>
-
           <ul class="countries-list">
             <li><a href="#" class="countries-list__link">Дания</a></li>
             <li><a href="#" class="countries-list__link">Джибути</a></li>
@@ -704,23 +695,17 @@
           </ul>
         </div>
         <div class="countries-item plan-countries__item">
-          <h3><a href="#" class="countries-item__title">Е</a></h3>
-
           <ul class="countries-list">
             <li><a href="#" class="countries-list__link">Египет</a></li>
           </ul>
         </div>
         <div class="countries-item plan-countries__item">
-          <h3><a href="#" class="countries-item__title">З</a></h3>
-
           <ul class="countries-list">
             <li><a href="#" class="countries-list__link">Замбия</a></li>
             <li><a href="#" class="countries-list__link">Зимбабве</a></li>
           </ul>
         </div>
         <div class="countries-item plan-countries__item">
-          <h3><a href="#" class="countries-item__title">И</a></h3>
-
           <ul class="countries-list">
             <li><a href="#" class="countries-list__link">Израиль</a></li>
             <li><a href="#" class="countries-list__link">Индия</a></li>
@@ -735,8 +720,6 @@
           </ul>
         </div>
         <div class="countries-item plan-countries__item">
-          <h3><a href="#" class="countries-item__title">К</a></h3>
-
           <ul class="countries-list">
             <li><a href="#" class="countries-list__link">Кабо-Верде</a></li>
             <li><a href="#" class="countries-list__link">Казахстан</a></li>
@@ -753,8 +736,6 @@
           </ul>
         </div>
         <div class="countries-item plan-countries__item">
-          <h3><a href="#" class="countries-item__title">Л</a></h3>
-
           <ul class="countries-list">
             <li><a href="#" class="countries-list__link">Лаос</a></li>
             <li><a href="#" class="countries-list__link">Латвия</a></li>
@@ -768,8 +749,6 @@
           </ul>
         </div>
         <div class="countries-item plan-countries__item">
-          <h3><a href="#" class="countries-item__title">М</a></h3>
-
           <ul class="countries-list">
             <li><a href="#" class="countries-list__link">Маврикий</a></li>
             <li><a href="#" class="countries-list__link">Мавритания</a></li>
@@ -783,8 +762,6 @@
           </ul>
         </div>
         <div class="countries-item plan-countries__item">
-          <h3><a href="#" class="countries-item__title">Н</a></h3>
-
           <ul class="countries-list">
             <li><a href="#" class="countries-list__link">Намибия</a></li>
             <li><a href="#" class="countries-list__link">Науру</a></li>
@@ -798,16 +775,12 @@
           </ul>
         </div>
         <div class="countries-item plan-countries__item">
-          <h3><a href="#" class="countries-item__title">О</a></h3>
-
           <ul class="countries-list">
             <li><a href="#" class="countries-list__link">ОАЭ</a></li>
             <li><a href="#" class="countries-list__link">Оман</a></li>
           </ul>
         </div>
         <div class="countries-item plan-countries__item">
-          <h3><a href="#" class="countries-item__title">П</a></h3>
-
           <ul class="countries-list">
             <li><a href="#" class="countries-list__link">Пакистан</a></li>
             <li><a href="#" class="countries-list__link">Палау</a></li>
@@ -820,8 +793,6 @@
           </ul>
         </div>
         <div class="countries-item plan-countries__item">
-          <h3><a href="#" class="countries-item__title">Р</a></h3>
-
           <ul class="countries-list">
             <li><a href="#" class="countries-list__link">Руанда</a></li>
             <li><a href="#" class="countries-list__link">Румыния</a></li>
@@ -829,8 +800,6 @@
           </ul>
         </div>
         <div class="countries-item plan-countries__item">
-          <h3><a href="#" class="countries-item__title">С</a></h3>
-
           <ul class="countries-list">
             <li><a href="#" class="countries-list__link">Сальвадор</a></li>
             <li><a href="#" class="countries-list__link">Самоа</a></li>
@@ -847,8 +816,6 @@
           </ul>
         </div>
         <div class="countries-item plan-countries__item">
-          <h3><a href="#" class="countries-item__title">Т</a></h3>
-
           <ul class="countries-list">
             <li><a href="#" class="countries-list__link">Таджикиста</a></li>
             <li><a href="#" class="countries-list__link">Таиланд</a></li>
@@ -863,8 +830,6 @@
           </ul>
         </div>
         <div class="countries-item plan-countries__item">
-          <h3><a href="#" class="countries-item__title">У</a></h3>
-
           <ul class="countries-list">
             <li><a href="#" class="countries-list__link">Уганда</a></li>
             <li><a href="#" class="countries-list__link">Узбекистан</a></li>
@@ -873,8 +838,6 @@
           </ul>
         </div>
         <div class="countries-item plan-countries__item">
-          <h3><a href="#" class="countries-item__title">Ф</a></h3>
-
           <ul class="countries-list">
             <li><a href="#" class="countries-list__link">Фиджи</a></li>
             <li><a href="#" class="countries-list__link">Филиппины</a></li>
@@ -883,15 +846,11 @@
           </ul>
         </div>
         <div class="countries-item plan-countries__item">
-          <h3><a href="#" class="countries-item__title">Х</a></h3>
-
           <ul class="countries-list">
             <li><a href="#" class="countries-list__link">Хорватия</a></li>
           </ul>
         </div>
         <div class="countries-item plan-countries__item">
-          <h3><a href="#" class="countries-item__title">Ч</a></h3>
-
           <ul class="countries-list">
             <li><a href="#" class="countries-list__link">Чад</a></li>
             <li><a href="#" class="countries-list__link">Черногория</a></li>
@@ -900,8 +859,6 @@
           </ul>
         </div>
         <div class="countries-item plan-countries__item">
-          <h3><a href="#" class="countries-item__title">Ш</a></h3>
-
           <ul class="countries-list">
             <li><a href="#" class="countries-list__link">Швейцария</a></li>
             <li><a href="#" class="countries-list__link">Швеция</a></li>
@@ -909,8 +866,6 @@
           </ul>
         </div>
         <div class="countries-item plan-countries__item">
-          <h3><a href="#" class="countries-item__title">Э</a></h3>
-
           <ul class="countries-list">
             <li><a href="#" class="countries-list__link">Эквадор</a></li>
             <li><a href="#" class="countries-list__link">Эритрея</a></li>
@@ -920,16 +875,12 @@
           </ul>
         </div>
         <div class="countries-item plan-countries__item">
-          <h3><a href="#" class="countries-item__title">Ю</a></h3>
-
           <ul class="countries-list">
             <li><a href="#" class="countries-list__link">ЮАР</a></li>
             <li><a href="#" class="countries-list__link">Южный Судан</a></li>
           </ul>
         </div>
         <div class="countries-item plan-countries__item">
-          <h3><a href="#" class="countries-item__title">Я</a></h3>
-
           <ul class="countries-list">
             <li><a href="#" class="countries-list__link">Ямайка</a></li>
             <li><a href="#" class="countries-list__link">Япония</a></li>
@@ -940,8 +891,8 @@
       <a href="#" class="plan__button-next-step">Следующий шаг</a>
       <a href="#" class="plan__button-last-step">На шаг назад</a>
 
-    </fieldset>
-    <fieldset class="plan__step">
+    </section>
+    <section class="plan__step">
       <h3 class="plan__title">Шаг 3. Развлечения</h3>
 
       <p class="plan__text">
@@ -971,9 +922,9 @@
         </li>
       </ul>
 
-      <a href="#" class="plan__button-next-step">Отправить</a>
+      <button type="submit" class="plan__button-next-step">Отправить</button>
       <a href="#" class="plan__button-last-step">На шаг назад</a>
-    </fieldset>
+    </section>
   </form>
 </main>
 
