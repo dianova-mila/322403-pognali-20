@@ -3,13 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <title>Направления</title>
+
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="page__body">
 
 
 <header class="header">
   <a href="index.html" class="site-logo header__logo">
-    <img src="https://via.placeholder.com/100x15" width="100" height="15" alt="Погнали">
+    <img src="img/logo-mobile-blue@1x.png" width="100" height="15" alt="Погнали">
   </a>
 
   <nav class="main-nav header__nav">
@@ -21,13 +23,39 @@
   </nav>
 
   <div class="login header__login">
-    <a href="#" class="login__button">Авторизация</a>
+    <a href="#" class="login-button login__button">Авторизация</a>
   </div>
 
   <ul class="contact header__contact">
-    <li class="contact__item"><a href="tel:88005558628">8 800 555-86-28</a></li>
-    <li class="contact__item"><a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></li>
+    <li class="contact__item">
+      <a class="contact__link contact__link--tel" href="tel:88005558628">8 800 555-86-28</a>
+    </li>
+    <li class="contact__item">
+      <a class="contact__link contact__link--mail" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+    </li>
   </ul>
+
+  <section class="socials footer__socials">
+    <h2 class="visually-hidden">Социальные сети</h2>
+
+    <ul class="socials__list">
+      <li class="socials__item">
+        <a href="#" class="socials__link socials__link--fb">
+          <span class="visually-hidden">Facebook</span>
+        </a>
+      </li>
+      <li class="socials__item">
+        <a href="#" class="socials__link socials__link--vk">
+          <span class="visually-hidden">Vkontakte</span>
+        </a>
+      </li>
+      <li class="socials__item">
+        <a href="#" class="socials__link socials__link--inst">
+          <span class="visually-hidden">Instagram</span>
+        </a>
+      </li>
+    </ul>
+  </section>
 </header>
 
 
@@ -572,7 +600,7 @@
     <section class="plan__step">
       <h3 class="plan__title">Шаг 2. Маршрут</h3>
 
-      <p class="plan-text">Укажите страны, которые вы хотели посетить. Это может быть одна или сразу несколько.</p>
+      <p class="plan__text">Укажите страны, которые вы хотели посетить. Это может быть одна или сразу несколько.</p>
 
       <div class="plan-countries plan__countries">
         <div class="plan-countries__add-countries">
@@ -931,7 +959,7 @@
 
 <footer class="footer">
   <a href="index.html" class="site-logo footer__logo">
-    <img src="https://via.placeholder.com/100x15" width="100" height="15" alt="Погнали">
+    <img src="img/logo-mobile-blue@1x.png" width="100" height="15" alt="Погнали">
   </a>
 
 
@@ -940,17 +968,17 @@
 
     <ul class="socials__list">
       <li class="socials__item">
-        <a href="" class="socials__link socials__link--fb">
+        <a href="#" class="socials__link socials__link--yellow socials__link--fb">
           <span class="visually-hidden">Facebook</span>
         </a>
       </li>
       <li class="socials__item">
-        <a href="" class="socials__link socials__link--vk">
+        <a href="#" class="socials__link socials__link--yellow socials__link--vk">
           <span class="visually-hidden">Vkontakte</span>
         </a>
       </li>
       <li class="socials__item">
-        <a href="" class="socials__link socials__link--inst">
+        <a href="#" class="socials__link socials__link--yellow socials__link--inst">
           <span class="visually-hidden">Instagram</span>
         </a>
       </li>
@@ -962,7 +990,7 @@
 
     <a href="https://htmlacademy.ru/intensive/adaptive" class="footer-copyright__link">
       <img
-        src="https://via.placeholder.com/27x33"
+        src="img/htmlacademy.svg"
         width="27"
         height="33"
         alt="Html Academy"

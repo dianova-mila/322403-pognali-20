@@ -1,0 +1,30 @@
+.directions-list {
+  list-style: none;
+}
+
+.directions-list__description {
+  background-color: $basic-white;
+  border-radius: 10px;
+}
+
+.directions-list__title {
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 21px;
+  color: $basic-black;
+}
+
+.directions-list__text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  opacity: 0.3;
+}
+
+.directions-list__number {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  opacity: 0.3;
+  color: $basic_blue_dark;
+}

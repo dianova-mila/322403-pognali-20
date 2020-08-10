@@ -1,0 +1,70 @@
+.contact {
+  list-style: none;
+}
+
+.contact__link {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 18px;
+  color: $basic-blue;
+  text-transform: uppercase;
+
+  &:focus,
+  &:hover {
+    opacity: 0.7;
+    outline: none;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-color: $special-blue-dark;
+    background-position: center;
+  }
+
+  &--tel::before {
+    background-image: url("../img/contacts-phone.svg");
+    background-size: 15.7px, 14.83px;
+  }
+
+  &--mail::before {
+    background-image: url("../img/contacts-mail.svg");
+    background-size: 18.28px, 12.5px;
+  }
+
+  &--yellow.contact__link--tel {
+    &::before {
+      background-image: url("../img/topmenu-phone.svg");
+      background-color: $special-orange;
+    }
+
+    &:focus,
+    &:hover {
+      &::before {
+        background-color: $special-orange-dark;
+      }
+    }
+  }
+
+  &--yellow.contact__link--mail {
+    &::before {
+      background-image: url("../img/topmenu-mail.svg");
+      background-color: $special-yellow-dark;
+    }
+
+    &:focus,
+    &:hover {
+      &::before {
+        background-color: $special-orange;
+      }
+    }
+  }
+}

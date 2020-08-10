@@ -1,0 +1,16 @@
+.companions {
+  padding-top: 68px;
+  padding-left: 25px;
+  padding-bottom: 31px;
+  padding-right: 25px;
+  background-image:
+    url("../img/rogovaya-back-mobile@1x.png"),
+    url("../img/smolov-back-desktop@1x.png");
+  background-repeat: no-repeat;
+}
+
+.companions__text {
+  &--bold {
+    font-weight: bold;
+  }
+}

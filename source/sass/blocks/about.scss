@@ -1,0 +1,14 @@
+.about {
+  background-image: url("../img/about-mobile@1x.png");
+  background-repeat: no-repeat;
+  padding-top: 33px;
+  padding-left: 49px;
+  padding-bottom: 82px;
+  padding-right: 60px;
+}
+
+.about__text {
+  &--bold {
+    font-weight: bold;
+  }
+}

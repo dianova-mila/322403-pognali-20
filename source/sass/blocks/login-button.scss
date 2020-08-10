@@ -1,0 +1,21 @@
+.login-button {
+  color: $basic_blue_dark;
+  background: $basic-yellow;
+  border-radius: 25px;
+  font-weight: 800;
+  font-size: 17px;
+  line-height: 30px;
+  text-align: center;
+  text-transform: uppercase;
+
+  &:focus,
+  &:hover {
+    background-color: $special-yellow-dark;
+    outline: none;
+  }
+
+  &:active {
+    background-color: $special-yellow-dark;
+    color: rgba($basic_blue_dark, 0.3);
+  }
+}

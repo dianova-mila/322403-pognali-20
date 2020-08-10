@@ -1,0 +1,16 @@
+.button {
+  background-color: $basic-yellow;
+  color: $special-blue;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 18px;
+
+  &:focus,
+  &:hover {
+    background-color: $special-yellow-dark;
+  }
+
+  &:active {
+    color: rgba($special-blue, 0.3);
+  }
+}

@@ -1,0 +1,33 @@
+.companions-countries {
+  list-style: none;
+}
+
+.companions-countries__item {
+  &::before {
+    content: "";
+    display: block;
+    width: 35px;
+    height: 25px;
+    background-repeat: no-repeat;
+  }
+
+  &--sri-lanka::before {
+    background-image: url("https://via.placeholder.com/35x25");
+  }
+
+  &--thailand::before {
+    background-image: url("https://via.placeholder.com/35x25");
+  }
+
+  &--seychelles::before {
+    background-image: url("https://via.placeholder.com/35x25");
+  }
+
+  &--belgium::before {
+    background-image: url("https://via.placeholder.com/35x25");
+  }
+
+  &--chech::before {
+    background-image: url("https://via.placeholder.com/35x25");
+  }
+}

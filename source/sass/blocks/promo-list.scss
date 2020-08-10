@@ -1,0 +1,27 @@
+.promo-list {
+  list-style: none;
+}
+
+.promo-list__item {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 18px;
+  color: $basic_blue_dark;
+  border-radius: 10px;
+
+  &--1 {
+    background-color: $special-orange;
+  }
+
+  &--2 {
+    background-color: $special-orange-light;
+  }
+
+  &--3 {
+    background-color: $special-yellow-dark;
+  }
+
+  &--4 {
+    background-color: $basic-yellow;
+  }
+}

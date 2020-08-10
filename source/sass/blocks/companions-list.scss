@@ -1,0 +1,23 @@
+.companions-list {
+  list-style: none;
+}
+
+.companions-list__item {
+  background-color: $basic-white;
+  border-radius: 10px;
+}
+
+.companions-list__name {
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 21px;
+  color: $special-blue;
+}
+
+.companions-list__tags {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 18px;
+  text-align: center;
+  color: $special-grey;
+}
