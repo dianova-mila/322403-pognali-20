@@ -1,4 +1,6 @@
 .about {
+  background-color: $basic-blue;
+  color: $basic-white;
   background-image: url("../img/about-mobile@1x.png");
   background-repeat: no-repeat;
   padding-top: 33px;
@@ -9,6 +11,6 @@
 
 .about__text {
   &--bold {
-    font-weight: bold;
+    font-weight: 700;
   }
 }

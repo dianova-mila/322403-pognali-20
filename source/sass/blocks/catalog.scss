@@ -1,5 +1,5 @@
 .catalog {
-  background-color: $special-light-grey;
+  background-color: $basic-blue-lighten;
   padding-top: 28px;
   padding-left: 25px;
   padding-bottom: 18px;
@@ -17,7 +17,7 @@
 }
 
 .catalog__name {
-  font-weight: bold;
+  font-weight: 700;
   font-size: 20px;
   line-height: 20px;
   color: $special-blue;
@@ -34,21 +34,21 @@
 }
 
 .catalog__tags {
-  font-weight: normal;
+  font-weight: 400;
   font-size: 15px;
   line-height: 18px;
 }
 
 .catalog__title {
-  font-weight: normal;
+  font-weight: 400;
   font-size: 15px;
   line-height: 16px;
 }
 
 .catalog__button {
   background-color: $basic-yellow;
-  color: $basic_blue_dark;
-  font-weight: bold;
+  color: $basic-blue-dark;
+  font-weight: 700;
   font-size: 17px;
   line-height: 17px;
   text-align: center;
@@ -62,13 +62,13 @@
   }
 
   &:active {
-    color: rgba($basic_blue_dark, 0.3);
+    color: $basic-blue-dark-30;
   }
 }
 
 .catalog__show-more {
   font-style: normal;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 17px;
   line-height: 30px;
   text-transform: uppercase;

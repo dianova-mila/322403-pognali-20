@@ -1,8 +1,8 @@
 .login-button {
-  color: $basic_blue_dark;
+  color: $basic-blue-dark;
   background: $basic-yellow;
   border-radius: 25px;
-  font-weight: 800;
+  font-weight: 700;
   font-size: 17px;
   line-height: 30px;
   text-align: center;
@@ -16,6 +16,6 @@
 
   &:active {
     background-color: $special-yellow-dark;
-    color: rgba($basic_blue_dark, 0.3);
+    color: $basic-blue-dark-30;
   }
 }

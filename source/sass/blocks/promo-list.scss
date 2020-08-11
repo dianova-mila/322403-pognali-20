@@ -3,11 +3,12 @@
 }
 
 .promo-list__item {
-  font-weight: bold;
+  font-weight: 700;
   font-size: 18px;
   line-height: 18px;
-  color: $basic_blue_dark;
+  color: $basic-blue-dark;
   border-radius: 10px;
+  background-color: $basic-yellow;
 
   &--1 {
     background-color: $special-orange;

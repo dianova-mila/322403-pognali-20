@@ -1,7 +1,7 @@
 .button {
   background-color: $basic-yellow;
   color: $special-blue;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 18px;
   line-height: 18px;
 
@@ -11,6 +11,6 @@
   }
 
   &:active {
-    color: rgba($special-blue, 0.3);
+    color: $special-blue-30;
   }
 }

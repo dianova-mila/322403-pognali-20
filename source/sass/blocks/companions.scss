@@ -3,6 +3,8 @@
   padding-left: 25px;
   padding-bottom: 31px;
   padding-right: 25px;
+  color: $basic-white;
+  background-color: $basic-blue;
   background-image:
     url("../img/rogovaya-back-mobile@1x.png"),
     url("../img/smolov-back-desktop@1x.png");
@@ -11,6 +13,6 @@
 
 .companions__text {
   &--bold {
-    font-weight: bold;
+    font-weight: 700;
   }
 }
