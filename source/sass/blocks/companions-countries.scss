@@ -1,0 +1,34 @@
+.companions-countries {
+  list-style: none;
+}
+
+.companions-countries__item {
+  &::before {
+    content: "";
+    display: block;
+    width: 35px;
+    height: 25px;
+    background-repeat: no-repeat;
+    background-size: 35px, 25px;
+  }
+
+  &--sri-lanka::before {
+    background-image: url("../../img/sri-lanka.png");
+  }
+
+  &--thailand::before {
+    background-image: url("../../img/thailand.png");
+  }
+
+  &--seychelles::before {
+    background-image: url("../../img/seychelles.png");
+  }
+
+  &--belgium::before {
+    background-image: url("../../img/belgium.png");
+  }
+
+  &--czech::before {
+    background-image: url("../../img/czechia.png");
+  }
+}

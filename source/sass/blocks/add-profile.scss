@@ -1,0 +1,25 @@
+.add-profile {
+  background-color: $special-blue-lighten;
+  line-height: 16px;
+  padding-top: 90px;
+  padding-left: 49px;
+  padding-bottom: 38px;
+  padding-right: 25px;
+}
+
+.add-profile__list {
+  list-style: none;
+}
+
+.add-profile__text {
+  color: $special-grey;
+}
+
+.add-profile__price {
+  color: $special-grey;
+}
+
+.add-profile__link {
+  font-weight: 700;
+  color: $special-blue-medium;
+}

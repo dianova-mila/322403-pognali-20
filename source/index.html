@@ -4,13 +4,15 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Погнали</title>
+
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="page__body">
 
 
 <header class="header">
   <a class="site-logo header__logo">
-    <img src="https://via.placeholder.com/100x15" width="100" height="15" alt="Погнали">
+    <img src="img/logo-mobile-blue@1x.png" width="100" height="15" alt="Погнали">
   </a>
 
   <nav class="main-nav header__nav">
@@ -26,9 +28,35 @@
   </div>
 
   <ul class="contact header__contact">
-    <li class="contact__item"><a href="tel:88005558628">8 800 555-86-28</a></li>
-    <li class="contact__item"><a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></li>
+    <li class="contact__item">
+      <a class="contact__link contact__link--tel" href="tel:88005558628">8 800 555-86-28</a>
+    </li>
+    <li class="contact__item">
+      <a class="contact__link contact__link--mail" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+    </li>
   </ul>
+
+  <section class="socials header__socials">
+    <h2 class="visually-hidden">Социальные сети</h2>
+
+    <ul class="socials__list">
+      <li class="socials__item">
+        <a href="#" class="socials__link socials__link--fb">
+          <span class="visually-hidden">Facebook</span>
+        </a>
+      </li>
+      <li class="socials__item">
+        <a href="#" class="socials__link socials__link--vk">
+          <span class="visually-hidden">Vkontakte</span>
+        </a>
+      </li>
+      <li class="socials__item">
+        <a href="#" class="socials__link socials__link--inst">
+          <span class="visually-hidden">Instagram</span>
+        </a>
+      </li>
+    </ul>
+  </section>
 </header>
 
 
@@ -40,11 +68,15 @@
     <p class="promo__text">В путешествие с крутыми попутчиками!</p>
 
     <ul class="contact contact--mini">
-      <li class="contact__item"><a href="tel:88005558628">
-        <span class="visually-hidden">8 800 555-86-28</span></a>
+      <li class="contact__item">
+        <a href="tel:88005558628" class="contact__link contact__link--yellow contact__link--tel">
+          <span class="visually-hidden">8 800 555-86-28</span>
+        </a>
       </li>
       <li class="contact__item">
-        <a href="mailto:mail@htmlacademy.ru"><span class="visually-hidden">mail@htmlacademy.ru</span></a>
+        <a href="mailto:mail@htmlacademy.ru" class="contact__link contact__link--yellow contact__link--mail">
+          <span class="visually-hidden">mail@htmlacademy.ru</span>
+        </a>
       </li>
       <li class="contact__item"><a href="#" class="login-button">Авторизация</a></li>
     </ul>
@@ -56,10 +88,10 @@
     </blockquote>
 
     <ol class="promo-list promo__list">
-      <li class="promo-list__item">Выберите направление</li>
-      <li class="promo-list__item">Изучите идеи путешественников</li>
-      <li class="promo-list__item">Находите тех, кто похож на вас</li>
-      <li class="promo-list__item">Путешествуйте вместе!</li>
+      <li class="promo-list__item promo-list__item--1">Выберите направление</li>
+      <li class="promo-list__item promo-list__item--2">Изучите идеи путешественников</li>
+      <li class="promo-list__item promo-list__item--3">Находите тех, кто похож на вас</li>
+      <li class="promo-list__item promo-list__item--4">Путешествуйте вместе!</li>
     </ol>
   </section>
 
@@ -90,22 +122,28 @@
 
     <ul class="directions-list directions__list">
       <li class="directions-list__item">
-        <img src="https://via.placeholder.com/270x110" alt="Фото страны" class="directions-list__img">
-        <h3 class="directions-list__title">Таиланд</h3>
-        <p class="directions-list__text">Джунгли зовут!</p>
-        <span class="directions-list__number">18321</span>
+        <img src="img/thailand-mobile@1x.jpg" alt="Фото страны" class="directions-list__img">
+        <div class="directions-list__description">
+          <h3 class="directions-list__title">Таиланд</h3>
+          <p class="directions-list__text">Джунгли зовут!</p>
+          <span class="directions-list__number">18321</span>
+        </div>
       </li>
       <li class="directions-list__item">
-        <img src="https://via.placeholder.com/270x110" alt="Фото страны" class="directions-list__img">
-        <h3 class="directions-list__title">Франция</h3>
-        <p class="directions-list__text">Трэ бьен, манифик!</p>
-        <span class="directions-list__number">12518</span>
+        <img src="img/france-mobile@1x.jpg" alt="Фото страны" class="directions-list__img">
+        <div class="directions-list__description">
+          <h3 class="directions-list__title">Франция</h3>
+          <p class="directions-list__text">Трэ бьен, манифик!</p>
+          <span class="directions-list__number">12518</span>
+        </div>
       </li>
       <li class="directions-list__item">
-        <img src="https://via.placeholder.com/270x110" alt="Фото страны" class="directions-list__img">
-        <h3 class="directions-list__title">Чехия</h3>
-        <p class="directions-list__text">Закоулки старой Европы</p>
-        <span class="directions-list__number">5326</span>
+        <img src="img/czech-mobile@1x.jpg" alt="Фото страны" class="directions-list__img">
+        <div class="directions-list__description">
+          <h3 class="directions-list__title">Чехия</h3>
+          <p class="directions-list__text">Закоулки старой Европы</p>
+          <span class="directions-list__number">5326</span>
+        </div>
       </li>
     </ul>
 
@@ -128,15 +166,21 @@
     <ul class="companions-list">
       <li class="companions-list__item">
         <img
-          src="https://via.placeholder.com/270x270"
+          src="img/firsova-mobile@1x.jpg"
           width="270"
           height="270"
           alt="Фото попутчика"
           class="companions-list__avatar">
         <ul class="companions-countries companions__countries">
-          <li class="companions-countries__item"><span class="visually-hidden">Шри-ланка</span></li>
-          <li class="companions-countries__item"><span class="visually-hidden">Тайланд</span></li>
-          <li class="companions-countries__item"><span class="visually-hidden">Сейшелы</span></li>
+          <li class="companions-countries__item companions-countries__item--sri-lanka">
+            <span class="visually-hidden">Шри-ланка</span>
+          </li>
+          <li class="companions-countries__item companions-countries__item--thailand">
+            <span class="visually-hidden">Тайланд</span>
+          </li>
+          <li class="companions-countries__item companions-countries__item--seychelles">
+            <span class="visually-hidden">Сейшелы</span>
+          </li>
         </ul>
         <p class="companions-list__name">Таня Фирсова</p>
         <p class="companions-list__tags"> &#35;ЗОЖ &#35;ПП &#35;Фитнес &#35;пляж &#35;авокадо &#35;смузи</p>
@@ -149,14 +193,18 @@
       </li>
       <li class="companions-list__item">
         <img
-          src="https://via.placeholder.com/270x270"
+          src="img/demin-mobile@1x.jpg"
           width="270"
           height="270"
           alt="Фото попутчика"
           class="companions-list__avatar">
         <ul class="companions-countries companions__countries">
-          <li class="companions-countries__item"><span class="visually-hidden">Бельгия</span></li>
-          <li class="companions-countries__item"><span class="visually-hidden">Чехия</span></li>
+          <li class="companions-countries__item companions-countries__item--belgium">
+            <span class="visually-hidden">Бельгия</span>
+          </li>
+          <li class="companions-countries__item companions-countries__item--czech">
+            <span class="visually-hidden">Чехия</span>
+          </li>
         </ul>
         <p class="companions-list__name">Петя Демин</p>
         <p class="companions-list__tags">&#35;бургер &#35;бар &#35;футбол &#35;концерт &#35;крафт</p>
@@ -252,7 +300,7 @@
 
 <footer class="footer">
   <a class="site-logo footer__logo">
-    <img src="https://via.placeholder.com/100x15" width="100" height="15" alt="Погнали">
+    <img src="img/logo-mobile-blue@1x.png" width="100" height="15" alt="Погнали">
   </a>
 
 
@@ -261,17 +309,17 @@
 
     <ul class="socials__list">
       <li class="socials__item">
-        <a href="" class="socials__link socials__link--fb">
+        <a href="#" class="socials__link socials__link--yellow socials__link--fb">
           <span class="visually-hidden">Facebook</span>
         </a>
       </li>
       <li class="socials__item">
-        <a href="" class="socials__link socials__link--vk">
+        <a href="#" class="socials__link socials__link--yellow socials__link--vk">
           <span class="visually-hidden">Vkontakte</span>
         </a>
       </li>
       <li class="socials__item">
-        <a href="" class="socials__link socials__link--inst">
+        <a href="#" class="socials__link socials__link--yellow socials__link--inst">
           <span class="visually-hidden">Instagram</span>
         </a>
       </li>
@@ -283,7 +331,7 @@
 
     <a href="https://htmlacademy.ru/intensive/adaptive" class="footer-copyright__link">
       <img
-        src="https://via.placeholder.com/27x33"
+        src="img/htmlacademy.svg"
         width="27"
         height="33"
         alt="Html Academy"
