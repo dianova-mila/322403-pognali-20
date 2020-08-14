@@ -1,1 +1,65 @@
-//
+.authorization {
+  background-color: $basic-blue;
+  color: $basic-white;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.authorization__link {
+  color: $basic-yellow;
+  text-decoration: underline;
+
+  &:focus,
+  &:hover {
+    color: $special-orange;
+    outline: none;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.authorization__input {
+  background-color: $basic-white;
+  border: none;
+  border-radius: 20px;
+  color: $basic-white;
+
+  &::placeholder {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 18px;
+    color: $special-grey;
+    opacity: 0.3;
+  }
+
+  &:hover {
+    background-color: $basic-blue-light;
+
+    &::placeholder {
+      opacity: 0.5;
+    }
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow:
+      inset 4px 4px 0 $basic-white,
+      inset -4px -4px 0 $basic-white,
+      inset 4px -4px 0 $basic-white,
+      inset -4px 4px 0 $basic-white;
+    background-color: inherit;
+  }
+}
+
+.authorization__button {
+  border: none;
+  background-color: $basic-yellow;
+
+  &:focus,
+  &:hover {
+    cursor: pointer;
+    border-color: $special-yellow-dark;
+  }
+}

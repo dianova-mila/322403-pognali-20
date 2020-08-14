@@ -1,1 +1,28 @@
-//
+.plan-countries__button {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: $special-blue;
+  border: 1px solid $another-blue-medium;
+  border-radius: 4px;
+  background-color: $basic-white;
+
+  &:focus,
+  &:hover {
+    border: 1px solid $another-blue-darken;
+    outline: none;
+    cursor: pointer;
+  }
+
+  &:active {
+    background: $special-blue;
+    border: 1px solid $special-blue;
+    color: $basic-white;
+  }
+
+  &--add-countries {
+    background-color: $basic-blue-lighten;
+  }
+}

@@ -1,1 +1,66 @@
-//
+.companions-form {
+  background: $basic-yellow;
+  border-radius: 20px;
+}
+
+.companions-form__big-title {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 22px;
+  letter-spacing: 0.02em;
+  color: $special-blue;
+}
+
+.companions-form__group {
+  border: none;
+}
+
+.companions-form__title {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: $special-blue;
+  border: none;
+  background-color: inherit;
+
+  &:focus,
+  &:hover {
+    opacity: 0.6;
+    cursor: pointer;
+    outline: none;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.companions-form__label {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+  color: $basic-black;
+
+  &:focus,
+  &:hover {
+    cursor: pointer;
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.companions-form__button {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  color: $basic-blue-dark;
+  border: none;
+  background-color: $basic-white;
+  border-radius: 25px;
+}

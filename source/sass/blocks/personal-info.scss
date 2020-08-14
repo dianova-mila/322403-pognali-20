@@ -1,1 +1,52 @@
-//
+.personal-info__button {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: $basic-blue-dark;
+  background-color: $special-blue-light;
+  border-radius: 20px;
+
+  &:focus,
+  &:hover {
+    background-color: $another-blue-light;
+  }
+
+  &:active {
+    color: $basic-blue-dark-30;
+  }
+}
+
+.personal-info__title {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  text-align: center;
+  text-transform: uppercase;
+  color: $special-blue;
+}
+
+.personal-info__tags {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  color: $special-grey;
+  border: 1px solid $another-blue-medium;
+  border-radius: 10px;
+  resize: none;
+  background-color: $basic-blue-lighten;
+
+  &::placeholder {
+    opacity: 0.6;
+  }
+
+  &:hover {
+    border: 1px solid $another-blue-dark;
+  }
+
+  &:focus {
+    border: 1px solid $basic-blue-dark;
+    outline: none;
+  }
+}

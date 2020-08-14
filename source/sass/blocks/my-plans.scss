@@ -1,1 +1,50 @@
-//
+.my-plans {
+  background-color: $special-blue-light;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.my-plans__title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 24px;
+  text-align: center;
+  color: $special-blue;
+}
+
+.my-plans__list {
+  list-style: none;
+}
+
+.my-plans__item {
+  background-color: $basic-white;
+  border-radius: 10px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 14px;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: $special-blue;
+}
+
+.my-plans__countries {
+  text-transform: none;
+  letter-spacing: normal;
+}
+
+.my-plans__button {
+  letter-spacing: 0.03em;
+  color: $basic-black;
+  opacity: 0.3;
+
+  &:focus,
+  &:hover {
+    opacity: 0.6;
+    outline: none;
+  }
+
+  &:active {
+    opacity: 0.1;
+  }
+}

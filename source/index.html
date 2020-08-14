@@ -251,22 +251,26 @@
       <a href="#" class="authorization__link">авторизуйтесь</a>.
     </p>
 
-    <form action="https://echo.htmlacademy.ru" method="post" class="authorization-form">
+    <form action="https://echo.htmlacademy.ru" method="post" class="authorization__form">
       <label for="authorization-email-field" class="visually-hidden">E-mail</label>
       <input
         type="email"
         name="authorization-email"
         id="authorization-email-field"
         placeholder="E-mail"
-        class="authorization-form__input">
-      <button type="submit" class="authorization-form__button"><span class="visually-hidden">Отправить</span></button>
+        class="authorization__input">
+      <button type="submit" class="authorization__button"><span class="visually-hidden">Отправить</span></button>
     </form>
 
     <p class="authorization__text">Остались вопросы? Мы с радостью на них ответим!</p>
 
     <ul class="contact authorization__contact">
-      <li class="contact__item"><a href="tel:88005558628">8 800 555-86-28</a></li>
-      <li class="contact__item"><a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></li>
+      <li class="contact__item">
+        <a class="contact__link contact__link--yellow-text contact__link--tel" href="tel:88005558628">8 800 555-86-28</a>
+      </li>
+      <li class="contact__item">
+        <a class="contact__link contact__link--yellow-text contact__link--mail" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+      </li>
     </ul>
   </section>
 

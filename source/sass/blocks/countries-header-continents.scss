@@ -1,1 +1,35 @@
-//
+.countries-header-continents {
+  list-style: none;
+}
+
+.countries-header-continents__link {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: $basic-blue;
+  opacity: 0.3;
+
+  &:focus,
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 1;
+  }
+
+  &--active {
+    opacity: 1;
+
+    &:focus,
+    &:hover {
+      opacity: 1;
+      cursor: default;
+    }
+
+    &:active {
+      opacity: 1;
+    }
+  }
+}

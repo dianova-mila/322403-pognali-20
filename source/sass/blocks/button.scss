@@ -4,6 +4,7 @@
   font-weight: 700;
   font-size: 18px;
   line-height: 18px;
+  border-radius: 10px;
 
   &:focus,
   &:hover {
@@ -12,5 +13,24 @@
 
   &:active {
     color: $special-blue-30;
+  }
+
+  &--empty {
+    background-color: inherit;
+    box-shadow:
+      inset 3px 3px 0 $basic-blue,
+      inset -3px -3px 0 $basic-blue,
+      inset 3px -3px 0 $basic-blue,
+      inset -3px 3px 0 $basic-blue;
+
+    &:focus,
+    &:hover {
+      background-color: $basic-blue;
+      color: $basic-white;
+    }
+
+    &:active {
+      color: $basic-white-30;
+    }
   }
 }

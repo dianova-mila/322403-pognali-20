@@ -1,1 +1,48 @@
-//
+.plan-calendar__month-and-year {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
+  color: $special-blue;
+}
+
+.plan-calendar__day {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+
+  &--weekend {
+    color: $special-red-dark;
+  }
+}
+
+.plan-calendar__date {
+  border: 1px solid $basic-blue-light;
+}
+
+.plan-calendar__label {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  opacity: 0.3;
+
+  &:focus,
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.1;
+  }
+
+  &--selected {
+    background-color: $special-blue;
+    color: $basic-white;
+    opacity: 1;
+  }
+
+  &--suggested {
+    background-color: $basic-blue-lighten;
+    color: $special-blue;
+    opacity: 1;
+  }
+}

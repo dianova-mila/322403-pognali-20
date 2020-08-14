@@ -1,1 +1,41 @@
-//
+.plan-list {
+  list-style: none;
+}
+
+.plan-list__title {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 18px;
+  color: $special-blue;
+}
+
+.plan-list__text {
+  resize: none;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: $special-grey;
+  border-radius: 4px;
+  border: 1px solid $another-blue-medium;
+
+  &::placeholder {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: $special-grey;
+    opacity: 0.3;
+  }
+
+  &:hover {
+    border: 1px solid $another-blue-darken;
+  }
+
+  &:focus {
+    border: 1px solid $basic-blue-dark;
+    outline: none;
+
+    &::placeholder {
+      opacity: 1;
+    }
+  }
+}

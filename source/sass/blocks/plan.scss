@@ -1,1 +1,104 @@
-//
+.plan {
+  background-color: $regular-blue-light;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.plan__step {
+  background: $basic-white;
+  border-radius: 10px;
+}
+
+.plan__title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 24px;
+  color: $special-blue;
+}
+
+.plan__markers {
+  list-style: none;
+}
+
+.plan__text {
+  font-weight: 400;
+}
+
+.plan__item {
+  border: none;
+}
+
+.plan__label {
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: $special-blue;
+}
+
+.plan__unit {
+  font-weight: 500;
+  line-height: 16px;
+  text-align: right;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: $special-blue;
+  opacity: 0.3;
+}
+
+.plan__checkbox-label {
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 15px;
+  color: $special-blue;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+    outline: none;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.plan__button-next-step {
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: $special-blue;
+  background-color: $basic-yellow;
+  border-radius: 20px;
+  border: none;
+
+  &:focus,
+  &:hover {
+    background-color: $special-yellow-dark;
+    outline: none;
+  }
+
+  &:active {
+    color: $special-blue-30;
+  }
+}
+
+.plan__button-last-step {
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 30px;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  color: $special-blue;
+
+  &:focus,
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}

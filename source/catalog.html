@@ -72,7 +72,11 @@
       <button class="countries-header__button">Свернуть</button>
 
       <ul class="countries-header-continents countries-header__continents">
-        <li><a href="#" class="countries-header-continents__link">Европа</a></li>
+        <li>
+          <a href="#" class="countries-header-continents__link countries-header-continents__link--active">
+            Европа
+          </a>
+        </li>
         <li><a href="#" class="countries-header-continents__link">Азия</a></li>
         <li><a href="#" class="countries-header-continents__link">Америка</a></li>
         <li><a href="#" class="countries-header-continents__link">Острова</a></li>
@@ -81,7 +85,7 @@
 
 
     <ul class="countries-alphabet countries__alphabet">
-      <li><a href="#" class="countries-alphabet__item">А</a></li>
+      <li><a href="#" class="countries-alphabet__item countries-alphabet__item--active">А</a></li>
       <li><a href="#" class="countries-alphabet__item">Б</a></li>
       <li><a href="#" class="countries-alphabet__item">В</a></li>
       <li><a href="#" class="countries-alphabet__item">Г</a></li>
@@ -108,7 +112,7 @@
       <li><a href="#" class="countries-alphabet__item">Я</a></li>
     </ul>
 
-    <div class="countries-item countries__item">
+    <div class="countries-item countries-item--active countries__item">
       <h3 class="countries-item__title">А</h3>
 
       <ul class="countries-list">
@@ -427,7 +431,7 @@
 
 
   <section class="companions-form">
-    <h2 class="companions-form__title">Подберите идеального попутчика</h2>
+    <h2 class="companions-form__big-title">Подберите идеального попутчика</h2>
 
     <form action="https://echo.htmlacademy.ru" method="get" class="companions-form__form">
       <fieldset class="companions-form__group">
@@ -441,7 +445,7 @@
             value="sport"
             class="visually-hidden companions-form__input"
             checked>
-          <label for="hobby-sport">Спортзал</label>
+          <label class="companions-form__label" for="hobby-sport">Спортзал</label>
         </p>
 
         <p class="companions-form__item">
@@ -451,7 +455,7 @@
             id="hobby-hookah"
             value="hookah"
             class="visually-hidden companions-form__input">
-          <label for="hobby-hookah">Кальян</label>
+          <label class="companions-form__label" for="hobby-hookah">Кальян</label>
         </p>
 
         <p class="companions-form__item">
@@ -461,7 +465,7 @@
             id="hobby-sofa"
             value="sofa"
             class="visually-hidden companions-form__input">
-          <label for="hobby-sofa">Диван</label>
+          <label class="companions-form__label" for="hobby-sofa">Диван</label>
         </p>
       </fieldset>
 
@@ -476,7 +480,7 @@
             value="rock"
             class="visually-hidden companions-form__input"
             checked>
-          <label for="music-rock">Тяжелый рок</label>
+          <label class="companions-form__label" for="music-rock">Тяжелый рок</label>
         </p>
 
         <p class="companions-form__item">
@@ -486,7 +490,7 @@
             id="music-rap"
             value="rap"
             class="visually-hidden companions-form__input">
-          <label for="music-rap">Русский рэп</label>
+          <label class="companions-form__label" for="music-rap">Русский рэп</label>
         </p>
 
         <p class="companions-form__item">
@@ -496,7 +500,7 @@
             id="music-eurodance"
             value="eurodance"
             class="visually-hidden companions-form__input">
-          <label for="music-eurodance">Евроденс</label>
+          <label class="companions-form__label" for="music-eurodance">Евроденс</label>
         </p>
       </fieldset>
 
@@ -511,7 +515,7 @@
             value="meat"
             class="visually-hidden companions-form__input"
             checked>
-          <label for="food-meat">Мясоед</label>
+          <label class="companions-form__label" for="food-meat">Мясоед</label>
         </p>
 
         <p class="companions-form__item">
@@ -521,7 +525,7 @@
             id="food-healthy"
             value="healthy"
             class="visually-hidden companions-form__input">
-          <label for="food-healthy">Сидит на ПП</label>
+          <label class="companions-form__label" for="food-healthy">Сидит на ПП</label>
         </p>
 
         <p class="companions-form__item">
@@ -531,7 +535,7 @@
             id="food-vegan"
             value="vegan"
             class="visually-hidden companions-form__input">
-          <label for="food-vegan">Веган-сыроед</label>
+          <label class="companions-form__label" for="food-vegan">Веган-сыроед</label>
         </p>
       </fieldset>
 
