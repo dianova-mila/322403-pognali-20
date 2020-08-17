@@ -1,1 +1,23 @@
-//
+.plan-number__input {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 14px;
+  text-transform: uppercase;
+  color: $special-blue;
+  background-color: $basic-white;
+  border: 1px solid $another-blue-medium;
+  border-radius: 4px;
+
+  &:hover {
+    border: 1px solid $another-blue-darken;
+  }
+
+  &:focus {
+    border: 1px solid $basic-blue-dark;
+    outline: none;
+  }
+
+  &::placeholder {
+    color: $special-blue;
+  }
+}

@@ -1,1 +1,27 @@
-//
+.countries {
+  background-color: $another-blue-lighten;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.countries__button {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: $basic-blue;
+  border: none;
+  background-color: $basic-blue-light;
+  border-radius: 20px;
+
+  &:focus,
+  &:hover {
+    outline: none;
+    cursor: pointer;
+    background: $another-blue;
+  }
+
+  &:active {
+    color: $basic-blue-30;
+  }
+}

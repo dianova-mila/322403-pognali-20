@@ -70,10 +70,14 @@
     </div>
 
     <p class="personal-info__item">
-      <img src="https://via.placeholder.com/100x100" alt="Ваше фото" class="personal-info__avatar">
+      <img src="img/demin-desktop@1x.jpg" width="100" height="100" alt="Ваше фото" class="personal-info__avatar">
 
-      <input type="file" class="personal-info__button" name="photo" id="photo-field" accept="image/*,image/jpeg">
-      <label for="photo-field">Cменить фото</label>
+      <input
+        type="file"
+        class="personal-info__add-photo visually-hidden"
+        name="photo" id="photo-field"
+        accept="image/*,image/jpeg">
+      <label class="personal-info__button" for="photo-field">Cменить фото</label>
     </p>
 
     <p class="personal-info__item">
@@ -87,6 +91,7 @@
     </textarea>
     </p>
 
+    <h3 class="personal-info__title">Транспорт</h3>
     <ul class="transport personal-info__transport">
       <li class="transport__item">Авиаперелет</li>
       <li class="transport__item">Автотранспорт</li>
@@ -100,13 +105,13 @@
 
     <ol class="my-plans__list">
       <li class="my-plans__item">
-        <h3 class="my-plans__countries">Франция, Италия</h3>
+        <h3 class="my-plans__countries">1. Франция, Италия</h3>
         <p class="my-plans__companions">3 попутчика</p>
         <p class="my-plans__dates">26 мар — 29 мар</p>
         <a href="" class="my-plans__button">Изменить</a>
       </li>
       <li class="my-plans__item">
-        <h3 class="my-plans__countries">Таиланд, Индонезия</h3>
+        <h3 class="my-plans__countries">2. Таиланд, Индонезия</h3>
         <p class="my-plans__companions">1 попутчик</p>
         <p class="my-plans__dates">1 июл — 15 июл</p>
         <a href="" class="my-plans__button">Изменить</a>
@@ -130,7 +135,7 @@
         и ее предполагаемую длительность.</p>
 
       <fieldset class="plan__item">
-        <label for="companions-field">Ищу попутчиков:</label>
+        <label class="plan__label" for="companions-field">Ищу попутчиков:</label>
         <span class="plan__unit">чел.</span>
 
         <div class="plan-number plan__number">
@@ -141,7 +146,7 @@
             type="text"
             name="companions"
             id="companions-field"
-            class="plan-number__number"
+            class="plan-number__input"
             placeholder="2">
           <button class="plan-number__button plan-number__button--plus">
             <span class="visually-hidden">Плюс</span>
@@ -161,7 +166,7 @@
       </fieldset>
 
       <fieldset class="plan__item">
-        <label for="duration-field">Длительность:</label>
+        <label class="plan__label" for="duration-field">Длительность:</label>
         <span class="plan__unit">дн.</span>
 
         <div class="plan-number plan__number">
@@ -172,7 +177,7 @@
             type="text"
             name="duration"
             id="duration-field"
-            class="plan-number__number"
+            class="plan-number__input"
             placeholder="2">
           <button class="plan-number__button plan-number__button--plus">
             <span class="visually-hidden">Плюс</span>
@@ -181,22 +186,22 @@
       </fieldset>
 
       <fieldset class="plan-calendar plan__calendar">
-        <div class="plan-calendar__month">
+        <div class="plan-calendar__header">
           <button class="plan-calendar__button plan-calendar__button--back">Назад</button>
-          <p class="plan-calendar__month-and-year">Март 2019</p>
+          <p class="plan-calendar__month">Март 2019</p>
           <button class="plan-calendar__button plan-calendar__button--forward">Вперед</button>
         </div>
 
         <table class="plan-calendar__table">
           <tbody>
           <tr class="plan-calendar__week">
-            <th class="plan-calendar__day">Пн</th>
-            <th class="plan-calendar__day">Вт</th>
-            <th class="plan-calendar__day">Ср</th>
-            <th class="plan-calendar__day">Чт</th>
-            <th class="plan-calendar__day">Пт</th>
-            <th class="plan-calendar__day plan-calendar__day--weekend">Сб</th>
-            <th class="plan-calendar__day plan-calendar__day--weekend">Вс</th>
+            <th class="plan-calendar__day">П</th>
+            <th class="plan-calendar__day">В</th>
+            <th class="plan-calendar__day">С</th>
+            <th class="plan-calendar__day">Ч</th>
+            <th class="plan-calendar__day">П</th>
+            <th class="plan-calendar__day plan-calendar__day--weekend">С</th>
+            <th class="plan-calendar__day plan-calendar__day--weekend">В</th>
           </tr>
           <tr class="plan-calendar__row">
             <td class="plan-calendar__date">
@@ -494,7 +499,7 @@
                 id="date-26" value="26"
                 checked
               >
-              <label class="plan-calendar__label" for="date-26">26</label>
+              <label class="plan-calendar__label plan-calendar__label--selected" for="date-26">26</label>
             </td>
             <td class="plan-calendar__date">
               <input
@@ -504,7 +509,7 @@
                 id="date-27" value="27"
                 checked
               >
-              <label class="plan-calendar__label" for="date-27">27</label>
+              <label class="plan-calendar__label plan-calendar__label--selected" for="date-27">27</label>
             </td>
             <td class="plan-calendar__date">
               <input
@@ -514,7 +519,7 @@
                 id="date-28" value="28"
                 checked
               >
-              <label class="plan-calendar__label" for="date-28">28</label>
+              <label class="plan-calendar__label plan-calendar__label--selected" for="date-28">28</label>
             </td>
             <td class="plan-calendar__date">
               <input
@@ -523,7 +528,7 @@
                 name="date"
                 id="date-29" value="29"
               >
-              <label class="plan-calendar__label" for="date-29">29</label>
+              <label class="plan-calendar__label plan-calendar__label--suggested" for="date-29">29</label>
             </td>
           </tr>
           <tr class="plan-calendar__row ">
@@ -534,7 +539,7 @@
                 name="date"
                 id="date-30" value="30"
               >
-              <label class="plan-calendar__label" for="date-30">30</label>
+              <label class="plan-calendar__label plan-calendar__label--suggested" for="date-30">30</label>
             </td>
             <td class="plan-calendar__date">
               <input
@@ -543,7 +548,7 @@
                 name="date"
                 id="date-31" value="31"
               >
-              <label class="plan-calendar__label" for="date-31">31</label>
+              <label class="plan-calendar__label plan-calendar__label--suggested" for="date-31">31</label>
             </td>
             <td class="plan-calendar__date">
               <input
@@ -552,7 +557,7 @@
                 name="date"
                 id="date-1-next-mount"
                 value="1">
-              <label class="plan-calendar__label" for="date-1-next-mount">1</label>
+              <label class="plan-calendar__label plan-calendar__label--suggested" for="date-1-next-mount">1</label>
             </td>
             <td class="plan-calendar__date">
               <input
@@ -561,7 +566,7 @@
                 name="date"
                 id="date-2-next-mount"
                 value="2">
-              <label class="plan-calendar__label" for="date-2-next-mount">2</label>
+              <label class="plan-calendar__label plan-calendar__label--suggested" for="date-2-next-mount">2</label>
             </td>
             <td class="plan-calendar__date">
               <input
@@ -570,7 +575,7 @@
                 name="date"
                 id="date-3-next-mount"
                 value="3">
-              <label class="plan-calendar__label" for="date-3-next-mount">3</label>
+              <label class="plan-calendar__label plan-calendar__label--suggested" for="date-3-next-mount">3</label>
             </td>
             <td class="plan-calendar__date">
               <input
@@ -579,7 +584,7 @@
                 name="date"
                 id="date-4-next-mount"
                 value="4">
-              <label class="plan-calendar__label" for="date-4-next-mount">4</label>
+              <label class="plan-calendar__label plan-calendar__label--suggested" for="date-4-next-mount">4</label>
             </td>
             <td class="plan-calendar__date">
               <input
@@ -588,7 +593,7 @@
                 name="date"
                 id="date-5-next-mount"
                 value="5">
-              <label class="plan-calendar__label" for="date-5-next-mount">5</label>
+              <label class="plan-calendar__label plan-calendar__label--suggested" for="date-5-next-mount">5</label>
             </td>
           </tr>
           </tbody>
@@ -604,27 +609,29 @@
 
       <div class="plan-countries plan__countries">
         <div class="plan-countries__add-countries">
-          <button class="plan-countries__button">Босния и Герцеговина</button>
+          <button type="button" class="plan-countries__button">Босния и Герцеговина</button>
           <span class="plan-countries__flag"></span>
-          <button class="plan-countries__delete"><span class="visually-hidden">Удалить</span></button>
+          <button type="button" class="plan-countries__delete"><span class="visually-hidden">Удалить</span></button>
         </div>
         <div class="plan-countries__add-countries">
-          <button class="plan-countries__button">Чехия</button>
+          <button type="button" class="plan-countries__button">Чехия</button>
           <span class="plan-countries__flag"></span>
-          <button class="plan-countries__delete"><span class="visually-hidden">Удалить</span></button>
+          <button type="button" class="plan-countries__delete"><span class="visually-hidden">Удалить</span></button>
         </div>
         <div class="plan-countries__add-countries">
-          <button class="plan-countries__button">Выберите страну</button>
-          <button class="plan-countries__delete"><span class="visually-hidden">Удалить</span></button>
+          <button type="button" class="plan-countries__button">Выберите страну</button>
+          <button type="button" class="plan-countries__delete"><span class="visually-hidden">Удалить</span></button>
         </div>
         <div class="plan-countries__add-countries">
-          <button class="plan-countries__button">Добавить страну</button>
+          <button  type="button" class="plan-countries__button plan-countries__button--add-countries">
+            Добавить страну
+          </button>
         </div>
       </div>
 
       <div class="plan-countries plan__countries">
         <ul class="countries-alphabet plan__countries-alphabet">
-          <li><a href="#" class="countries-alphabet__item">А</a></li>
+          <li><a href="#" class="countries-alphabet__item countries-alphabet__item--active">А</a></li>
           <li><a href="#" class="countries-alphabet__item">Б</a></li>
           <li><a href="#" class="countries-alphabet__item">В</a></li>
           <li><a href="#" class="countries-alphabet__item">Г</a></li>
@@ -651,7 +658,7 @@
           <li><a href="#" class="countries-alphabet__item">Я</a></li>
         </ul>
 
-        <div class="countries-item plan-countries__item">
+        <div class="countries-item countries-item--active plan-countries__item">
           <ul class="countries-list">
             <li><a href="#" class="countries-list__link">Австралия</a></li>
             <li><a href="#" class="countries-list__link">Австрия</a></li>
@@ -935,8 +942,7 @@
             name="plan-text"
             id="plan-text-field-1"
             class="plan-list__text"
-            placeholder="План действий">
-          </textarea>
+            placeholder="План действий"></textarea>
         </li>
         <li class="plan-list__item">
           <h4 class="plan-list__title">Чехия</h4>

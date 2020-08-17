@@ -84,4 +84,18 @@
       }
     }
   }
+
+  &--yellow-text {
+    color: $basic-yellow;
+
+    &:focus,
+    &:hover {
+      color: $special-yellow-dark;
+      opacity: 1;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
 }
