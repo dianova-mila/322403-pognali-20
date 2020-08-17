@@ -63,4 +63,16 @@
   border: none;
   background-color: $basic-white;
   border-radius: 25px;
+
+  &:focus,
+  &:hover {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.14);
+    outline: none;
+  }
+
+  &:active {
+    background-color: $basic-yellow-dark;
+    color: $basic-blue-dark-30;
+    box-shadow: none;
+  }
 }

@@ -22,9 +22,9 @@
 
 .authorization__input {
   background-color: $basic-white;
-  border: none;
   border-radius: 20px;
   color: $basic-white;
+  border: 4px solid transparent;
 
   &::placeholder {
     font-weight: 700;
@@ -44,11 +44,7 @@
 
   &:focus {
     outline: none;
-    box-shadow:
-      inset 4px 4px 0 $basic-white,
-      inset -4px -4px 0 $basic-white,
-      inset 4px -4px 0 $basic-white,
-      inset -4px 4px 0 $basic-white;
+    border: 4px solid $basic-white;
     background-color: inherit;
   }
 }

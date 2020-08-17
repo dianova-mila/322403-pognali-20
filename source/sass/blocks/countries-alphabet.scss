@@ -31,15 +31,9 @@
     color: $basic-white;
 
     &:focus,
-    &:hover {
-      outline: none;
-      background-color: $special-blue;
-      border: 1px solid $special-blue;
-      color: $basic-white;
-      cursor: default;
-    }
-
+    &:hover,
     &:active {
+      outline: none;
       background-color: $special-blue;
       border: 1px solid $special-blue;
       color: $basic-white;
