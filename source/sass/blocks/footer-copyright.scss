@@ -1,4 +1,13 @@
 .footer-copyright__text {
   line-height: 16px;
   color: $special-grey;
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
 }

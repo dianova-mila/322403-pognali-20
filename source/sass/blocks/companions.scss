@@ -1,8 +1,6 @@
 .companions {
   padding-top: 68px;
-  padding-left: 25px;
   padding-bottom: 31px;
-  padding-right: 25px;
   color: $basic-white;
   background-color: $basic-blue;
   background-image:
@@ -13,8 +11,36 @@
   border-bottom-right-radius: 10px;
 }
 
+.companions__wrapper {
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: min-content min-content min-content min-content;
+  }
+}
+
+.companions__title {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.companions__list {
+  grid-column: 2;
+  grid-row: 1 / 5;
+}
+
 .companions__text {
+  grid-column: 1;
+  margin: 0;
+  grid-row: 2;
+
   &--bold {
     font-weight: 700;
+    grid-row: 3;
   }
+}
+
+.companions__button-wrapper {
+  grid-column: 1;
+  grid-row: 4;
 }

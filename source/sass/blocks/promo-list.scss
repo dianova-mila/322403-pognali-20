@@ -1,5 +1,9 @@
 .promo-list {
   list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .promo-list__item {
@@ -9,6 +13,15 @@
   color: $basic-blue-dark;
   border-radius: 10px;
   background-color: $basic-yellow;
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    width: 50%;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 25%;
+  }
 
   &--1 {
     background-color: $special-orange;

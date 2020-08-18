@@ -25,3 +25,29 @@ a {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+.container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 25px;
+  padding-left: 25px;
+
+  @media (min-width: $mobile-width) {
+    min-width: $mobile-width;
+    padding-right: 25px;
+    padding-left: 25px;
+  }
+
+  @media (min-width: $tablet-width) {
+    min-width: $tablet-width;
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: $desktop-width;
+    padding-right: 60px;
+    padding-left: 60px;
+  }
+}
