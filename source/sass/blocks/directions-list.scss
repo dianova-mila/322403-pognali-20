@@ -5,15 +5,10 @@
 }
 
 .directions-list__item {
-  display: flex;
-  flex-direction: column;
-
   @media (min-width: $tablet-width) {
+    display: flex;
     flex-direction: row-reverse;
-  }
-
-  @media (min-width: $desktop-width) {
-    flex-direction: row-reverse;
+    flex-grow: 1;
   }
 }
 

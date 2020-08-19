@@ -33,12 +33,6 @@ a {
   padding-right: 25px;
   padding-left: 25px;
 
-  @media (min-width: $mobile-width) {
-    min-width: $mobile-width;
-    padding-right: 25px;
-    padding-left: 25px;
-  }
-
   @media (min-width: $tablet-width) {
     min-width: $tablet-width;
     padding-right: 40px;

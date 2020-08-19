@@ -28,7 +28,7 @@
   background-color: $basic-white;
   border-radius: 20px;
   color: $basic-white;
-  border: 4px solid transparent;
+  border: 4px solid $basic-white;
   padding: 0;
 
   &::placeholder {

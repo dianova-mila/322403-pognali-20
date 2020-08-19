@@ -6,6 +6,10 @@
   &--mini {
     display: flex;
   }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+  }
 }
 
 .contact__link {
