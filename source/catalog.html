@@ -2,6 +2,9 @@
 <html lang="ru" class="page">
 <head>
   <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width,initial-scale=1">
   <title>Попутчики</title>
 
   <link rel="stylesheet" href="css/style.css">
@@ -10,52 +13,58 @@
 
 
 <header class="header">
-  <a href="index.html" class="site-logo header__logo">
-    <img src="img/logo-mobile-blue@1x.png" width="100" height="15" alt="Погнали">
-  </a>
+  <div class="container">
+    <a href="index.html" class="site-logo header__logo">
+      <img src="img/logo-mobile-blue@1x.png" width="100" height="15" alt="Погнали">
+    </a>
 
-  <nav class="main-nav header__nav">
-    <ul class="main-nav__list">
-      <li class="main-nav__item"><a href="#" class="main-nav__link">О сервисе</a></li>
-      <li class="main-nav__item"><a href="form.html" class="main-nav__link">Направления</a></li>
-      <li class="main-nav__item"><a class="main-nav__link">Попутчики</a></li>
+    <button class="header__button header__button--close">
+      <span class="visually-hidden">Открыть/закрыть меню</span>
+    </button>
+
+    <nav class="main-nav header__nav">
+      <ul class="main-nav__list">
+        <li class="main-nav__item"><a href="#" class="main-nav__link">О сервисе</a></li>
+        <li class="main-nav__item"><a href="form.html" class="main-nav__link">Направления</a></li>
+        <li class="main-nav__item"><a class="main-nav__link">Попутчики</a></li>
+      </ul>
+    </nav>
+
+    <div class="login header__login">
+      <a href="#" class="login-button login__button">Авторизация</a>
+    </div>
+
+    <ul class="contact header__contact">
+      <li class="contact__item">
+        <a class="contact__link contact__link--tel" href="tel:88005558628">8 800 555-86-28</a>
+      </li>
+      <li class="contact__item">
+        <a class="contact__link contact__link--mail" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+      </li>
     </ul>
-  </nav>
 
-  <div class="login header__login">
-    <a href="#" class="login-button login__button">Авторизация</a>
+    <section class="socials header__socials">
+      <h2 class="visually-hidden">Социальные сети</h2>
+
+      <ul class="socials__list">
+        <li class="socials__item">
+          <a href="#" class="socials__link socials__link--fb">
+            <span class="visually-hidden">Facebook</span>
+          </a>
+        </li>
+        <li class="socials__item">
+          <a href="#" class="socials__link socials__link--vk">
+            <span class="visually-hidden">Vkontakte</span>
+          </a>
+        </li>
+        <li class="socials__item">
+          <a href="#" class="socials__link socials__link--inst">
+            <span class="visually-hidden">Instagram</span>
+          </a>
+        </li>
+      </ul>
+    </section>
   </div>
-
-  <ul class="contact header__contact">
-    <li class="contact__item">
-      <a class="contact__link contact__link--tel" href="tel:88005558628">8 800 555-86-28</a>
-    </li>
-    <li class="contact__item">
-      <a class="contact__link contact__link--mail" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-    </li>
-  </ul>
-
-  <section class="socials footer__socials">
-    <h2 class="visually-hidden">Социальные сети</h2>
-
-    <ul class="socials__list">
-      <li class="socials__item">
-        <a href="#" class="socials__link socials__link--fb">
-          <span class="visually-hidden">Facebook</span>
-        </a>
-      </li>
-      <li class="socials__item">
-        <a href="#" class="socials__link socials__link--vk">
-          <span class="visually-hidden">Vkontakte</span>
-        </a>
-      </li>
-      <li class="socials__item">
-        <a href="#" class="socials__link socials__link--inst">
-          <span class="visually-hidden">Instagram</span>
-        </a>
-      </li>
-    </ul>
-  </section>
 </header>
 
 
@@ -429,352 +438,380 @@
     <button class="countries__button">Свернуть</button>
   </section>
 
+  <div class="container">
+    <section class="companions-form">
+      <h2 class="companions-form__big-title">Подберите идеального попутчика</h2>
 
-  <section class="companions-form">
-    <h2 class="companions-form__big-title">Подберите идеального попутчика</h2>
+      <form action="https://echo.htmlacademy.ru" method="get" class="companions-form__form">
+        <fieldset class="companions-form__group">
+          <button type="button" class="companions-form__title">Хобби:</button>
 
-    <form action="https://echo.htmlacademy.ru" method="get" class="companions-form__form">
-      <fieldset class="companions-form__group">
-        <button type="button" class="companions-form__title">Хобби:</button>
+          <p class="companions-form__item">
+            <input
+              type="checkbox"
+              name="hobby"
+              id="hobby-sport"
+              value="sport"
+              class="visually-hidden companions-form__input"
+              checked>
+            <label class="companions-form__label" for="hobby-sport">Спортзал</label>
+          </p>
 
-        <p class="companions-form__item">
-          <input
-            type="checkbox"
-            name="hobby"
-            id="hobby-sport"
-            value="sport"
-            class="visually-hidden companions-form__input"
-            checked>
-          <label class="companions-form__label" for="hobby-sport">Спортзал</label>
-        </p>
+          <p class="companions-form__item">
+            <input
+              type="checkbox"
+              name="hobby"
+              id="hobby-hookah"
+              value="hookah"
+              class="visually-hidden companions-form__input">
+            <label class="companions-form__label" for="hobby-hookah">Кальян</label>
+          </p>
 
-        <p class="companions-form__item">
-          <input
-            type="checkbox"
-            name="hobby"
-            id="hobby-hookah"
-            value="hookah"
-            class="visually-hidden companions-form__input">
-          <label class="companions-form__label" for="hobby-hookah">Кальян</label>
-        </p>
+          <p class="companions-form__item">
+            <input
+              type="checkbox"
+              name="hobby"
+              id="hobby-sofa"
+              value="sofa"
+              class="visually-hidden companions-form__input">
+            <label class="companions-form__label" for="hobby-sofa">Диван</label>
+          </p>
+        </fieldset>
 
-        <p class="companions-form__item">
-          <input
-            type="checkbox"
-            name="hobby"
-            id="hobby-sofa"
-            value="sofa"
-            class="visually-hidden companions-form__input">
-          <label class="companions-form__label" for="hobby-sofa">Диван</label>
-        </p>
-      </fieldset>
+        <fieldset class="companions-form__group">
+          <button type="button" class="companions-form__title">Музыка:</button>
 
-      <fieldset class="companions-form__group">
-        <button type="button" class="companions-form__title">Музыка:</button>
+          <p class="companions-form__item">
+            <input
+              type="checkbox"
+              name="music"
+              id="music-rock"
+              value="rock"
+              class="visually-hidden companions-form__input"
+              checked>
+            <label class="companions-form__label" for="music-rock">Тяжелый рок</label>
+          </p>
 
-        <p class="companions-form__item">
-          <input
-            type="checkbox"
-            name="music"
-            id="music-rock"
-            value="rock"
-            class="visually-hidden companions-form__input"
-            checked>
-          <label class="companions-form__label" for="music-rock">Тяжелый рок</label>
-        </p>
+          <p class="companions-form__item">
+            <input
+              type="checkbox"
+              name="music"
+              id="music-rap"
+              value="rap"
+              class="visually-hidden companions-form__input">
+            <label class="companions-form__label" for="music-rap">Русский рэп</label>
+          </p>
 
-        <p class="companions-form__item">
-          <input
-            type="checkbox"
-            name="music"
-            id="music-rap"
-            value="rap"
-            class="visually-hidden companions-form__input">
-          <label class="companions-form__label" for="music-rap">Русский рэп</label>
-        </p>
+          <p class="companions-form__item">
+            <input
+              type="checkbox"
+              name="music"
+              id="music-eurodance"
+              value="eurodance"
+              class="visually-hidden companions-form__input">
+            <label class="companions-form__label" for="music-eurodance">Евроденс</label>
+          </p>
+        </fieldset>
 
-        <p class="companions-form__item">
-          <input
-            type="checkbox"
-            name="music"
-            id="music-eurodance"
-            value="eurodance"
-            class="visually-hidden companions-form__input">
-          <label class="companions-form__label" for="music-eurodance">Евроденс</label>
-        </p>
-      </fieldset>
+        <fieldset class="companions-form__group">
+          <button type="button" class="companions-form__title">Еда:</button>
 
-      <fieldset class="companions-form__group">
-        <button type="button" class="companions-form__title">Еда:</button>
+          <p class="companions-form__item">
+            <input
+              type="checkbox"
+              name="food"
+              id="food-meat"
+              value="meat"
+              class="visually-hidden companions-form__input"
+              checked>
+            <label class="companions-form__label" for="food-meat">Мясоед</label>
+          </p>
 
-        <p class="companions-form__item">
-          <input
-            type="checkbox"
-            name="food"
-            id="food-meat"
-            value="meat"
-            class="visually-hidden companions-form__input"
-            checked>
-          <label class="companions-form__label" for="food-meat">Мясоед</label>
-        </p>
+          <p class="companions-form__item">
+            <input
+              type="checkbox"
+              name="food"
+              id="food-healthy"
+              value="healthy"
+              class="visually-hidden companions-form__input">
+            <label class="companions-form__label" for="food-healthy">Сидит на ПП</label>
+          </p>
 
-        <p class="companions-form__item">
-          <input
-            type="checkbox"
-            name="food"
-            id="food-healthy"
-            value="healthy"
-            class="visually-hidden companions-form__input">
-          <label class="companions-form__label" for="food-healthy">Сидит на ПП</label>
-        </p>
+          <p class="companions-form__item">
+            <input
+              type="checkbox"
+              name="food"
+              id="food-vegan"
+              value="vegan"
+              class="visually-hidden companions-form__input">
+            <label class="companions-form__label" for="food-vegan">Веган-сыроед</label>
+          </p>
+        </fieldset>
 
-        <p class="companions-form__item">
-          <input
-            type="checkbox"
-            name="food"
-            id="food-vegan"
-            value="vegan"
-            class="visually-hidden companions-form__input">
-          <label class="companions-form__label" for="food-vegan">Веган-сыроед</label>
-        </p>
-      </fieldset>
+        <fieldset class="companions-form__group">
+          <button type="button" class="companions-form__title">Транспорт:</button>
 
-      <fieldset class="companions-form__group">
-        <button type="button" class="companions-form__title">Транспорт:</button>
+          <p class="companions-form__item">
+            <input
+              type="checkbox"
+              name="transport"
+              id="transport-air"
+              value="air"
+              class="visually-hidden companions-form__input"
+              checked>
+            <label for="transport-air"><span class="visually-hidden">Авиаперелет</span></label>
+          </p>
 
-        <p class="companions-form__item">
-          <input
-            type="checkbox"
-            name="transport"
-            id="transport-air"
-            value="air"
-            class="visually-hidden companions-form__input"
-            checked>
-          <label for="transport-air"><span class="visually-hidden">Авиаперелет</span></label>
-        </p>
+          <p class="companions-form__item">
+            <input
+              type="checkbox"
+              name="transport"
+              id="transport-car"
+              value="car"
+              class="visually-hidden companions-form__input"
+              checked>
+            <label for="transport-car"><span class="visually-hidden">Автотранспорт</span></label>
+          </p>
 
-        <p class="companions-form__item">
-          <input
-            type="checkbox"
-            name="transport"
-            id="transport-car"
-            value="car"
-            class="visually-hidden companions-form__input"
-            checked>
-          <label for="transport-car"><span class="visually-hidden">Автотранспорт</span></label>
-        </p>
+          <p class="companions-form__item">
+            <input
+              type="checkbox"
+              name="transport"
+              id="transport-cycle"
+              value="cycle"
+              class="visually-hidden companions-form__input">
+            <label for="transport-cycle"><span class="visually-hidden">Велосипед</span></label>
+          </p>
 
-        <p class="companions-form__item">
-          <input
-            type="checkbox"
-            name="transport"
-            id="transport-cycle"
-            value="cycle"
-            class="visually-hidden companions-form__input">
-          <label for="transport-cycle"><span class="visually-hidden">Велосипед</span></label>
-        </p>
+          <p class="companions-form__item">
+            <input
+              type="checkbox"
+              name="transport"
+              id="transport-afoot"
+              value="afoot"
+              class="visually-hidden companions-form__input"
+              checked>
+            <label for="transport-afoot"><span class="visually-hidden">Пешком</span></label>
+          </p>
+        </fieldset>
 
-        <p class="companions-form__item">
-          <input
-            type="checkbox"
-            name="transport"
-            id="transport-afoot"
-            value="afoot"
-            class="visually-hidden companions-form__input"
-            checked>
-          <label for="transport-afoot"><span class="visually-hidden">Пешком</span></label>
-        </p>
-      </fieldset>
+        <div class="companions-form__group">
+          <button type="button" class="companions-form__title">Левел:</button>
 
-      <div class="companions-form__group">
-        <button type="button" class="companions-form__title">Левел:</button>
-
-        <div class="level companions-form__level">
-          <div class="level__range">
-            <div class="level__scale">
-              <div class="level__bar"></div>
-              <button type="button" class="level__toggle level__toggle--min" aria-label="от"></button>
-              <button type="button" class="level__toggle level__toggle--max" aria-label="до"></button>
-            </div>
-          </div>
-
-          <div class="level__numbers">
-            <div class="level__number level__number_min">
-              <label for="level-min-field">от</label>
-              <input class="level__value" type="text" id="level-min-field" name="level-min" value="0">
+          <div class="level companions-form__level">
+            <div class="level__range">
+              <div class="level__scale">
+                <div class="level__bar"></div>
+                <button type="button" class="level__toggle level__toggle--min" aria-label="от"></button>
+                <button type="button" class="level__toggle level__toggle--max" aria-label="до"></button>
+              </div>
             </div>
 
-            <div class="level__number level__number_max">
-              <label for="level-max-field">до</label>
-              <input class="level__value" type="text" id="level-max-field" name="level-max" value="100">
+            <div class="level__numbers">
+              <div class="level__number level__number_min">
+                <label for="level-min-field">от</label>
+                <input class="level__value" type="text" id="level-min-field" name="level-min" value="0">
+              </div>
+
+              <div class="level__number level__number_max">
+                <label for="level-max-field">до</label>
+                <input class="level__value" type="text" id="level-max-field" name="level-max" value="100">
+              </div>
             </div>
           </div>
         </div>
+
+        <button type="submit" class="companions-form__button">Показать</button>
+      </form>
+    </section>
+
+
+    <section class="catalog">
+      <ul class="catalog__list">
+        <li class="catalog__item">
+          <a href="#" class="catalog__img">
+            <img src="img/firsova-mobile@1x.jpg" alt="Фото попутчика" width="70" height="70">
+          </a>
+          <a href="#" class="catalog__name">Таня Фирсова</a>
+          <p class="catalog__tags">&#35;ЗОЖ &#35;ПП &#35;Фитнес &#35;пляж &#35;авокадо &#35;смузи</p>
+          <h3 class="catalog__title catalog__title--countries">хочет посетить:</h3>
+          <ul class="catalog-countries catalog__countries">
+            <li class="catalog-countries__item">Шри-ланка</li>
+            <li class="catalog-countries__item">Тайланд</li>
+            <li class="catalog-countries__item">Сейшелы</li>
+          </ul>
+          <h3 class="catalog__title catalog__title--transport">транспорт:</h3>
+          <ul class="transport catalog__transport">
+            <li class="transport__item"><span class="visually-hidden">Авиаперелет</span></li>
+            <li class="transport__item"><span class="visually-hidden">Автотранспорт</span></li>
+            <li class="transport__item"><span class="visually-hidden">Велосипед</span></li>
+            <li class="transport__item"><span class="visually-hidden">Пешком</span></li>
+          </ul>
+          <h3 class="catalog__title catalog__title--level">левел:</h3>
+          <div class="catalog__level-wrapper">
+            <span class="catalog__level">99</span>
+          </div>
+          <div class="catalog__button-wrapper">
+            <a href="#" class="catalog__button">Позвать!</a>
+          </div>
+          <div class="catalog__likes">
+            <button class="like-button"><span class="visually-hidden">Мне нравится</span></button>
+            <span class="catalog__text">1,5 М</span>
+          </div>
+        </li>
+
+
+        <li class="catalog__item">
+          <a href="#" class="catalog__img">
+            <img src="img/demin-mobile@1x.jpg" alt="Фото попутчика" width="70" height="70">
+          </a>
+          <a href="#" class="catalog__name">Петя Демин</a>
+          <p class="catalog__tags">&#35;бургер &#35;бар &#35;футбол &#35;концерт &#35;крафт</p>
+          <h3 class="catalog__title catalog__title--countries">хочет посетить:</h3>
+          <ul class="catalog-countries catalog__countries">
+            <li class="catalog-countries__item">Бельгия</li>
+            <li class="catalog-countries__item">Чехия</li>
+          </ul>
+          <h3 class="catalog__title catalog__title--transport">транспорт:</h3>
+          <ul class="transport catalog__transport">
+            <li class="transport__item"><span class="visually-hidden">Авиаперелет</span></li>
+            <li class="transport__item"><span class="visually-hidden">Автотранспорт</span></li>
+            <li class="transport__item"><span class="visually-hidden">Велосипед</span></li>
+            <li class="transport__item"><span class="visually-hidden">Пешком</span></li>
+          </ul>
+          <h3 class="catalog__title catalog__title--level">левел:</h3>
+          <div class="catalog__level-wrapper">
+            <span class="catalog__level">80</span>
+          </div>
+          <div class="catalog__button-wrapper">
+            <a href="#" class="catalog__button">Позвать!</a>
+          </div>
+          <div class="catalog__likes">
+            <button class="like-button"><span class="visually-hidden">Мне нравится</span></button>
+            <span class="catalog__text">1500</span>
+          </div>
+        </li>
+
+
+        <li class="catalog__item">
+          <a href="#" class="catalog__img">
+            <img src="img/smolov-mobile@1x.jpg" alt="Фото попутчика" width="70" height="70">
+          </a>
+          <a href="#" class="catalog__name">Марк Смолов</a>
+          <p class="catalog__tags">&#35;рэп &#35;тату &#35;хайпбист &#35;кроссовки &#35;суприм</p>
+          <h3 class="catalog__title catalog__title--countries">хочет посетить:</h3>
+          <ul class="catalog-countries catalog__countries">
+            <li class="catalog-countries__item">США</li>
+            <li class="catalog-countries__item">Австралия</li>
+            <li class="catalog-countries__item">Доминика</li>
+          </ul>
+          <h3 class="catalog__title catalog__title--transport">транспорт:</h3>
+          <ul class="transport catalog__transport">
+            <li class="transport__item"><span class="visually-hidden">Авиаперелет</span></li>
+            <li class="transport__item"><span class="visually-hidden">Автотранспорт</span></li>
+            <li class="transport__item"><span class="visually-hidden">Велосипед</span></li>
+            <li class="transport__item"><span class="visually-hidden">Пешком</span></li>
+          </ul>
+          <h3 class="catalog__title catalog__title--level">левел:</h3>
+          <div class="catalog__level-wrapper">
+            <span class="catalog__level">25</span>
+          </div>
+          <div class="catalog__button-wrapper">
+            <a href="#" class="catalog__button">Позвать!</a>
+          </div>
+          <div class="catalog__likes">
+            <button class="like-button"><span class="visually-hidden">Мне нравится</span></button>
+            <span class="catalog__text">170</span>
+          </div>
+        </li>
+
+
+        <li class="catalog__item">
+          <a href="#" class="catalog__img">
+            <img src="img/rogovaya-mobile@1x.jpg" alt="Фото попутчика" width="70" height="70">
+          </a>
+          <a href="#" class="catalog__name">Лариса Роговая</a>
+          <p class="catalog__tags">&#35;образование &#35;карьера &#35;учеба &#35;линкедин</p>
+          <h3 class="catalog__title catalog__title--countries">хочет посетить:</h3>
+          <ul class="catalog-countries catalog__countries">
+            <li class="catalog-countries__item">Великобритания</li>
+            <li class="catalog-countries__item">Германия</li>
+          </ul>
+          <ul class="catalog__countries"></ul>
+          <h3 class="catalog__title catalog__title--transport">транспорт:</h3>
+          <ul class="transport catalog__transport">
+            <li class="transport__item"><span class="visually-hidden">Авиаперелет</span></li>
+            <li class="transport__item"><span class="visually-hidden">Автотранспорт</span></li>
+            <li class="transport__item"><span class="visually-hidden">Велосипед</span></li>
+            <li class="transport__item"><span class="visually-hidden">Пешком</span></li>
+          </ul>
+          <h3 class="catalog__title catalog__title--level">левел:</h3>
+          <div class="catalog__level-wrapper">
+            <span class="catalog__level">50</span>
+          </div>
+          <div class="catalog__button-wrapper">
+            <a href="#" class="catalog__button">Позвать!</a>
+          </div>
+          <div class="catalog__likes">
+            <button class="like-button"><span class="visually-hidden">Мне нравится</span></button>
+            <span class="catalog__text">23</span>
+          </div>
+        </li>
+      </ul>
+
+      <a href="#" class="catalog__show-more">Показать еще</a>
+
+      <div class="pagination">
+        <a href="#" class="pagination__button pagination__button--back"><span class="visually-hidden">Назад</span></a>
+        <a href="#" class="pagination__button pagination__button--forward"><span
+          class="visually-hidden">Вперед</span></a>
       </div>
-
-      <button type="submit" class="companions-form__button">Показать</button>
-    </form>
-  </section>
-
-
-  <section class="catalog">
-    <ul class="catalog__list">
-      <li class="catalog__item">
-        <a href="#" class="catalog__img">
-          <img src="img/firsova-mobile@1x.jpg" alt="Фото попутчика" width="70" height="70">
-        </a>
-        <a href="#" class="catalog__name">Таня Фирсова</a>
-        <p class="catalog__tags">&#35;ЗОЖ &#35;ПП &#35;Фитнес &#35;пляж &#35;авокадо &#35;смузи</p>
-        <h3 class="catalog__title">хочет посетить:</h3>
-        <ul class="catalog-countries catalog__countries">
-          <li class="catalog-countries__item">Шри-ланка</li>
-          <li class="catalog-countries__item">Тайланд</li>
-          <li class="catalog-countries__item">Сейшелы</li>
-        </ul>
-        <h3 class="catalog__title">транспорт:</h3>
-        <ul class="transport catalog__transport">
-          <li class="transport__item"><span class="visually-hidden">Авиаперелет</span></li>
-          <li class="transport__item"><span class="visually-hidden">Автотранспорт</span></li>
-          <li class="transport__item"><span class="visually-hidden">Велосипед</span></li>
-          <li class="transport__item"><span class="visually-hidden">Пешком</span></li>
-        </ul>
-        <h3 class="catalog__title">левел:</h3>
-        <span class="catalog__level">99</span>
-        <a href="#" class="catalog__button">Позвать!</a>
-        <button class="like-button"><span class="visually-hidden">Мне нравится</span></button>
-        <span class="catalog__likes">1,5 М</span>
-      </li>
-
-
-      <li class="catalog__item">
-        <a href="#" class="catalog__img">
-          <img src="img/demin-mobile@1x.jpg" alt="Фото попутчика" width="70" height="70">
-        </a>
-        <a href="#" class="catalog__name">Петя Демин</a>
-        <p class="catalog__tags">&#35;бургер &#35;бар &#35;футбол &#35;концерт &#35;крафт</p>
-        <h3 class="catalog__title">хочет посетить:</h3>
-        <ul class="catalog-countries catalog__countries">
-          <li class="catalog-countries__item">Бельгия</li>
-          <li class="catalog-countries__item">Чехия</li>
-        </ul>
-        <h3 class="catalog__title">транспорт:</h3>
-        <ul class="transport catalog__transport">
-          <li class="transport__item"><span class="visually-hidden">Авиаперелет</span></li>
-          <li class="transport__item"><span class="visually-hidden">Автотранспорт</span></li>
-          <li class="transport__item"><span class="visually-hidden">Велосипед</span></li>
-          <li class="transport__item"><span class="visually-hidden">Пешком</span></li>
-        </ul>
-        <h3 class="catalog__title">левел:</h3>
-        <span class="catalog__level">80</span>
-        <a href="#" class="catalog__button">Позвать!</a>
-        <button class="like-button"><span class="visually-hidden">Мне нравится</span></button>
-        <span class="catalog__likes">1500</span>
-      </li>
-
-
-      <li class="catalog__item">
-        <a href="#" class="catalog__img">
-          <img src="img/smolov-mobile@1x.jpg" alt="Фото попутчика" width="70" height="70">
-        </a>
-        <a href="#" class="catalog__name">Марк Смолов</a>
-        <p class="catalog__tags">&#35;рэп &#35;тату &#35;хайпбист &#35;кроссовки &#35;суприм</p>
-        <h3 class="catalog__title">хочет посетить:</h3>
-        <ul class="catalog-countries catalog__countries">
-          <li class="catalog-countries__item">США</li>
-          <li class="catalog-countries__item">Австралия</li>
-          <li class="catalog-countries__item">Доминика</li>
-        </ul>
-        <h3 class="catalog__title">транспорт:</h3>
-        <ul class="transport catalog__transport">
-          <li class="transport__item"><span class="visually-hidden">Авиаперелет</span></li>
-          <li class="transport__item"><span class="visually-hidden">Автотранспорт</span></li>
-          <li class="transport__item"><span class="visually-hidden">Велосипед</span></li>
-          <li class="transport__item"><span class="visually-hidden">Пешком</span></li>
-        </ul>
-        <h3 class="catalog__title">левел:</h3>
-        <span class="catalog__level">25</span>
-        <a href="#" class="catalog__button">Позвать!</a>
-        <button class="like-button"><span class="visually-hidden">Мне нравится</span></button>
-        <span class="catalog__likes">170</span>
-      </li>
-
-
-      <li class="catalog__item">
-        <a href="#" class="catalog__img">
-          <img src="img/rogovaya-mobile@1x.jpg" alt="Фото попутчика" width="70" height="70">
-        </a>
-        <a href="#" class="catalog__name">Лариса Роговая</a>
-        <p class="catalog__tags">&#35;образование &#35;карьера &#35;учеба &#35;линкедин</p>
-        <h3 class="catalog__title">хочет посетить:</h3>
-        <ul class="catalog-countries catalog__countries">
-          <li class="catalog-countries__item">Великобритания</li>
-          <li class="catalog-countries__item">Германия</li>
-        </ul>
-        <ul class="catalog__countries"></ul>
-        <h3 class="catalog__title">транспорт:</h3>
-        <ul class="transport catalog__transport">
-          <li class="transport__item"><span class="visually-hidden">Авиаперелет</span></li>
-          <li class="transport__item"><span class="visually-hidden">Автотранспорт</span></li>
-          <li class="transport__item"><span class="visually-hidden">Велосипед</span></li>
-          <li class="transport__item"><span class="visually-hidden">Пешком</span></li>
-        </ul>
-        <h3 class="catalog__title">левел:</h3>
-        <span class="catalog__level">50</span>
-        <a href="#" class="catalog__button">Позвать!</a>
-        <button class="like-button"><span class="visually-hidden">Мне нравится</span></button>
-        <span class="catalog__likes">23</span>
-      </li>
-    </ul>
-
-    <a href="#" class="catalog__show-more">Показать еще</a>
-
-    <div class="pagination">
-      <a href="#" class="pagination__button pagination__button--back"><span class="visually-hidden">Назад</span></a>
-      <a href="#" class="pagination__button pagination__button--forward"><span class="visually-hidden">Вперед</span></a>
-    </div>
-  </section>
+    </section>
+  </div>
 </main>
 
 
 <footer class="footer">
-  <a href="index.html" class="site-logo footer__logo">
-    <img src="img/logo-mobile-blue@1x.png" width="100" height="15" alt="Погнали">
-  </a>
-
-
-  <section class="socials footer__socials">
-    <h2 class="visually-hidden">Социальные сети</h2>
-
-    <ul class="socials__list">
-      <li class="socials__item">
-        <a href="#" class="socials__link socials__link--yellow socials__link--fb">
-          <span class="visually-hidden">Facebook</span>
-        </a>
-      </li>
-      <li class="socials__item">
-        <a href="#" class="socials__link socials__link--yellow socials__link--vk">
-          <span class="visually-hidden">Vkontakte</span>
-        </a>
-      </li>
-      <li class="socials__item">
-        <a href="#" class="socials__link socials__link--yellow socials__link--inst">
-          <span class="visually-hidden">Instagram</span>
-        </a>
-      </li>
-    </ul>
-  </section>
-
-  <div class="footer-copyright footer__copyright">
-    <p class="footer-copyright__text">Разработано</p>
-
-    <a href="https://htmlacademy.ru/intensive/adaptive" class="footer-copyright__link">
-      <img
-        src="img/htmlacademy.svg"
-        width="27"
-        height="33"
-        alt="Html Academy"
-        class="footer-copyright__img">
+  <div class="container footer__wrapper">
+    <a href="index.html" class="site-logo footer__logo">
+      <img src="img/logo-mobile-blue@1x.png" width="100" height="15" alt="Погнали">
     </a>
+
+
+    <section class="socials footer__socials">
+      <h2 class="visually-hidden">Социальные сети</h2>
+
+      <ul class="socials__list">
+        <li class="socials__item">
+          <a href="#" class="socials__link socials__link--yellow socials__link--fb">
+            <span class="visually-hidden">Facebook</span>
+          </a>
+        </li>
+        <li class="socials__item">
+          <a href="#" class="socials__link socials__link--yellow socials__link--vk">
+            <span class="visually-hidden">Vkontakte</span>
+          </a>
+        </li>
+        <li class="socials__item">
+          <a href="#" class="socials__link socials__link--yellow socials__link--inst">
+            <span class="visually-hidden">Instagram</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <div class="footer-copyright footer__copyright">
+      <p class="footer-copyright__text">Разработано</p>
+
+      <a href="https://htmlacademy.ru/intensive/adaptive" class="footer-copyright__link">
+        <img
+          src="img/htmlacademy.svg"
+          width="27"
+          height="33"
+          alt="Html Academy"
+          class="footer-copyright__img">
+      </a>
+    </div>
   </div>
 </footer>
 </body>

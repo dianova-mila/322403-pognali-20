@@ -1,5 +1,15 @@
 .contact {
   list-style: none;
+  margin: 0;
+  padding: 0;
+
+  &--mini {
+    display: flex;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+  }
 }
 
 .contact__link {

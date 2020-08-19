@@ -1,5 +1,15 @@
 .directions-list {
   list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.directions-list__item {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-grow: 1;
+  }
 }
 
 .directions-list__description {

@@ -1,5 +1,12 @@
 .companions-list {
   list-style: none;
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: row;
+  }
 }
 
 .companions-list__item {
@@ -9,6 +16,7 @@
 }
 
 .companions-list__name {
+  margin: 0;
   font-weight: 700;
   font-size: 21px;
   line-height: 21px;
@@ -16,6 +24,7 @@
 }
 
 .companions-list__tags {
+  margin: 0;
   font-weight: 400;
   font-size: 16px;
   line-height: 18px;

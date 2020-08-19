@@ -4,15 +4,23 @@
   background-image: url("../img/about-mobile@1x.png");
   background-repeat: no-repeat;
   padding-top: 33px;
-  padding-left: 49px;
   padding-bottom: 82px;
-  padding-right: 60px;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
 }
 
 .about__text {
+  margin: 0;
+
   &--bold {
     font-weight: 700;
+  }
+}
+
+.about__button {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: inline-block;
   }
 }
