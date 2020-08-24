@@ -4,13 +4,6 @@
   border-bottom-right-radius: 10px;
 }
 
-.countries__wrapper {
-  @media (min-width: $tablet-width) {
-    display: flex;
-    flex-wrap: wrap;
-  }
-}
-
 .countries__header {
   @media (min-width: $tablet-width) {
     width: 100%;

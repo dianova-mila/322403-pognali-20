@@ -5,4 +5,9 @@
   color: $basic-white;
   background-color: $basic-blue-darken;
   margin: 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
