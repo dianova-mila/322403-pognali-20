@@ -69,905 +69,913 @@
 
 
 <main class="main">
-  <h1 class="big-title">Направления</h1>
 
   <form action="https://echo.htmlacademy.ru" method="post" class="personal-info">
-    <h2 class="visually-hidden">Личная информация</h2>
-    <div class="personal-level personal-info__level">
-      <span class="personal-level__number">80</span>
-      <span class="personal-level__level">level</span>
-    </div>
+    <div class="container personal-info_wrapper">
+      <h1 class="big-title personal-info__big-title">Направления</h1>
+      <h2 class="visually-hidden">Личная информация</h2>
 
-    <p class="personal-info__item">
+      <div class="personal-level personal-info__level">
+        <span class="personal-level__number">80</span>
+        <span class="personal-level__level">level</span>
+      </div>
+
+
       <img src="img/demin-desktop@1x.jpg" width="100" height="100" alt="Ваше фото" class="personal-info__avatar">
 
-      <input
-        type="file"
-        class="personal-info__add-photo visually-hidden"
-        name="photo" id="photo-field"
-        accept="image/*,image/jpeg">
-      <label class="personal-info__button" for="photo-field">Cменить фото</label>
-    </p>
+      <div class="personal-info__button-wrapper">
+        <input
+          type="file"
+          class="personal-info__add-photo visually-hidden"
+          name="photo" id="photo-field"
+          accept="image/*,image/jpeg">
+        <label class="personal-info__button" for="photo-field">Cменить фото</label>
+      </div>
 
-    <p class="personal-info__item">
-      <label for="tags-field" class="personal-info__title">Тэги</label>
-      <textarea
-        class="personal-info__tags"
-        id="tags-field"
-        name="tags"
-        placeholder="Коротко о себе в виде 5-8 хештэгов">
-      &#35;бургер &#35;бар &#35;футбол &#35;концерт &#35;крафт
-    </textarea>
-    </p>
+      <p class="personal-info__item personal-info__item--tags">
+        <label for="tags-field" class="personal-info__title">Тэги</label>
+        <textarea
+          class="personal-info__tags"
+          id="tags-field"
+          name="tags"
+          placeholder="Коротко о себе в виде 5-8 хештэгов">&#35;бургер &#35;бар &#35;футбол &#35;концерт &#35;крафт</textarea>
+      </p>
 
-    <h3 class="personal-info__title">Транспорт</h3>
-    <ul class="transport personal-info__transport">
-      <li class="transport__item">Авиаперелет</li>
-      <li class="transport__item">Автотранспорт</li>
-      <li class="transport__item">Велосипед</li>
-      <li class="transport__item">Пешком</li>
-    </ul>
+      <div class="personal-info__item personal-info__item--transport">
+        <h3 class="personal-info__title">Транспорт</h3>
+        <ul class="transport personal-info__transport">
+          <li class="transport__item">Авиаперелет</li>
+          <li class="transport__item">Автотранспорт</li>
+          <li class="transport__item">Велосипед</li>
+          <li class="transport__item">Пешком</li>
+        </ul>
+      </div>
+    </div>
   </form>
 
   <section class="my-plans">
-    <h2 class="my-plans__title">Мои планы:</h2>
+    <div class="container">
+      <h2 class="my-plans__title">Мои планы:</h2>
 
-    <ol class="my-plans__list">
-      <li class="my-plans__item">
-        <h3 class="my-plans__countries">1. Франция, Италия</h3>
-        <p class="my-plans__companions">3 попутчика</p>
-        <p class="my-plans__dates">26 мар — 29 мар</p>
-        <a href="" class="my-plans__button">Изменить</a>
-      </li>
-      <li class="my-plans__item">
-        <h3 class="my-plans__countries">2. Таиланд, Индонезия</h3>
-        <p class="my-plans__companions">1 попутчик</p>
-        <p class="my-plans__dates">1 июл — 15 июл</p>
-        <a href="" class="my-plans__button">Изменить</a>
-      </li>
-    </ol>
+      <ol class="my-plans__list">
+        <li class="my-plans__item">
+          <h3 class="my-plans__countries">1. Франция, Италия</h3>
+          <p class="my-plans__companions">3 попутчика</p>
+          <p class="my-plans__dates">26 мар — 29 мар</p>
+          <a href="" class="my-plans__button">Изменить</a>
+        </li>
+        <li class="my-plans__item">
+          <h3 class="my-plans__countries">2. Таиланд, Индонезия</h3>
+          <p class="my-plans__companions">1 попутчик</p>
+          <p class="my-plans__dates">1 июл — 15 июл</p>
+          <a href="" class="my-plans__button">Изменить</a>
+        </li>
+      </ol>
+    </div>
   </section>
 
   <form method="post" action="https://echo.htmlacademy.ru" class="plan">
-    <h2 class="plan__title">Добавить план:</h2>
+    <div class="container">
+      <h2 class="plan__title">Добавить план:</h2>
 
-    <ul class="plan__markers">
-      <li class="plan__marker"><span class="visually-hidden">Шаг 1</span></li>
-      <li class="plan__marker"><span class="visually-hidden">Шаг 2</span></li>
-      <li class="plan__marker"><span class="visually-hidden">Шаг 3</span></li>
-    </ul>
-
-    <section class="plan__step">
-      <h3 class="plan__title">Шаг 1. Даты пребывания</h3>
-
-      <p class="plan__text">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку
-        и ее предполагаемую длительность.</p>
-
-      <fieldset class="plan__item">
-        <label class="plan__label" for="companions-field">Ищу попутчиков:</label>
-        <span class="plan__unit">чел.</span>
-
-        <div class="plan-number plan__number">
-          <button class="plan-number__button plan-number__button--minus">
-            <span class="visually-hidden">Минус</span>
-          </button>
-          <input
-            type="text"
-            name="companions"
-            id="companions-field"
-            class="plan-number__input"
-            placeholder="2">
-          <button class="plan-number__button plan-number__button--plus">
-            <span class="visually-hidden">Плюс</span>
-          </button>
-        </div>
-      </fieldset>
-
-
-      <fieldset class="plan__item">
-        <input
-          type="checkbox"
-          name="with-children"
-          id="with-children-field"
-          class="plan__checkbox visually-hidden"
-          checked>
-        <label for="with-children-field" class="plan__checkbox-label">Можно с детьми</label>
-      </fieldset>
-
-      <fieldset class="plan__item">
-        <label class="plan__label" for="duration-field">Длительность:</label>
-        <span class="plan__unit">дн.</span>
-
-        <div class="plan-number plan__number">
-          <button class="plan-number__button plan-number__button--minus">
-            <span class="visually-hidden">Минус</span>
-          </button>
-          <input
-            type="text"
-            name="duration"
-            id="duration-field"
-            class="plan-number__input"
-            placeholder="2">
-          <button class="plan-number__button plan-number__button--plus">
-            <span class="visually-hidden">Плюс</span>
-          </button>
-        </div>
-      </fieldset>
-
-      <fieldset class="plan-calendar plan__calendar">
-        <div class="plan-calendar__header">
-          <button class="plan-calendar__button plan-calendar__button--back">Назад</button>
-          <p class="plan-calendar__month">Март 2019</p>
-          <button class="plan-calendar__button plan-calendar__button--forward">Вперед</button>
-        </div>
-
-        <table class="plan-calendar__table">
-          <tbody>
-          <tr class="plan-calendar__week">
-            <th class="plan-calendar__day">П</th>
-            <th class="plan-calendar__day">В</th>
-            <th class="plan-calendar__day">С</th>
-            <th class="plan-calendar__day">Ч</th>
-            <th class="plan-calendar__day">П</th>
-            <th class="plan-calendar__day plan-calendar__day--weekend">С</th>
-            <th class="plan-calendar__day plan-calendar__day--weekend">В</th>
-          </tr>
-          <tr class="plan-calendar__row">
-            <td class="plan-calendar__date">
-              <input
-                class="plan-calendar__input visually-hidden"
-                type="checkbox"
-                name="date"
-                id="date-23-last-mount"
-                value="23">
-              <label class="plan-calendar__label" for="date-23-last-mount">23</label>
-            </td>
-            <td class="plan-calendar__date">
-              <input
-                class="plan-calendar__input visually-hidden"
-                type="checkbox"
-                name="date"
-                id="date-24-last-mount"
-                value="24">
-              <label class="plan-calendar__label" for="date-24-last-mount">24</label>
-            </td>
-            <td class="plan-calendar__date">
-              <input
-                class="plan-calendar__input visually-hidden"
-                type="checkbox"
-                name="date"
-                id="date-25-last-mount"
-                value="25">
-              <label class="plan-calendar__label" for="date-25-last-mount">25</label>
-            </td>
-            <td class="plan-calendar__date">
-              <input
-                class="plan-calendar__input visually-hidden"
-                type="checkbox"
-                name="date"
-                id="date-26-last-mount"
-                value="26">
-              <label class="plan-calendar__label" for="date-26-last-mount">26</label>
-            </td>
-            <td class="plan-calendar__date">
-              <input
-                class="plan-calendar__input visually-hidden"
-                type="checkbox"
-                name="date"
-                id="date-27-last-mount"
-                value="27">
-              <label class="plan-calendar__label" for="date-27-last-mount">27</label>
-            </td>
-            <td class="plan-calendar__date">
-              <input
-                class="plan-calendar__input visually-hidden"
-                type="checkbox"
-                name="date"
-                id="date-28-last-mount"
-                value="28">
-              <label class="plan-calendar__label" for="date-28-last-mount">28</label>
-            </td>
-            <td class="plan-calendar__date">
-              <input
-                class="plan-calendar__input visually-hidden"
-                type="checkbox"
-                name="date"
-                id="date-1" value="1">
-
-              <label class="plan-calendar__label" for="date-1">1</label>
-            </td>
-          </tr>
-          <tr class="plan-calendar__row">
-            <td class="plan-calendar__date">
-              <input
-                class="plan-calendar__input visually-hidden"
-                type="checkbox"
-                name="date"
-                id="date-2" value="2">
-
-              <label class="plan-calendar__label" for="date-2">2</label>
-            </td>
-            <td class="plan-calendar__date">
-              <input
-                class="plan-calendar__input visually-hidden"
-                type="checkbox"
-                name="date"
-                id="date-3" value="3">
-
-              <label class="plan-calendar__label" for="date-3">3</label>
-            </td>
-            <td class="plan-calendar__date">
-              <input
-                class="plan-calendar__input visually-hidden"
-                type="checkbox"
-                name="date"
-                id="date-4" value="4">
-
-              <label class="plan-calendar__label" for="date-4">4</label>
-            </td>
-            <td class="plan-calendar__date">
-              <input
-                class="plan-calendar__input visually-hidden"
-                type="checkbox"
-                name="date"
-                id="date-5" value="5">
-
-              <label class="plan-calendar__label" for="date-5">5</label>
-            </td>
-            <td class="plan-calendar__date">
-              <input
-                class="plan-calendar__input visually-hidden"
-                type="checkbox"
-                name="date"
-                id="date-6" value="6">
-
-              <label class="plan-calendar__label" for="date-6">6</label>
-            </td>
-            <td class="plan-calendar__date">
-              <input
-                class="plan-calendar__input visually-hidden"
-                type="checkbox"
-                name="date"
-                id="date-7" value="7">
-
-              <label class="plan-calendar__label" for="date-7">7</label>
-            </td>
-            <td class="plan-calendar__date">
-              <input
-                class="plan-calendar__input visually-hidden"
-                type="checkbox"
-                name="date"
-                id="date-8" value="8">
-
-              <label class="plan-calendar__label" for="date-8">8</label>
-            </td>
-          </tr>
-          <tr class="plan-calendar__row">
-            <td class="plan-calendar__date">
-              <input
-                class="plan-calendar__input visually-hidden"
-                type="checkbox"
-                name="date"
-                id="date-9" value="9">
-
-              <label class="plan-calendar__label" for="date-9">9</label>
-            </td>
-            <td class="plan-calendar__date">
-              <input
-                class="plan-calendar__input visually-hidden"
-                type="checkbox"
-                name="date"
-                id="date-10" value="10"
-              >
-              <label class="plan-calendar__label" for="date-10">10</label>
-            </td>
-            <td class="plan-calendar__date">
-              <input
-                class="plan-calendar__input visually-hidden"
-                type="checkbox"
-                name="date"
-                id="date-11" value="11"
-              >
-              <label class="plan-calendar__label" for="date-11">11</label>
-            </td>
-            <td class="plan-calendar__date">
-              <input
-                class="plan-calendar__input visually-hidden"
-                type="checkbox"
-                name="date"
-                id="date-12" value="12"
-              >
-              <label class="plan-calendar__label" for="date-12">12</label>
-            </td>
-            <td class="plan-calendar__date">
-              <input
-                class="plan-calendar__input visually-hidden"
-                type="checkbox"
-                name="date"
-                id="date-13" value="13"
-              >
-              <label class="plan-calendar__label" for="date-13">13</label>
-            </td>
-            <td class="plan-calendar__date">
-              <input
-                class="plan-calendar__input visually-hidden"
-                type="checkbox"
-                name="date"
-                id="date-14" value="14"
-              >
-              <label class="plan-calendar__label" for="date-14">14</label>
-            </td>
-            <td class="plan-calendar__date">
-              <input
-                class="plan-calendar__input visually-hidden"
-                type="checkbox"
-                name="date"
-                id="date-15" value="15"
-              >
-              <label class="plan-calendar__label" for="date-15">15</label>
-            </td>
-          </tr>
-          <tr class="plan-calendar__row">
-            <td class="plan-calendar__date">
-              <input
-                class="plan-calendar__input visually-hidden"
-                type="checkbox"
-                name="date"
-                id="date-16" value="16"
-              >
-              <label class="plan-calendar__label" for="date-16">16</label>
-            </td>
-            <td class="plan-calendar__date">
-              <input
-                class="plan-calendar__input visually-hidden"
-                type="checkbox"
-                name="date"
-                id="date-17" value="17"
-              >
-              <label class="plan-calendar__label" for="date-17">17</label>
-            </td>
-            <td class="plan-calendar__date">
-              <input
-                class="plan-calendar__input visually-hidden"
-                type="checkbox"
-                name="date"
-                id="date-18" value="18"
-              >
-              <label class="plan-calendar__label" for="date-18">18</label>
-            </td>
-            <td class="plan-calendar__date">
-              <input
-                class="plan-calendar__input visually-hidden"
-                type="checkbox"
-                name="date"
-                id="date-19" value="19"
-              >
-              <label class="plan-calendar__label" for="date-19">19</label>
-            </td>
-            <td class="plan-calendar__date">
-              <input
-                class="plan-calendar__input visually-hidden"
-                type="checkbox"
-                name="date"
-                id="date-20" value="20"
-              >
-              <label class="plan-calendar__label" for="date-20">20</label>
-            </td>
-            <td class="plan-calendar__date">
-              <input
-                class="plan-calendar__input visually-hidden"
-                type="checkbox"
-                name="date"
-                id="date-21" value="21"
-              >
-              <label class="plan-calendar__label" for="date-21">21</label>
-            </td>
-            <td class="plan-calendar__date">
-              <input
-                class="plan-calendar__input visually-hidden"
-                type="checkbox"
-                name="date"
-                id="date-22" value="22"
-              >
-              <label class="plan-calendar__label" for="date-22">22</label>
-            </td>
-          </tr>
-          <tr class="plan-calendar__row">
-            <td class="plan-calendar__date">
-              <input
-                class="plan-calendar__input visually-hidden"
-                type="checkbox"
-                name="date"
-                id="date-23" value="23"
-              >
-              <label class="plan-calendar__label" for="date-23">23</label>
-            </td>
-            <td class="plan-calendar__date">
-              <input
-                class="plan-calendar__input visually-hidden"
-                type="checkbox"
-                name="date"
-                id="date-24" value="24"
-              >
-              <label class="plan-calendar__label" for="date-24">24</label>
-            </td>
-            <td class="plan-calendar__date">
-              <input
-                class="plan-calendar__input visually-hidden"
-                type="checkbox"
-                name="date"
-                id="date-25" value="25"
-              >
-              <label class="plan-calendar__label" for="date-25">25</label>
-            </td>
-            <td class="plan-calendar__date">
-              <input
-                class="plan-calendar__input visually-hidden"
-                type="checkbox"
-                name="date"
-                id="date-26" value="26"
-                checked
-              >
-              <label class="plan-calendar__label plan-calendar__label--selected" for="date-26">26</label>
-            </td>
-            <td class="plan-calendar__date">
-              <input
-                class="plan-calendar__input visually-hidden"
-                type="checkbox"
-                name="date"
-                id="date-27" value="27"
-                checked
-              >
-              <label class="plan-calendar__label plan-calendar__label--selected" for="date-27">27</label>
-            </td>
-            <td class="plan-calendar__date">
-              <input
-                class="plan-calendar__input visually-hidden"
-                type="checkbox"
-                name="date"
-                id="date-28" value="28"
-                checked
-              >
-              <label class="plan-calendar__label plan-calendar__label--selected" for="date-28">28</label>
-            </td>
-            <td class="plan-calendar__date">
-              <input
-                class="plan-calendar__input visually-hidden"
-                type="checkbox"
-                name="date"
-                id="date-29" value="29"
-              >
-              <label class="plan-calendar__label plan-calendar__label--suggested" for="date-29">29</label>
-            </td>
-          </tr>
-          <tr class="plan-calendar__row ">
-            <td class="plan-calendar__date">
-              <input
-                class="plan-calendar__input visually-hidden"
-                type="checkbox"
-                name="date"
-                id="date-30" value="30"
-              >
-              <label class="plan-calendar__label plan-calendar__label--suggested" for="date-30">30</label>
-            </td>
-            <td class="plan-calendar__date">
-              <input
-                class="plan-calendar__input visually-hidden"
-                type="checkbox"
-                name="date"
-                id="date-31" value="31"
-              >
-              <label class="plan-calendar__label plan-calendar__label--suggested" for="date-31">31</label>
-            </td>
-            <td class="plan-calendar__date">
-              <input
-                class="plan-calendar__input visually-hidden"
-                type="checkbox"
-                name="date"
-                id="date-1-next-mount"
-                value="1">
-              <label class="plan-calendar__label plan-calendar__label--suggested" for="date-1-next-mount">1</label>
-            </td>
-            <td class="plan-calendar__date">
-              <input
-                class="plan-calendar__input visually-hidden"
-                type="checkbox"
-                name="date"
-                id="date-2-next-mount"
-                value="2">
-              <label class="plan-calendar__label plan-calendar__label--suggested" for="date-2-next-mount">2</label>
-            </td>
-            <td class="plan-calendar__date">
-              <input
-                class="plan-calendar__input visually-hidden"
-                type="checkbox"
-                name="date"
-                id="date-3-next-mount"
-                value="3">
-              <label class="plan-calendar__label plan-calendar__label--suggested" for="date-3-next-mount">3</label>
-            </td>
-            <td class="plan-calendar__date">
-              <input
-                class="plan-calendar__input visually-hidden"
-                type="checkbox"
-                name="date"
-                id="date-4-next-mount"
-                value="4">
-              <label class="plan-calendar__label plan-calendar__label--suggested" for="date-4-next-mount">4</label>
-            </td>
-            <td class="plan-calendar__date">
-              <input
-                class="plan-calendar__input visually-hidden"
-                type="checkbox"
-                name="date"
-                id="date-5-next-mount"
-                value="5">
-              <label class="plan-calendar__label plan-calendar__label--suggested" for="date-5-next-mount">5</label>
-            </td>
-          </tr>
-          </tbody>
-        </table>
-      </fieldset>
-
-      <a href="#" class="plan__button-next-step">Следующий шаг</a>
-    </section>
-    <section class="plan__step">
-      <h3 class="plan__title">Шаг 2. Маршрут</h3>
-
-      <p class="plan__text">Укажите страны, которые вы хотели посетить. Это может быть одна или сразу несколько.</p>
-
-      <div class="plan-countries plan__countries">
-        <div class="plan-countries__add-countries">
-          <button type="button" class="plan-countries__button">Босния и Герцеговина</button>
-          <span class="plan-countries__flag"></span>
-          <button type="button" class="plan-countries__delete"><span class="visually-hidden">Удалить</span></button>
-        </div>
-        <div class="plan-countries__add-countries">
-          <button type="button" class="plan-countries__button">Чехия</button>
-          <span class="plan-countries__flag"></span>
-          <button type="button" class="plan-countries__delete"><span class="visually-hidden">Удалить</span></button>
-        </div>
-        <div class="plan-countries__add-countries">
-          <button type="button" class="plan-countries__button">Выберите страну</button>
-          <button type="button" class="plan-countries__delete"><span class="visually-hidden">Удалить</span></button>
-        </div>
-        <div class="plan-countries__add-countries">
-          <button type="button" class="plan-countries__button plan-countries__button--add-countries">
-            Добавить страну
-          </button>
-        </div>
-      </div>
-
-      <div class="plan-countries plan__countries">
-        <ul class="countries-alphabet plan__countries-alphabet">
-          <li><a href="#" class="countries-alphabet__item countries-alphabet__item--active">А</a></li>
-          <li><a href="#" class="countries-alphabet__item">Б</a></li>
-          <li><a href="#" class="countries-alphabet__item">В</a></li>
-          <li><a href="#" class="countries-alphabet__item">Г</a></li>
-          <li><a href="#" class="countries-alphabet__item">Д</a></li>
-          <li><a href="#" class="countries-alphabet__item">Е</a></li>
-          <li><a href="#" class="countries-alphabet__item">З</a></li>
-          <li><a href="#" class="countries-alphabet__item">И</a></li>
-          <li><a href="#" class="countries-alphabet__item">К</a></li>
-          <li><a href="#" class="countries-alphabet__item">Л</a></li>
-          <li><a href="#" class="countries-alphabet__item">М</a></li>
-          <li><a href="#" class="countries-alphabet__item">Н</a></li>
-          <li><a href="#" class="countries-alphabet__item">О</a></li>
-          <li><a href="#" class="countries-alphabet__item">П</a></li>
-          <li><a href="#" class="countries-alphabet__item">Р</a></li>
-          <li><a href="#" class="countries-alphabet__item">С</a></li>
-          <li><a href="#" class="countries-alphabet__item">Т</a></li>
-          <li><a href="#" class="countries-alphabet__item">У</a></li>
-          <li><a href="#" class="countries-alphabet__item">Ф</a></li>
-          <li><a href="#" class="countries-alphabet__item">Х</a></li>
-          <li><a href="#" class="countries-alphabet__item">Ч</a></li>
-          <li><a href="#" class="countries-alphabet__item">Ш</a></li>
-          <li><a href="#" class="countries-alphabet__item">Э</a></li>
-          <li><a href="#" class="countries-alphabet__item">Ю</a></li>
-          <li><a href="#" class="countries-alphabet__item">Я</a></li>
-        </ul>
-
-        <div class="countries-item countries-item--active plan-countries__item">
-          <ul class="countries-list">
-            <li><a href="#" class="countries-list__link">Австралия</a></li>
-            <li><a href="#" class="countries-list__link">Австрия</a></li>
-            <li><a href="#" class="countries-list__link">Азербайджан</a></li>
-            <li><a href="#" class="countries-list__link">Албания</a></li>
-            <li><a href="#" class="countries-list__link">Алжир</a></li>
-            <li><a href="#" class="countries-list__link">Ангола</a></li>
-            <li><a href="#" class="countries-list__link">Андорра</a></li>
-            <li><a href="#" class="countries-list__link">Антигуа и Барбуда</a></li>
-            <li><a href="#" class="countries-list__link">Аргентина</a></li>
-            <li><a href="#" class="countries-list__link">Армения</a></li>
-            <li><a href="#" class="countries-list__link">Афганистан</a></li>
-          </ul>
-        </div>
-        <div class="countries-item plan-countries__item">
-          <ul class="countries-list">
-            <li><a href="#" class="countries-list__link">Багамские Острова</a></li>
-            <li><a href="#" class="countries-list__link">Бангладеш</a></li>
-            <li><a href="#" class="countries-list__link">Барбадос</a></li>
-            <li><a href="#" class="countries-list__link">Бахрейн</a></li>
-            <li><a href="#" class="countries-list__link">Белоруссия</a></li>
-            <li><a href="#" class="countries-list__link">Белиз</a></li>
-            <li><a href="#" class="countries-list__link">Бельгия</a></li>
-            <li><a href="#" class="countries-list__link">Бенин</a></li>
-            <li><a href="#" class="countries-list__link">Болгария</a></li>
-            <li><a href="#" class="countries-list__link">Боливия</a></li>
-            <li><a href="#" class="countries-list__link">Босния и Герцеговина</a></li>
-            <li><a href="#" class="countries-list__link">Ботсвана</a></li>
-            <li><a href="#" class="countries-list__link">Бразилия</a></li>
-            <li><a href="#" class="countries-list__link">Бруней</a></li>
-            <li><a href="#" class="countries-list__link">Буркина-Фасо</a></li>
-            <li><a href="#" class="countries-list__link">Бурунди</a></li>
-            <li><a href="#" class="countries-list__link">Бутан</a></li>
-          </ul>
-        </div>
-        <div class="countries-item plan-countries__item">
-          <ul class="countries-list">
-            <li><a href="#" class="countries-list__link">Вануату</a></li>
-            <li><a href="#" class="countries-list__link">Великобритания</a></li>
-            <li><a href="#" class="countries-list__link">Венгрия</a></li>
-            <li><a href="#" class="countries-list__link">Венесуэла</a></li>
-            <li><a href="#" class="countries-list__link">Восточный Тимор</a></li>
-            <li><a href="#" class="countries-list__link">Вьетнам</a></li>
-          </ul>
-        </div>
-        <div class="countries-item plan-countries__item">
-          <ul class="countries-list">
-            <li><a href="#" class="countries-list__link">Габон</a></li>
-            <li><a href="#" class="countries-list__link">Гаити</a></li>
-            <li><a href="#" class="countries-list__link">Гайана</a></li>
-            <li><a href="#" class="countries-list__link">Гамбия</a></li>
-            <li><a href="#" class="countries-list__link">Гана</a></li>
-            <li><a href="#" class="countries-list__link">Гватемала</a></li>
-            <li><a href="#" class="countries-list__link">Гвинея</a></li>
-            <li><a href="#" class="countries-list__link">Гвинея-Бисау</a></li>
-            <li><a href="#" class="countries-list__link">Германия</a></li>
-            <li><a href="#" class="countries-list__link">Гондурас</a></li>
-            <li><a href="#" class="countries-list__link">Гренада</a></li>
-            <li><a href="#" class="countries-list__link">Греция</a></li>
-            <li><a href="#" class="countries-list__link">Грузия</a></li>
-          </ul>
-        </div>
-        <div class="countries-item plan-countries__item">
-          <ul class="countries-list">
-            <li><a href="#" class="countries-list__link">Дания</a></li>
-            <li><a href="#" class="countries-list__link">Джибути</a></li>
-            <li><a href="#" class="countries-list__link">Доминика</a></li>
-            <li><a href="#" class="countries-list__link">Доминикана</a></li>
-          </ul>
-        </div>
-        <div class="countries-item plan-countries__item">
-          <ul class="countries-list">
-            <li><a href="#" class="countries-list__link">Египет</a></li>
-          </ul>
-        </div>
-        <div class="countries-item plan-countries__item">
-          <ul class="countries-list">
-            <li><a href="#" class="countries-list__link">Замбия</a></li>
-            <li><a href="#" class="countries-list__link">Зимбабве</a></li>
-          </ul>
-        </div>
-        <div class="countries-item plan-countries__item">
-          <ul class="countries-list">
-            <li><a href="#" class="countries-list__link">Израиль</a></li>
-            <li><a href="#" class="countries-list__link">Индия</a></li>
-            <li><a href="#" class="countries-list__link">Индонезия</a></li>
-            <li><a href="#" class="countries-list__link">Иордания</a></li>
-            <li><a href="#" class="countries-list__link">Ирак</a></li>
-            <li><a href="#" class="countries-list__link">Иран</a></li>
-            <li><a href="#" class="countries-list__link">Ирландия</a></li>
-            <li><a href="#" class="countries-list__link">Исландия</a></li>
-            <li><a href="#" class="countries-list__link">Испания</a></li>
-            <li><a href="#" class="countries-list__link">Италия</a></li>
-          </ul>
-        </div>
-        <div class="countries-item plan-countries__item">
-          <ul class="countries-list">
-            <li><a href="#" class="countries-list__link">Кабо-Верде</a></li>
-            <li><a href="#" class="countries-list__link">Казахстан</a></li>
-            <li><a href="#" class="countries-list__link">Камбоджа</a></li>
-            <li><a href="#" class="countries-list__link">Камерун</a></li>
-            <li><a href="#" class="countries-list__link">Канада</a></li>
-            <li><a href="#" class="countries-list__link">Катар</a></li>
-            <li><a href="#" class="countries-list__link">Кения</a></li>
-            <li><a href="#" class="countries-list__link">Кипр</a></li>
-            <li><a href="#" class="countries-list__link">Киргизия</a></li>
-            <li><a href="#" class="countries-list__link">Кирибати</a></li>
-            <li><a href="#" class="countries-list__link">Китай</a></li>
-            <li><a href="#" class="countries-list__link">Колумбия</a></li>
-          </ul>
-        </div>
-        <div class="countries-item plan-countries__item">
-          <ul class="countries-list">
-            <li><a href="#" class="countries-list__link">Лаос</a></li>
-            <li><a href="#" class="countries-list__link">Латвия</a></li>
-            <li><a href="#" class="countries-list__link">Лесото</a></li>
-            <li><a href="#" class="countries-list__link">Либерия</a></li>
-            <li><a href="#" class="countries-list__link">Ливан</a></li>
-            <li><a href="#" class="countries-list__link">Ливия</a></li>
-            <li><a href="#" class="countries-list__link">Литва</a></li>
-            <li><a href="#" class="countries-list__link">Лихтенштейн</a></li>
-            <li><a href="#" class="countries-list__link">Люксембург</a></li>
-          </ul>
-        </div>
-        <div class="countries-item plan-countries__item">
-          <ul class="countries-list">
-            <li><a href="#" class="countries-list__link">Маврикий</a></li>
-            <li><a href="#" class="countries-list__link">Мавритания</a></li>
-            <li><a href="#" class="countries-list__link">Мадагаскар</a></li>
-            <li><a href="#" class="countries-list__link">Малави</a></li>
-            <li><a href="#" class="countries-list__link">Малайзия</a></li>
-            <li><a href="#" class="countries-list__link">Мали</a></li>
-            <li><a href="#" class="countries-list__link">Мальдивы</a></li>
-            <li><a href="#" class="countries-list__link">Мальта</a></li>
-            <li><a href="#" class="countries-list__link">Марокко</a></li>
-          </ul>
-        </div>
-        <div class="countries-item plan-countries__item">
-          <ul class="countries-list">
-            <li><a href="#" class="countries-list__link">Намибия</a></li>
-            <li><a href="#" class="countries-list__link">Науру</a></li>
-            <li><a href="#" class="countries-list__link">Непал</a></li>
-            <li><a href="#" class="countries-list__link">Нигер</a></li>
-            <li><a href="#" class="countries-list__link">Нигерия</a></li>
-            <li><a href="#" class="countries-list__link">Нидерланд</a></li>
-            <li><a href="#" class="countries-list__link">Никарагуа</a></li>
-            <li><a href="#" class="countries-list__link">Новая Зеландия</a></li>
-            <li><a href="#" class="countries-list__link">Норвегия</a></li>
-          </ul>
-        </div>
-        <div class="countries-item plan-countries__item">
-          <ul class="countries-list">
-            <li><a href="#" class="countries-list__link">ОАЭ</a></li>
-            <li><a href="#" class="countries-list__link">Оман</a></li>
-          </ul>
-        </div>
-        <div class="countries-item plan-countries__item">
-          <ul class="countries-list">
-            <li><a href="#" class="countries-list__link">Пакистан</a></li>
-            <li><a href="#" class="countries-list__link">Палау</a></li>
-            <li><a href="#" class="countries-list__link">Панама</a></li>
-            <li><a href="#" class="countries-list__link">Папуа - Новая Гвинея</a></li>
-            <li><a href="#" class="countries-list__link">Парагвай</a></li>
-            <li><a href="#" class="countries-list__link">Перу</a></li>
-            <li><a href="#" class="countries-list__link">Польша</a></li>
-            <li><a href="#" class="countries-list__link">Португалия</a></li>
-          </ul>
-        </div>
-        <div class="countries-item plan-countries__item">
-          <ul class="countries-list">
-            <li><a href="#" class="countries-list__link">Руанда</a></li>
-            <li><a href="#" class="countries-list__link">Румыния</a></li>
-            <li><a href="#" class="countries-list__link">Россия</a></li>
-          </ul>
-        </div>
-        <div class="countries-item plan-countries__item">
-          <ul class="countries-list">
-            <li><a href="#" class="countries-list__link">Сальвадор</a></li>
-            <li><a href="#" class="countries-list__link">Самоа</a></li>
-            <li><a href="#" class="countries-list__link">Сан-Марино</a></li>
-            <li><a href="#" class="countries-list__link">Саудовская Аравия</a></li>
-            <li><a href="#" class="countries-list__link">Сейшелы</a></li>
-            <li><a href="#" class="countries-list__link">Сенегал</a></li>
-            <li><a href="#" class="countries-list__link">Сербия</a></li>
-            <li><a href="#" class="countries-list__link">Сингапур</a></li>
-            <li><a href="#" class="countries-list__link">Сирия</a></li>
-            <li><a href="#" class="countries-list__link">Словакия</a></li>
-            <li><a href="#" class="countries-list__link">Словения</a></li>
-            <li><a href="#" class="countries-list__link">США</a></li>
-          </ul>
-        </div>
-        <div class="countries-item plan-countries__item">
-          <ul class="countries-list">
-            <li><a href="#" class="countries-list__link">Таджикиста</a></li>
-            <li><a href="#" class="countries-list__link">Таиланд</a></li>
-            <li><a href="#" class="countries-list__link">Танзания</a></li>
-            <li><a href="#" class="countries-list__link">Того</a></li>
-            <li><a href="#" class="countries-list__link">Тонга</a></li>
-            <li><a href="#" class="countries-list__link">Тринидад и Тобаго</a></li>
-            <li><a href="#" class="countries-list__link">Тувалу</a></li>
-            <li><a href="#" class="countries-list__link">Тунис</a></li>
-            <li><a href="#" class="countries-list__link">Туркмения</a></li>
-            <li><a href="#" class="countries-list__link">Турция</a></li>
-          </ul>
-        </div>
-        <div class="countries-item plan-countries__item">
-          <ul class="countries-list">
-            <li><a href="#" class="countries-list__link">Уганда</a></li>
-            <li><a href="#" class="countries-list__link">Узбекистан</a></li>
-            <li><a href="#" class="countries-list__link">Украина</a></li>
-            <li><a href="#" class="countries-list__link">Уругвай</a></li>
-          </ul>
-        </div>
-        <div class="countries-item plan-countries__item">
-          <ul class="countries-list">
-            <li><a href="#" class="countries-list__link">Фиджи</a></li>
-            <li><a href="#" class="countries-list__link">Филиппины</a></li>
-            <li><a href="#" class="countries-list__link">Финляндия</a></li>
-            <li><a href="#" class="countries-list__link">Франция</a></li>
-          </ul>
-        </div>
-        <div class="countries-item plan-countries__item">
-          <ul class="countries-list">
-            <li><a href="#" class="countries-list__link">Хорватия</a></li>
-          </ul>
-        </div>
-        <div class="countries-item plan-countries__item">
-          <ul class="countries-list">
-            <li><a href="#" class="countries-list__link">Чад</a></li>
-            <li><a href="#" class="countries-list__link">Черногория</a></li>
-            <li><a href="#" class="countries-list__link">Чехия</a></li>
-            <li><a href="#" class="countries-list__link">Чили</a></li>
-          </ul>
-        </div>
-        <div class="countries-item plan-countries__item">
-          <ul class="countries-list">
-            <li><a href="#" class="countries-list__link">Швейцария</a></li>
-            <li><a href="#" class="countries-list__link">Швеция</a></li>
-            <li><a href="#" class="countries-list__link">Шри-Ланка</a></li>
-          </ul>
-        </div>
-        <div class="countries-item plan-countries__item">
-          <ul class="countries-list">
-            <li><a href="#" class="countries-list__link">Эквадор</a></li>
-            <li><a href="#" class="countries-list__link">Эритрея</a></li>
-            <li><a href="#" class="countries-list__link">Эсватини</a></li>
-            <li><a href="#" class="countries-list__link">Эстония</a></li>
-            <li><a href="#" class="countries-list__link">Эфиопия</a></li>
-          </ul>
-        </div>
-        <div class="countries-item plan-countries__item">
-          <ul class="countries-list">
-            <li><a href="#" class="countries-list__link">ЮАР</a></li>
-            <li><a href="#" class="countries-list__link">Южный Судан</a></li>
-          </ul>
-        </div>
-        <div class="countries-item plan-countries__item">
-          <ul class="countries-list">
-            <li><a href="#" class="countries-list__link">Ямайка</a></li>
-            <li><a href="#" class="countries-list__link">Япония</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <a href="#" class="plan__button-next-step">Следующий шаг</a>
-      <a href="#" class="plan__button-last-step">На шаг назад</a>
-
-    </section>
-    <section class="plan__step">
-      <h3 class="plan__title">Шаг 3. Развлечения</h3>
-
-      <p class="plan__text">
-        Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.
-      </p>
-
-      <ul class="plan-list plan__list">
-        <li class="plan-list__item">
-          <h4 class="plan-list__title">Босния и Герцеговина</h4>
-          <label for="plan-text-field-1" class="visually-hidden">План действий</label>
-          <textarea
-            name="plan-text"
-            id="plan-text-field-1"
-            class="plan-list__text"
-            placeholder="План действий"></textarea>
-        </li>
-        <li class="plan-list__item">
-          <h4 class="plan-list__title">Чехия</h4>
-          <label for="plan-text-field-2" class="visually-hidden">План действий</label>
-          <textarea
-            name="plan-text"
-            id="plan-text-field-2"
-            class="plan-list__text"
-            placeholder="План действий">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.
-          </textarea>
-        </li>
+      <ul class="plan__markers">
+        <li class="plan__marker"><span class="visually-hidden">Шаг 1</span></li>
+        <li class="plan__marker"><span class="visually-hidden">Шаг 2</span></li>
+        <li class="plan__marker"><span class="visually-hidden">Шаг 3</span></li>
       </ul>
 
-      <button type="submit" class="plan__button-next-step">Отправить</button>
-      <a href="#" class="plan__button-last-step">На шаг назад</a>
-    </section>
+      <section class="plan__step">
+        <h3 class="plan__title">Шаг 1. Даты пребывания</h3>
+
+        <p class="plan__text">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку
+          и ее предполагаемую длительность.</p>
+
+        <fieldset class="plan__item">
+          <label class="plan__label" for="companions-field">Ищу попутчиков:</label>
+          <span class="plan__unit">чел.</span>
+
+          <div class="plan-number plan__number">
+            <button class="plan-number__button plan-number__button--minus">
+              <span class="visually-hidden">Минус</span>
+            </button>
+            <input
+              type="text"
+              name="companions"
+              id="companions-field"
+              class="plan-number__input"
+              placeholder="2">
+            <button class="plan-number__button plan-number__button--plus">
+              <span class="visually-hidden">Плюс</span>
+            </button>
+          </div>
+        </fieldset>
+
+
+        <fieldset class="plan__item">
+          <input
+            type="checkbox"
+            name="with-children"
+            id="with-children-field"
+            class="plan__checkbox visually-hidden"
+            checked>
+          <label for="with-children-field" class="plan__checkbox-label">Можно с детьми</label>
+        </fieldset>
+
+        <fieldset class="plan__item">
+          <label class="plan__label" for="duration-field">Длительность:</label>
+          <span class="plan__unit">дн.</span>
+
+          <div class="plan-number plan__number">
+            <button class="plan-number__button plan-number__button--minus">
+              <span class="visually-hidden">Минус</span>
+            </button>
+            <input
+              type="text"
+              name="duration"
+              id="duration-field"
+              class="plan-number__input"
+              placeholder="2">
+            <button class="plan-number__button plan-number__button--plus">
+              <span class="visually-hidden">Плюс</span>
+            </button>
+          </div>
+        </fieldset>
+
+        <fieldset class="plan-calendar plan__calendar">
+          <div class="plan-calendar__header">
+            <button class="plan-calendar__button plan-calendar__button--back">Назад</button>
+            <p class="plan-calendar__month">Март 2019</p>
+            <button class="plan-calendar__button plan-calendar__button--forward">Вперед</button>
+          </div>
+
+          <table class="plan-calendar__table">
+            <tbody>
+            <tr class="plan-calendar__week">
+              <th class="plan-calendar__day">П</th>
+              <th class="plan-calendar__day">В</th>
+              <th class="plan-calendar__day">С</th>
+              <th class="plan-calendar__day">Ч</th>
+              <th class="plan-calendar__day">П</th>
+              <th class="plan-calendar__day plan-calendar__day--weekend">С</th>
+              <th class="plan-calendar__day plan-calendar__day--weekend">В</th>
+            </tr>
+            <tr class="plan-calendar__row">
+              <td class="plan-calendar__date">
+                <input
+                  class="plan-calendar__input visually-hidden"
+                  type="checkbox"
+                  name="date"
+                  id="date-23-last-mount"
+                  value="23">
+                <label class="plan-calendar__label" for="date-23-last-mount">23</label>
+              </td>
+              <td class="plan-calendar__date">
+                <input
+                  class="plan-calendar__input visually-hidden"
+                  type="checkbox"
+                  name="date"
+                  id="date-24-last-mount"
+                  value="24">
+                <label class="plan-calendar__label" for="date-24-last-mount">24</label>
+              </td>
+              <td class="plan-calendar__date">
+                <input
+                  class="plan-calendar__input visually-hidden"
+                  type="checkbox"
+                  name="date"
+                  id="date-25-last-mount"
+                  value="25">
+                <label class="plan-calendar__label" for="date-25-last-mount">25</label>
+              </td>
+              <td class="plan-calendar__date">
+                <input
+                  class="plan-calendar__input visually-hidden"
+                  type="checkbox"
+                  name="date"
+                  id="date-26-last-mount"
+                  value="26">
+                <label class="plan-calendar__label" for="date-26-last-mount">26</label>
+              </td>
+              <td class="plan-calendar__date">
+                <input
+                  class="plan-calendar__input visually-hidden"
+                  type="checkbox"
+                  name="date"
+                  id="date-27-last-mount"
+                  value="27">
+                <label class="plan-calendar__label" for="date-27-last-mount">27</label>
+              </td>
+              <td class="plan-calendar__date">
+                <input
+                  class="plan-calendar__input visually-hidden"
+                  type="checkbox"
+                  name="date"
+                  id="date-28-last-mount"
+                  value="28">
+                <label class="plan-calendar__label" for="date-28-last-mount">28</label>
+              </td>
+              <td class="plan-calendar__date">
+                <input
+                  class="plan-calendar__input visually-hidden"
+                  type="checkbox"
+                  name="date"
+                  id="date-1" value="1">
+
+                <label class="plan-calendar__label" for="date-1">1</label>
+              </td>
+            </tr>
+            <tr class="plan-calendar__row">
+              <td class="plan-calendar__date">
+                <input
+                  class="plan-calendar__input visually-hidden"
+                  type="checkbox"
+                  name="date"
+                  id="date-2" value="2">
+
+                <label class="plan-calendar__label" for="date-2">2</label>
+              </td>
+              <td class="plan-calendar__date">
+                <input
+                  class="plan-calendar__input visually-hidden"
+                  type="checkbox"
+                  name="date"
+                  id="date-3" value="3">
+
+                <label class="plan-calendar__label" for="date-3">3</label>
+              </td>
+              <td class="plan-calendar__date">
+                <input
+                  class="plan-calendar__input visually-hidden"
+                  type="checkbox"
+                  name="date"
+                  id="date-4" value="4">
+
+                <label class="plan-calendar__label" for="date-4">4</label>
+              </td>
+              <td class="plan-calendar__date">
+                <input
+                  class="plan-calendar__input visually-hidden"
+                  type="checkbox"
+                  name="date"
+                  id="date-5" value="5">
+
+                <label class="plan-calendar__label" for="date-5">5</label>
+              </td>
+              <td class="plan-calendar__date">
+                <input
+                  class="plan-calendar__input visually-hidden"
+                  type="checkbox"
+                  name="date"
+                  id="date-6" value="6">
+
+                <label class="plan-calendar__label" for="date-6">6</label>
+              </td>
+              <td class="plan-calendar__date">
+                <input
+                  class="plan-calendar__input visually-hidden"
+                  type="checkbox"
+                  name="date"
+                  id="date-7" value="7">
+
+                <label class="plan-calendar__label" for="date-7">7</label>
+              </td>
+              <td class="plan-calendar__date">
+                <input
+                  class="plan-calendar__input visually-hidden"
+                  type="checkbox"
+                  name="date"
+                  id="date-8" value="8">
+
+                <label class="plan-calendar__label" for="date-8">8</label>
+              </td>
+            </tr>
+            <tr class="plan-calendar__row">
+              <td class="plan-calendar__date">
+                <input
+                  class="plan-calendar__input visually-hidden"
+                  type="checkbox"
+                  name="date"
+                  id="date-9" value="9">
+
+                <label class="plan-calendar__label" for="date-9">9</label>
+              </td>
+              <td class="plan-calendar__date">
+                <input
+                  class="plan-calendar__input visually-hidden"
+                  type="checkbox"
+                  name="date"
+                  id="date-10" value="10"
+                >
+                <label class="plan-calendar__label" for="date-10">10</label>
+              </td>
+              <td class="plan-calendar__date">
+                <input
+                  class="plan-calendar__input visually-hidden"
+                  type="checkbox"
+                  name="date"
+                  id="date-11" value="11"
+                >
+                <label class="plan-calendar__label" for="date-11">11</label>
+              </td>
+              <td class="plan-calendar__date">
+                <input
+                  class="plan-calendar__input visually-hidden"
+                  type="checkbox"
+                  name="date"
+                  id="date-12" value="12"
+                >
+                <label class="plan-calendar__label" for="date-12">12</label>
+              </td>
+              <td class="plan-calendar__date">
+                <input
+                  class="plan-calendar__input visually-hidden"
+                  type="checkbox"
+                  name="date"
+                  id="date-13" value="13"
+                >
+                <label class="plan-calendar__label" for="date-13">13</label>
+              </td>
+              <td class="plan-calendar__date">
+                <input
+                  class="plan-calendar__input visually-hidden"
+                  type="checkbox"
+                  name="date"
+                  id="date-14" value="14"
+                >
+                <label class="plan-calendar__label" for="date-14">14</label>
+              </td>
+              <td class="plan-calendar__date">
+                <input
+                  class="plan-calendar__input visually-hidden"
+                  type="checkbox"
+                  name="date"
+                  id="date-15" value="15"
+                >
+                <label class="plan-calendar__label" for="date-15">15</label>
+              </td>
+            </tr>
+            <tr class="plan-calendar__row">
+              <td class="plan-calendar__date">
+                <input
+                  class="plan-calendar__input visually-hidden"
+                  type="checkbox"
+                  name="date"
+                  id="date-16" value="16"
+                >
+                <label class="plan-calendar__label" for="date-16">16</label>
+              </td>
+              <td class="plan-calendar__date">
+                <input
+                  class="plan-calendar__input visually-hidden"
+                  type="checkbox"
+                  name="date"
+                  id="date-17" value="17"
+                >
+                <label class="plan-calendar__label" for="date-17">17</label>
+              </td>
+              <td class="plan-calendar__date">
+                <input
+                  class="plan-calendar__input visually-hidden"
+                  type="checkbox"
+                  name="date"
+                  id="date-18" value="18"
+                >
+                <label class="plan-calendar__label" for="date-18">18</label>
+              </td>
+              <td class="plan-calendar__date">
+                <input
+                  class="plan-calendar__input visually-hidden"
+                  type="checkbox"
+                  name="date"
+                  id="date-19" value="19"
+                >
+                <label class="plan-calendar__label" for="date-19">19</label>
+              </td>
+              <td class="plan-calendar__date">
+                <input
+                  class="plan-calendar__input visually-hidden"
+                  type="checkbox"
+                  name="date"
+                  id="date-20" value="20"
+                >
+                <label class="plan-calendar__label" for="date-20">20</label>
+              </td>
+              <td class="plan-calendar__date">
+                <input
+                  class="plan-calendar__input visually-hidden"
+                  type="checkbox"
+                  name="date"
+                  id="date-21" value="21"
+                >
+                <label class="plan-calendar__label" for="date-21">21</label>
+              </td>
+              <td class="plan-calendar__date">
+                <input
+                  class="plan-calendar__input visually-hidden"
+                  type="checkbox"
+                  name="date"
+                  id="date-22" value="22"
+                >
+                <label class="plan-calendar__label" for="date-22">22</label>
+              </td>
+            </tr>
+            <tr class="plan-calendar__row">
+              <td class="plan-calendar__date">
+                <input
+                  class="plan-calendar__input visually-hidden"
+                  type="checkbox"
+                  name="date"
+                  id="date-23" value="23"
+                >
+                <label class="plan-calendar__label" for="date-23">23</label>
+              </td>
+              <td class="plan-calendar__date">
+                <input
+                  class="plan-calendar__input visually-hidden"
+                  type="checkbox"
+                  name="date"
+                  id="date-24" value="24"
+                >
+                <label class="plan-calendar__label" for="date-24">24</label>
+              </td>
+              <td class="plan-calendar__date">
+                <input
+                  class="plan-calendar__input visually-hidden"
+                  type="checkbox"
+                  name="date"
+                  id="date-25" value="25"
+                >
+                <label class="plan-calendar__label" for="date-25">25</label>
+              </td>
+              <td class="plan-calendar__date">
+                <input
+                  class="plan-calendar__input visually-hidden"
+                  type="checkbox"
+                  name="date"
+                  id="date-26" value="26"
+                  checked
+                >
+                <label class="plan-calendar__label plan-calendar__label--selected" for="date-26">26</label>
+              </td>
+              <td class="plan-calendar__date">
+                <input
+                  class="plan-calendar__input visually-hidden"
+                  type="checkbox"
+                  name="date"
+                  id="date-27" value="27"
+                  checked
+                >
+                <label class="plan-calendar__label plan-calendar__label--selected" for="date-27">27</label>
+              </td>
+              <td class="plan-calendar__date">
+                <input
+                  class="plan-calendar__input visually-hidden"
+                  type="checkbox"
+                  name="date"
+                  id="date-28" value="28"
+                  checked
+                >
+                <label class="plan-calendar__label plan-calendar__label--selected" for="date-28">28</label>
+              </td>
+              <td class="plan-calendar__date">
+                <input
+                  class="plan-calendar__input visually-hidden"
+                  type="checkbox"
+                  name="date"
+                  id="date-29" value="29"
+                >
+                <label class="plan-calendar__label plan-calendar__label--suggested" for="date-29">29</label>
+              </td>
+            </tr>
+            <tr class="plan-calendar__row ">
+              <td class="plan-calendar__date">
+                <input
+                  class="plan-calendar__input visually-hidden"
+                  type="checkbox"
+                  name="date"
+                  id="date-30" value="30"
+                >
+                <label class="plan-calendar__label plan-calendar__label--suggested" for="date-30">30</label>
+              </td>
+              <td class="plan-calendar__date">
+                <input
+                  class="plan-calendar__input visually-hidden"
+                  type="checkbox"
+                  name="date"
+                  id="date-31" value="31"
+                >
+                <label class="plan-calendar__label plan-calendar__label--suggested" for="date-31">31</label>
+              </td>
+              <td class="plan-calendar__date">
+                <input
+                  class="plan-calendar__input visually-hidden"
+                  type="checkbox"
+                  name="date"
+                  id="date-1-next-mount"
+                  value="1">
+                <label class="plan-calendar__label plan-calendar__label--suggested" for="date-1-next-mount">1</label>
+              </td>
+              <td class="plan-calendar__date">
+                <input
+                  class="plan-calendar__input visually-hidden"
+                  type="checkbox"
+                  name="date"
+                  id="date-2-next-mount"
+                  value="2">
+                <label class="plan-calendar__label plan-calendar__label--suggested" for="date-2-next-mount">2</label>
+              </td>
+              <td class="plan-calendar__date">
+                <input
+                  class="plan-calendar__input visually-hidden"
+                  type="checkbox"
+                  name="date"
+                  id="date-3-next-mount"
+                  value="3">
+                <label class="plan-calendar__label plan-calendar__label--suggested" for="date-3-next-mount">3</label>
+              </td>
+              <td class="plan-calendar__date">
+                <input
+                  class="plan-calendar__input visually-hidden"
+                  type="checkbox"
+                  name="date"
+                  id="date-4-next-mount"
+                  value="4">
+                <label class="plan-calendar__label plan-calendar__label--suggested" for="date-4-next-mount">4</label>
+              </td>
+              <td class="plan-calendar__date">
+                <input
+                  class="plan-calendar__input visually-hidden"
+                  type="checkbox"
+                  name="date"
+                  id="date-5-next-mount"
+                  value="5">
+                <label class="plan-calendar__label plan-calendar__label--suggested" for="date-5-next-mount">5</label>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </fieldset>
+
+        <a href="#" class="plan__button-next-step">Следующий шаг</a>
+      </section>
+      <section class="plan__step">
+        <h3 class="plan__title">Шаг 2. Маршрут</h3>
+
+        <p class="plan__text">Укажите страны, которые вы хотели посетить. Это может быть одна или сразу несколько.</p>
+
+        <div class="plan-countries plan__countries">
+          <div class="plan-countries__add-countries">
+            <button type="button" class="plan-countries__button">Босния и Герцеговина</button>
+            <span class="plan-countries__flag"></span>
+            <button type="button" class="plan-countries__delete"><span class="visually-hidden">Удалить</span></button>
+          </div>
+          <div class="plan-countries__add-countries">
+            <button type="button" class="plan-countries__button">Чехия</button>
+            <span class="plan-countries__flag"></span>
+            <button type="button" class="plan-countries__delete"><span class="visually-hidden">Удалить</span></button>
+          </div>
+          <div class="plan-countries__add-countries">
+            <button type="button" class="plan-countries__button">Выберите страну</button>
+            <button type="button" class="plan-countries__delete"><span class="visually-hidden">Удалить</span></button>
+          </div>
+          <div class="plan-countries__add-countries">
+            <button type="button" class="plan-countries__button plan-countries__button--add-countries">
+              Добавить страну
+            </button>
+          </div>
+        </div>
+
+        <div class="plan-countries plan__countries">
+          <ul class="countries-alphabet plan__countries-alphabet">
+            <li><a href="#" class="countries-alphabet__item countries-alphabet__item--active">А</a></li>
+            <li><a href="#" class="countries-alphabet__item">Б</a></li>
+            <li><a href="#" class="countries-alphabet__item">В</a></li>
+            <li><a href="#" class="countries-alphabet__item">Г</a></li>
+            <li><a href="#" class="countries-alphabet__item">Д</a></li>
+            <li><a href="#" class="countries-alphabet__item">Е</a></li>
+            <li><a href="#" class="countries-alphabet__item">З</a></li>
+            <li><a href="#" class="countries-alphabet__item">И</a></li>
+            <li><a href="#" class="countries-alphabet__item">К</a></li>
+            <li><a href="#" class="countries-alphabet__item">Л</a></li>
+            <li><a href="#" class="countries-alphabet__item">М</a></li>
+            <li><a href="#" class="countries-alphabet__item">Н</a></li>
+            <li><a href="#" class="countries-alphabet__item">О</a></li>
+            <li><a href="#" class="countries-alphabet__item">П</a></li>
+            <li><a href="#" class="countries-alphabet__item">Р</a></li>
+            <li><a href="#" class="countries-alphabet__item">С</a></li>
+            <li><a href="#" class="countries-alphabet__item">Т</a></li>
+            <li><a href="#" class="countries-alphabet__item">У</a></li>
+            <li><a href="#" class="countries-alphabet__item">Ф</a></li>
+            <li><a href="#" class="countries-alphabet__item">Х</a></li>
+            <li><a href="#" class="countries-alphabet__item">Ч</a></li>
+            <li><a href="#" class="countries-alphabet__item">Ш</a></li>
+            <li><a href="#" class="countries-alphabet__item">Э</a></li>
+            <li><a href="#" class="countries-alphabet__item">Ю</a></li>
+            <li><a href="#" class="countries-alphabet__item">Я</a></li>
+          </ul>
+
+          <div class="countries-item countries-item--active plan-countries__item">
+            <ul class="countries-list">
+              <li><a href="#" class="countries-list__link">Австралия</a></li>
+              <li><a href="#" class="countries-list__link">Австрия</a></li>
+              <li><a href="#" class="countries-list__link">Азербайджан</a></li>
+              <li><a href="#" class="countries-list__link">Албания</a></li>
+              <li><a href="#" class="countries-list__link">Алжир</a></li>
+              <li><a href="#" class="countries-list__link">Ангола</a></li>
+              <li><a href="#" class="countries-list__link">Андорра</a></li>
+              <li><a href="#" class="countries-list__link">Антигуа и Барбуда</a></li>
+              <li><a href="#" class="countries-list__link">Аргентина</a></li>
+              <li><a href="#" class="countries-list__link">Армения</a></li>
+              <li><a href="#" class="countries-list__link">Афганистан</a></li>
+            </ul>
+          </div>
+          <div class="countries-item plan-countries__item">
+            <ul class="countries-list">
+              <li><a href="#" class="countries-list__link">Багамские Острова</a></li>
+              <li><a href="#" class="countries-list__link">Бангладеш</a></li>
+              <li><a href="#" class="countries-list__link">Барбадос</a></li>
+              <li><a href="#" class="countries-list__link">Бахрейн</a></li>
+              <li><a href="#" class="countries-list__link">Белоруссия</a></li>
+              <li><a href="#" class="countries-list__link">Белиз</a></li>
+              <li><a href="#" class="countries-list__link">Бельгия</a></li>
+              <li><a href="#" class="countries-list__link">Бенин</a></li>
+              <li><a href="#" class="countries-list__link">Болгария</a></li>
+              <li><a href="#" class="countries-list__link">Боливия</a></li>
+              <li><a href="#" class="countries-list__link">Босния и Герцеговина</a></li>
+              <li><a href="#" class="countries-list__link">Ботсвана</a></li>
+              <li><a href="#" class="countries-list__link">Бразилия</a></li>
+              <li><a href="#" class="countries-list__link">Бруней</a></li>
+              <li><a href="#" class="countries-list__link">Буркина-Фасо</a></li>
+              <li><a href="#" class="countries-list__link">Бурунди</a></li>
+              <li><a href="#" class="countries-list__link">Бутан</a></li>
+            </ul>
+          </div>
+          <div class="countries-item plan-countries__item">
+            <ul class="countries-list">
+              <li><a href="#" class="countries-list__link">Вануату</a></li>
+              <li><a href="#" class="countries-list__link">Великобритания</a></li>
+              <li><a href="#" class="countries-list__link">Венгрия</a></li>
+              <li><a href="#" class="countries-list__link">Венесуэла</a></li>
+              <li><a href="#" class="countries-list__link">Восточный Тимор</a></li>
+              <li><a href="#" class="countries-list__link">Вьетнам</a></li>
+            </ul>
+          </div>
+          <div class="countries-item plan-countries__item">
+            <ul class="countries-list">
+              <li><a href="#" class="countries-list__link">Габон</a></li>
+              <li><a href="#" class="countries-list__link">Гаити</a></li>
+              <li><a href="#" class="countries-list__link">Гайана</a></li>
+              <li><a href="#" class="countries-list__link">Гамбия</a></li>
+              <li><a href="#" class="countries-list__link">Гана</a></li>
+              <li><a href="#" class="countries-list__link">Гватемала</a></li>
+              <li><a href="#" class="countries-list__link">Гвинея</a></li>
+              <li><a href="#" class="countries-list__link">Гвинея-Бисау</a></li>
+              <li><a href="#" class="countries-list__link">Германия</a></li>
+              <li><a href="#" class="countries-list__link">Гондурас</a></li>
+              <li><a href="#" class="countries-list__link">Гренада</a></li>
+              <li><a href="#" class="countries-list__link">Греция</a></li>
+              <li><a href="#" class="countries-list__link">Грузия</a></li>
+            </ul>
+          </div>
+          <div class="countries-item plan-countries__item">
+            <ul class="countries-list">
+              <li><a href="#" class="countries-list__link">Дания</a></li>
+              <li><a href="#" class="countries-list__link">Джибути</a></li>
+              <li><a href="#" class="countries-list__link">Доминика</a></li>
+              <li><a href="#" class="countries-list__link">Доминикана</a></li>
+            </ul>
+          </div>
+          <div class="countries-item plan-countries__item">
+            <ul class="countries-list">
+              <li><a href="#" class="countries-list__link">Египет</a></li>
+            </ul>
+          </div>
+          <div class="countries-item plan-countries__item">
+            <ul class="countries-list">
+              <li><a href="#" class="countries-list__link">Замбия</a></li>
+              <li><a href="#" class="countries-list__link">Зимбабве</a></li>
+            </ul>
+          </div>
+          <div class="countries-item plan-countries__item">
+            <ul class="countries-list">
+              <li><a href="#" class="countries-list__link">Израиль</a></li>
+              <li><a href="#" class="countries-list__link">Индия</a></li>
+              <li><a href="#" class="countries-list__link">Индонезия</a></li>
+              <li><a href="#" class="countries-list__link">Иордания</a></li>
+              <li><a href="#" class="countries-list__link">Ирак</a></li>
+              <li><a href="#" class="countries-list__link">Иран</a></li>
+              <li><a href="#" class="countries-list__link">Ирландия</a></li>
+              <li><a href="#" class="countries-list__link">Исландия</a></li>
+              <li><a href="#" class="countries-list__link">Испания</a></li>
+              <li><a href="#" class="countries-list__link">Италия</a></li>
+            </ul>
+          </div>
+          <div class="countries-item plan-countries__item">
+            <ul class="countries-list">
+              <li><a href="#" class="countries-list__link">Кабо-Верде</a></li>
+              <li><a href="#" class="countries-list__link">Казахстан</a></li>
+              <li><a href="#" class="countries-list__link">Камбоджа</a></li>
+              <li><a href="#" class="countries-list__link">Камерун</a></li>
+              <li><a href="#" class="countries-list__link">Канада</a></li>
+              <li><a href="#" class="countries-list__link">Катар</a></li>
+              <li><a href="#" class="countries-list__link">Кения</a></li>
+              <li><a href="#" class="countries-list__link">Кипр</a></li>
+              <li><a href="#" class="countries-list__link">Киргизия</a></li>
+              <li><a href="#" class="countries-list__link">Кирибати</a></li>
+              <li><a href="#" class="countries-list__link">Китай</a></li>
+              <li><a href="#" class="countries-list__link">Колумбия</a></li>
+            </ul>
+          </div>
+          <div class="countries-item plan-countries__item">
+            <ul class="countries-list">
+              <li><a href="#" class="countries-list__link">Лаос</a></li>
+              <li><a href="#" class="countries-list__link">Латвия</a></li>
+              <li><a href="#" class="countries-list__link">Лесото</a></li>
+              <li><a href="#" class="countries-list__link">Либерия</a></li>
+              <li><a href="#" class="countries-list__link">Ливан</a></li>
+              <li><a href="#" class="countries-list__link">Ливия</a></li>
+              <li><a href="#" class="countries-list__link">Литва</a></li>
+              <li><a href="#" class="countries-list__link">Лихтенштейн</a></li>
+              <li><a href="#" class="countries-list__link">Люксембург</a></li>
+            </ul>
+          </div>
+          <div class="countries-item plan-countries__item">
+            <ul class="countries-list">
+              <li><a href="#" class="countries-list__link">Маврикий</a></li>
+              <li><a href="#" class="countries-list__link">Мавритания</a></li>
+              <li><a href="#" class="countries-list__link">Мадагаскар</a></li>
+              <li><a href="#" class="countries-list__link">Малави</a></li>
+              <li><a href="#" class="countries-list__link">Малайзия</a></li>
+              <li><a href="#" class="countries-list__link">Мали</a></li>
+              <li><a href="#" class="countries-list__link">Мальдивы</a></li>
+              <li><a href="#" class="countries-list__link">Мальта</a></li>
+              <li><a href="#" class="countries-list__link">Марокко</a></li>
+            </ul>
+          </div>
+          <div class="countries-item plan-countries__item">
+            <ul class="countries-list">
+              <li><a href="#" class="countries-list__link">Намибия</a></li>
+              <li><a href="#" class="countries-list__link">Науру</a></li>
+              <li><a href="#" class="countries-list__link">Непал</a></li>
+              <li><a href="#" class="countries-list__link">Нигер</a></li>
+              <li><a href="#" class="countries-list__link">Нигерия</a></li>
+              <li><a href="#" class="countries-list__link">Нидерланд</a></li>
+              <li><a href="#" class="countries-list__link">Никарагуа</a></li>
+              <li><a href="#" class="countries-list__link">Новая Зеландия</a></li>
+              <li><a href="#" class="countries-list__link">Норвегия</a></li>
+            </ul>
+          </div>
+          <div class="countries-item plan-countries__item">
+            <ul class="countries-list">
+              <li><a href="#" class="countries-list__link">ОАЭ</a></li>
+              <li><a href="#" class="countries-list__link">Оман</a></li>
+            </ul>
+          </div>
+          <div class="countries-item plan-countries__item">
+            <ul class="countries-list">
+              <li><a href="#" class="countries-list__link">Пакистан</a></li>
+              <li><a href="#" class="countries-list__link">Палау</a></li>
+              <li><a href="#" class="countries-list__link">Панама</a></li>
+              <li><a href="#" class="countries-list__link">Папуа - Новая Гвинея</a></li>
+              <li><a href="#" class="countries-list__link">Парагвай</a></li>
+              <li><a href="#" class="countries-list__link">Перу</a></li>
+              <li><a href="#" class="countries-list__link">Польша</a></li>
+              <li><a href="#" class="countries-list__link">Португалия</a></li>
+            </ul>
+          </div>
+          <div class="countries-item plan-countries__item">
+            <ul class="countries-list">
+              <li><a href="#" class="countries-list__link">Руанда</a></li>
+              <li><a href="#" class="countries-list__link">Румыния</a></li>
+              <li><a href="#" class="countries-list__link">Россия</a></li>
+            </ul>
+          </div>
+          <div class="countries-item plan-countries__item">
+            <ul class="countries-list">
+              <li><a href="#" class="countries-list__link">Сальвадор</a></li>
+              <li><a href="#" class="countries-list__link">Самоа</a></li>
+              <li><a href="#" class="countries-list__link">Сан-Марино</a></li>
+              <li><a href="#" class="countries-list__link">Саудовская Аравия</a></li>
+              <li><a href="#" class="countries-list__link">Сейшелы</a></li>
+              <li><a href="#" class="countries-list__link">Сенегал</a></li>
+              <li><a href="#" class="countries-list__link">Сербия</a></li>
+              <li><a href="#" class="countries-list__link">Сингапур</a></li>
+              <li><a href="#" class="countries-list__link">Сирия</a></li>
+              <li><a href="#" class="countries-list__link">Словакия</a></li>
+              <li><a href="#" class="countries-list__link">Словения</a></li>
+              <li><a href="#" class="countries-list__link">США</a></li>
+            </ul>
+          </div>
+          <div class="countries-item plan-countries__item">
+            <ul class="countries-list">
+              <li><a href="#" class="countries-list__link">Таджикиста</a></li>
+              <li><a href="#" class="countries-list__link">Таиланд</a></li>
+              <li><a href="#" class="countries-list__link">Танзания</a></li>
+              <li><a href="#" class="countries-list__link">Того</a></li>
+              <li><a href="#" class="countries-list__link">Тонга</a></li>
+              <li><a href="#" class="countries-list__link">Тринидад и Тобаго</a></li>
+              <li><a href="#" class="countries-list__link">Тувалу</a></li>
+              <li><a href="#" class="countries-list__link">Тунис</a></li>
+              <li><a href="#" class="countries-list__link">Туркмения</a></li>
+              <li><a href="#" class="countries-list__link">Турция</a></li>
+            </ul>
+          </div>
+          <div class="countries-item plan-countries__item">
+            <ul class="countries-list">
+              <li><a href="#" class="countries-list__link">Уганда</a></li>
+              <li><a href="#" class="countries-list__link">Узбекистан</a></li>
+              <li><a href="#" class="countries-list__link">Украина</a></li>
+              <li><a href="#" class="countries-list__link">Уругвай</a></li>
+            </ul>
+          </div>
+          <div class="countries-item plan-countries__item">
+            <ul class="countries-list">
+              <li><a href="#" class="countries-list__link">Фиджи</a></li>
+              <li><a href="#" class="countries-list__link">Филиппины</a></li>
+              <li><a href="#" class="countries-list__link">Финляндия</a></li>
+              <li><a href="#" class="countries-list__link">Франция</a></li>
+            </ul>
+          </div>
+          <div class="countries-item plan-countries__item">
+            <ul class="countries-list">
+              <li><a href="#" class="countries-list__link">Хорватия</a></li>
+            </ul>
+          </div>
+          <div class="countries-item plan-countries__item">
+            <ul class="countries-list">
+              <li><a href="#" class="countries-list__link">Чад</a></li>
+              <li><a href="#" class="countries-list__link">Черногория</a></li>
+              <li><a href="#" class="countries-list__link">Чехия</a></li>
+              <li><a href="#" class="countries-list__link">Чили</a></li>
+            </ul>
+          </div>
+          <div class="countries-item plan-countries__item">
+            <ul class="countries-list">
+              <li><a href="#" class="countries-list__link">Швейцария</a></li>
+              <li><a href="#" class="countries-list__link">Швеция</a></li>
+              <li><a href="#" class="countries-list__link">Шри-Ланка</a></li>
+            </ul>
+          </div>
+          <div class="countries-item plan-countries__item">
+            <ul class="countries-list">
+              <li><a href="#" class="countries-list__link">Эквадор</a></li>
+              <li><a href="#" class="countries-list__link">Эритрея</a></li>
+              <li><a href="#" class="countries-list__link">Эсватини</a></li>
+              <li><a href="#" class="countries-list__link">Эстония</a></li>
+              <li><a href="#" class="countries-list__link">Эфиопия</a></li>
+            </ul>
+          </div>
+          <div class="countries-item plan-countries__item">
+            <ul class="countries-list">
+              <li><a href="#" class="countries-list__link">ЮАР</a></li>
+              <li><a href="#" class="countries-list__link">Южный Судан</a></li>
+            </ul>
+          </div>
+          <div class="countries-item plan-countries__item">
+            <ul class="countries-list">
+              <li><a href="#" class="countries-list__link">Ямайка</a></li>
+              <li><a href="#" class="countries-list__link">Япония</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <a href="#" class="plan__button-next-step">Следующий шаг</a>
+        <a href="#" class="plan__button-last-step">На шаг назад</a>
+
+      </section>
+      <section class="plan__step">
+        <h3 class="plan__title">Шаг 3. Развлечения</h3>
+
+        <p class="plan__text">
+          Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.
+        </p>
+
+        <ul class="plan-list plan__list">
+          <li class="plan-list__item">
+            <h4 class="plan-list__title">Босния и Герцеговина</h4>
+            <label for="plan-text-field-1" class="visually-hidden">План действий</label>
+            <textarea
+              name="plan-text"
+              id="plan-text-field-1"
+              class="plan-list__text"
+              placeholder="План действий"></textarea>
+          </li>
+          <li class="plan-list__item">
+            <h4 class="plan-list__title">Чехия</h4>
+            <label for="plan-text-field-2" class="visually-hidden">План действий</label>
+            <textarea
+              name="plan-text"
+              id="plan-text-field-2"
+              class="plan-list__text"
+              placeholder="План действий">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.
+          </textarea>
+          </li>
+        </ul>
+
+        <button type="submit" class="plan__button-next-step">Отправить</button>
+        <a href="#" class="plan__button-last-step">На шаг назад</a>
+      </section>
+    </div>
   </form>
 </main>
 

@@ -3,6 +3,11 @@
   padding-top: 28px;
   padding-bottom: 18px;
   color: $special-grey;
+
+  @media (min-width: $desktop-width) {
+    order: 1;
+    width: 75%;
+  }
 }
 
 .catalog__list {
@@ -22,7 +27,6 @@
   }
 
   @media (min-width: $desktop-width) {
-    display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
   }

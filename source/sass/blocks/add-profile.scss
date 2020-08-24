@@ -13,11 +13,20 @@
   padding: 0;
 }
 
+.add-profile__item {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
 .add-profile__text {
+  display: block;
   color: $special-grey;
 }
 
 .add-profile__price {
+  display: block;
   color: $special-grey;
 }
 
