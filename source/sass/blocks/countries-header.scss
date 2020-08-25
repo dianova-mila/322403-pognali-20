@@ -1,7 +1,53 @@
+.countries-header {
+  display: grid;
+  grid-template-columns: 1fr min-content;
+  grid-template-rows: min-content min-content;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: min-content;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: min-content 1fr min-content;
+  }
+}
+
 .countries-header__title {
   font-weight: 700;
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
   color: $basic-blue;
+  grid-column: 1;
+  grid-row: 1;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
+}
+
+.countries-header__button-wrapper {
+  grid-column: 2;
+  grid-row: 1;
+
+  @media (min-width: $desktop-width) {
+    grid-column: 3;
+  }
+}
+
+.countries-header__continents {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 2;
+  }
 }

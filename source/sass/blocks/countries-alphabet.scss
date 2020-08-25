@@ -1,5 +1,11 @@
 .countries-alphabet {
   list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
 }
 
 .countries-alphabet__item {

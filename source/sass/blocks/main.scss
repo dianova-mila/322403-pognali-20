@@ -1,1 +1,5 @@
-//
+.main__row {
+  @media (min-width: $desktop-width) {
+    display: flex;
+  }
+}

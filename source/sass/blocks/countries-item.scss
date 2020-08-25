@@ -4,9 +4,17 @@
   &--active {
     display: block;
   }
+
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
 }
 
 
 .countries-item__title {
   display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
 }

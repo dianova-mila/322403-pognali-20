@@ -3,6 +3,7 @@
 @import "global/global.scss";
 //
 @import "blocks/page";
+@import "blocks/main";
 @import "blocks/main-nav";
 @import "blocks/login";
 @import "blocks/login-button";
@@ -33,6 +34,7 @@
 @import "blocks/countries-header";
 @import "blocks/countries-continents";
 @import "blocks/countries-alphabet";
+@import "blocks/countries-container";
 @import "blocks/countries-item";
 @import "blocks/countries-list";
 @import "blocks/companions-form";

@@ -54,6 +54,13 @@
   }
 }
 
+.authorization__contact {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    justify-content: center;
+  }
+}
+
 .authorization__button {
   border: none;
   background-color: $basic-yellow;

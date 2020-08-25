@@ -1,6 +1,11 @@
 .companions-form {
   background: $basic-yellow;
   border-radius: 20px;
+
+  @media (min-width: $desktop-width) {
+    order: 2;
+    width: 25%;
+  }
 }
 
 .companions-form__big-title {
@@ -13,7 +18,16 @@
 
 .companions-form__group {
   border: none;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
 }
+
 
 .companions-form__title {
   font-weight: 700;
