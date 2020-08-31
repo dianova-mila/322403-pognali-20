@@ -1,10 +1,43 @@
+.main-nav {
+  padding-top: 52px;
+  padding-bottom: 51px;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 8.3%;
+    padding-bottom: 129px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 67px;
+    padding-left: 111px;
+    padding-bottom: 0;
+  }
+}
+
 .main-nav__list {
   list-style: none;
   margin: 0;
   padding: 0;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    text-align: left;
+  }
 
   @media (min-width: $desktop-width) {
     display: flex;
+    position: relative;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 2px;
+      background-color: $basic-white;
+      position: absolute;
+      left: -71px;
+      top: 7px;
+    }
   }
 }
 
@@ -23,5 +56,17 @@
 
   &:active {
     opacity: 0.3;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+    line-height: 71px;
+  }
+
+  @media (min-width: $desktop-width) {
+    color: $basic-white;
+    font-size: 20px;
+    line-height: 20px;
+    margin-left: 34px;
   }
 }
