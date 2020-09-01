@@ -1,14 +1,9 @@
 .header {
-  position: absolute;
-  z-index: 2;
+  position: fixed;
+  z-index: 5;
   width: 100%;
-  background-color: $basic-white;
-  color: $basic-blue;
-
-  @media (min-width: $desktop-width) {
-    background-color: $basic-blue-dark;
-    position: static;
-  }
+  background-color: $basic-blue-dark;
+  color: $basic-white;
 }
 
 .header__wrapper {
@@ -22,7 +17,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    grid-template-columns: 200px 2fr 1fr min-content;
+    grid-template-columns: 200px 2fr 1fr auto;
     grid-template-rows: min-content;
   }
 }
@@ -51,14 +46,14 @@
   padding-top: 27px;
   padding-bottom: 20px;
 
-  @media (min-width: $desktop-width) {
-    display: none;
-  }
-
   @media (min-width: $tablet-width) {
     text-align: center;
     padding-top: 55px;
     padding-bottom: 51px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: none;
   }
 }
 
@@ -66,12 +61,10 @@
   display: inline-block;
   border: none;
   background-color: transparent;
-  width: 18px;
-  height: 19px;
-  background-repeat: no-repeat;
-  background-image: url("../../img/menu-close.svg");
-  background-position: center;
-  opacity: 0.1;
+  width: 22px;
+  height: 22px;
+  padding: 0;
+  padding-top: 4px;
 
   &:focus,
   &:hover {
@@ -80,16 +73,34 @@
   }
 
   &:active {
-    opacity: 0.05;
+    opacity: 0.15;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+.header__button-img {
+  width: 22px;
+  height: 22px;
+  fill: $basic-white;
+
+  @media (min-width: $tablet-width) {
+    width: 22px;
+    height: 22px;
   }
 }
 
 .header__login {
+  display: none;
   grid-column: 1 / 3;
   grid-row: 3;
   margin-bottom: 51px;
 
   @media (min-width: $tablet-width) {
+    display: block;
     grid-column: 3;
     grid-row: 1;
     padding-left: 18%;
@@ -103,11 +114,12 @@
     padding-bottom: 0;
     padding-left: 0;
     padding-top: 49px;
-    width: 188px;
+    max-width: 200px;
   }
 }
 
 .header__nav {
+  display: none;
   grid-column: 1 / 3;
   grid-row: 2;
 
@@ -116,6 +128,7 @@
   }
 
   @media (min-width: $desktop-width) {
+    display: block;
     grid-row: 1;
     grid-column: 2;
   }
@@ -125,6 +138,7 @@
   grid-column: 1 / 3;
   grid-row: 4;
   margin-bottom: 29px;
+  display: none;
 
   @media (min-width: $tablet-width) {
     grid-column: 1 / 4;
@@ -143,83 +157,8 @@
   }
 }
 
-.header__contact-link {
-  .contact-link__text {
-    margin-left: 4%;
-
-    @media (min-width: $tablet-width) {
-      margin-left: 3%;
-    }
-
-    @media (min-width: $desktop-width) {
-      display: none;
-    }
-  }
-
-  .contact-link__icon {
-    @media (min-width: $desktop-width) {
-      width: 50px;
-      height: 50px;
-    }
-  }
-
-  .contact-link__icon--tel {
-    @media (min-width: $desktop-width) {
-      background-color: $special-orange;
-    }
-  }
-
-  .contact-link__icon--mail {
-    @media (min-width: $desktop-width) {
-      background-color: $special-yellow-dark;
-    }
-  }
-
-  .contact-link__img {
-    @media (min-width: $desktop-width) {
-      fill: $basic-blue-dark;
-    }
-
-    &--tel {
-      @media (min-width: $desktop-width) {
-        width: 15.9px;
-        height: 16.2px;
-        margin-top: 16px;
-      }
-    }
-
-    &--mail {
-      @media (min-width: $desktop-width) {
-        width: 14.4px;
-        height: 11.2px;
-        margin-top: 19px;
-      }
-    }
-  }
-
-  &:focus,
-  &:hover {
-    .contact-link__icon--tel {
-      @media (min-width: $desktop-width) {
-        background-color: $special-orange-dark;
-      }
-    }
-
-    .contact-link__icon--mail {
-      @media (min-width: $desktop-width) {
-        background-color: $special-orange;
-      }
-    }
-
-    .contact-link__img {
-      @media (min-width: $desktop-width) {
-        fill: $basic-blue-dark;
-      }
-    }
-  }
-}
-
 .header__socials {
+  display: none;
   grid-column: 1 / 3;
   grid-row: 5;
   margin-bottom: 29px;
@@ -230,10 +169,6 @@
     padding-left: 8.3%;
     margin-bottom: 73px;
   }
-
-  @media (min-width: $desktop-width) {
-    display: none;
-  }
 }
 
 .header__socials .socials__list {
@@ -242,9 +177,21 @@
   }
 }
 
-.header--closed {
-  position: static;
-  background-color: $basic-blue-dark;
+.header--opened {
+  background-color: $basic-white;
+
+  @media (min-width: $desktop-width) {
+    background-color: $basic-blue-dark;
+  }
+
+  .header__button-img {
+    display: none;
+  }
+
+  .header__button {
+    background-image: url("../img/menu-close.svg");
+    opacity: 0.1;
+  }
 
   .header__logo-img {
     display: none;
@@ -255,12 +202,12 @@
   }
 
   .header__logo {
-    background-image: url("../../img/logo-mobile-white@1x.png");
+    background-image: url("../img/logo-mobile-blue@1x.png");
     background-repeat: no-repeat;
     background-position: 0 center;
 
     @media (min-width: $tablet-width) {
-      background-image: url("../../img/logo-tablet-white@1x.png");
+      background-image: url("../img/logo-tablet-blue@1x.png");
     }
 
     @media (min-width: $desktop-width) {
@@ -268,132 +215,123 @@
     }
   }
 
-  .header__button {
-    background-image: url("../../img/menu.svg");
-    opacity: 1;
-  }
-
-  .header__login {
-    display: none;
-
-    @media (min-width: $tablet-width) {
-      display: block;
-    }
-  }
-
+  .header__login,
   .header__nav {
-    display: none;
+    display: block;
+  }
+
+
+  .header__socials {
+    display: block;
 
     @media (min-width: $desktop-width) {
-      display: block;
+      display: none;
     }
   }
 
   .header__contact {
-    display: none;
+    display: block;
 
     @media (min-width: $desktop-width) {
       display: flex;
     }
-  }
-
-  .header__socials {
-    display: none;
   }
 }
 
 .header--scroll {
   background-color: $basic-white;
+  color: $basic-blue;
 
   .header__logo-img {
     display: none;
   }
 
+  .header__button-img {
+    fill: #cccccc;
+  }
+
   .header__logo {
-    background-image: url("../../img/logo-mobile-blue@1x.png");
+    background-image: url("../img/logo-mobile-blue@1x.png");
     background-repeat: no-repeat;
     background-position: 0 center;
 
     @media (min-width: $tablet-width) {
-      background-image: url("../../img/logo-tablet-blue@1x.png");
+      background-image: url("../img/logo-tablet-blue@1x.png");
     }
 
     @media (min-width: $desktop-width) {
-      background-image: url("../../img/logo-desktop-blue@1x.png");
+      background-image: url("../img/logo-desktop-blue@1x.png");
       background-position: 0 center;
     }
   }
 
-  .header__button {
-    background-image: url("../../img/menu-scroll.svg");
-    opacity: 1;
-  }
-
   .header__login {
-    display: none;
-
-    @media (min-width: $tablet-width) {
-      display: block;
-      padding-top: 41px;
-    }
-
     @media (min-width: $desktop-width) {
-      display: block;
       padding-top: 21px;
       padding-bottom: 19px;
     }
   }
 
   .header__nav {
-    display: none;
-
     @media (min-width: $desktop-width) {
-      display: block;
       padding-top: 39px;
       padding-bottom: 19px;
     }
   }
 
-  .main-nav__link {
-    @media (min-width: $desktop-width) {
-      color: $basic-blue;
-    }
-  }
-
   .header__contact {
-    display: none;
-
     @media (min-width: $desktop-width) {
-      display: flex;
       padding-top: 21px;
       padding-bottom: 19px;
     }
-  }
-
-  .header__socials {
-    display: none;
   }
 }
 
 .header--nojs {
   background-color: $basic-white;
-  position: static;
 
   @media (min-width: $desktop-width) {
-    background-color: $basic-blue-dark;;
-  }
-
-  .header__button {
-    display: none;
+    background-color: $basic-blue-dark;
   }
 
   .header__logo-img {
-    display: block;
+    display: none;
+
+    @media (min-width: $desktop-width) {
+      display: block;
+    }
+  }
+
+  .header__logo {
+    background-image: url("../img/logo-mobile-blue@1x.png");
+    background-repeat: no-repeat;
+    background-position: 0 center;
+
+    @media (min-width: $tablet-width) {
+      background-image: url("../img/logo-tablet-blue@1x.png");
+    }
+
+    @media (min-width: $desktop-width) {
+      background-image: none;
+    }
+  }
+
+  .header__button-wrapper {
+    display: none;
   }
 
   .header__login,
-  .header__nav, {
+  .header__nav {
     display: block;
+  }
+
+
+  .header__socials {
+    display: block;
+
+    @media (min-width: $desktop-width) {
+      display: none;
+    }
   }
 
   .header__contact {
@@ -401,12 +339,6 @@
 
     @media (min-width: $desktop-width) {
       display: flex;
-    }
-  }
-
-  .header__socials {
-    @media (min-width: $desktop-width) {
-      display: none;
     }
   }
 }

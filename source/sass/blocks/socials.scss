@@ -4,6 +4,12 @@
   padding: 0;
   display: flex;
   justify-content: center;
+
+  &--left {
+    @media (min-width: $tablet-width) {
+      justify-content: left;
+    }
+  }
 }
 
 .socials__link {
