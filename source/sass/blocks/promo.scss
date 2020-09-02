@@ -6,6 +6,22 @@
     url("../img/globe-back-mobile@1x.jpg");
   background-repeat: no-repeat;
   padding-bottom: 39px;
+  padding-top: 95px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 162px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 209px;
+  }
+}
+
+.promo__text-wrapper {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .promo__text {
@@ -14,10 +30,50 @@
   line-height: 40px;
   text-align: center;
   margin: 0;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+    line-height: 70px;
+    padding-left: 145px;
+    padding-right: 145px;
+    margin-bottom: 86px;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: left;
+    padding-left: 67px;
+    width: 50%;
+    padding-right: 155px;
+  }
 }
 
 .promo__contact {
+  margin-top: 242px;
+  margin-bottom: 28px;
+
   @media (min-width: $tablet-width) {
     display: none;
+  }
+}
+
+.promo__button {
+  font-size: 20px;
+  line-height: 20px;
+  min-width: 190px;
+  width: 100%;
+}
+
+.promo__quote {
+  display: block;
+  margin-bottom: 29px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 211px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 115px;
   }
 }

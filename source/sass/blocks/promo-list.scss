@@ -7,6 +7,7 @@
 }
 
 .promo-list__item {
+  position: relative;
   font-weight: 700;
   font-size: 18px;
   line-height: 18px;
@@ -14,28 +15,148 @@
   border-radius: 10px;
   background-color: $basic-yellow;
   width: 100%;
+  min-height: 100px;
+  margin-top: -20px;
+  padding-top: 22px;
+  padding-left: 24px;
+  padding-bottom: 20px;
+  padding-right: 96px;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 22px;
+    right: 11px;
+    color: $basic-white;
+  }
 
   @media (min-width: $tablet-width) {
     width: 50%;
+    margin-top: 0;
+    border-radius: 0;
+    min-height: 140px;
+    font-size: 24px;
+    line-height: 24px;
+    padding-top: 31px;
+    padding-left: 32.6px;
+    padding-bottom: 61px;
+
+    &::after {
+      font-size: 30px;
+      line-height: 30px;
+      top: inherit;
+      right: inherit;
+      bottom: 31px;
+      left: 33px;
+    }
   }
 
   @media (min-width: $desktop-width) {
     width: 25%;
+    min-height: 106px;
+    padding-top: 30px;
+    padding-left: 34px;
+    padding-bottom: 30px;
+    padding-right: 107px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+
+    &::after {
+      font-size: 24px;
+      line-height: 24px;
+      bottom: inherit;
+      left: inherit;
+      top: 29px;
+      right: 55px;
+    }
   }
 
   &--1 {
     background-color: $special-orange;
+    margin-top: 0;
+
+    &::after {
+      content: "1";
+    }
+
+    @media (min-width: $tablet-width) {
+      border-top-left-radius: 20px;
+      width: calc(50% + 20px);
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 345px;
+
+      &::after {
+        right: 57px;
+      }
+    }
   }
 
   &--2 {
     background-color: $special-orange-light;
+
+
+    &::after {
+      content: "2";
+    }
+
+    @media (min-width: $tablet-width) {
+      margin-left: -20px;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 375px;
+      margin-left: -30px;
+      border-top-right-radius: 0;
+    }
   }
 
   &--3 {
     background-color: $special-yellow-dark;
+
+    &::after {
+      content: "3";
+    }
+
+    @media (min-width: $tablet-width) {
+      border-bottom-left-radius: 20px;
+      width: calc(50% + 20px);
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 375px;
+      margin-left: -30px;
+    }
   }
 
   &--4 {
     background-color: $basic-yellow;
+    min-height: 80px;
+
+    &::after {
+      content: "4";
+    }
+
+    @media (min-width: $tablet-width) {
+      margin-left: -20px;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+    }
+
+    @media (min-width: $desktop-width) {
+      border-radius: 20px;
+      margin-left: -30px;
+      width: 315px;
+
+      &::after {
+        right: 26px;
+      }
+    }
   }
 }

@@ -12,8 +12,8 @@
 <body class="page__body">
 
 
-<header class="header header--closed header--nojs">
-  <div class="container">
+<header class="header header--nojs">
+  <div class="container header__wrapper">
     <a href="index.html" class="site-logo header__logo">
       <picture class="header__logo-img">
         <source media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.png">
@@ -25,6 +25,20 @@
     <div class="header__button-wrapper">
       <button class="header__button header__button--close">
         <span class="visually-hidden">Открыть/закрыть меню</span>
+        <svg
+          class="header__button-img"
+          version="1.1"
+          id="Layer_1"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          x="0px"
+          y="0px"
+          xml:space="preserve">
+          <g>
+            <path d="M1.5,3h22C24.3,3,25,2.3,25,1.5S24.3,0,23.5,0h-22C0.7,0,0,0.7,0,1.5S0.7,3,1.5,3z"/>
+            <path d="M23.5,8h-22C0.7,8,0,8.7,0,9.5S0.7,11,1.5,11h22c0.8,0,1.5-0.7,1.5-1.5S24.3,8,23.5,8z"/>
+          </g>
+        </svg>
       </button>
     </div>
 
@@ -40,12 +54,12 @@
       <a href="#" class="login-button">Авторизация</a>
     </div>
 
-    <ul class="contact header__contact">
+    <ul class="contact header__contact contact--mini-in-desktop">
       <li class="contact__item">
-        <a class="contact-link contact__link--tel header__contact-link" href="tel:88005558628">
-          <span class="contact-link__icon contact-link__icon--tel">
+        <a class="contact__link contact__link--tel" href="tel:88005558628">
+          <span class="contact__link-icon contact__link-icon--tel">
             <svg
-              class="contact-link__img contact-link__img--tel"
+              class="contact__link-img contact__link-img--tel"
               version="1.1"
               id="Layer_1"
               xmlns="http://www.w3.org/2000/svg"
@@ -67,14 +81,14 @@
                 6,6c0,3.3-2.7,6-6,6c-3.3,0-6-2.7-6-6C12,19.2,14.7,16.5,18,16.5z"/>
             </svg>
           </span>
-          <span class="contact-link__text contact-link__text--blue">8 800 555-86-28</span>
+          <span class="contact__link-text contact__link-text--blue">8 800 555-86-28</span>
         </a>
       </li>
       <li class="contact__item">
-        <a class="contact-link contact-link--mail header__contact-link" href="mailto:mail@htmlacademy.ru">
-          <span class="contact-link__icon contact-link__icon--mail">
+        <a class="contact__link contact__link--mail" href="mailto:mail@htmlacademy.ru">
+          <span class="contact__link-icon contact__link-icon--mail">
             <svg
-              class="contact-link__img contact-link__img--mail"
+              class="contact__link-img contact__link-img--mail"
               version="1.1"
               id="Layer_1"
               xmlns="http://www.w3.org/2000/svg"
@@ -92,12 +106,12 @@
                 1-2.4,1c-0.9,0-1.8-0.4-2.4-1c-0.4-0.4-2.5-2.5-2.5-2.5l-6.9,6.8c-0.6,0.6-1.5,0.6-2.1,0c-0.6-0.6-0.6-1.5,0-2L11,13z"/>
             </svg>
           </span>
-          <span class="contact-link__text contact-link__text--blue">mail@htmlacademy.ru</span>
+          <span class="contact__link-text contact__link-text--blue">mail@htmlacademy.ru</span>
         </a>
       </li>
     </ul>
 
-    <section class="socials header__socials">
+    <section class="socials socials--left header__socials">
       <h2 class="visually-hidden">Социальные сети</h2>
 
       <ul class="socials__list">

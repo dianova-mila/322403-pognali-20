@@ -171,11 +171,6 @@
   }
 }
 
-.header__socials .socials__list {
-  @media (min-width: $tablet-width) {
-    justify-content: left;
-  }
-}
 
 .header--opened {
   background-color: $basic-white;

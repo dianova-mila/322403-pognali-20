@@ -6,120 +6,6 @@
   @media (min-width: $desktop-width) {
     display: flex;
   }
-
-  &--mini {
-    display: flex;
-
-    .contact__link-text {
-      display: none;
-    }
-
-    .contact__link-icon--tel {
-      background-color: $special-orange;
-    }
-
-    .contact__link-icon--mail {
-      background-color: $special-yellow-dark;
-    }
-
-    .contact__link-img {
-      fill: $basic-blue-dark;
-    }
-
-    &:focus,
-    &:hover {
-      .contact__link-icon--tel {
-        background-color: $special-orange-dark;
-      }
-
-      .contact__link-icon--mail {
-        background-color: $special-orange;
-      }
-
-      .contact__link-img {
-        fill: $basic-blue-dark;
-      }
-    }
-  }
-
-  &--mini-in-desktop {
-    .contact__link-text {
-      margin-left: 4%;
-
-      @media (min-width: $tablet-width) {
-        margin-left: 3%;
-      }
-
-      @media (min-width: $desktop-width) {
-        display: none;
-      }
-    }
-
-    .contact__link-icon {
-      @media (min-width: $desktop-width) {
-        width: 50px;
-        height: 50px;
-      }
-
-
-      &--tel {
-        @media (min-width: $desktop-width) {
-          background-color: $special-orange;
-        }
-      }
-
-      &--mail {
-        @media (min-width: $desktop-width) {
-          background-color: $special-yellow-dark;
-        }
-      }
-    }
-
-    .contact__link-img {
-      @media (min-width: $desktop-width) {
-        fill: $basic-blue-dark;
-      }
-
-      &--tel {
-        @media (min-width: $desktop-width) {
-          width: 15.9px;
-          height: 16.2px;
-          margin-top: 16px;
-        }
-      }
-
-      &--mail {
-        @media (min-width: $desktop-width) {
-          width: 14.4px;
-          height: 11.2px;
-          margin-top: 19px;
-        }
-      }
-    }
-
-    .contact__link {
-      &:focus,
-      &:hover {
-        .contact__link-icon--tel {
-          @media (min-width: $desktop-width) {
-            background-color: $special-orange-dark;
-          }
-        }
-
-        .contact__link-icon--mail {
-          @media (min-width: $desktop-width) {
-            background-color: $special-orange;
-          }
-        }
-
-        .contact__link-img {
-          @media (min-width: $desktop-width) {
-            fill: $basic-blue-dark;
-          }
-        }
-      }
-    }
-  }
 }
 
 
@@ -226,5 +112,136 @@
 
   @media (min-width: $desktop-width) {
     margin-left: 31px;
+  }
+}
+
+.contact--mini {
+  display: flex;
+
+  .contact__item:last-child {
+    flex-grow: 1;
+  }
+
+  .contact__link-text {
+    display: none;
+  }
+
+  .contact__link-icon {
+    width: 40px;
+    height: 40px;
+
+    &--tel {
+      background-color: $special-orange;
+    }
+
+    &--mail {
+      background-color: $special-yellow-dark;
+    }
+  }
+
+  .contact__link-img {
+    fill: $basic-blue-dark;
+
+    &--tel {
+      margin-top: 12.7px;
+    }
+
+    &--mail {
+      margin-top: 13.9px;
+    }
+  }
+
+  &:focus,
+  &:hover {
+    .contact__link-icon--tel {
+      background-color: $special-orange-dark;
+    }
+
+    .contact__link-icon--mail {
+      background-color: $special-orange;
+    }
+
+    .contact__link-img {
+      fill: $basic-blue-dark;
+    }
+  }
+}
+
+.contact--mini-in-desktop {
+  .contact__link-text {
+    margin-left: 4%;
+
+    @media (min-width: $tablet-width) {
+      margin-left: 3%;
+    }
+
+    @media (min-width: $desktop-width) {
+      display: none;
+    }
+  }
+
+  .contact__link-icon {
+    @media (min-width: $desktop-width) {
+      width: 50px;
+      height: 50px;
+    }
+
+
+    &--tel {
+      @media (min-width: $desktop-width) {
+        background-color: $special-orange;
+      }
+    }
+
+    &--mail {
+      @media (min-width: $desktop-width) {
+        background-color: $special-yellow-dark;
+      }
+    }
+  }
+
+  .contact__link-img {
+    @media (min-width: $desktop-width) {
+      fill: $basic-blue-dark;
+    }
+
+    &--tel {
+      @media (min-width: $desktop-width) {
+        width: 15.9px;
+        height: 16.2px;
+        margin-top: 16px;
+      }
+    }
+
+    &--mail {
+      @media (min-width: $desktop-width) {
+        width: 14.4px;
+        height: 11.2px;
+        margin-top: 19px;
+      }
+    }
+  }
+
+  .contact__link {
+    &:focus,
+    &:hover {
+      .contact__link-icon--tel {
+        @media (min-width: $desktop-width) {
+          background-color: $special-orange-dark;
+        }
+      }
+
+      .contact__link-icon--mail {
+        @media (min-width: $desktop-width) {
+          background-color: $special-orange;
+        }
+      }
+
+      .contact__link-img {
+        @media (min-width: $desktop-width) {
+          fill: $basic-blue-dark;
+        }
+      }
+    }
   }
 }
