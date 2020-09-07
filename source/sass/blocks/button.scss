@@ -1,11 +1,46 @@
 .button {
+  display: inline-block;
   background-color: $basic-yellow;
+  position: relative;
   color: $special-blue;
   font-weight: 700;
   font-size: 18px;
   line-height: 18px;
   border-radius: 10px;
   border: 3px solid $basic-yellow;
+  height: 62px;
+  padding-top: 20px;
+  padding-left: 20px;
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    top: 22px;
+    right: 19px;
+    background-repeat: no-repeat;
+    background-image: url("../img/triangle-arrow-right.svg");
+    background-size: 13px 13px;
+  }
+
+  @media (min-width: $tablet-width) {
+    height: 80px;
+    border-radius: 20px;
+    font-size: 24px;
+    line-height: 24px;
+    padding-top: 26px;
+    padding-left: 30px;
+
+    &::after {
+      width: 14px;
+      height: 14px;
+      top: 30px;
+      right: 28px;
+      background-size: 14px 14px;
+    }
+  }
 
   &:focus,
   &:hover {

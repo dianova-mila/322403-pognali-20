@@ -4,16 +4,81 @@
   background-image: url("../img/about-mobile@1x.png");
   background-repeat: no-repeat;
   padding-top: 33px;
-  padding-bottom: 82px;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
+  padding-bottom: 61px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  position: relative;
+  z-index: 6;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 89px;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 163px;
+    border-bottom-left-radius: 55px;
+    border-bottom-right-radius: 55px;
+  }
+}
+
+.about__title {
+  padding-left: 25px;
+  margin-bottom: 19px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 7px;
+    padding-left: 34px;
+    margin-bottom: 41px;
+    width: 50%;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 99px;
+    padding-left: 70px;
+    margin-bottom: 58px;
+  }
 }
 
 .about__text {
   margin: 0;
+  margin-bottom: 20px;
+  padding-right: 25px;
+  padding-left: 25px;
+
+  @media (min-width: $tablet-width) {
+    width: 50%;
+    font-size: 28px;
+    line-height: 33px;
+    padding-left: 34px;
+    padding-right: 8px;
+    margin-bottom: 39px;
+
+    & br {
+      display: none;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 70px;
+    padding-right: 0;
+    width: 700px;
+  }
 
   &--bold {
     font-weight: 700;
+
+    @media (min-width: $tablet-width) {
+      font-size: 21px;
+      line-height: 25px;
+      margin-bottom: 43px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 540px;
+      margin-bottom: 84px;
+    }
   }
 }
 
@@ -22,5 +87,13 @@
 
   @media (min-width: $tablet-width) {
     display: inline-block;
+    width: 40%;
+    margin-left: 34px;
+    position: relative;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 70px;
+    width: 274px;
   }
 }
