@@ -1,5 +1,5 @@
 .promo-list {
-  list-style: none;
+  counter-reset: myCounter;
   margin: 0;
   padding: 0;
   display: flex;
@@ -7,6 +7,7 @@
 }
 
 .promo-list__item {
+  list-style: none;
   position: relative;
   font-weight: 700;
   font-size: 18px;
@@ -23,13 +24,12 @@
   padding-right: 96px;
 
   &::after {
-    content: "";
+    counter-increment: myCounter;
+    content: counter(myCounter);
     display: block;
-    width: 20px;
-    height: 20px;
     position: absolute;
     top: 22px;
-    right: 11px;
+    right: 21px;
     color: $basic-white;
   }
 
@@ -49,13 +49,12 @@
       line-height: 30px;
       top: inherit;
       right: inherit;
-      bottom: 31px;
+      bottom: 22px;
       left: 33px;
     }
   }
 
   @media (min-width: $desktop-width) {
-    width: 25%;
     min-height: 106px;
     padding-top: 30px;
     padding-left: 34px;
@@ -70,17 +69,13 @@
       bottom: inherit;
       left: inherit;
       top: 29px;
-      right: 55px;
+      right: 64px;
     }
   }
 
   &--1 {
     background-color: $special-orange;
     margin-top: 0;
-
-    &::after {
-      content: "1";
-    }
 
     @media (min-width: $tablet-width) {
       border-top-left-radius: 20px;
@@ -89,20 +84,11 @@
 
     @media (min-width: $desktop-width) {
       width: 345px;
-
-      &::after {
-        right: 57px;
-      }
     }
   }
 
   &--2 {
     background-color: $special-orange-light;
-
-
-    &::after {
-      content: "2";
-    }
 
     @media (min-width: $tablet-width) {
       margin-left: -20px;
@@ -120,10 +106,6 @@
   &--3 {
     background-color: $special-yellow-dark;
 
-    &::after {
-      content: "3";
-    }
-
     @media (min-width: $tablet-width) {
       border-bottom-left-radius: 20px;
       width: calc(50% + 20px);
@@ -139,10 +121,6 @@
     background-color: $basic-yellow;
     min-height: 80px;
 
-    &::after {
-      content: "4";
-    }
-
     @media (min-width: $tablet-width) {
       margin-left: -20px;
       border-bottom-left-radius: 20px;
@@ -155,7 +133,7 @@
       width: 315px;
 
       &::after {
-        right: 26px;
+        right: 33px;
       }
     }
   }

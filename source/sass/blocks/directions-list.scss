@@ -17,6 +17,9 @@
 .directions-list__item {
   margin-bottom: 10px;
   position: relative;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  overflow: hidden;
 
   &::after {
     content: "";
@@ -33,6 +36,8 @@
 
   @media (min-width: $tablet-width) {
     display: flex;
+    align-items: flex-start;
+    margin-bottom: 4px;
 
     &::after {
       width: 70px;
@@ -63,11 +68,13 @@
   }
 }
 
-.directions-list__img {
-  display: block;
-  border-top-right-radius: 10px;
-  border-top-left-radius: 10px;
+.directions-list__picture {
+  @media (min-width: $tablet-width) {
+    order: 2;
+  }
+}
 
+.directions-list__img {
   @media (min-width: $tablet-width) {
     order: 2;
     border-top-right-radius: 20px;
@@ -99,6 +106,7 @@
     border-bottom-right-radius: 0;
     padding-top: 30px;
     padding-left: 29px;
+    padding-bottom: 19px;
     display: block;
   }
 }

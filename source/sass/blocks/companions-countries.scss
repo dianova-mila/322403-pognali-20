@@ -2,9 +2,14 @@
   list-style: none;
   margin: 0;
   padding: 0;
+  display: flex;
+  justify-content: center;
 }
 
 .companions-countries__item {
+  margin-left: 10px;
+  margin-right: 10px;
+
   &::before {
     content: "";
     display: block;

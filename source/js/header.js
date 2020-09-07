@@ -9,8 +9,6 @@ headerButton.addEventListener('click', function() {
 });
 
 window.addEventListener('scroll', function() {
-  var scrollPosition = window.scrollY;
-
   if (window.scrollY > 1) {
     header.classList.add('header--scroll');
     headerNav.classList.add('main-nav--scroll')

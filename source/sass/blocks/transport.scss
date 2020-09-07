@@ -2,4 +2,41 @@
   list-style: none;
   margin: 0;
   padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.transport__item {
+  display: block;
+  width: 25px;
+  height: 25px;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-left: 4px;
+  margin-right: 4px;
+  opacity: 0.15;
+
+  &--active {
+    opacity: 1;
+  }
+
+  &--plane {
+    background-image: url("../img/plane.svg");
+    background-size: 20.8px 21.1px;
+  }
+
+  &--bus {
+    background-image: url("../img/bus.svg");
+    background-size: 17px 19.2px;
+  }
+
+  &--bike {
+    background-image: url("../img/bike.svg");
+    background-size: 23.6px 24px;
+  }
+
+  &--run {
+    background-image: url("../img/run.svg");
+    background-size: 20.6px 23px;
+  }
 }

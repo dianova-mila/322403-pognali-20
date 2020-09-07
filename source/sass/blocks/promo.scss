@@ -5,16 +5,16 @@
     url("../img/traveller-illustration-mobile@1x.png"),
     url("../img/globe-back-mobile@1x.jpg");
   background-repeat: no-repeat;
+  padding-top: 15px;
   padding-bottom: 39px;
-  padding-top: 95px;
 
   @media (min-width: $tablet-width) {
-    padding-top: 162px;
+    padding-top: 23px;
     padding-bottom: 95px;
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 209px;
+    padding-top: 103px;
     padding-bottom: 122px;
   }
 }

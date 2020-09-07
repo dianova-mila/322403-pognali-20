@@ -253,9 +253,9 @@
 
       <ul class="directions-list directions__list">
         <li class="directions-list__item directions-list__item--thailand">
-          <picture class="directions-list__img">
+          <picture class="directions-list__picture">
             <source media="(min-width: 768px)" srcset="img/thailand-desktop@1x.jpg">
-            <img src="img/thailand-mobile@1x.jpg" alt="Фото страны">
+            <img class="directions-list__img" src="img/thailand-mobile@1x.jpg" alt="Фото страны">
           </picture>
           <div class="directions-list__description">
             <h3 class="directions-list__title">Таиланд</h3>
@@ -264,9 +264,9 @@
           </div>
         </li>
         <li class="directions-list__item directions-list__item--france">
-          <picture class="directions-list__img">
+          <picture class="directions-list__picture">
             <source media="(min-width: 768px)" srcset="img/france-desktop@1x.jpg">
-            <img src="img/france-mobile@1x.jpg" alt="Фото страны">
+            <img class="directions-list__img" src="img/france-mobile@1x.jpg" alt="Фото страны">
           </picture>
           <div class="directions-list__description">
             <h3 class="directions-list__title">Франция</h3>
@@ -275,9 +275,9 @@
           </div>
         </li>
         <li class="directions-list__item directions-list__item--czech">
-          <picture class="directions-list__img">
+          <picture class="directions-list__picture">
             <source media="(min-width: 768px)" srcset="img/czech-desktop@1x.jpg">
-            <img src="img/czech-mobile@1x.jpg" alt="Фото страны">
+            <img class="directions-list__img" src="img/czech-mobile@1x.jpg" alt="Фото страны">
           </picture>
           <div class="directions-list__description">
             <h3 class="directions-list__title">Чехия</h3>
@@ -305,16 +305,14 @@
         </p>
 
         <p class="companions__text companions__text--bold">
-          Теперь можно легко найти единомышленников!
+          Теперь можно легко<br> найти единомышленников!
         </p>
       </div>
 
       <ul class="companions-list companions__list">
         <li class="companions-list__item">
           <img
-            src="img/firsova-mobile@1x.jpg"
-            width="270"
-            height="270"
+            src="img/firsova-desktop@1x.jpg"
             alt="Фото попутчика"
             class="companions-list__avatar">
           <ul class="companions-countries companions__countries">
@@ -328,20 +326,28 @@
               <span class="visually-hidden">Сейшелы</span>
             </li>
           </ul>
-          <p class="companions-list__name">Таня Фирсова</p>
+          <div class="companions-list__name-wrapper">
+            <p class="companions-list__name">Таня Фирсова</p>
+          </div>
           <p class="companions-list__tags"> &#35;ЗОЖ &#35;ПП &#35;Фитнес &#35;пляж &#35;авокадо &#35;смузи</p>
           <ul class="transport companions-list__transport">
-            <li class="transport__item">Авиаперелет</li>
-            <li class="transport__item">Автотранспорт</li>
-            <li class="transport__item">Велосипед</li>
-            <li class="transport__item">Пешком</li>
+            <li class="transport__item transport__item--plane transport__item--active">
+              <span class="visually-hidden">Авиаперелет</span>
+            </li>
+            <li class="transport__item transport__item--bus">
+              <span class="visually-hidden">Автотранспорт</span>
+            </li>
+            <li class="transport__item transport__item--bike">
+              <span class="visually-hidden">Велосипед</span>
+            </li>
+            <li class="transport__item transport__item--run">
+              <span class="visually-hidden">Пешком</span>
+            </li>
           </ul>
         </li>
         <li class="companions-list__item">
           <img
-            src="img/demin-mobile@1x.jpg"
-            width="270"
-            height="270"
+            src="img/demin-desktop@1x.jpg"
             alt="Фото попутчика"
             class="companions-list__avatar">
           <ul class="companions-countries companions__countries">
@@ -352,13 +358,23 @@
               <span class="visually-hidden">Чехия</span>
             </li>
           </ul>
-          <p class="companions-list__name">Петя Демин</p>
+          <div class="companions-list__name-wrapper">
+            <p class="companions-list__name companions-list__name--online">Петя Демин</p>
+          </div>
           <p class="companions-list__tags">&#35;бургер &#35;бар &#35;футбол &#35;концерт &#35;крафт</p>
           <ul class="transport companions-list__transport">
-            <li class="transport__item">Авиаперелет</li>
-            <li class="transport__item">Автотранспорт</li>
-            <li class="transport__item">Велосипед</li>
-            <li class="transport__item">Пешком</li>
+            <li class="transport__item transport__item--plane transport__item--active">
+              <span class="visually-hidden">Авиаперелет</span>
+            </li>
+            <li class="transport__item transport__item--bus transport__item--active">
+              <span class="visually-hidden">Автотранспорт</span>
+            </li>
+            <li class="transport__item transport__item--bike">
+              <span class="visually-hidden">Велосипед</span>
+            </li>
+            <li class="transport__item transport__item--run transport__item--active">
+              <span class="visually-hidden">Пешком</span>
+            </li>
           </ul>
         </li>
       </ul>
