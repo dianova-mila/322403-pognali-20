@@ -49,6 +49,13 @@
     }
   }
 
+  @media (min-width: $desktop-width) {
+    &::after {
+      top: 23px;
+      right: 152px;
+    }
+  }
+
   &--thailand {
     &::after {
       background-image: url("../img/thailand.png");
@@ -109,6 +116,10 @@
     padding-bottom: 19px;
     display: block;
   }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 24px;
+  }
 }
 
 .directions-list__title {
@@ -140,6 +151,10 @@
     font-size: 20px;
     line-height: 20px;
     padding-bottom: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 26px;
   }
 }
 

@@ -1,1 +1,18 @@
-//
+.like-button {
+  border: none;
+  display: inline-block;
+  border-radius: 50%;
+  background-color: $another-blue-lighten;
+  width: 30px;
+  height: 30px;
+  background-image: url("../img/heart.svg");
+  background-size: 12px 10px;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @media (min-width: $tablet-width) {
+    width: 50px;
+    height: 50px;
+    background-size: 20px 20px;
+  }
+}

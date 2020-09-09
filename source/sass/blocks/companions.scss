@@ -1,4 +1,6 @@
 .companions {
+  position: relative;
+  z-index: 4;
   margin-top: -80px;
   padding-top: 148px;
   padding-bottom: 31px;
@@ -18,7 +20,7 @@
     border-bottom-right-radius: 60px;
   }
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $desktop-width) {
     padding-top: 210px;
     padding-bottom: 53px;
   }

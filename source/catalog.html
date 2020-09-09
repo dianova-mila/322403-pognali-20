@@ -706,22 +706,33 @@
       <ul class="catalog__list">
         <li class="catalog__item">
           <a href="#" class="catalog__img">
-            <img src="img/firsova-mobile@1x.jpg" alt="Фото попутчика" width="70" height="70">
+            <picture>
+              <source media="(min-width: 768px)" srcset="img/firsova-desktop@1x.jpg">
+              <img src="img/firsova-mobile@1x.jpg" alt="Фото попутчика">
+            </picture>
           </a>
           <a href="#" class="catalog__name">Таня Фирсова</a>
           <p class="catalog__tags">&#35;ЗОЖ &#35;ПП &#35;Фитнес &#35;пляж &#35;авокадо &#35;смузи</p>
           <h3 class="catalog__title catalog__title--countries">хочет посетить:</h3>
           <ul class="catalog-countries catalog__countries">
-            <li class="catalog-countries__item">Шри-ланка</li>
-            <li class="catalog-countries__item">Тайланд</li>
-            <li class="catalog-countries__item">Сейшелы</li>
+            <li class="catalog-countries__item catalog-countries__item__sri-lanka">Шри-ланка</li>
+            <li class="catalog-countries__item catalog-countries__item__thailand">Тайланд</li>
+            <li class="catalog-countries__item catalog-countries__item__seychelles">Сейшелы</li>
           </ul>
           <h3 class="catalog__title catalog__title--transport">транспорт:</h3>
-          <ul class="transport catalog__transport">
-            <li class="transport__item"><span class="visually-hidden">Авиаперелет</span></li>
-            <li class="transport__item"><span class="visually-hidden">Автотранспорт</span></li>
-            <li class="transport__item"><span class="visually-hidden">Велосипед</span></li>
-            <li class="transport__item"><span class="visually-hidden">Пешком</span></li>
+          <ul class="transport transport--bg-blue catalog__transport">
+            <li class="transport__item transport__item--plane transport__item--active">
+              <span class="visually-hidden">Авиаперелет</span>
+            </li>
+            <li class="transport__item transport__item--bus">
+              <span class="visually-hidden">Автотранспорт</span>
+            </li>
+            <li class="transport__item transport__item--bike">
+              <span class="visually-hidden">Велосипед</span>
+            </li>
+            <li class="transport__item transport__item--run">
+              <span class="visually-hidden">Пешком</span>
+            </li>
           </ul>
           <h3 class="catalog__title catalog__title--level">левел:</h3>
           <div class="catalog__level-wrapper">
@@ -731,7 +742,7 @@
             <a href="#" class="catalog__button">Позвать!</a>
           </div>
           <div class="catalog__likes">
-            <button class="like-button"><span class="visually-hidden">Мне нравится</span></button>
+            <button class="like-button  catalog__like-button"><span class="visually-hidden">Мне нравится</span></button>
             <span class="catalog__text">1,5 М</span>
           </div>
         </li>
@@ -739,21 +750,32 @@
 
         <li class="catalog__item">
           <a href="#" class="catalog__img">
-            <img src="img/demin-mobile@1x.jpg" alt="Фото попутчика" width="70" height="70">
+            <picture>
+              <source media="(min-width: 768px)" srcset="img/demin-desktop@1x.jpg">
+              <img src="img/demin-mobile@1x.jpg" alt="Фото попутчика">
+            </picture>
           </a>
           <a href="#" class="catalog__name">Петя Демин</a>
           <p class="catalog__tags">&#35;бургер &#35;бар &#35;футбол &#35;концерт &#35;крафт</p>
           <h3 class="catalog__title catalog__title--countries">хочет посетить:</h3>
           <ul class="catalog-countries catalog__countries">
-            <li class="catalog-countries__item">Бельгия</li>
-            <li class="catalog-countries__item">Чехия</li>
+            <li class="catalog-countries__item catalog-countries__item__belgium">Бельгия</li>
+            <li class="catalog-countries__item catalog-countries__item__czechia">Чехия</li>
           </ul>
           <h3 class="catalog__title catalog__title--transport">транспорт:</h3>
-          <ul class="transport catalog__transport">
-            <li class="transport__item"><span class="visually-hidden">Авиаперелет</span></li>
-            <li class="transport__item"><span class="visually-hidden">Автотранспорт</span></li>
-            <li class="transport__item"><span class="visually-hidden">Велосипед</span></li>
-            <li class="transport__item"><span class="visually-hidden">Пешком</span></li>
+          <ul class="transport transport--bg-blue catalog__transport">
+            <li class="transport__item transport__item--plane transport__item--active">
+              <span class="visually-hidden">Авиаперелет</span>
+            </li>
+            <li class="transport__item transport__item--bus transport__item--active">
+              <span class="visually-hidden">Автотранспорт</span>
+            </li>
+            <li class="transport__item transport__item--bike">
+              <span class="visually-hidden">Велосипед</span>
+            </li>
+            <li class="transport__item transport__item--run transport__item--active">
+              <span class="visually-hidden">Пешком</span>
+            </li>
           </ul>
           <h3 class="catalog__title catalog__title--level">левел:</h3>
           <div class="catalog__level-wrapper">
@@ -763,7 +785,7 @@
             <a href="#" class="catalog__button">Позвать!</a>
           </div>
           <div class="catalog__likes">
-            <button class="like-button"><span class="visually-hidden">Мне нравится</span></button>
+            <button class="like-button  catalog__like-button"><span class="visually-hidden">Мне нравится</span></button>
             <span class="catalog__text">1500</span>
           </div>
         </li>
@@ -771,22 +793,33 @@
 
         <li class="catalog__item">
           <a href="#" class="catalog__img">
-            <img src="img/smolov-mobile@1x.jpg" alt="Фото попутчика" width="70" height="70">
+            <picture>
+              <source media="(min-width: 768px)" srcset="img/smolov-desktop@1x.jpg">
+              <img src="img/smolov-mobile@1x.jpg" alt="Фото попутчика">
+            </picture>
           </a>
           <a href="#" class="catalog__name">Марк Смолов</a>
           <p class="catalog__tags">&#35;рэп &#35;тату &#35;хайпбист &#35;кроссовки &#35;суприм</p>
           <h3 class="catalog__title catalog__title--countries">хочет посетить:</h3>
           <ul class="catalog-countries catalog__countries">
-            <li class="catalog-countries__item">США</li>
-            <li class="catalog-countries__item">Австралия</li>
-            <li class="catalog-countries__item">Доминика</li>
+            <li class="catalog-countries__item catalog-countries__item__usa">США</li>
+            <li class="catalog-countries__item catalog-countries__item__australia">Австралия</li>
+            <li class="catalog-countries__item catalog-countries__item__dominica">Доминика</li>
           </ul>
           <h3 class="catalog__title catalog__title--transport">транспорт:</h3>
-          <ul class="transport catalog__transport">
-            <li class="transport__item"><span class="visually-hidden">Авиаперелет</span></li>
-            <li class="transport__item"><span class="visually-hidden">Автотранспорт</span></li>
-            <li class="transport__item"><span class="visually-hidden">Велосипед</span></li>
-            <li class="transport__item"><span class="visually-hidden">Пешком</span></li>
+          <ul class="transport transport--bg-blue catalog__transport">
+            <li class="transport__item transport__item--plane transport__item--active">
+              <span class="visually-hidden">Авиаперелет</span>
+            </li>
+            <li class="transport__item transport__item--bus">
+              <span class="visually-hidden">Автотранспорт</span>
+            </li>
+            <li class="transport__item transport__item--bike transport__item--active">
+              <span class="visually-hidden">Велосипед</span>
+            </li>
+            <li class="transport__item transport__item--run">
+              <span class="visually-hidden">Пешком</span>
+            </li>
           </ul>
           <h3 class="catalog__title catalog__title--level">левел:</h3>
           <div class="catalog__level-wrapper">
@@ -796,7 +829,7 @@
             <a href="#" class="catalog__button">Позвать!</a>
           </div>
           <div class="catalog__likes">
-            <button class="like-button"><span class="visually-hidden">Мне нравится</span></button>
+            <button class="like-button catalog__like-button"><span class="visually-hidden">Мне нравится</span></button>
             <span class="catalog__text">170</span>
           </div>
         </li>
@@ -804,22 +837,33 @@
 
         <li class="catalog__item">
           <a href="#" class="catalog__img">
-            <img src="img/rogovaya-mobile@1x.jpg" alt="Фото попутчика" width="70" height="70">
+            <picture>
+              <source media="(min-width: 768px)" srcset="img/rogovaya-desktop@1x.jpg">
+              <img src="img/rogovaya-mobile@1x.jpg" alt="Фото попутчика">
+            </picture>
           </a>
           <a href="#" class="catalog__name">Лариса Роговая</a>
           <p class="catalog__tags">&#35;образование &#35;карьера &#35;учеба &#35;линкедин</p>
           <h3 class="catalog__title catalog__title--countries">хочет посетить:</h3>
           <ul class="catalog-countries catalog__countries">
-            <li class="catalog-countries__item">Великобритания</li>
-            <li class="catalog-countries__item">Германия</li>
+            <li class="catalog-countries__item catalog-countries__item__uk">Великобритания</li>
+            <li class="catalog-countries__item catalog-countries__item__germany">Германия</li>
           </ul>
           <ul class="catalog__countries"></ul>
           <h3 class="catalog__title catalog__title--transport">транспорт:</h3>
-          <ul class="transport catalog__transport">
-            <li class="transport__item"><span class="visually-hidden">Авиаперелет</span></li>
-            <li class="transport__item"><span class="visually-hidden">Автотранспорт</span></li>
-            <li class="transport__item"><span class="visually-hidden">Велосипед</span></li>
-            <li class="transport__item"><span class="visually-hidden">Пешком</span></li>
+          <ul class="transport transport--bg-blue catalog__transport">
+            <li class="transport__item transport__item--plane transport__item--active">
+              <span class="visually-hidden">Авиаперелет</span>
+            </li>
+            <li class="transport__item transport__item--bus transport__item--active">
+              <span class="visually-hidden">Автотранспорт</span>
+            </li>
+            <li class="transport__item transport__item--bike">
+              <span class="visually-hidden">Велосипед</span>
+            </li>
+            <li class="transport__item transport__item--run">
+              <span class="visually-hidden">Пешком</span>
+            </li>
           </ul>
           <h3 class="catalog__title catalog__title--level">левел:</h3>
           <div class="catalog__level-wrapper">
@@ -829,7 +873,7 @@
             <a href="#" class="catalog__button">Позвать!</a>
           </div>
           <div class="catalog__likes">
-            <button class="like-button"><span class="visually-hidden">Мне нравится</span></button>
+            <button class="like-button  catalog__like-button"><span class="visually-hidden">Мне нравится</span></button>
             <span class="catalog__text">23</span>
           </div>
         </li>
@@ -850,7 +894,11 @@
 <footer class="footer">
   <div class="container footer__wrapper">
     <a href="index.html" class="site-logo footer__logo">
-      <img src="img/logo-mobile-blue@1x.png" width="100" height="15" alt="Погнали">
+      <picture>
+        <source media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.png">
+        <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png">
+        <img src="img/logo-mobile-blue@1x.png" alt="Погнали">
+      </picture>
     </a>
 
 

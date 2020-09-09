@@ -4,6 +4,66 @@
   padding: 0;
   display: flex;
   justify-content: center;
+
+  &--bg-blue {
+    justify-content: left;
+
+    @media (min-width: $tablet-width) {
+      flex-direction: column;
+      align-items: flex-end;
+      padding-right: 15px;
+    }
+
+    @media (min-width: $desktop-width) {
+      flex-direction: row;
+      align-items: flex-start;
+    }
+
+    .transport__item {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background-color: $basic-blue-lighten;
+      opacity: 1;
+      margin: 0;
+
+      &--plane {
+        background-size: 14px 16px;
+      }
+
+      &--bus {
+        background-size: 13px 16px;
+      }
+
+      &--bike {
+        background-size: 14px 17px;
+      }
+
+      &--run {
+        background-size: 13px 17px;
+      }
+
+      @media (min-width: $tablet-width) {
+        background-color: $basic-white;
+
+        &--plane {
+          background-size: 22.8px 22px;
+        }
+
+        &--bus {
+          background-size: 18.7px 20px;
+        }
+
+        &--bike {
+          background-size: 26px 25px;
+        }
+
+        &--run {
+          background-size: 22.6px 24px;
+        }
+      }
+    }
+  }
 }
 
 .transport__item {

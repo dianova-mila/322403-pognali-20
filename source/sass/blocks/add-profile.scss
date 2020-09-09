@@ -1,28 +1,173 @@
 .add-profile {
+  position: relative;
+  z-index: 3;
   background-color: $special-blue-lighten;
   line-height: 16px;
-  padding-top: 90px;
+  margin-top: -80px;
+  padding-top: 133px;
   padding-bottom: 38px;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 154px;
+    font-size: 28px;
+    line-height: 28px;
+    padding-bottom: 83px;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 187px;
+    padding-bottom: 187px;
+  }
+}
+
+.add-profile__title {
+  padding-left: 25px;
+  margin-bottom: 56px;
+  width: 50%;
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+    text-align: center;
+    padding-left: 0;
+    margin-bottom: 31px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 81px;
+  }
 }
 
 .add-profile__list {
-  list-style: none;
+  position: relative;
+  counter-reset: myCounter;
   margin: 0;
   padding: 0;
+  padding-left: 25px;
+  margin-bottom: 45px;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 1px;
+    width: 74%;
+    bottom: -14px;
+    background-color: #e1e3e9;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-top: 63px;
+    margin-bottom: 62px;
+
+    &::before {
+      z-index: -2;
+      bottom: -11px;
+      left: 91px;
+      width: 80%;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 198px;
+      height: calc(100% + 55px);
+      top: 0;
+      right: 0;
+      background-color: $another-blue-lighten;
+      border-radius: 20px;
+      z-index: -1;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 72px;
+    padding-left: 95px;
+    padding-right: 311px;
+
+    &::after {
+      width: 446px;
+      height: calc(100% + 65px);
+      right: 184px;
+    }
+  }
 }
 
 .add-profile__item {
+  position: relative;
+  list-style: none;
+  margin-bottom: 28px;
+
+  &::after {
+    counter-increment: myCounter;
+    content: counter(myCounter);
+    display: block;
+    position: absolute;
+    width: 34px;
+    height: 34px;
+    top: -10px;
+    right: 0;
+    padding-top: 10px;
+    border-radius: 50%;
+    text-align: center;
+    color: $basic-white;
+  }
+
+  &--1::after {
+    background-color: $special-orange;
+  }
+
+  &--2::after {
+    background-color: $special-yellow-dark;
+  }
+
+  &--3::after {
+    background-color: $basic-yellow;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 1px;
+    width: 80%;
+    top: -13px;
+    background-color: #e1e3e9;
+  }
+
   @media (min-width: $tablet-width) {
     display: flex;
     justify-content: space-between;
+    padding-left: 65px;
+    padding-right: 34px;
+    margin-bottom: 33px;
+
+    &::before {
+      top: -22px;
+      width: 90%;
+      z-index: -2;
+    }
+
+    &::after {
+      padding-top: 23px;
+      width: 68px;
+      height: 68px;
+      right: inherit;
+      top: -23px;
+      left: -25px;
+    }
   }
 }
+
 
 .add-profile__text {
   display: block;
   color: $special-grey;
+  margin-bottom: 6px;
 }
 
 .add-profile__price {
@@ -31,6 +176,47 @@
 }
 
 .add-profile__link {
+  position: relative;
   font-weight: 700;
   color: $special-blue-medium;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+
+  &:focus,
+  &:hover {
+    outline: none;
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+    text-align: left;
+    padding-left: 89px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 68px;
+      height: 68px;
+      top: -25px;
+      left: 0;
+      border-radius: 50%;
+      background-color: $another-blue-lighten;
+      background-image: url("../img/business.svg");
+      background-repeat: no-repeat;
+      background-size: 26.7px 26.7px;
+      background-position: 20.6px 20.6px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 71px;
+  }
 }

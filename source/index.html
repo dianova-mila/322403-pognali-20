@@ -391,15 +391,15 @@
       <h2 class="basic-title add-profile__title">Добавьте свой профиль</h2>
 
       <ol class="add-profile__list">
-        <li class="add-profile__item">
+        <li class="add-profile__item add-profile__item--1">
           <span class="add-profile__text">Базовое размещение</span>
           <span class="add-profile__price">Бесплатно</span>
         </li>
-        <li class="add-profile__item">
+        <li class="add-profile__item add-profile__item--2">
           <span class="add-profile__text">Вывод на первых позициях</span>
           <span class="add-profile__price">99 руб./мес</span>
         </li>
-        <li class="add-profile__item">
+        <li class="add-profile__item add-profile__item--3">
           <span class="add-profile__text">Кастомный цвет карточки</span>
           <span class="add-profile__price">59 руб./мес</span>
         </li>
@@ -524,7 +524,11 @@
 <footer class="footer">
   <div class="container footer__wrapper">
     <a class="site-logo footer__logo">
-      <img src="img/logo-mobile-blue@1x.png" width="100" height="15" alt="Погнали">
+      <picture>
+        <source media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.png">
+        <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png">
+        <img src="img/logo-mobile-blue@1x.png" alt="Погнали">
+      </picture>
     </a>
 
 

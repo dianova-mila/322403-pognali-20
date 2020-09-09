@@ -4,6 +4,95 @@
   font-weight: 500;
   font-size: 15px;
   line-height: 16px;
+  padding: 0;
   text-transform: uppercase;
   color: $special-blue;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: column;
+    padding-top: 49px;
+    padding-left: 20px;
+  }
+}
+
+.catalog-countries__item {
+  padding-top: 5px;
+  padding-left: 45px;
+  margin-bottom: 5px;
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 5px;
+    width: 26px;
+    height: 18px;
+    background-repeat: no-repeat;
+    background-size: 26px 18px;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-right: 23px;
+    padding-left: 48px;
+
+    &::before {
+      width: 35px;
+      height: 24px;
+      background-size: 35px 24px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 60px;
+    margin-right: 0;
+    margin-bottom: 12px;
+  }
+
+  &__sri-lanka::before {
+    background-image: url("../img/sri-lanka.png");
+  }
+
+  &__thailand::before {
+    background-image: url("../img/thailand.png");
+  }
+
+  &__seychelles::before {
+    background-image: url("../img/seychelles.png");
+  }
+
+  &__belgium::before {
+    background-image: url("../img/belgium.png");
+  }
+
+  &__czechia::before {
+    background-image: url("../img/czechia.png");
+  }
+
+  &__usa::before {
+    background-image: url("../img/usa.png");
+  }
+
+  &__australia::before {
+    background-image: url("../img/australia.png");
+  }
+
+  &__dominica::before {
+    background-image: url("../img/dominica.png");
+  }
+
+  &__uk::before {
+    background-image: url("../img/uk.png");
+  }
+
+  &__germany::before {
+    background-image: url("../img/germany.png");
+  }
 }
