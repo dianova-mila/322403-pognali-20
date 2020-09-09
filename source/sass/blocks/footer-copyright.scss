@@ -1,4 +1,27 @@
+.footer-copyright {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  position: relative;
+  padding-top: 13px;
+  border-top: 1px solid #f2f2f2;
+
+
+  @media (min-width: $tablet-width) {
+    border-top: none;
+  }
+}
+
+
 .footer-copyright__text {
   line-height: 16px;
   color: $special-grey;
+  margin: 0;
+  padding-top: 8px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+    margin-right: 23px;
+  }
 }

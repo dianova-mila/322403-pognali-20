@@ -1,5 +1,19 @@
 .promo-quote {
   margin: 0;
+  padding-left: 25px;
+  padding-right: 84px;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 33px;
+    padding-right: 15px;
+    width: 50%;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 44px;
+    padding-top: 12px;
+    width: 25%;
+  }
 }
 
 .promo-quote__text {
@@ -7,6 +21,17 @@
   font-size: 16px;
   line-height: 22px;
   margin: 0;
+  margin-bottom: 18px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 28px;
+    line-height: 33px;
+    margin-bottom: 45px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 43px;
+  }
 }
 
 .promo-quote__author {
@@ -14,4 +39,9 @@
   font-weight: 700;
   font-size: 16px;
   line-height: 22px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 21px;
+    line-height: 25px;
+  }
 }

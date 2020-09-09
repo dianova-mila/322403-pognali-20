@@ -1,28 +1,149 @@
 .add-profile {
+  position: relative;
+  z-index: 3;
   background-color: $special-blue-lighten;
   line-height: 16px;
-  padding-top: 90px;
+  margin-top: -80px;
+  padding-top: 133px;
   padding-bottom: 38px;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 154px;
+    font-size: 28px;
+    line-height: 28px;
+    padding-bottom: 83px;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 187px;
+    padding-bottom: 187px;
+  }
+}
+
+.add-profile__title {
+  padding-left: 25px;
+  margin-bottom: 43px;
+  width: 50%;
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+    text-align: center;
+    padding-left: 0;
+    margin-bottom: 31px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 81px;
+  }
 }
 
 .add-profile__list {
-  list-style: none;
+  position: relative;
+  counter-reset: myCounter;
+  border-bottom: 1px solid #e1e3e9;
   margin: 0;
   padding: 0;
+  margin-left: 25px;
+  margin-bottom: 45px;
+  margin-right: 45px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 42px;
+    padding-left: 0;
+    margin-bottom: 54px;
+    margin-right: 34px;
+    margin-left: 90px;
+
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 198px;
+      height: calc(100% + 55px);
+      top: 0;
+      right: -34px;
+      background-color: $another-blue-lighten;
+      border-radius: 20px;
+      z-index: -1;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 52px;
+    margin-left: 160px;
+    padding-right: 311px;
+
+    &::after {
+      width: 446px;
+      height: calc(100% + 65px);
+      right: 184px;
+    }
+  }
 }
 
 .add-profile__item {
+  position: relative;
+  list-style: none;
+  border-top: 1px solid #e1e3e9;
+  padding-top: 13px;
+  padding-bottom: 13px;
+
+
+  &::after {
+    counter-increment: myCounter;
+    content: counter(myCounter);
+    display: block;
+    position: absolute;
+    width: 34px;
+    height: 34px;
+    top: 3px;
+    right: -44px;
+    padding-top: 10px;
+    border-radius: 50%;
+    text-align: center;
+    color: $basic-white;
+  }
+
+  &--1::after {
+    background-color: $special-orange;
+  }
+
+  &--2::after {
+    background-color: $special-yellow-dark;
+  }
+
+  &--3::after {
+    background-color: $basic-yellow;
+  }
+
   @media (min-width: $tablet-width) {
     display: flex;
     justify-content: space-between;
+    padding-top: 20px;
+    padding-left: 0;
+    padding-bottom: 11px;
+
+    &::after {
+      padding-top: 23px;
+      width: 68px;
+      height: 68px;
+      right: inherit;
+      top: -2px;
+      left: -90px;
+    }
   }
 }
+
 
 .add-profile__text {
   display: block;
   color: $special-grey;
+  margin-bottom: 6px;
 }
 
 .add-profile__price {
@@ -31,6 +152,72 @@
 }
 
 .add-profile__link {
+  position: relative;
   font-weight: 700;
   color: $special-blue-medium;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+
+  &:focus,
+  &:hover {
+    outline: none;
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+    text-align: left;
+    padding-left: 89px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 68px;
+      height: 68px;
+      top: -25px;
+      left: 0;
+      border-radius: 50%;
+      background-color: $another-blue-lighten;
+      background-image: url("../img/business.svg");
+      background-repeat: no-repeat;
+      background-size: 26.7px 26.7px;
+      background-position: 20.6px 20.6px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 71px;
+  }
+}
+
+.add-profile__icon {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-repeat: no-repeat;
+    background-image: url("../img/rates@1x.png");
+    background-size: 100px 100px;
+    bottom: 46px;
+    right: 85px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 198px;
+    height: 198px;
+    background-size: 198px 198px;
+    bottom: inherit;
+    top: 367px;
+    right: 133px;
+  }
 }

@@ -5,7 +5,12 @@
 
   @media (min-width: $tablet-width) {
     display: flex;
-    flex-direction: row;
+    padding-left: 34px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 30px;
+    padding-top: 4px;
   }
 }
 
@@ -13,14 +18,68 @@
   background-color: $basic-white;
   border-radius: 10px;
   overflow: hidden;
+  margin-bottom: 9px;
+  width: 270px;
+
+  @media (min-width: $tablet-width) {
+    width: 285px;
+    border-radius: 20px;
+
+    &:first-child {
+      margin-right: 50px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &:first-child {
+      margin-right: 60px;
+    }
+  }
 }
+
 
 .companions-list__name {
   margin: 0;
+  position: relative;
   font-weight: 700;
   font-size: 21px;
   line-height: 21px;
   color: $special-blue;
+  margin-bottom: 14px;
+  text-align: center;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: $special-red-light;
+    top: 6px;
+    left: 53px;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 24px;
+    line-height: 22px;
+    padding-left: 68px;
+    margin-bottom: 24px;
+    text-align: left;
+
+    &::before {
+      width: 8px;
+      height: 8px;
+      top: 7px;
+      left: 46px;
+    }
+  }
+
+  &--online {
+    &::before {
+      background-color: $special-green-light;
+    }
+  }
 }
 
 .companions-list__tags {
@@ -30,4 +89,23 @@
   line-height: 18px;
   text-align: center;
   color: $special-grey;
+  padding-left: 42px;
+  padding-right: 36px;
+  margin-bottom: 14px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 23px;
+    padding-left: 27px;
+    padding-right: 27px;
+    margin-bottom: 23px;
+  }
+}
+
+.companions-list__transport {
+  margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 27px;
+  }
 }

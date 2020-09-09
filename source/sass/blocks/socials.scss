@@ -3,6 +3,13 @@
   margin: 0;
   padding: 0;
   display: flex;
+  justify-content: center;
+
+  &--left {
+    @media (min-width: $tablet-width) {
+      justify-content: left;
+    }
+  }
 }
 
 .socials__link {
@@ -11,6 +18,11 @@
   height: 45px;
   border-radius: 50%;
 
+  @media (min-width: $tablet-width) {
+    width: 62px;
+    height: 62px;
+  }
+
   &::after {
     content: "";
     display: block;
@@ -18,6 +30,11 @@
     height: 45px;
     background-repeat: no-repeat;
     background-position: center;
+
+    @media (min-width: $tablet-width) {
+      width: 62px;
+      height: 62px;
+    }
   }
 
   &:focus,
@@ -61,15 +78,27 @@
   &--fb::after {
     background-image: url("../img/facebook.svg");
     background-size: 11px, 21px;
+
+    @media (min-width: $tablet-width) {
+      background-size: 13.5px, 27.7px;
+    }
   }
 
   &--vk::after {
     background-image: url("../img/vk.svg");
     background-size: 23px, 12px;
+
+    @media (min-width: $tablet-width) {
+      background-size: 30px, 15.8px;
+    }
   }
 
   &--inst::after {
     background-image: url("../img/instagram.svg");
     background-size: 18px, 18px;
+
+    @media (min-width: $tablet-width) {
+      background-size: 24px, 24px;
+    }
   }
 }

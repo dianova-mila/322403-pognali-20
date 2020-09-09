@@ -2,18 +2,124 @@
   list-style: none;
   margin: 0;
   padding: 0;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 36px;
+    padding-right: 35px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 70px;
+    padding-right: 30px;
+  }
 }
 
 .directions-list__item {
+  margin-bottom: 10px;
+  position: relative;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  overflow: hidden;
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: 2;
+    width: 35px;
+    height: 25px;
+    background-repeat: no-repeat;
+    background-size: 35px 25px;
+    top: 86px;
+    left: 25px;
+  }
+
   @media (min-width: $tablet-width) {
     display: flex;
-    flex-direction: row-reverse;
+    align-items: flex-start;
+    margin-bottom: 4px;
+
+    &::after {
+      width: 70px;
+      height: 47px;
+      background-size: 70px 47px;
+      top: 17px;
+      left: inherit;
+      right: 150px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &::after {
+      top: 23px;
+      right: 152px;
+    }
+  }
+
+  &--thailand {
+    &::after {
+      background-image: url("../img/thailand.png");
+    }
+  }
+
+  &--france {
+    &::after {
+      background-image: url("../img/france.png");
+    }
+  }
+
+  &--czech {
+    &::after {
+      background-image: url("../img/czechia.png");
+    }
+  }
+}
+
+.directions-list__picture {
+  @media (min-width: $tablet-width) {
+    order: 2;
+  }
+}
+
+.directions-list__img {
+  @media (min-width: $tablet-width) {
+    order: 2;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
   }
 }
 
 .directions-list__description {
   background-color: $basic-white;
   border-radius: 10px;
+  margin-top: -18px;
+  padding-top: 26px;
+  padding-left: 24px;
+  padding-bottom: 24px;
+  padding-right: 24px;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+
+  @media (min-width: $tablet-width) {
+    order: 1;
+    margin-top: 0;
+    flex-grow: 1;
+    border-radius: 20px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    padding-top: 30px;
+    padding-left: 29px;
+    padding-bottom: 19px;
+    display: block;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 24px;
+  }
 }
 
 .directions-list__title {
@@ -21,6 +127,15 @@
   font-size: 21px;
   line-height: 21px;
   color: $basic-black;
+  margin: 0;
+  width: 70%;
+  order: 1;
+
+  @media (min-width: $tablet-width) {
+    font-size: 24px;
+    line-height: 24px;
+    padding-bottom: 5px;
+  }
 }
 
 .directions-list__text {
@@ -29,6 +144,18 @@
   line-height: 18px;
   opacity: 0.3;
   flex-grow: 1;
+  margin: 0;
+  order: 3;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+    padding-bottom: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 26px;
+  }
 }
 
 .directions-list__number {
@@ -37,4 +164,35 @@
   line-height: 20px;
   opacity: 0.3;
   color: $basic-blue-dark;
+  width: 42px;
+  order: 2;
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    top: 3px;
+    left: -17px;
+    background-repeat: no-repeat;
+    background-image: url("../img/user.svg");
+    background-size: 11px 12px;
+    opacity: 0.5;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+    padding-left: 29px;
+
+    &::before {
+      width: 18px;
+      height: 20px;
+      background-size: 18px 20px;
+      top: 0;
+      left: 0;
+    }
+  }
 }

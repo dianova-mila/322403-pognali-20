@@ -1,3 +1,15 @@
+.main {
+  padding-top: 80px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 139px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 106px;
+  }
+}
+
 .main__row {
   @media (min-width: $desktop-width) {
     display: flex;

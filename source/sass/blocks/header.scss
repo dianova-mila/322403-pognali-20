@@ -1,8 +1,9 @@
 .header {
-  background-color: $basic-white;
-  color: $basic-blue;
-  padding-top: 25px;
-  padding-bottom: 40px;
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  background-color: $basic-blue-dark;
+  color: $basic-white;
 }
 
 .header__wrapper {
@@ -16,7 +17,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    grid-template-columns: 200px 1fr 1fr min-content;
+    grid-template-columns: 200px 2fr 1fr auto;
     grid-template-rows: min-content;
   }
 }
@@ -24,21 +25,46 @@
 .header__logo {
   grid-row: 1;
   grid-column: 1;
+  padding-top: 27px;
+  padding-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 45px;
+    padding-bottom: 38px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 47px;
+    padding-bottom: 0;
+  }
+}
+
+.header__button-wrapper {
+  grid-row: 1;
+  grid-column: 2;
+  text-align: right;
+  padding-top: 27px;
+  padding-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    text-align: center;
+    padding-top: 55px;
+    padding-bottom: 51px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
 }
 
 .header__button {
+  display: inline-block;
   border: none;
   background-color: transparent;
-  width: 18px;
-  height: 19px;
-  background-repeat: no-repeat;
-  grid-row: 1;
-  grid-column: 2;
-
-  &--close {
-    background-image: url("../../img/small-cross.svg");
-    opacity: 0.1;
-  }
+  width: 22px;
+  height: 22px;
+  padding: 0;
+  padding-top: 4px;
 
   &:focus,
   &:hover {
@@ -47,29 +73,53 @@
   }
 
   &:active {
-    opacity: 0.05;
+    opacity: 0.15;
   }
 
-  @media (min-width: $desktop-width) {
-    display: none;
+  @media (min-width: $tablet-width) {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+.header__button-img {
+  width: 22px;
+  height: 22px;
+  fill: $basic-white;
+
+  @media (min-width: $tablet-width) {
+    width: 22px;
+    height: 22px;
   }
 }
 
 .header__login {
+  display: none;
   grid-column: 1 / 3;
   grid-row: 3;
+  margin-bottom: 51px;
 
   @media (min-width: $tablet-width) {
+    display: block;
     grid-column: 3;
     grid-row: 1;
+    padding-left: 18%;
+    padding-top: 41px;
+    padding-bottom: 41px;
+    margin: 0;
   }
 
   @media (min-width: $desktop-width) {
     grid-column: 4;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-top: 49px;
+    max-width: 200px;
   }
 }
 
 .header__nav {
+  display: none;
   grid-column: 1 / 3;
   grid-row: 2;
 
@@ -78,6 +128,7 @@
   }
 
   @media (min-width: $desktop-width) {
+    display: block;
     grid-row: 1;
     grid-column: 2;
   }
@@ -86,28 +137,203 @@
 .header__contact {
   grid-column: 1 / 3;
   grid-row: 4;
+  margin-bottom: 29px;
+  display: none;
 
   @media (min-width: $tablet-width) {
     grid-column: 1 / 4;
     grid-row: 3;
+    padding-left: 8.3%;
+    margin-bottom: 113px;
   }
 
   @media (min-width: $desktop-width) {
     grid-column: 3;
     grid-row: 1;
+    margin-bottom: 0;
+    padding-top: 49px;
+    display: flex;
+    justify-content: flex-end;
   }
 }
 
 .header__socials {
+  display: none;
   grid-column: 1 / 3;
   grid-row: 5;
+  margin-bottom: 29px;
 
   @media (min-width: $tablet-width) {
     grid-column: 1 / 4;
     grid-row: 4;
+    padding-left: 8.3%;
+    margin-bottom: 73px;
   }
+}
+
+
+.header--opened {
+  background-color: $basic-white;
 
   @media (min-width: $desktop-width) {
+    background-color: $basic-blue-dark;
+  }
+
+  .header__button-img {
     display: none;
+  }
+
+  .header__button {
+    background-image: url("../img/menu-close.svg");
+    opacity: 0.1;
+  }
+
+  .header__logo-img {
+    display: none;
+
+    @media (min-width: $desktop-width) {
+      display: block;
+    }
+  }
+
+  .header__logo {
+    background-image: url("../img/logo-mobile-blue@1x.png");
+    background-repeat: no-repeat;
+    background-position: 0 center;
+
+    @media (min-width: $tablet-width) {
+      background-image: url("../img/logo-tablet-blue@1x.png");
+    }
+
+    @media (min-width: $desktop-width) {
+      background-image: none;
+    }
+  }
+
+  .header__login,
+  .header__nav {
+    display: block;
+  }
+
+
+  .header__socials {
+    display: block;
+
+    @media (min-width: $desktop-width) {
+      display: none;
+    }
+  }
+
+  .header__contact {
+    display: block;
+
+    @media (min-width: $desktop-width) {
+      display: flex;
+    }
+  }
+}
+
+.header--scroll {
+  background-color: $basic-white;
+  color: $basic-blue;
+
+  .header__logo-img {
+    display: none;
+  }
+
+  .header__button-img {
+    fill: #cccccc;
+  }
+
+  .header__logo {
+    background-image: url("../img/logo-mobile-blue@1x.png");
+    background-repeat: no-repeat;
+    background-position: 0 center;
+
+    @media (min-width: $tablet-width) {
+      background-image: url("../img/logo-tablet-blue@1x.png");
+    }
+
+    @media (min-width: $desktop-width) {
+      background-image: url("../img/logo-desktop-blue@1x.png");
+      background-position: 0 center;
+    }
+  }
+
+  .header__login {
+    @media (min-width: $desktop-width) {
+      padding-top: 21px;
+      padding-bottom: 19px;
+    }
+  }
+
+  .header__nav {
+    @media (min-width: $desktop-width) {
+      padding-top: 39px;
+      padding-bottom: 19px;
+    }
+  }
+
+  .header__contact {
+    @media (min-width: $desktop-width) {
+      padding-top: 21px;
+      padding-bottom: 19px;
+    }
+  }
+}
+
+.header--nojs {
+  background-color: $basic-white;
+
+  @media (min-width: $desktop-width) {
+    background-color: $basic-blue-dark;
+  }
+
+  .header__logo-img {
+    display: none;
+
+    @media (min-width: $desktop-width) {
+      display: block;
+    }
+  }
+
+  .header__logo {
+    background-image: url("../img/logo-mobile-blue@1x.png");
+    background-repeat: no-repeat;
+    background-position: 0 center;
+
+    @media (min-width: $tablet-width) {
+      background-image: url("../img/logo-tablet-blue@1x.png");
+    }
+
+    @media (min-width: $desktop-width) {
+      background-image: none;
+    }
+  }
+
+  .header__button-wrapper {
+    display: none;
+  }
+
+  .header__login,
+  .header__nav {
+    display: block;
+  }
+
+
+  .header__socials {
+    display: block;
+
+    @media (min-width: $desktop-width) {
+      display: none;
+    }
+  }
+
+  .header__contact {
+    display: block;
+
+    @media (min-width: $desktop-width) {
+      display: flex;
+    }
   }
 }
