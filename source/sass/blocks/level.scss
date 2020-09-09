@@ -1,0 +1,69 @@
+.level {
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 24px;
+  color: $special-blue;
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: 45px 45px;
+  padding-top: 12px;
+  padding-left: 9px;
+  text-align: left;
+
+  @media (min-width: $tablet-width) {
+    width: 62px;
+    height: 62px;
+    background-size: 62px 62px;
+    padding-left: 15px;
+  }
+
+  &--99 {
+    background-image: url("../img/level-99.svg");
+  }
+
+  &--80 {
+    background-image: url("../img/level-80.svg");
+  }
+
+  &--25 {
+    background-image: url("../img/level-25.svg");
+    background-size: 22.5px 22.5px;
+
+    @media (min-width: $tablet-width) {
+      background-size: 32px 33px;
+    }
+  }
+
+  &--50 {
+    background-image: url("../img/level-50.svg");
+    background-size: 22.5px 45px;
+
+    @media (min-width: $tablet-width) {
+      background-size: 32px 62px;
+    }
+  }
+}
+
+.level__number {
+  @media (min-width: $tablet-width) {
+    padding-left: 4px;
+  }
+}
+
+.level__level {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: normal;
+    width: 31px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    padding-top: 2px;
+    padding-left: 4px;
+  }
+}

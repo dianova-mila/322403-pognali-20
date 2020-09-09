@@ -37,13 +37,6 @@
   }
 }
 
-.companions-list__name-wrapper {
-  text-align: center;
-
-  @media (min-width: $tablet-width) {
-    text-align: left;
-  }
-}
 
 .companions-list__name {
   margin: 0;
@@ -53,6 +46,7 @@
   line-height: 21px;
   color: $special-blue;
   margin-bottom: 14px;
+  text-align: center;
 
   &::before {
     content: "";
@@ -71,6 +65,7 @@
     line-height: 22px;
     padding-left: 68px;
     margin-bottom: 24px;
+    text-align: left;
 
     &::before {
       width: 8px;
