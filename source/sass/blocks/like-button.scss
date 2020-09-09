@@ -5,14 +5,40 @@
   background-color: $another-blue-lighten;
   width: 30px;
   height: 30px;
-  background-image: url("../img/heart.svg");
-  background-size: 12px 10px;
-  background-position: center;
-  background-repeat: no-repeat;
+  position: relative;
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 10px;
+    left: 9px;
+    width: 12px;
+    height: 10px;
+    background-image: url("../img/heart.svg");
+    background-size: 12px 10px;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
 
   @media (min-width: $tablet-width) {
     width: 50px;
     height: 50px;
-    background-size: 20px 20px;
+
+    &::after {
+      width: 20px;
+      height: 20px;
+      top: 16px;
+      left: 16px;
+      background-size: 20px 20px;
+    }
+  }
+}
+
+.like-button--active {
+  background-color: #f9eaea;
+
+  &::after {
+    background-image: url("../img/heart-active.svg");
   }
 }
