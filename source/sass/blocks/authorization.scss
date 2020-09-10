@@ -1,12 +1,50 @@
 .authorization {
+  position: relative;
+  z-index: 2;
   background-color: $basic-blue;
   color: $basic-white;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
+  margin-top: -80px;
+  padding-top: 152px;
+  padding-bottom: 28px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 59px;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 189px;
+    padding-bottom: 106px;
+  }
+}
+
+.authorization__title {
+  margin-bottom: 19px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 61px;
+  }
 }
 
 .authorization__text {
   margin: 0;
+  padding-left: 31px;
+  padding-right: 27px;
+  margin-bottom: 18px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 28px;
+    line-height: 32px;
+    margin-bottom: 40px;
+
+    & br:first-child {
+      display: none;
+    }
+  }
 }
 
 .authorization__link {
@@ -24,12 +62,51 @@
   }
 }
 
+.authorization__form {
+  margin-top: 29px;
+  position: relative;
+  margin-bottom: 29px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 66px;
+    margin-left: 36px;
+    margin-right: 36px;
+    margin-bottom: 59px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 55px;
+    margin-left: 72px;
+    margin-right: 74px;
+    margin-bottom: 68px;
+  }
+}
+
 .authorization__input {
+  position: relative;
+  z-index: 1;
   background-color: $basic-white;
-  border-radius: 20px;
+  border-radius: 10px;
   color: $basic-white;
   border: 4px solid $basic-white;
   padding: 0;
+  width: 100%;
+  height: 62px;
+  padding-left: 20px;
+  padding-right: 70px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 24px;
+    line-height: 24px;
+    padding-left: 32px;
+    padding-right: 100px;
+    height: 80px;
+    border-radius: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 350px;
+  }
 
   &::placeholder {
     font-weight: 700;
@@ -37,6 +114,11 @@
     line-height: 18px;
     color: $special-grey;
     opacity: 0.3;
+
+    @media (min-width: $tablet-width) {
+      font-size: 24px;
+      line-height: 24px;
+    }
   }
 
   &:hover {
@@ -55,19 +137,87 @@
 }
 
 .authorization__contact {
+  text-align: left;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 34px;
+  }
+
   @media (min-width: $desktop-width) {
     display: flex;
     justify-content: center;
+    margin-left: 0;
+  }
+
+  & .contact__item:first-child {
+    @media (min-width: $desktop-width) {
+      margin-right: 110px;
+    }
   }
 }
 
 .authorization__button {
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  right: 0;
   border: none;
   background-color: $basic-yellow;
+  height: 62px;
+  width: 60px;
+  border-radius: 10px;
+
+  @media (min-width: $tablet-width) {
+    height: 80px;
+    width: 80px;
+    border-radius: 0;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 324px;
+    text-align: left;
+    padding-left: 36px;
+  }
 
   &:focus,
   &:hover {
     cursor: pointer;
     border-color: $special-yellow-dark;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background-image: url("../img/triangle-arrow-right.svg");
+    background-repeat: no-repeat;
+    background-size: 14px 16px;
+    background-position: center;
+
+    @media (min-width: $desktop-width) {
+      width: 14px;
+      height: 16px;
+      top: 31px;
+      right: 34px;
+    }
+  }
+}
+
+.authorization__button-text {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: inline-block;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 24px;
+    color: $special-blue;
+    max-width: 200px;
   }
 }

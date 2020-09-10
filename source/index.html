@@ -342,6 +342,10 @@
               <span class="visually-hidden">Пешком</span>
             </li>
           </ul>
+          <div class="level level--full level--99 companions-list__level">
+            <span class="level__number">99</span>
+            <span class="level__level">level</span>
+          </div>
         </li>
         <li class="companions-list__item">
           <img
@@ -372,6 +376,10 @@
               <span class="visually-hidden">Пешком</span>
             </li>
           </ul>
+          <div class="level level--full level--80 companions-list__level">
+            <span class="level__number">80</span>
+            <span class="level__level">level</span>
+          </div>
         </li>
       </ul>
 
@@ -412,7 +420,7 @@
       <h2 class="basic-title authorization__title">Заинтересовались?</h2>
 
       <p class="authorization__text">
-        Зарегистрируйтесь, это быстро и бесплатно! Уже зарегистрированы? Тогда скорее
+        Зарегистрируйтесь,<br> это быстро и бесплатно!<br> Уже зарегистрированы? Тогда скорее
         <a href="#" class="authorization__link">авторизуйтесь</a>.
       </p>
 
@@ -424,10 +432,10 @@
           id="authorization-email-field"
           placeholder="E-mail"
           class="authorization__input">
-        <button type="submit" class="authorization__button"><span class="visually-hidden">Отправить</span></button>
+        <button type="submit" class="authorization__button"><span class="authorization__button-text">Регистрация</span></button>
       </form>
 
-      <p class="authorization__text">Остались вопросы? Мы с радостью на них ответим!</p>
+      <p class="authorization__text">Остались вопросы?<br> Мы с радостью на них ответим!</p>
 
       <ul class="contact authorization__contact">
         <li class="contact__item">
@@ -493,12 +501,14 @@
     <h2 class="visually-hidden">Как до нас добраться</h2>
 
     <section class="map-text map__text">
-      <div class="container">
+      <div class="container map-text__wrapper">
         <h3 class="visually-hidden">Наш адрес</h3>
 
         <address class="map-text__address">ул. Большая Конюшенная, 19/8</address>
 
-        <a href="#" class="button button--empty map-text__button">Проложить маршрут</a>
+        <div class="map-text__button-wrapper">
+          <a href="#" class="button button--empty map-text__button">Проложить маршрут</a>
+        </div>
       </div>
     </section>
 
@@ -506,7 +516,7 @@
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253003006!2d30.32085871595745!3d59.938719169054345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1596459033592!5m2!1sru!2sru"
         width="100%"
-        height="424"
+        height="100%"
         frameborder="0"
         style="border:0;"
         allowfullscreen=""
@@ -514,6 +524,31 @@
         tabindex="0">
       </iframe>
     </div>
+  </section>
+
+  <section class="business-rates">
+    <h2 class="basic-title business-rates__title">Бизнес-тарифы</h2>
+
+    <ul class="business-rates__list">
+      <li class="business-rates__item">
+        <span class="business-rates__text">Реклама у блоггера</span>
+        <span class="business-rates__price">300 000 руб./пост</span>
+      </li>
+      <li class="business-rates__item">
+        <span class="business-rates__text">Накрутка подписчиков</span>
+        <span class="business-rates__price">от 1 руб./шт.</span>
+      </li>
+      <li class="business-rates__item">
+        <span class="business-rates__text">Лайки от ботов</span>
+        <span class="business-rates__price">от 20 коп./лайк</span>
+      </li>
+      <li class="business-rates__item">
+        <span class="business-rates__text">Ваш продакт-плейсмент </span>
+        <span class="business-rates__price">Индивидуально</span>
+      </li>
+    </ul>
+
+    <button class="business-rates__button">Закрыть окно</button>
   </section>
 </main>
 
@@ -567,5 +602,6 @@
 </footer>
 
 <script src="js/header.js"></script>
+<script src="js/business-rates.js"></script>
 </body>
 </html>

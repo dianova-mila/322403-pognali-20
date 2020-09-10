@@ -8,7 +8,6 @@
   }
 }
 
-
 .contact__link {
   &:focus,
   &:hover {
@@ -112,6 +111,8 @@
 
   @media (min-width: $desktop-width) {
     margin-left: 31px;
+    vertical-align: top;
+    padding-top: 37px;
   }
 }
 
