@@ -1,7 +1,48 @@
 .title {
+  position: relative;
   background-color: $basic-blue-darken;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  padding-top: 16px;
+  padding-bottom: 11px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 84px;
+    padding-bottom: 67px;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 117px;
+  }
+}
+
+.title__text {
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    border-radius: 4px;
+    background-color: $special-orange;
+    width: 173px;
+    height: 5px;
+    bottom: -2px;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-left: 34px;
+
+    &::after {
+      width: 288px;
+      height: 8px;
+      bottom: -4px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 66px;
+  }
 }
 
 .title__link {

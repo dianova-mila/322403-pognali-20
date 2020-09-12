@@ -1,1 +1,81 @@
-//
+.pagination {
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: $basic-white;
+  height: 51px;
+
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+  }
+}
+
+.pagination__buttons {
+  display: flex;
+  width: 100%;
+  height: 100%;
+
+  @media (min-width: $tablet-width) {
+    width: 120px;
+  }
+}
+
+.pagination__button {
+  display: block;
+  width: 50%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20px 13px;
+
+  &--back {
+    background-image: url("../img/triangle-arrow-left.svg");
+    border-right: 1px solid #edeff6;
+
+    @media (min-width: $tablet-width) {
+      border-right: none;
+      background-position: 28px center;
+    }
+  }
+
+  &--forward {
+    background-image: url("../img/triangle-arrow-right.svg");
+
+    @media (min-width: $tablet-width) {
+      background-position: 11px center;
+    }
+  }
+}
+
+.pagination__list {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    padding-left: 28px;
+  }
+}
+
+.pagination__number {
+  font-family: "Blogger Sans", "Arial", sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 20px;
+  display: block;
+  width: 50px;
+  height: 50px;
+  color: $special-blue;
+  border-radius: 50%;
+  text-align: center;
+  padding-top: 17px;
+
+  &--active {
+    background-color: $basic-yellow;
+  }
+}
