@@ -1,7 +1,13 @@
 .my-plans {
   background-color: $special-blue-light;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  padding-top: 28px;
+  padding-bottom: 80px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 57px;
+  }
 }
 
 .my-plans__title {
@@ -9,29 +15,126 @@
   font-size: 24px;
   line-height: 24px;
   color: $special-blue;
+  margin: 0;
+  margin-bottom: 29px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+    padding-left: 35px;
+    margin-bottom: 48px;
+  }
 }
 
 .my-plans__list {
-  list-style: none;
   margin: 0;
   padding: 0;
+  list-style: none;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 35px;
+    padding-right: 35px;
+    counter-reset: myCounter;
+  }
 }
 
 .my-plans__item {
+  position: relative;
   background-color: $basic-white;
   border-radius: 10px;
   font-weight: 500;
   font-size: 14px;
   line-height: 14px;
-  text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: $special-blue;
+  padding-top: 24px;
+  padding-left: 23px;
+  padding-right: 23px;
+  padding-bottom: 23px;
+  margin-bottom: 12px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+    padding-top: 40px;
+    list-style: none;
+
+    &::after {
+      // номер
+      counter-increment: myCounter;
+      content: counter(myCounter);
+      font-size: 20px;
+      line-height: 20px;
+      position: absolute;
+      top: 43px;
+      right: 36px;
+    }
+
+    &::before {
+      // точка
+      content: ".";
+      font-size: 20px;
+      line-height: 20px;
+      position: absolute;
+      top: 43px;
+      right: 31px;
+    }
+  }
+}
+
+.my-plans__wrapper {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    border-top: 1px solid #cbced9;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.1em;
+    height: 54px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 33px;
+    padding-right: 34px;
+  }
+}
+
+.my-plans__number {
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
 }
 
 .my-plans__countries {
   text-transform: none;
   letter-spacing: normal;
+  margin: 0;
+  margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 36px;
+    font-size: 24px;
+    line-height: 24px;
+    margin-bottom: 34px;
+  }
+}
+
+.my-plans__companions {
+  margin: 0;
+  margin-bottom: 5px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+  }
+}
+
+.my-plans__dates {
+  margin: 0;
+  margin-bottom: 24px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    padding-right: 36px;
+  }
 }
 
 .my-plans__button {

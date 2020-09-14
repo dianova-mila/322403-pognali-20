@@ -1,13 +1,83 @@
+.plan-countries__add-countries {
+  display: flex;
+  position: relative;
+  margin-bottom: 22px;
+  width: 100%;
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 10px;
+    width: 5px;
+    background-repeat: no-repeat;
+    background-image: url("../img/small-arrow.svg");
+    bottom: -16px;
+    right: 51px;
+  }
+
+  &:last-child::after {
+    display: none;
+  }
+}
+
+.plan-countries__list {
+  display: none;
+  position: absolute;
+  z-index: 5;
+  background-color: $basic-white;
+  top: 40px;
+
+  &--active {
+    display: block;
+  }
+}
+
+.plan-countries__alphabet-wrapper {
+  margin: 0;
+}
+
+.plan-countries__filter {
+  border: 1px solid #cbced9;
+  border-top: none;
+  padding-top: 20px;
+  padding-left: 19px;
+  padding-bottom: 20px;
+}
+
 .plan-countries__button {
+  display: block;
+  position: relative;
+  z-index: 1;
+  font-family: "Blogger Sans", "Arial", sans-serif;
   font-weight: 500;
   font-size: 14px;
   line-height: 18px;
   letter-spacing: 0.09em;
+  text-align: left;
   text-transform: uppercase;
   color: $special-blue;
   border: 1px solid $another-blue-medium;
   border-radius: 4px;
   background-color: $basic-white;
+  height: 42px;
+  white-space: nowrap;
+  width: 168px;
+  flex-grow: 1;
+
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 52px;
+    background-repeat: no-repeat;
+    background-image: url("../img/arrow-back.svg"), url("../img/fade-mobile.png");
+    background-size: 20px 16px, 52px 40px;
+    background-position: center;
+    top: 0;
+    right: 0;
+  }
 
   &:focus,
   &:hover {
@@ -22,7 +92,110 @@
     color: $basic-white;
   }
 
+  &--choice-countries {
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      height: 8px;
+      width: 8px;
+      border-radius: 50%;
+      border: 1px solid #cbced9;
+      top: 15px;
+      right: 48px;
+    }
+  }
+
   &--add-countries {
     background-color: $basic-blue-lighten;
+
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: 2;
+      display: block;
+      height: 100%;
+      width: 52px;
+      background-repeat: no-repeat;
+      background-size: 20px 16px;
+      background-position: center;
+      top: 0;
+      right: 0;
+      background-image: url("../img/qty-plus.svg");
+      opacity: 0.3;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      height: 8px;
+      width: 8px;
+      border-radius: 50%;
+      border: 1px solid #cbced9;
+      top: 15px;
+      right: 48px;
+    }
+  }
+}
+
+.plan-countries__flag {
+  display: block;
+  position: relative;
+  z-index: 2;
+  width: 53px;
+  height: 42px;
+  border: 1px solid #cbced9;
+  border-radius: 4px;
+  background-color: $basic-white;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 35px 24px;
+
+  &--bosnia {
+    background-image: url("../img/bosnia_and_herzegovina.png");
+  }
+
+  &--czech {
+    background-image: url("../img/czechia.png");
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: $special-blue;
+    top: 15px;
+    left: -5px;
+  }
+}
+
+.plan-countries__delete {
+  position: absolute;
+  z-index: 3;
+  width: 21px;
+  height: 21px;
+  display: block;
+  border-radius: 50%;
+  background: #edeff6;
+  border: none;
+  top: -11px;
+  right: -9px;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 21px;
+    height: 21px;
+    background-repeat: no-repeat;
+    background-image: url("../img/countries-close.svg");
+    background-position: center;
+    background-size: 9px 9px;
+    top: 0;
+    left: 0;
   }
 }

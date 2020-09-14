@@ -87,3 +87,35 @@
     padding-left: 4px;
   }
 }
+
+.level--big {
+  width: 100px;
+  height: 100px;
+  background-size: 100px 100px;
+  padding-top: 20px;
+  padding-left: 29px;
+
+  .level__number {
+    font-size: 38px;
+    line-height: 38px;
+  }
+
+  .level__level {
+    position: relative;
+    display: block;
+    font-size: 18px;
+    line-height: 18px;
+    padding-top: 2px;
+    padding-left: 4px;
+    border: none;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 51px;
+      height: 1px;
+      background-color: $special-grey;
+    }
+  }
+}
