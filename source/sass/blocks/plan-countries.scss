@@ -1,3 +1,23 @@
+.plan-countries {
+  @media (min-width: $tablet-width) {
+    position: relative;
+    padding-top: 42px;
+    border-top: 1px solid #E1E3E9;
+
+    &:after {
+      // вертикальная палка
+      content: "";
+      display: block;
+      width: 1px;
+      height: 100%;
+      background-color: #E1E3E9;
+      position: absolute;
+      top: 0;
+      right: 136px;
+    }
+  }
+}
+
 .plan-countries__add-countries {
   display: flex;
   position: relative;
@@ -5,6 +25,7 @@
   width: 100%;
 
   &::after {
+    // маленькая стрелка
     content: "";
     display: block;
     position: absolute;
@@ -14,6 +35,13 @@
     background-image: url("../img/small-arrow.svg");
     bottom: -16px;
     right: 51px;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 16px;
+    &::after {
+      display: none;
+    }
   }
 
   &:last-child::after {
@@ -27,13 +55,34 @@
   z-index: 5;
   background-color: $basic-white;
   top: 40px;
+  box-shadow: 0 8px 16px rgba(54, 80, 148, 0.18);
 
   &--active {
     display: block;
   }
+
+  @media (min-width: $tablet-width) {
+    top: 67px;
+    width: 575px;
+    justify-content: space-between;
+
+    &--active {
+      display: flex;
+    }
+  }
 }
 
 .plan-countries__alphabet-wrapper {
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 35px;
+    padding-left: 27px;
+    padding-bottom: 33px;
+  }
+}
+
+.plan-countries__alphabet {
   margin: 0;
 }
 
@@ -43,6 +92,16 @@
   padding-top: 20px;
   padding-left: 19px;
   padding-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    border: none;
+    border-left: 1px solid #cbced9;
+    padding-right: 23px;
+    padding-left: 26px;
+    padding-top: 38px;
+    max-height: 414px;
+    width: 212px;
+  }
 }
 
 .plan-countries__button {
@@ -66,17 +125,35 @@
   flex-grow: 1;
 
   &::after {
+    // стрелка
     content: "";
     position: absolute;
     display: block;
     height: 100%;
     width: 52px;
     background-repeat: no-repeat;
-    background-image: url("../img/arrow-back.svg"), url("../img/fade-mobile.png");
+    background-image: url("../img/arrow-back.svg"),
+    url("../img/fade-mobile.png");
     background-size: 20px 16px, 52px 40px;
     background-position: center;
     top: 0;
     right: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    height: 70px;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.1em;
+    width: 369px;
+    flex-grow: 0;
+    padding-left: 20px;
+
+    &::after {
+      background-image: url("../img/arrow-back.svg");
+      background-size: 20px 22px;
+      right: 9px;
+    }
   }
 
   &:focus,
@@ -93,6 +170,7 @@
   }
 
   &--choice-countries {
+    // пустой кружок
     &::before {
       content: "";
       position: absolute;
@@ -101,8 +179,18 @@
       width: 8px;
       border-radius: 50%;
       border: 1px solid #cbced9;
+      background-color: $basic-white;
       top: 15px;
       right: 48px;
+    }
+
+    @media (min-width: $tablet-width) {
+      &::before {
+        width: 14px;
+        height: 14px;
+        top: 24px;
+        right: -34px;
+      }
     }
   }
 
@@ -110,6 +198,7 @@
     background-color: $basic-blue-lighten;
 
     &::after {
+      // плюс
       content: "";
       position: absolute;
       z-index: 2;
@@ -126,6 +215,7 @@
     }
 
     &::before {
+      // пустой кружок
       content: "";
       position: absolute;
       display: block;
@@ -135,6 +225,21 @@
       border: 1px solid #cbced9;
       top: 15px;
       right: 48px;
+    }
+
+    @media (min-width: $tablet-width) {
+      &::after {
+        background-size: 20px 22px;
+        right: 9px;
+      }
+
+      &::before {
+        width: 14px;
+        height: 14px;
+        top: 24px;
+        right: -34px;
+        background-color: #EDEFF6
+      }
     }
   }
 }
@@ -152,15 +257,9 @@
   background-position: center;
   background-size: 35px 24px;
 
-  &--bosnia {
-    background-image: url("../img/bosnia_and_herzegovina.png");
-  }
-
-  &--czech {
-    background-image: url("../img/czechia.png");
-  }
 
   &::before {
+    // синий кружок
     content: "";
     display: block;
     position: absolute;
@@ -170,6 +269,29 @@
     background-color: $special-blue;
     top: 15px;
     left: -5px;
+  }
+
+  @media (min-width: $tablet-width) {
+    height: 70px;
+    width: 90px;
+    margin-left: 42px;
+    background-size: 70px 47px;
+    border: none;
+
+    &::before {
+      width: 14px;
+      height: 14px;
+      top: 25px;
+      left: -24px;
+    }
+  }
+
+  &--bosnia {
+    background-image: url("../img/bosnia_and_herzegovina.png");
+  }
+
+  &--czech {
+    background-image: url("../img/czechia.png");
   }
 }
 
@@ -186,6 +308,7 @@
   right: -9px;
 
   &::before {
+    // крестик
     content: "";
     display: block;
     position: absolute;
@@ -197,5 +320,18 @@
     background-size: 9px 9px;
     top: 0;
     left: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 22px;
+    height: 24px;
+    background: $basic-white;
+    border-radius: 0;
+    top: 23px;
+    right: -5px;
+
+    &::before {
+      background-size: 22px 24px
+    }
   }
 }

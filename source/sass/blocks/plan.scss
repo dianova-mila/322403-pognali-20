@@ -5,6 +5,7 @@
   margin-top: -60px;
   padding-bottom: 88px;
   margin-bottom: -60px;
+
 }
 
 .plan__header {
@@ -13,6 +14,12 @@
   align-items: center;
   padding-top: 30px;
   padding-bottom: 33px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 53px;
+    padding-bottom: 56px;
+    padding-left: 35px;
+  }
 }
 
 .plan__title {
@@ -22,6 +29,11 @@
   line-height: 20px;
   color: $special-blue;
   margin: 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+  }
 }
 
 .plan__markers {
@@ -39,6 +51,12 @@
   border-radius: 50%;
   margin-right: 16px;
 
+  @media (min-width: $tablet-width) {
+    width: 6px;
+    height: 6px;
+    margin-right: 30px;
+  }
+
   &--active {
     opacity: 1;
   }
@@ -51,12 +69,45 @@
   padding-left: 25px;
   padding-right: 25px;
   margin-bottom: 10px;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 35px;
+    margin-left: 35px;
+    border-radius: 30px;
+    padding-top: 48px;
+    padding-left: 43px;
+    padding-right: 43px;
+    padding-bottom: 55px;
+    margin-bottom: 39px;
+  }
 }
 
 .plan__text {
   font-weight: 400;
   margin-top: 16px;
   margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 24px;
+    margin-top: 35px;
+    margin-bottom: 43px
+    padding-right: 10px;
+  }
+
+  &--countries {
+    @media (min-width: $tablet-width) {
+      width: 400px;
+      margin-bottom: 31px;
+    }
+  }
+}
+
+.plan__items {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .plan__item {
@@ -65,6 +116,25 @@
   padding: 0;
   margin: 0;
   margin-bottom: 20px;
+
+  &--companions {
+    @media (min-width: $tablet-width) {
+      order: 1;
+    }
+  }
+
+  &--time {
+    @media (min-width: $tablet-width) {
+      order: 3;
+      margin-bottom: 60px;
+    }
+  }
+
+  &--children {
+    @media (min-width: $tablet-width) {
+      order: 2;
+    }
+  }
 }
 
 .plan__label {
@@ -76,6 +146,15 @@
   color: $special-blue;
   width: 100%;
   margin-bottom: 8px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 18px;
+    letter-spacing: 0.1em;
+    padding-top: 26px;
+    border-top: 1px solid #E1E3E9;
+    margin-bottom: 24px;
+  }
 }
 
 .plan__unit {
@@ -89,6 +168,13 @@
   opacity: 0.3;
   top: 0;
   right: 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 18px;
+    letter-spacing: 0.1em;
+    padding-top: 26px;
+  }
 }
 
 .plan__checkbox-label {
@@ -117,6 +203,22 @@
     background-position: center;
   }
 
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding-left: 59px;
+    padding-top: 15px;
+    margin-bottom: 10px;
+
+    &::before {
+      width: 36px;
+      height: 36px;
+      top: 5px;
+    }
+  }
+
   &:hover,
   &:focus {
     opacity: 0.6;
@@ -134,6 +236,29 @@
 
 .plan__calendar {
   margin-bottom: 17px;
+
+  @media (min-width: $tablet-width) {
+    order: 4;
+    margin-bottom: 47px;
+  }
+}
+
+.plan__countries {
+  @media (min-width: $tablet-width) {
+    margin-bottom: 47px;
+  }
+}
+
+.plan__list {
+  margin-bottom: 21px;
+}
+
+.plan__button-wrapper {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 .plan__button-next-step {
@@ -153,6 +278,27 @@
   padding-top: 7px;
   margin-bottom: 23px;
 
+  @media (min-width: $tablet-width) {
+    width: 284px;
+    height: 80px;
+    padding-top: 29px;
+    padding-left: 33px;
+    text-align: left;
+    font-size: 24px;
+    line-height: 24px;
+    text-transform: none;
+    margin-bottom: 0;
+
+    &::after {
+      top: 33px;
+      right: 34px;
+    }
+  }
+
+  &--send {
+    padding-top: 0;
+  }
+
   &:focus,
   &:hover {
     background-color: $special-yellow-dark;
@@ -165,6 +311,7 @@
 }
 
 .plan__button-last-step {
+  position: relative;
   display: inline-block;
   font-weight: 700;
   font-size: 17px;
@@ -176,6 +323,27 @@
   text-align: center;
   margin-top: -5px;
   margin-bottom: 5px;
+
+  @media (min-width: $tablet-width) {
+    width: 200px;
+    font-size: 24px;
+    line-height: 22px;
+    text-transform: none;
+    margin: 0;
+    text-align: right;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      background-repeat: no-repeat;
+      background-image: url("../img/triangle-arrow-left.svg");
+      top: 2px;
+      left: 20px;
+    }
+  }
 
   &:focus,
   &:hover {

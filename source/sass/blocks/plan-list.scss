@@ -2,6 +2,10 @@
   list-style: none;
   padding: 0;
   margin: 0;
+
+  @media (min-width: $tablet-width) {
+    border-top: 1px solid #E1E3E9;
+  }
 }
 
 .plan-list__item {
@@ -19,6 +23,13 @@
     left: -14px;
   }
 
+  @media (min-width: $tablet-width) {
+    &::before {
+      display: none;
+    }
+  }
+
+
   &:first-child {
     &::after {
       // большая палка
@@ -30,6 +41,14 @@
       background-color: $special-blue;
       top: 10px;
       left: -14px;
+    }
+
+    @media (min-width: $tablet-width) {
+      &::after {
+        top: 42px;
+        left: inherit;
+        right: 3px;
+      }
     }
   }
 }
@@ -73,15 +92,47 @@
     right: 0;
   }
 
+  @media (min-width: $tablet-width) {
+    font-size: 31px;
+    line-height: 30px;
+    padding-top: 31px;
+    padding-left: 0;
+    margin-bottom: 38px;
+
+    &::before {
+      width: 14px;
+      height: 14px;
+      top: 38px;
+      left: inherit;
+      right: -3px;
+    }
+
+    &::after {
+      width: 70px;
+      height: 47px;
+      background-size: 70px 47px;
+      top: 22px;
+      right: 31px;
+    }
+  }
+
   &--bosnia {
     &::after {
       background-image: url("../img/bosnia_and_herzegovina.png"), url("../img/fade-mobile.png");
+
+      @media (min-width: $tablet-width) {
+        background-image: url("../img/bosnia_and_herzegovina.png");
+      }
     }
   }
 
   &--czech {
     &::after {
       background-image: url("../img/czechia.png"), url("../img/fade-mobile.png");
+
+      @media (min-width: $tablet-width) {
+        background-image: url("../img/czechia.png");
+      }
     }
   }
 }
@@ -103,13 +154,27 @@
   padding-bottom: 20px;
   margin-bottom: 18px;
 
-
   &::placeholder {
     font-weight: 400;
     font-size: 16px;
     line-height: 22px;
     color: $special-grey;
     opacity: 0.3;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 500px;
+    height: 140px;
+    font-size: 20px;
+    line-height: 23px;
+    padding-top: 18px;
+    padding-right: 30px;
+    padding-left: 20px;
+
+    &::placeholder {
+      font-size: 20px;
+      line-height: 23px;
+    }
   }
 
   &:hover {
