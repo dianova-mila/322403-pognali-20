@@ -220,4 +220,8 @@
     top: 367px;
     right: 133px;
   }
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/rates@2x.png");
+  }
 }

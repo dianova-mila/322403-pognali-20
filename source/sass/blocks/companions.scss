@@ -13,11 +13,26 @@
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
 
+  @media (min-resolution: 2dppx) {
+    background-image:
+      url("../img/rogovaya-back-mobile@2x.png"),
+      url("../img/smolov-back-desktop@2x.png");
+  }
+
   @media (min-width: $tablet-width) {
     padding-top: 221px;
     padding-bottom: 87px;
     border-bottom-left-radius: 60px;
     border-bottom-right-radius: 60px;
+    background-image:
+      url("../img/rogovaya-back-desktop@1x.png"),
+      url("../img/smolov-back-desktop@1x.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image:
+        url("../img/rogovaya-back-desktop@2x.png"),
+        url("../img/smolov-back-desktop@2x.png");
+    }
   }
 
   @media (min-width: $desktop-width) {

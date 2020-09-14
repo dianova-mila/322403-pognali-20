@@ -17,9 +17,19 @@
   <div class="container header__wrapper">
     <a class="site-logo header__logo">
       <picture class="header__logo-img">
-        <source media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.png">
-        <source media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.png">
-        <img src="img/logo-mobile-white@1x.png" alt="Погнали">
+        <source
+          media="(min-width: 1440px)"
+          srcset="img/logo-desktop-white@1x.png 1x, img/logo-desktop-white@2x.png 2x"
+        >
+        <source
+          media="(min-width: 768px)"
+          srcset="img/logo-tablet-white@1x.png 1x, img/logo-tablet-white@2x.png 2x"
+        >
+        <img
+          src="img/logo-mobile-white@1x.png"
+          srcset="img/logo-mobile-white@1x.png 1x, img/logo-mobile-white@2x.png 2x"
+          alt="Погнали"
+        >
       </picture>
     </a>
 
@@ -29,7 +39,6 @@
         <svg
           class="header__button-img"
           version="1.1"
-          id="Layer_1"
           xmlns="http://www.w3.org/2000/svg"
           xmlns:xlink="http://www.w3.org/1999/xlink"
           x="0px"
@@ -62,7 +71,6 @@
             <svg
               class="contact__link-img contact__link-img--tel"
               version="1.1"
-              id="Layer_1"
               xmlns="http://www.w3.org/2000/svg"
               xmlns:xlink="http://www.w3.org/1999/xlink"
               x="0px"
@@ -91,7 +99,6 @@
             <svg
               class="contact__link-img contact__link-img--mail"
               version="1.1"
-              id="Layer_1"
               xmlns="http://www.w3.org/2000/svg"
               xmlns:xlink="http://www.w3.org/1999/xlink"
               x="0px"
@@ -153,7 +160,6 @@
             <svg
               class="contact__link-img contact__link-img--tel"
               version="1.1"
-              id="Layer_1"
               xmlns="http://www.w3.org/2000/svg"
               xmlns:xlink="http://www.w3.org/1999/xlink"
               x="0px"
@@ -182,7 +188,6 @@
             <svg
               class="contact__link-img contact__link-img--mail"
               version="1.1"
-              id="Layer_1"
               xmlns="http://www.w3.org/2000/svg"
               xmlns:xlink="http://www.w3.org/1999/xlink"
               x="0px"
@@ -254,8 +259,16 @@
       <ul class="directions-list directions__list">
         <li class="directions-list__item directions-list__item--thailand">
           <picture class="directions-list__picture">
-            <source media="(min-width: 768px)" srcset="img/thailand-desktop@1x.jpg">
-            <img class="directions-list__img" src="img/thailand-mobile@1x.jpg" alt="Фото страны">
+            <source
+              media="(min-width: 768px)"
+              srcset="img/thailand-desktop@1x.jpg 1x, img/thailand-desktop@2x.jpg 2x"
+            >
+            <img
+              class="directions-list__img"
+              src="img/thailand-mobile@1x.jpg"
+              srcset="img/thailand-mobile@1x.jpg 1x, img/thailand-mobile@2x.jpg 2x"
+              alt="Фото страны"
+            >
           </picture>
           <div class="directions-list__description">
             <h3 class="directions-list__title">Таиланд</h3>
@@ -265,8 +278,15 @@
         </li>
         <li class="directions-list__item directions-list__item--france">
           <picture class="directions-list__picture">
-            <source media="(min-width: 768px)" srcset="img/france-desktop@1x.jpg">
-            <img class="directions-list__img" src="img/france-mobile@1x.jpg" alt="Фото страны">
+            <source
+              media="(min-width: 768px)"
+              srcset="img/france-desktop@1x.jpg 1x, img/france-desktop@2x.jpg 2x">
+            <img
+              class="directions-list__img"
+              src="img/france-mobile@1x.jpg"
+              srcset="img/france-mobile@1x.jpg 1x, img/france-mobile@2x.jpg 2x"
+              alt="Фото страны"
+            >
           </picture>
           <div class="directions-list__description">
             <h3 class="directions-list__title">Франция</h3>
@@ -275,9 +295,16 @@
           </div>
         </li>
         <li class="directions-list__item directions-list__item--czech">
-          <picture class="directions-list__picture">
-            <source media="(min-width: 768px)" srcset="img/czech-desktop@1x.jpg">
-            <img class="directions-list__img" src="img/czech-mobile@1x.jpg" alt="Фото страны">
+          <picture>
+            <source
+              media="(min-width: 768px)"
+              srcset="img/czech-desktop@1x.jpg 1x, img/czech-desktop@2x.jpg 2x">
+            <img
+              class="directions-list__img"
+              src="img/czech-mobile@1x.jpg"
+              srcset="img/czech-mobile@1x.jpg 1x, img/czech-mobile@2x.jpg 2x"
+              alt="Фото страны"
+            >
           </picture>
           <div class="directions-list__description">
             <h3 class="directions-list__title">Чехия</h3>
@@ -311,10 +338,22 @@
 
       <ul class="companions-list companions__list">
         <li class="companions-list__item">
-          <img
-            src="img/firsova-desktop@1x.jpg"
-            alt="Фото попутчика"
-            class="companions-list__avatar">
+          <picture>
+            <source
+              media="(min-width: 1440px)"
+              srcset="img/firsova-desktop@1x.jpg 1x, img/firsova-desktop@2x.jpg 2x"
+            >
+            <source
+              media="(min-width: 768px)"
+              srcset="img/firsova-tablet@1x.jpg 1x, img/firsova-tablet@2x.jpg 2x"
+            >
+            <img
+              src="img/firsova-mobile@1x.jpg"
+              srcset="img/firsova-mobile@1x.jpg 1x, img/firsova-mobile@2x.jpg 2x"
+              alt="Фото попутчика"
+              class="companions-list__avatar"
+            >
+          </picture>
           <ul class="companions-countries companions__countries">
             <li class="companions-countries__item companions-countries__item--sri-lanka">
               <span class="visually-hidden">Шри-ланка</span>
@@ -348,10 +387,22 @@
           </div>
         </li>
         <li class="companions-list__item">
-          <img
-            src="img/demin-desktop@1x.jpg"
-            alt="Фото попутчика"
-            class="companions-list__avatar">
+          <picture>
+            <source
+              media="(min-width: 1440px)"
+              srcset="img/demin-desktop@1x.jpg 1x, img/demin-desktop@2x.jpg 2x"
+            >
+            <source
+              media="(min-width: 768px)"
+              srcset="img/demin-tablet@1x.jpg 1x, img/demin-tablet@2x.jpg 2x"
+            >
+            <img
+              src="img/demin-mobile@1x.jpg"
+              srcset="img/demin-mobile@1x.jpg 1x, img/demin-mobile@2x.jpg 2x"
+              alt="Фото попутчика"
+              class="companions-list__avatar"
+            >
+          </picture>
           <ul class="companions-countries companions__countries">
             <li class="companions-countries__item companions-countries__item--belgium">
               <span class="visually-hidden">Бельгия</span>
@@ -444,7 +495,6 @@
             <svg
               class="contact__link-img contact__link-img--tel"
               version="1.1"
-              id="Layer_1"
               xmlns="http://www.w3.org/2000/svg"
               xmlns:xlink="http://www.w3.org/1999/xlink"
               x="0px"
@@ -473,7 +523,6 @@
             <svg
               class="contact__link-img contact__link-img--mail"
               version="1.1"
-              id="Layer_1"
               xmlns="http://www.w3.org/2000/svg"
               xmlns:xlink="http://www.w3.org/1999/xlink"
               x="0px"
@@ -557,9 +606,19 @@
   <div class="container footer__wrapper">
     <a class="site-logo footer__logo">
       <picture>
-        <source media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.png">
-        <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png">
-        <img src="img/logo-mobile-blue@1x.png" alt="Погнали">
+        <source
+          media="(min-width: 1440px)"
+          srcset="img/logo-desktop-white@1x.png 1x, img/logo-desktop-white@2x.png 2x"
+        >
+        <source
+          media="(min-width: 768px)"
+          srcset="img/logo-tablet-white@1x.png 1x, img/logo-tablet-white@2x.png 2x"
+        >
+        <img
+          src="img/logo-mobile-blue@1x.png"
+          srcset="img/logo-mobile-white@1x.png 1x, img/logo-mobile-white@2x.png 2x"
+          alt="Погнали"
+        >
       </picture>
     </a>
 

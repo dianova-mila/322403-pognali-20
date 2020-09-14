@@ -10,16 +10,30 @@
   position: relative;
   z-index: 6;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/about-mobile@2x.png");
+  }
+
   @media (min-width: $tablet-width) {
     padding-bottom: 89px;
     border-bottom-left-radius: 60px;
     border-bottom-right-radius: 60px;
+    background-image: url("../img/about-tablet@1x.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/about-tablet@2x.png");
+    }
   }
 
   @media (min-width: $desktop-width) {
     padding-bottom: 163px;
     border-bottom-left-radius: 55px;
     border-bottom-right-radius: 55px;
+    background-image: url("../img/about-desktop@1x.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/about-desktop@2x.png");
+    }
   }
 }
 

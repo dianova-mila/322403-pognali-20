@@ -118,20 +118,20 @@
 
   &--bosnia {
     &::after {
-      background-image: url("../img/bosnia_and_herzegovina.png"), url("../img/fade-mobile.png");
+      background-image: url("../img/flag-bosnia.svg"), url("../img/fade-mobile.png");
 
       @media (min-width: $tablet-width) {
-        background-image: url("../img/bosnia_and_herzegovina.png");
+        background-image: url("../img/flag-bosnia.svg");
       }
     }
   }
 
   &--czech {
     &::after {
-      background-image: url("../img/czechia.png"), url("../img/fade-mobile.png");
+      background-image: url("../img/flag-czech.svg"), url("../img/fade-mobile.png");
 
       @media (min-width: $tablet-width) {
-        background-image: url("../img/czechia.png");
+        background-image: url("../img/flag-czech.svg");
       }
     }
   }

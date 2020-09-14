@@ -58,19 +58,19 @@
 
   &--thailand {
     &::after {
-      background-image: url("../img/thailand.png");
+      background-image: url("../img/flag-thailand.svg");
     }
   }
 
   &--france {
     &::after {
-      background-image: url("../img/france.png");
+      background-image: url("../img/flag-france.svg");
     }
   }
 
   &--czech {
     &::after {
-      background-image: url("../img/czechia.png");
+      background-image: url("../img/flag-czechia.svg");
     }
   }
 }

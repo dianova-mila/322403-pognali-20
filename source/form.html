@@ -15,10 +15,21 @@
 <header class="header header--nojs">
   <div class="container header__wrapper">
     <a href="index.html" class="site-logo header__logo">
-      <picture class="header__logo-img">
-        <source media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.png">
-        <source media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.png">
-        <img src="img/logo-mobile-blue@1x.png" alt="Погнали">
+      <picture>
+        <source
+          media="(min-width: 1440px)"
+          srcset="img/logo-desktop-white@1x.png 1x, img/logo-desktop-white@2x.png 2x"
+        >
+        <source
+          media="(min-width: 768px)"
+          srcset="img/logo-tablet-white@1x.png 1x, img/logo-tablet-white@2x.png 2x"
+        >
+        <img
+          class="header__logo-img"
+          src="img/logo-mobile-white@1x.png"
+          srcset="img/logo-mobile-white@1x.png 1x, img/logo-mobile-white@2x.png 2x"
+          alt="Погнали"
+        >
       </picture>
     </a>
 
@@ -27,8 +38,6 @@
         <span class="visually-hidden">Открыть/закрыть меню</span>
         <svg
           class="header__button-img"
-          version="1.1"
-          id="Layer_1"
           xmlns="http://www.w3.org/2000/svg"
           xmlns:xlink="http://www.w3.org/1999/xlink"
           x="0px"
@@ -60,8 +69,6 @@
           <span class="contact__link-icon contact__link-icon--tel">
             <svg
               class="contact__link-img contact__link-img--tel"
-              version="1.1"
-              id="Layer_1"
               xmlns="http://www.w3.org/2000/svg"
               xmlns:xlink="http://www.w3.org/1999/xlink"
               x="0px"
@@ -89,8 +96,6 @@
           <span class="contact__link-icon contact__link-icon--mail">
             <svg
               class="contact__link-img contact__link-img--mail"
-              version="1.1"
-              id="Layer_1"
               xmlns="http://www.w3.org/2000/svg"
               xmlns:xlink="http://www.w3.org/1999/xlink"
               x="0px"
@@ -148,8 +153,18 @@
         <span class="level__level">level</span>
       </div>
 
-
-      <img src="img/demin-desktop@1x.jpg" width="100" height="100" alt="Ваше фото" class="personal-info__avatar">
+      <picture class="directions-list__picture">
+        <source
+          media="(min-width: 768px)"
+          srcset="img/photo-account-tablet@1x.jpg 1x, img/photo-account-tablet@2x.jpg 2x"
+        >
+        <img
+          class="personal-info__avatar"
+          src="img/photo-account-mobile@1x.jpg"
+          srcset="img/photo-account-mobile@1x.jpg 1x, img/photo-account-mobile@2x.jpg 2x"
+          alt="Ваше фото"
+        >
+      </picture>
 
       <div class="personal-info__button-wrapper">
         <input
@@ -186,8 +201,6 @@
               <span class="visually-hidden">Авиаперелет</span>
               <svg
                 class="transport-field__img"
-                version="1.1"
-                id="Layer_1"
                 xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink"
                 x="0px"
@@ -252,8 +265,6 @@
               <span class="visually-hidden">Велосипед</span>
               <svg
                 class="transport-field__img"
-                version="1.1"
-                id="Layer_1"
                 xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink"
                 x="0px"
@@ -308,7 +319,6 @@
           </p>
         </div>
       </div>
-    </div>
     </div>
   </form>
 
@@ -365,8 +375,6 @@
                 <span class="visually-hidden">Минус</span>
                 <svg
                   class="plan-number__button-img"
-                  version="1.1"
-                  id="Layer_1"
                   xmlns="http://www.w3.org/2000/svg"
                   xmlns:xlink="http://www.w3.org/1999/xlink"
                   x="0px"
@@ -388,15 +396,13 @@
                 <span class="visually-hidden">Плюс</span>
                 <svg
                   class="plan-number__button-img"
-                  version="1.1"
-                  id="Layer_1"
                   xmlns="http://www.w3.org/2000/svg"
                   xmlns:xlink="http://www.w3.org/1999/xlink"
                   x="0px"
                   y="0px"
                   viewBox="0 0 20 20"
                   style="enable-background:new 0 0 20 20;"
-                  xml:space="preserve">>
+                  xml:space="preserve">
                 <polygon class="st0" points="20,9 11,9 11,0 9,0 9,9 0,9 0,11 9,11 9,20 11,20 11,11 20,11 "/>
               </svg>
               </button>
@@ -412,8 +418,6 @@
                 <span class="visually-hidden">Минус</span>
                 <svg
                   class="plan-number__button-img"
-                  version="1.1"
-                  id="Layer_1"
                   xmlns="http://www.w3.org/2000/svg"
                   xmlns:xlink="http://www.w3.org/1999/xlink"
                   x="0px"
@@ -435,15 +439,13 @@
                 <span class="visually-hidden">Плюс</span>
                 <svg
                   class="plan-number__button-img"
-                  version="1.1"
-                  id="Layer_1"
                   xmlns="http://www.w3.org/2000/svg"
                   xmlns:xlink="http://www.w3.org/1999/xlink"
                   x="0px"
                   y="0px"
                   viewBox="0 0 20 20"
                   style="enable-background:new 0 0 20 20;"
-                  xml:space="preserve">>
+                  xml:space="preserve">
                 <polygon class="st0" points="20,9 11,9 11,0 9,0 9,9 0,9 0,11 9,11 9,20 11,20 11,11 20,11 "/>
               </svg>
               </button>
@@ -1312,9 +1314,19 @@
   <div class="container footer__wrapper">
     <a href="index.html" class="site-logo footer__logo">
       <picture>
-        <source media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.png">
-        <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png">
-        <img src="img/logo-mobile-blue@1x.png" alt="Погнали">
+        <source
+          media="(min-width: 1440px)"
+          srcset="img/logo-desktop-white@1x.png 1x, img/logo-desktop-white@2x.png 2x"
+        >
+        <source
+          media="(min-width: 768px)"
+          srcset="img/logo-tablet-white@1x.png 1x, img/logo-tablet-white@2x.png 2x"
+        >
+        <img
+          src="img/logo-mobile-blue@1x.png"
+          srcset="img/logo-mobile-white@1x.png 1x, img/logo-mobile-white@2x.png 2x"
+          alt="Погнали"
+        >
       </picture>
     </a>
 
