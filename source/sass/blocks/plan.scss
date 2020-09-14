@@ -1,43 +1,85 @@
 .plan {
   background-color: $regular-blue-light;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  margin-top: -60px;
+  padding-bottom: 88px;
+  margin-bottom: -60px;
 }
 
-.plan__step {
-  background: $basic-white;
-  border-radius: 10px;
+.plan__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 30px;
+  padding-bottom: 33px;
 }
 
 .plan__title {
   font-style: normal;
   font-weight: 700;
-  font-size: 24px;
-  line-height: 24px;
+  font-size: 20px;
+  line-height: 20px;
   color: $special-blue;
+  margin: 0;
 }
 
 .plan__markers {
   list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.plan__marker {
+  background: $special-blue;
+  opacity: 0.3;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  margin-right: 16px;
+
+  &--active {
+    opacity: 1;
+  }
+}
+
+.plan__step {
+  background: $basic-white;
+  border-radius: 10px;
+  padding-top: 24px;
+  padding-left: 25px;
+  padding-right: 25px;
+  margin-bottom: 10px;
 }
 
 .plan__text {
   font-weight: 400;
+  margin-top: 16px;
+  margin-bottom: 20px;
 }
 
 .plan__item {
+  position: relative;
   border: none;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 20px;
 }
 
 .plan__label {
+  display: block;
   font-weight: 500;
   line-height: 16px;
   letter-spacing: 0.09em;
   text-transform: uppercase;
   color: $special-blue;
+  width: 100%;
+  margin-bottom: 8px;
 }
 
 .plan__unit {
+  position: absolute;
   font-weight: 500;
   line-height: 16px;
   text-align: right;
@@ -45,13 +87,35 @@
   text-transform: uppercase;
   color: $special-blue;
   opacity: 0.3;
+  top: 0;
+  right: 0;
 }
 
 .plan__checkbox-label {
+  display: inline-block;
+  position: relative;
   font-weight: normal;
   font-size: 15px;
   line-height: 15px;
   color: $special-blue;
+  padding-left: 39px;
+  padding-top: 9px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    background-color: $basic-white;
+    border: 1px solid #cbced9;
+    border-radius: 4px;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    background-size: 13px 13px;
+    background-position: center;
+  }
 
   &:hover,
   &:focus {
@@ -64,7 +128,18 @@
   }
 }
 
+.plan__checkbox:checked + .plan__checkbox-label::before {
+  background-image: url("../img/check.svg");
+}
+
+.plan__calendar {
+  margin-bottom: 17px;
+}
+
 .plan__button-next-step {
+  font-family: "Blogger Sans", "Arial", sans-serif;
+  display: inline-block;
+  text-align: center;
   font-weight: 700;
   font-size: 17px;
   line-height: 30px;
@@ -73,6 +148,10 @@
   background-color: $basic-yellow;
   border-radius: 20px;
   border: none;
+  width: 100%;
+  height: 40px;
+  padding-top: 7px;
+  margin-bottom: 23px;
 
   &:focus,
   &:hover {
@@ -86,12 +165,17 @@
 }
 
 .plan__button-last-step {
+  display: inline-block;
   font-weight: 700;
   font-size: 17px;
   line-height: 30px;
   letter-spacing: 0.01em;
   text-transform: uppercase;
   color: $special-blue;
+  width: 100%;
+  text-align: center;
+  margin-top: -5px;
+  margin-bottom: 5px;
 
   &:focus,
   &:hover {

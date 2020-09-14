@@ -1,14 +1,69 @@
+.plan-calendar__header {
+  position: relative;
+  border-top: 1px solid #d6d9e6;
+  border-bottom: 1px solid #d6d9e6;
+  margin-bottom: 22px;
+}
+
+
 .plan-calendar__month {
   font-weight: 700;
   font-size: 20px;
   line-height: 20px;
   color: $special-blue;
+  width: 100%;
+  text-align: center;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  margin: 0;
+}
+
+.plan-calendar__button {
+  position: absolute;
+  border: none;
+  background-color: transparent;
+  width: 14px;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 14px 21px;
+  opacity: 0.3;
+  top: 0;
+
+
+  &--back {
+    background-image: url("../img/month-arrow-left.svg");
+    left: 0;
+  }
+
+  &--forward {
+    background-image: url("../img/month-arrow-right.svg");
+    right: 0;
+  }
+
+  &:focus,
+  &:hover {
+    opacity: 0.5;
+    outline: none;
+  }
+
+  &:active {
+    opacity: 0.1;
+  }
+}
+
+.plan-calendar__table {
+  width: 221px;
+  height: 187px;
+  border-collapse: collapse;
+  text-align: center;
 }
 
 .plan-calendar__day {
   font-weight: normal;
   font-size: 14px;
   line-height: 18px;
+  padding-bottom: 7px;
 
   &--weekend {
     color: $special-red-dark;
@@ -17,13 +72,20 @@
 
 .plan-calendar__date {
   border: 1px solid $basic-blue-light;
+  padding: 0;
+  width: 33px;
+  height: 32px;
 }
 
 .plan-calendar__label {
+  display: block;
   font-weight: normal;
   font-size: 14px;
   line-height: 18px;
   opacity: 0.3;
+  width: 100%;
+  height: 100%;
+  padding-top: 8px;
 
   &:focus,
   &:hover {

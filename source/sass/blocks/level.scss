@@ -55,15 +55,67 @@
 
 .level__level {
   display: none;
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: normal;
+  width: 31px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
 
   @media (min-width: $tablet-width) {
     display: block;
-    font-size: 14px;
-    line-height: 14px;
-    font-weight: normal;
-    width: 31px;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
     padding-top: 2px;
     padding-left: 4px;
+  }
+}
+
+.level--full {
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.6);
+  background-size: 62px 62px;
+  padding-left: 15px;
+  color: $basic-white;
+
+  .level__number {
+    padding-left: 4px;
+  }
+
+  .level__level {
+    display: block;
+    padding-top: 2px;
+    padding-left: 4px;
+  }
+}
+
+.level--big {
+  width: 100px;
+  height: 100px;
+  background-size: 100px 100px;
+  padding-top: 20px;
+  padding-left: 29px;
+
+  .level__number {
+    font-size: 38px;
+    line-height: 38px;
+  }
+
+  .level__level {
+    position: relative;
+    display: block;
+    font-size: 18px;
+    line-height: 18px;
+    padding-top: 2px;
+    padding-left: 4px;
+    border: none;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 51px;
+      height: 1px;
+      background-color: $special-grey;
+    }
   }
 }

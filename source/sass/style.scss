@@ -26,28 +26,28 @@
 @import "blocks/authorization";
 @import "blocks/map";
 @import "blocks/map-text";
+@import "blocks/business-rates";
 @import "blocks/footer-copyright";
 @import "blocks/footer";
 //
 @import "blocks/big-title";
 @import "blocks/title";
-@import "blocks/countries";
 @import "blocks/countries-header";
-@import "blocks/countries-continents";
 @import "blocks/countries-alphabet";
-@import "blocks/countries-container";
-@import "blocks/countries-item";
-@import "blocks/countries-list";
+@import "blocks/countries-filter";
+@import "blocks/countries";
+@import "blocks/filter-level";
+@import "blocks/transport-field";
 @import "blocks/companions-form";
 @import "blocks/catalog-countries";
 @import "blocks/like-button";
 @import "blocks/catalog";
+@import "blocks/pagination";
 //
 @import "blocks/personal-info";
-@import "blocks/personal-level";
 @import "blocks/my-plans";
-@import "blocks/plan";
 @import "blocks/plan-number";
 @import "blocks/plan-calendar";
 @import "blocks/plan-countries";
 @import "blocks/plan-list";
+@import "blocks/plan";

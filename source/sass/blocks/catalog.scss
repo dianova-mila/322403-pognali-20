@@ -2,12 +2,20 @@
   background-color: $basic-blue-lighten;
   padding-top: 28px;
   padding-bottom: 18px;
+  margin-bottom: 28px;
   color: $special-grey;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 41px;
+    margin-bottom: 44px;
+  }
 
   @media (min-width: $desktop-width) {
     order: 1;
     width: 75%;
     padding-right: 41px;
+    padding-top: 0;
+    margin-bottom: 59px;
   }
 }
 
@@ -24,7 +32,7 @@
   padding-top: 15px;
   padding-left: 20px;
   padding-right: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 22px;
   margin-bottom: 10px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -37,8 +45,8 @@
     padding-top: 35px;
     padding-left: 35px;
     padding-right: 25px;
-    padding-bottom: 12px;
-    margin-bottom: 39px;
+    padding-bottom: 15px;
+    margin-bottom: 40px;
   }
 
   @media (min-width: $desktop-width) {
@@ -331,11 +339,57 @@
   }
 }
 
+.catalog__show-more-wrapper {
+  width: 100%;
+  text-align: center;
+  margin-top: 23px;
+  margin-bottom: 18px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 51px;
+    margin-bottom: 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 66px;
+    margin-bottom: 71px;
+  }
+}
+
 .catalog__show-more {
+  position: relative;
   font-style: normal;
   font-weight: 700;
   font-size: 17px;
   line-height: 30px;
   text-transform: uppercase;
   color: $special-blue;
+  padding-left: 30px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background-repeat: no-repeat;
+    background-image: url("../img/show-more-plus.svg");
+    top: -2px;
+    left: -4px;
+    background-size: 18px 18px;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+    padding-left: 44px;
+
+    &::before {
+      width: 26px;
+      height: 26px;
+      background-size: 26px 26px;
+      left: -7px;
+      top: -5px;
+    }
+  }
 }

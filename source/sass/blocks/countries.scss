@@ -1,7 +1,29 @@
 .countries {
   background-color: $another-blue-lighten;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  padding-bottom: 28px;
+  margin-bottom: 21px;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 75px;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+    margin-bottom: 43px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 95px;
+  }
+}
+
+
+.countries__wrapper {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: start;
+  }
 }
 
 .countries__header {
@@ -10,15 +32,36 @@
   }
 }
 
-.countries__alphabet {
+.countries__alphabet-wrapper {
+  margin-left: 25px;
+  margin-bottom: 14px;
+
   @media (min-width: $tablet-width) {
     width: 66%;
+    margin: 0;
+    padding-top: 30px;
+    padding-left: 11px;
+    margin-bottom: 53px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: none;
   }
 }
 
-.countries__item {
+.countries__filter {
+  padding-left: 25px;
+  padding-bottom: 28px;
+
   @media (min-width: $tablet-width) {
     width: 33%;
+    padding-top: 39px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
+    padding-left: 35px;
+    padding-top: 55px;
   }
 }
 
@@ -26,17 +69,55 @@
   @media (min-width: $tablet-width) {
     width: 100%;
   }
+
+  @media (min-width: $tablet-width) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .countries__button {
+  font-family: "Blogger Sans", "Arial", sans-serif;
   font-weight: 700;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
   color: $basic-blue;
   border: none;
   background-color: $basic-blue-light;
   border-radius: 20px;
+  width: 100%;
+  height: 39px;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background-repeat: no-repeat;
+    background-image: url("../img/close.svg");
+    background-size: 14px 14px;
+    margin-right: 11px;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+    height: 100px;
+
+    &::before {
+      position: relative;
+      width: 22px;
+      height: 24px;
+      background-size: 22px 24px;
+      top: 5px;
+    }
+  }
 
   &:focus,
   &:hover {
