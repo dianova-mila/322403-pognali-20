@@ -13,6 +13,10 @@
   &--center {
     justify-content: center;
     padding-bottom: 0;
+
+    @media (min-width: $desktop-width) {
+      margin-top: 0;
+    }
   }
 }
 

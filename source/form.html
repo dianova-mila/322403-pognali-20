@@ -172,11 +172,12 @@
           class="personal-info__add-photo visually-hidden"
           name="photo" id="photo-field"
           accept="image/*,image/jpeg">
-        <label class="personal-info__button" for="photo-field">Cменить фото</label>
+        <label class="personal-info__button" for="photo-field">
+          <span class="personal-info__button-letter">Cменить</span> фото</label>
       </div>
 
       <p class="personal-info__item personal-info__item--tags">
-        <label for="tags-field" class="personal-info__title">Тэги</label>
+        <label for="tags-field" class="personal-info__title personal-info__title--tags">Тэги</label>
         <textarea
           class="personal-info__tags"
           id="tags-field"
@@ -360,10 +361,18 @@
       </div>
 
       <section class="plan__step">
-        <h3 class="plan__title">Шаг 1.<br> Даты пребывания</h3>
+        <div class="plan__step-header">
+          <h3 class="plan__title">Шаг 1.<br> Даты пребывания</h3>
 
-        <p class="plan__text">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку
-          и ее предполагаемую длительность.</p>
+          <ul class="plan__step-list">
+            <li class="plan__step-list-item plan__step-list-item--active">Даты</li>
+            <li class="plan__step-list-item">Маршрут</li>
+            <li class="plan__step-list-item">Развлечения</li>
+          </ul>
+
+          <p class="plan__text">Укажите предпочтительное количество попутчиков, которых<br> вы хотели бы позвать в поездку
+            и ее предполагаемую длительность.</p>
+        </div>
 
         <div class="plan__items">
           <div class="plan__item plan__item--companions">
@@ -548,7 +557,9 @@
                     name="date"
                     id="date-1" value="1">
 
-                  <label class="plan-calendar__label" for="date-1">1</label>
+                  <label class="plan-calendar__label" for="date-1">
+                    1 <span class="plan-calendar__letter plan-calendar__letter--dt">мар</span>
+                  </label>
                 </td>
               </tr>
               <tr class="plan-calendar__row">
@@ -782,7 +793,9 @@
                     id="date-26" value="26"
                     checked
                   >
-                  <label class="plan-calendar__label plan-calendar__label--selected" for="date-26">26</label>
+                  <label class="plan-calendar__label plan-calendar__label--selected" for="date-26">
+                    26<span class="plan-calendar__letter plan-calendar__letter-dt"><br>Заезд</span>
+                  </label>
                 </td>
                 <td class="plan-calendar__date">
                   <input
@@ -802,7 +815,9 @@
                     id="date-28" value="28"
                     checked
                   >
-                  <label class="plan-calendar__label plan-calendar__label--selected" for="date-28">28</label>
+                  <label class="plan-calendar__label plan-calendar__label--selected" for="date-28">
+                    28<span class="plan-calendar__letter plan-calendar__letter-dt"><br>Выезд</span>
+                  </label>
                 </td>
                 <td class="plan-calendar__date">
                   <input
@@ -840,7 +855,9 @@
                     name="date"
                     id="date-1-next-mount"
                     value="1">
-                  <label class="plan-calendar__label plan-calendar__label--suggested" for="date-1-next-mount">1</label>
+                  <label class="plan-calendar__label plan-calendar__label--suggested" for="date-1-next-mount">
+                    1 <span class="plan-calendar__letter plan-calendar__letter-dt">апр</span>
+                  </label>
                 </td>
                 <td class="plan-calendar__date">
                   <input
@@ -887,10 +904,18 @@
         <a href="#" class="button plan__button-next-step">Следующий шаг</a>
       </section>
       <section class="plan__step">
-        <h3 class="plan__title">Шаг 2.<br> Маршрут</h3>
+        <div class="plan__step-header">
+          <h3 class="plan__title">Шаг 2.<br> Маршрут</h3>
 
-        <p class="plan__text plan__text--countries">Укажите страны, которые вы хотели посетить. Это может быть одна или
-          сразу несколько.</p>
+          <ul class="plan__step-list">
+            <li class="plan__step-list-item">Даты</li>
+            <li class="plan__step-list-item  plan__step-list-item--active">Маршрут</li>
+            <li class="plan__step-list-item">Развлечения</li>
+          </ul>
+
+          <p class="plan__text plan__text--countries">Укажите страны, которые вы хотели посетить.<br> Это может быть одна
+            или сразу несколько.</p>
+        </div>
 
         <div class="plan-countries plan__countries">
           <div class="plan-countries__add-countries">
@@ -945,7 +970,7 @@
                 </ul>
               </div>
 
-              <div class="countries-filter plan-countries__filter">
+              <div class="countries-filter countries-filter--mini-in-desktop plan-countries__filter">
                 <div class="countries-filter__item countries-filter__item--active countries__item">
                   <h3 class="countries-filter__title">А</h3>
 
@@ -1272,11 +1297,19 @@
 
       </section>
       <section class="plan__step">
-        <h3 class="plan__title">Шаг 3.<br> Развлечения</h3>
+        <div class="plan__step-header">
+          <h3 class="plan__title">Шаг 3.<br> Развлечения</h3>
 
-        <p class="plan__text">
-          Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.
-        </p>
+          <ul class="plan__step-list">
+            <li class="plan__step-list-item">Даты</li>
+            <li class="plan__step-list-item">Маршрут</li>
+            <li class="plan__step-list-item  plan__step-list-item--active">Развлечения</li>
+          </ul>
+
+          <p class="plan__text">
+            Наконец, расскажите о своих планах времяпровождения.<br> Можно писать в свободной форме и ставить тэги.
+          </p>
+        </div>
 
         <ul class="plan-list plan__list">
           <li class="plan-list__item">
@@ -1301,8 +1334,9 @@
         </ul>
 
         <div class="plan__button-wrapper">
-        <button type="submit" class="button plan__button-next-step button plan__button-next-step--send">Отправить</button>
-        <a href="#" class="plan__button-last-step">На шаг назад</a>
+          <button type="submit" class="button plan__button-next-step button plan__button-next-step--send">Отправить
+          </button>
+          <a href="#" class="plan__button-last-step">На шаг назад</a>
         </div>
       </section>
     </div>

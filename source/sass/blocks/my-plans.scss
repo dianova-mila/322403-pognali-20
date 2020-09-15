@@ -9,6 +9,12 @@
     padding-top: 57px;
     padding-bottom: 123px;
   }
+
+  @media (min-width: $desktop-width) {
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+    padding-bottom: 114px;
+  }
 }
 
 .my-plans__title {
@@ -25,6 +31,10 @@
     padding-left: 35px;
     margin-bottom: 48px;
   }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 72px;
+  }
 }
 
 .my-plans__list {
@@ -36,6 +46,11 @@
     padding-left: 35px;
     padding-right: 35px;
     counter-reset: myCounter;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 64px;
+    padding-right: 0;
   }
 }
 
@@ -81,6 +96,27 @@
       right: 31px;
     }
   }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 36px;
+    padding-left: 58px;
+    padding-right: 10px;
+    margin-bottom: 15px;
+
+    &::after {
+      right: inherit;
+      top: 39px;
+      left: 42px;
+    }
+
+    &::before {
+      right: inherit;
+      top: 39px;
+      left: 53px;
+    }
+  }
 }
 
 .my-plans__wrapper {
@@ -96,6 +132,12 @@
     justify-content: space-between;
     padding-left: 33px;
     padding-right: 34px;
+  }
+
+  @media (min-width: $desktop-width) {
+    border: none;
+    align-items: start;
+    width: 55%;
   }
 }
 
@@ -135,6 +177,10 @@
   @media (min-width: $tablet-width) {
     margin: 0;
     padding-right: 36px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 87px;
   }
 }
 

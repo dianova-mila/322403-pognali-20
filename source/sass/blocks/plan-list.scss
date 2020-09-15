@@ -4,7 +4,11 @@
   margin: 0;
 
   @media (min-width: $tablet-width) {
-    border-top: 1px solid #E1E3E9;
+    border-top: 1px solid #e1e3e9;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 53px;
   }
 }
 
@@ -48,6 +52,12 @@
         top: 42px;
         left: inherit;
         right: 3px;
+      }
+    }
+
+    @media (min-width: $desktop-width) {
+      &::after {
+        right: 222px;
       }
     }
   }
@@ -116,6 +126,17 @@
     }
   }
 
+  @media (min-width: $desktop-width) {
+    &::after {
+      top: 24px;
+      right: 113px;
+    }
+
+    &::before {
+      right: 216px;
+    }
+  }
+
   &--bosnia {
     &::after {
       background-image: url("../img/flag-bosnia.svg"), url("../img/fade-mobile.png");
@@ -175,6 +196,13 @@
       font-size: 20px;
       line-height: 23px;
     }
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 730px;
+    padding-top: 21px;
+    padding-right: 20px;
+    padding-left: 23px;
   }
 
   &:hover {

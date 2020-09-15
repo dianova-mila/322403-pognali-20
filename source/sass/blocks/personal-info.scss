@@ -34,8 +34,8 @@
   }
 
   @media (min-width: $desktop-width) {
-    grid-template-columns: 3fr 1fr 1fr;
-    grid-template-rows: 1fr min-content 1fr;
+    grid-template-columns: 3fr min-content 1fr;
+    grid-template-rows: 1fr min-content min-content;
   }
 }
 
@@ -75,6 +75,10 @@
 
   @media (min-width: $desktop-width) {
     grid-column: 1;
+    padding-top: 117px;
+    padding-left: 64px;
+    padding-bottom: 70px;
+    margin-bottom: 0;
   }
 }
 
@@ -83,13 +87,16 @@
   grid-row: 2;
   margin-left: 17px;
 
+  @media (min-width: $tablet-width) {
+    margin-left: 32px;
+  }
+
   @media (min-width: $desktop-width) {
     grid-column: 2;
     grid-row: 1;
-  }
-
-  @media (min-width: $tablet-width) {
-    margin-left: 32px;
+    margin: 0;
+    margin-top: 92px;
+    margin-right: 30px;
   }
 }
 
@@ -112,6 +119,11 @@
 
   @media (min-width: $desktop-width) {
     grid-row: 1;
+    width: 190px;
+    height: 190px;
+    margin: 0;
+    margin-left: 11px;
+    margin-top: 55px;
   }
 }
 
@@ -130,6 +142,9 @@
   @media (min-width: $desktop-width) {
     grid-column: 3;
     grid-row: 2;
+    padding: 0;
+    padding-left: 12px;
+    margin-bottom: 25px;
   }
 }
 
@@ -155,6 +170,13 @@
     letter-spacing: 0.09em;
   }
 
+  @media (min-width: $desktop-width) {
+    width: 190px;
+    height: 47px;
+    padding-top: 15px;
+    letter-spacing: 0;
+  }
+
   &:focus,
   &:hover {
     background-color: $another-blue-light;
@@ -162,6 +184,12 @@
 
   &:active {
     color: $basic-blue-dark-30;
+  }
+}
+
+.personal-info__button-letter {
+  @media (min-width: $desktop-width) {
+    display: none;
   }
 }
 
@@ -185,6 +213,9 @@
     @media (min-width: $desktop-width) {
       grid-column: 1;
       grid-row: 3;
+      padding-left: 64px;
+      padding-right: 97px;
+      margin-bottom: 64px;
     }
   }
 
@@ -203,8 +234,11 @@
     }
 
     @media (min-width: $desktop-width) {
-      grid-column: 3;
+      grid-column: 2 / 4;
       grid-row: 3;
+      margin-left: 43px;
+      margin-right: 0;
+      margin-bottom: 0;
     }
   }
 }
@@ -237,6 +271,13 @@
     padding-left: 17px;
     padding-right: 17px;
   }
+
+  &--tags {
+    @media (min-width: $desktop-width) {
+      left: 86px;
+      transform: none;
+    }
+  }
 }
 
 .personal-info__tags {
@@ -262,6 +303,7 @@
     padding-left: 39px;
     padding-bottom: 14px;
   }
+
 
   &::placeholder {
     opacity: 0.6;

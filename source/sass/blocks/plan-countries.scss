@@ -2,18 +2,26 @@
   @media (min-width: $tablet-width) {
     position: relative;
     padding-top: 42px;
-    border-top: 1px solid #E1E3E9;
+    border-top: 1px solid #e1e3e9;
 
-    &:after {
+    &::after {
       // вертикальная палка
       content: "";
       display: block;
       width: 1px;
       height: 100%;
-      background-color: #E1E3E9;
+      background-color: #e1e3e9;
       position: absolute;
       top: 0;
       right: 136px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 63px;
+
+    &::after {
+      right: 222px;
     }
   }
 }
@@ -39,6 +47,7 @@
 
   @media (min-width: $tablet-width) {
     margin-bottom: 16px;
+
     &::after {
       display: none;
     }
@@ -70,6 +79,10 @@
       display: flex;
     }
   }
+
+  @media (min-width: $desktop-width) {
+    width: 730px;
+  }
 }
 
 .plan-countries__alphabet-wrapper {
@@ -79,6 +92,11 @@
     padding-top: 35px;
     padding-left: 27px;
     padding-bottom: 33px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    padding-top: 24px;
   }
 }
 
@@ -99,8 +117,11 @@
     padding-right: 23px;
     padding-left: 26px;
     padding-top: 38px;
-    max-height: 414px;
     width: 212px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 241px;
   }
 }
 
@@ -132,8 +153,9 @@
     height: 100%;
     width: 52px;
     background-repeat: no-repeat;
-    background-image: url("../img/arrow-back.svg"),
-    url("../img/fade-mobile.png");
+    background-image:
+      url("../img/arrow-back.svg"),
+      url("../img/fade-mobile.png");
     background-size: 20px 16px, 52px 40px;
     background-position: center;
     top: 0;
@@ -154,6 +176,10 @@
       background-size: 20px 22px;
       right: 9px;
     }
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 730px;
   }
 
   &:focus,
@@ -190,6 +216,12 @@
         height: 14px;
         top: 24px;
         right: -34px;
+      }
+    }
+
+    @media (min-width: $desktop-width) {
+      &::before {
+        right: -53px;
       }
     }
   }
@@ -238,7 +270,14 @@
         height: 14px;
         top: 24px;
         right: -34px;
-        background-color: #EDEFF6
+        background-color: #edeff6;
+      }
+
+
+      @media (min-width: $desktop-width) {
+        &::before {
+          right: -53px;
+        }
       }
     }
   }
@@ -283,6 +322,14 @@
       height: 14px;
       top: 25px;
       left: -24px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-left: 75px;
+
+      &::before {
+        left: -37px;
+      }
     }
   }
 
@@ -331,7 +378,7 @@
     right: -5px;
 
     &::before {
-      background-size: 22px 24px
+      background-size: 22px 24px;
     }
   }
 }

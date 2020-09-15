@@ -63,3 +63,21 @@
   }
 }
 
+.countries-filter--mini-in-desktop {
+  .countries-filter__item {
+    @media (min-width: $desktop-width) {
+      display: none;
+      width: 100%;
+
+      &--active {
+        display: block;
+      }
+    }
+  }
+
+  .countries-filter__title {
+    @media (min-width: $desktop-width) {
+      display: none;
+    }
+  }
+}
