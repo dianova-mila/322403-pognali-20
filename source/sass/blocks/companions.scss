@@ -9,9 +9,24 @@
   background-image:
     url("../img/rogovaya-back-mobile@1x.png"),
     url("../img/smolov-back-desktop@1x.png");
+  background-size: 64px 71px, 143px 143px;
+  background-position: -2px 387px,152px 115px;;
   background-repeat: no-repeat;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
+
+  &::before {
+    position: absolute;
+    z-index: -1;
+    content: "";
+    display: block;
+    width: 113px;
+    height: 132px;
+    background: #141B3B;
+    border-radius: 20px;
+    top: 114px;
+    left: -1px;
+  }
 
   @media (min-resolution: 2dppx) {
     background-image:
@@ -78,10 +93,18 @@
   margin: 0;
   margin-bottom: 21px;
 
+  & br {
+    display: none;
+  }
+
   @media (min-width: $tablet-width) {
     font-size: 28px;
     line-height: 34px;
     margin-bottom: 39px;
+
+    & br {
+      display: inline;
+    }
   }
 
   &--bold {

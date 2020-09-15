@@ -250,7 +250,7 @@
               name="transport"
               id="transport-cycle"
               value="cycle"
-              class="visually-hidden companions-form__input">
+              class="visually-hidden transport-field__input">
             <label
               class="transport-field__label"
               for="transport-cycle">
@@ -324,7 +324,7 @@
           <div class="my-plans__wrapper">
             <p class="my-plans__companions">3 попутчика</p>
             <p class="my-plans__dates">26 мар — 29 мар</p>
-            <a href="" class="my-plans__button">Изменить</a>
+            <a href="plans.html" class="my-plans__button">Изменить</a>
           </div>
         </li>
         <li class="my-plans__item">
@@ -332,7 +332,7 @@
           <div class="my-plans__wrapper">
             <p class="my-plans__companions">1 попутчик</p>
             <p class="my-plans__dates">1 июл — 15 июл</p>
-            <a href="" class="my-plans__button">Изменить</a>
+            <a href="plans.html" class="my-plans__button">Изменить</a>
           </div>
         </li>
       </ol>
@@ -351,7 +351,7 @@
         </ul>
       </div>
 
-      <section class="plan__step">
+      <section id="dates" class="plan__step">
         <div class="plan__step-header">
           <h3 class="plan__title">Шаг 1.<br> Даты пребывания</h3>
 
@@ -785,7 +785,7 @@
                     checked
                   >
                   <label class="plan-calendar__label plan-calendar__label--selected" for="date-26">
-                    26<span class="plan-calendar__letter plan-calendar__letter-dt"><br>Заезд</span>
+                    26<span class="plan-calendar__letter plan-calendar__letter--dt"><br>Заезд</span>
                   </label>
                 </td>
                 <td class="plan-calendar__date">
@@ -807,7 +807,7 @@
                     checked
                   >
                   <label class="plan-calendar__label plan-calendar__label--selected" for="date-28">
-                    28<span class="plan-calendar__letter plan-calendar__letter-dt"><br>Выезд</span>
+                    28<span class="plan-calendar__letter plan-calendar__letter--dt"><br>Выезд</span>
                   </label>
                 </td>
                 <td class="plan-calendar__date">
@@ -847,7 +847,7 @@
                     id="date-1-next-mount"
                     value="1">
                   <label class="plan-calendar__label plan-calendar__label--suggested" for="date-1-next-mount">
-                    1 <span class="plan-calendar__letter plan-calendar__letter-dt">апр</span>
+                    1 <span class="plan-calendar__letter plan-calendar__letter--dt">апр</span>
                   </label>
                 </td>
                 <td class="plan-calendar__date">
@@ -892,9 +892,9 @@
           </div>
         </div>
 
-        <a href="#" class="button plan__button-next-step">Следующий шаг</a>
+        <a href="#place" class="button plan__button-next-step">Следующий шаг</a>
       </section>
-      <section class="plan__step">
+      <section id="place" class="plan__step">
         <div class="plan__step-header">
           <h3 class="plan__title">Шаг 2.<br> Маршрут</h3>
 
@@ -930,8 +930,8 @@
               Добавить страну
             </button>
 
-            <div class="plan-countries__list">
-              <div class="countries__alphabet-wrapper plan-countries__alphabet-wrapper">
+            <div class="plan-countries__list plan-countries__list--active">
+              <div class="plan-countries__alphabet-wrapper">
                 <ul class="countries-alphabet countries-alphabet--white plan-countries__alphabet">
                   <li><a href="#" class="countries-alphabet__item countries-alphabet__item--active">А</a></li>
                   <li><a href="#" class="countries-alphabet__item">Б</a></li>
@@ -962,7 +962,7 @@
               </div>
 
               <div class="countries-filter countries-filter--mini-in-desktop plan-countries__filter">
-                <div class="countries-filter__item countries-filter__item--active countries__item">
+                <div class="countries-filter__item countries-filter__item--active">
                   <h3 class="countries-filter__title">А</h3>
 
                   <ul class="countries-filter__list">
@@ -979,7 +979,7 @@
                     <li><a href="#" class="countries-filter__link">Афганистан</a></li>
                   </ul>
                 </div>
-                <div class="countries-filter__item countries__item">
+                <div class="countries-filter__item">
                   <h3 class="countries-filter__title">Б</h3>
 
                   <ul class="countries-filter__list">
@@ -1002,7 +1002,7 @@
                     <li><a href="#" class="countries-filter__link">Бутан</a></li>
                   </ul>
                 </div>
-                <div class="countries-filter__item countries__item">
+                <div class="countries-filter__item">
                   <h3 class="countries-filter__title">В</h3>
 
                   <ul class="countries-filter__list">
@@ -1014,7 +1014,7 @@
                     <li><a href="#" class="countries-filter__link">Вьетнам</a></li>
                   </ul>
                 </div>
-                <div class="countries-filter__item countries__item">
+                <div class="countries-filter__item">
                   <h3 class="countries-filter__title">Г</h3>
 
                   <ul class="countries-filter__list">
@@ -1033,7 +1033,7 @@
                     <li><a href="#" class="countries-filter__link">Грузия</a></li>
                   </ul>
                 </div>
-                <div class="countries-filter__item countries__item">
+                <div class="countries-filter__item">
                   <h3 class="countries-filter__title">Д</h3>
 
                   <ul class="countries-filter__list">
@@ -1043,14 +1043,14 @@
                     <li><a href="#" class="countries-filter__link">Доминикана</a></li>
                   </ul>
                 </div>
-                <div class="countries-filter__item countries__item">
+                <div class="countries-filter__item">
                   <h3 class="countries-filter__title">Е</h3>
 
                   <ul class="countries-filter__list">
                     <li><a href="#" class="countries-filter__link">Египет</a></li>
                   </ul>
                 </div>
-                <div class="countries-filter__item countries__item">
+                <div class="countries-filter__item">
                   <h3 class="countries-filter__title">З</h3>
 
                   <ul class="countries-filter__list">
@@ -1058,7 +1058,7 @@
                     <li><a href="#" class="countries-filter__link">Зимбабве</a></li>
                   </ul>
                 </div>
-                <div class="countries-filter__item countries__item">
+                <div class="countries-filter__item">
                   <h3 class="countries-filter__title">И</h3>
 
                   <ul class="countries-filter__list">
@@ -1074,7 +1074,7 @@
                     <li><a href="#" class="countries-filter__link">Италия</a></li>
                   </ul>
                 </div>
-                <div class="countries-filter__item countries__item">
+                <div class="countries-filter__item">
                   <h3 class="countries-filter__title">К</h3>
 
                   <ul class="countries-filter__list">
@@ -1092,7 +1092,7 @@
                     <li><a href="#" class="countries-filter__link">Колумбия</a></li>
                   </ul>
                 </div>
-                <div class="countries-filter__item countries__item">
+                <div class="countries-filter__item">
                   <h3 class="countries-filter__title">Л</h3>
 
                   <ul class="countries-filter__list">
@@ -1107,7 +1107,7 @@
                     <li><a href="#" class="countries-filter__link">Люксембург</a></li>
                   </ul>
                 </div>
-                <div class="countries-filter__item countries__item">
+                <div class="countries-filter__item">
                   <h3 class="countries-filter__title">М</h3>
 
                   <ul class="countries-filter__list">
@@ -1122,7 +1122,7 @@
                     <li><a href="#" class="countries-filter__link">Марокко</a></li>
                   </ul>
                 </div>
-                <div class="countries-filter__item countries__item">
+                <div class="countries-filter__item">
                   <h3 class="countries-filter__title">Н</h3>
 
                   <ul class="countries-filter__list">
@@ -1137,7 +1137,7 @@
                     <li><a href="#" class="countries-filter__link">Норвегия</a></li>
                   </ul>
                 </div>
-                <div class="countries-filter__item countries__item">
+                <div class="countries-filter__item">
                   <h3 class="countries-filter__title">О</h3>
 
                   <ul class="countries-filter__list">
@@ -1145,7 +1145,7 @@
                     <li><a href="#" class="countries-filter__link">Оман</a></li>
                   </ul>
                 </div>
-                <div class="countries-filter__item countries__item">
+                <div class="countries-filter__item">
                   <h3 class="countries-filter__title">П</h3>
 
                   <ul class="countries-filter__list">
@@ -1159,7 +1159,7 @@
                     <li><a href="#" class="countries-filter__link">Португалия</a></li>
                   </ul>
                 </div>
-                <div class="countries-filter__item countries__item">
+                <div class="countries-filter__item">
                   <h3 class="countries-filter__title">Р</h3>
 
                   <ul class="countries-filter__list">
@@ -1168,7 +1168,7 @@
                     <li><a href="#" class="countries-filter__link">Россия</a></li>
                   </ul>
                 </div>
-                <div class="countries-filter__item countries__item">
+                <div class="countries-filter__item">
                   <h3 class="countries-filter__title">С</h3>
 
                   <ul class="countries-filter__list">
@@ -1186,7 +1186,7 @@
                     <li><a href="#" class="countries-filter__link">США</a></li>
                   </ul>
                 </div>
-                <div class="countries-filter__item countries__item">
+                <div class="countries-filter__item">
                   <h3 class="countries-filter__title">Т</h3>
 
                   <ul class="countries-filter__list">
@@ -1202,7 +1202,7 @@
                     <li><a href="#" class="countries-filter__link">Турция</a></li>
                   </ul>
                 </div>
-                <div class="countries-filter__item countries__item">
+                <div class="countries-filter__item">
                   <h3 class="countries-filter__title">У</h3>
 
                   <ul class="countries-filter__list">
@@ -1212,7 +1212,7 @@
                     <li><a href="#" class="countries-filter__link">Уругвай</a></li>
                   </ul>
                 </div>
-                <div class="countries-filter__item countries__item">
+                <div class="countries-filter__item">
                   <h3 class="countries-filter__title">Ф</h3>
 
                   <ul class="countries-filter__list">
@@ -1222,14 +1222,14 @@
                     <li><a href="#" class="countries-filter__link">Франция</a></li>
                   </ul>
                 </div>
-                <div class="countries-filter__item countries__item">
+                <div class="countries-filter__item">
                   <h3 class="countries-filter__title">Х</h3>
 
                   <ul class="countries-filter__list">
                     <li><a href="#" class="countries-filter__link">Хорватия</a></li>
                   </ul>
                 </div>
-                <div class="countries-filter__item countries__item">
+                <div class="countries-filter__item">
                   <h3 class="countries-filter__title">Ч</h3>
 
                   <ul class="countries-filter__list">
@@ -1239,7 +1239,7 @@
                     <li><a href="#" class="countries-filter__link">Чили</a></li>
                   </ul>
                 </div>
-                <div class="countries-filter__item countries__item">
+                <div class="countries-filter__item">
                   <h3 class="countries-filter__title">Ш</h3>
 
                   <ul class="countries-filter__list">
@@ -1248,7 +1248,7 @@
                     <li><a href="#" class="countries-filter__link">Шри-Ланка</a></li>
                   </ul>
                 </div>
-                <div class="countries-filter__item countries__item">
+                <div class="countries-filter__item">
                   <h3 class="countries-filter__title">Э</h3>
 
                   <ul class="countries-filter__list">
@@ -1259,7 +1259,7 @@
                     <li><a href="#" class="countries-filter__link">Эфиопия</a></li>
                   </ul>
                 </div>
-                <div class="countries-filter__item countries__item">
+                <div class="countries-filter__item">
                   <h3 class="countries-filter__title">Ю</h3>
 
                   <ul class="countries-filter__list">
@@ -1267,7 +1267,7 @@
                     <li><a href="#" class="countries-filter__link">Южный Судан</a></li>
                   </ul>
                 </div>
-                <div class="countries-filter__item countries__item">
+                <div class="countries-filter__item">
                   <h3 class="countries-filter__title">Я</h3>
 
                   <ul class="countries-filter__list">
@@ -1282,12 +1282,12 @@
 
 
         <div class="plan__button-wrapper">
-          <a href="#" class="button plan__button-next-step">Следующий шаг</a>
-          <a href="#" class="plan__button-last-step">На шаг назад</a>
+          <a href="#countries" class="button plan__button-next-step">Следующий шаг</a>
+          <a href="#dates" class="plan__button-last-step">На шаг назад</a>
         </div>
 
       </section>
-      <section class="plan__step">
+      <section id="countries" class="plan__step">
         <div class="plan__step-header">
           <h3 class="plan__title">Шаг 3.<br> Развлечения</h3>
 
@@ -1327,7 +1327,7 @@
         <div class="plan__button-wrapper">
           <button type="submit" class="button plan__button-next-step button plan__button-next-step--send">Отправить
           </button>
-          <a href="#" class="plan__button-last-step">На шаг назад</a>
+          <a href="#place" class="plan__button-last-step">На шаг назад</a>
         </div>
       </section>
     </div>

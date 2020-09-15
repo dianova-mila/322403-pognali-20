@@ -3,22 +3,29 @@
   color: $basic-white;
   background-image: url("../img/about-mobile@1x.png");
   background-repeat: no-repeat;
-  padding-top: 33px;
+  padding-top: 35px;
   padding-bottom: 61px;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
   position: relative;
   z-index: 6;
+  background-size: 292px 353px;
+  background-position: center;
+  margin-top: -2px;
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/about-mobile@2x.png");
   }
 
   @media (min-width: $tablet-width) {
+    padding-top: 37px;
     padding-bottom: 89px;
     border-bottom-left-radius: 60px;
     border-bottom-right-radius: 60px;
     background-image: url("../img/about-tablet@1x.png");
+    background-size: 384px 548px;
+    background-position: right 51px;
+
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/about-tablet@2x.png");
