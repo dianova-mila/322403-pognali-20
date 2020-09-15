@@ -10,6 +10,7 @@
   transform: translate(-50%, -50%);
   background-color: $basic-white;
   border-radius: 20px;
+  overflow: hidden;
   padding-top: 34px;
 
   &--active {
@@ -78,8 +79,6 @@
   border: none;
   background-color: #f3f4f8;
   height: 59px;
-  border-bottom-right-radius: 30px;
-  border-bottom-left-radius: 30px;
   font-weight: bold;
   text-transform: uppercase;
   color: $special-blue;

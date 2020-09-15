@@ -29,22 +29,22 @@
 
   &--plane::after {
     background-image: url("../img/plane.svg");
-    background-size: 20.8px 21.1px;
+    background-size: 21px 21px;
   }
 
   &--bus::after {
     background-image: url("../img/bus.svg");
-    background-size: 17px 19.2px;
+    background-size: 17px 19px;
   }
 
   &--bike::after {
     background-image: url("../img/bike.svg");
-    background-size: 23.6px 24px;
+    background-size: 24px 24px;
   }
 
   &--run::after {
     background-image: url("../img/run.svg");
-    background-size: 20.6px 23px;
+    background-size: 21px 23px;
   }
 }
 

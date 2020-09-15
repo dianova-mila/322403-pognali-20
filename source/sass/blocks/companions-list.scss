@@ -38,7 +38,6 @@
   }
 }
 
-
 .companions-list__name {
   margin: 0;
   position: relative;
@@ -80,6 +79,16 @@
     &::before {
       background-color: $special-green-light;
     }
+  }
+}
+
+.companions-list__avatar {
+  width: 270px;
+  height: 270px;
+
+  @media (min-width: $tablet-width) {
+    width: 285px;
+    height: 285px;
   }
 }
 

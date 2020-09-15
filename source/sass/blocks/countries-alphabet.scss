@@ -79,3 +79,47 @@
     }
   }
 }
+
+.countries-alphabet--white {
+  @media (min-width: $tablet-width) {
+    height: 346px;
+    width: 261px;
+    padding-top: 1px;
+    padding-left: 1px;
+
+    .countries-alphabet__item {
+      font-size: 20px;
+      line-height: 20px;
+      width: 53px;
+      height: 70px;
+      color: $special-blue;
+      background-color: $basic-white;
+      border: 1px solid #cbced9;
+      justify-content: start;
+      align-items: start;
+      margin-top: -1px;
+      margin-left: -1px;
+      margin-right: 0;
+      padding-top: 27px;
+
+      &--active {
+        background-color: $special-blue;
+        border: 1px solid $special-blue;
+        color: $basic-white;
+      }
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 374px;
+    height: inherit;
+
+    .countries-alphabet__item {
+      width: 60px;
+      height: 70px;
+      border-radius: 4px;
+      margin-right: 15px;
+      margin-top: 14px;
+    }
+  }
+}

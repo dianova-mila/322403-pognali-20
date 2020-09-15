@@ -174,6 +174,7 @@
     line-height: 20px;
     text-align: left;
     padding-left: 89px;
+    width: auto;
 
     &::before {
       content: "";
@@ -219,5 +220,9 @@
     bottom: inherit;
     top: 367px;
     right: 133px;
+  }
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/rates@2x.png");
   }
 }

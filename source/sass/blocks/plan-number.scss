@@ -15,6 +15,14 @@
   height: 43px;
   text-align: center;
 
+  @media (min-width: $tablet-width) {
+    height: 70px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 180px;
+  }
+
   &:hover {
     border: 1px solid $another-blue-darken;
   }
@@ -37,6 +45,10 @@
   width: 40px;
   top: 0;
 
+  @media (min-width: $tablet-width) {
+    width: 60px;
+  }
+
   &--minus {
     left: 0;
   }
@@ -50,4 +62,9 @@
   width: 14px;
   height: 14px;
   fill: #959bb2;
+
+  @media (min-width: $tablet-width) {
+    width: 20px;
+    height: 20px;
+  }
 }

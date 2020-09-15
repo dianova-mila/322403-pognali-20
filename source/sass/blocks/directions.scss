@@ -1,5 +1,5 @@
 .directions {
-  background-color: $basic-blue-light;
+  background-color: #edeff6;
   color: $special-grey;
   padding-top: 151px;
   padding-bottom: 34px;
@@ -10,14 +10,41 @@
   z-index: 5;
 
   @media (min-width: $tablet-width) {
+    background-image: url("../img/flags-back@1x.png");
+    background-repeat: no-repeat;
+    background-size: 288px, 574px;
+    background-position: 440px 161px;
     padding-bottom: 83px;
     border-bottom-left-radius: 60px;
     border-bottom-right-radius: 60px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/flags-back@2x.png");
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 141px;
+      height: 141px;
+      background: #e2e5f2;
+      border-radius: 20px;
+      z-index: -1;
+      top: 41%;
+      left: 39px;
+    }
   }
 
   @media (min-width: $desktop-width) {
     padding-top: 241px;
-    padding-bottom: 97px;
+    padding-bottom: 95px;
+    background-position: 1093px 166px;
+
+    &::after {
+      top: 20%;
+      left: 59px;
+    }
   }
 }
 

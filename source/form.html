@@ -7,7 +7,7 @@
     content="width=device-width,initial-scale=1">
   <title>Направления</title>
 
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body class="page__body">
 
@@ -15,20 +15,29 @@
 <header class="header header--nojs">
   <div class="container header__wrapper">
     <a href="index.html" class="site-logo header__logo">
-      <picture class="header__logo-img">
-        <source media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.png">
-        <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png">
-        <img src="img/logo-mobile-blue@1x.png" alt="Погнали">
+      <picture>
+        <source
+          media="(min-width: 1440px)"
+          srcset="img/logo-desktop-white@1x.png 1x, img/logo-desktop-white@2x.png 2x"
+        >
+        <source
+          media="(min-width: 768px)"
+          srcset="img/logo-tablet-white@1x.png 1x, img/logo-tablet-white@2x.png 2x"
+        >
+        <img
+          class="header__logo-img"
+          src="img/logo-mobile-white@1x.png"
+          srcset="img/logo-mobile-white@1x.png 1x, img/logo-mobile-white@2x.png 2x"
+          alt="Погнали"
+        >
       </picture>
     </a>
 
     <div class="header__button-wrapper">
-      <button class="header__button header__button--close">
+      <button type="button" class="header__button header__button--close">
         <span class="visually-hidden">Открыть/закрыть меню</span>
         <svg
           class="header__button-img"
-          version="1.1"
-          id="Layer_1"
           xmlns="http://www.w3.org/2000/svg"
           xmlns:xlink="http://www.w3.org/1999/xlink"
           x="0px"
@@ -44,8 +53,8 @@
 
     <nav class="main-nav header__nav">
       <ul class="main-nav__list">
-        <li class="main-nav__item"><a href="#" class="main-nav__link">О сервисе</a></li>
-        <li class="main-nav__item"><a class="main-nav__link">Направления</a></li>
+        <li class="main-nav__item"><a href="index.html" class="main-nav__link">О сервисе</a></li>
+        <li class="main-nav__item"><a href="#" class="main-nav__link">Направления</a></li>
         <li class="main-nav__item"><a href="catalog.html" class="main-nav__link">Попутчики</a></li>
       </ul>
     </nav>
@@ -60,25 +69,14 @@
           <span class="contact__link-icon contact__link-icon--tel">
             <svg
               class="contact__link-img contact__link-img--tel"
-              version="1.1"
-              id="Layer_1"
-              xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink"
-              x="0px"
-              y="0px"
-              viewBox="0 0 36 36"
-              style="enable-background:new 0 0 36 36;"
-              xml:space="preserve">
-              <path
-                class="st0"
-                d="M18,0C11.6,0,5.2,1.1,2.8,3.4C0.9,5.3,0.2,8.7,0,10.8c0,0,0,0.2,0,0.3c0,0.8,0.7,1.5,1.5,1.5
-                c0.1,0,3.7-0.3,5.9-0.5c0.1,0,0.1,0,0.2,0c0.8,0,1.5-0.7,1.5-1.5l0-3C9,6.7,9.7,6,10.7,6h14.7C26.2,6,27,6.7,27,7.7l0,3
-                c0,0.8,0.7,1.5,1.5,1.5c0.1,0,0.1,0,0.2,0c2.2,0.2,5.8,0.5,5.9,0.5c0.8,0,1.5-0.7,1.5-1.5c0-0.1,0-0.3,0-0.3
-                c-0.2-2.1-0.9-5.5-2.8-7.4C30.8,1.1,24.4,0,18,0z M18,19.5c-1.7,0-3,1.3-3,3s1.3,3,3,3c1.7,0,3-1.3,3-3S19.7,19.5,18,
-                19.5zM15.7,12.7v-1.9c0-1-0.8-1.9-1.9-1.9S12,9.8,12,10.9v1.9L1.9,23.6c-0.7,0.7-1.1,1.6-1.1,2.7v3c0,1.7,1.3,3,3,
-                3h0.8v1.9c0,1,0.8,1.9,1.9,1.9s1.9-0.8,1.9-1.9v-1.9h19.5v1.9c0,1,0.8,1.9,1.9,1.9c1,0,1.9-0.8,1.9-1.9v-1.9h0.8c1.7,0,
-                3-1.3,3-3v-3c0-1.1-0.4-2-1.1-2.7L24,12.7v-1.9c0-1-0.8-1.9-1.9-1.9s-1.9,0.8-1.9,1.9v1.9H15.7z M18,16.5c3.3,0,6,2.7,
-                6,6c0,3.3-2.7,6-6,6c-3.3,0-6-2.7-6-6C12,19.2,14.7,16.5,18,16.5z"/>
+              width="32"
+              height="132"
+              viewBox="0 0 32 32"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M15.9999 0.172363C10.407 0.172363 4.80065 1.1177 2.76644 3.00191C1.07869 4.56509 0.516077 7.32664 0.326429 9.07513C0.326429 9.07513 0.300293 9.24791 0.300293 9.32224C0.300293 10.0079 0.888893 10.5578 1.60853 10.5578C1.69357 10.5578 4.84004 10.3168 6.73702 10.1686C6.78267 10.1623 6.82868 10.1562 6.87433 10.1439C7.58086 10.1255 8.1501 9.58166 8.1501 8.90832L8.15643 6.47406C8.15643 5.72035 8.80429 5.11481 9.60241 5.11481H22.3973C23.1956 5.11481 23.8435 5.72028 23.8435 6.47406L23.8499 8.90832C23.8499 9.58166 24.4191 10.1255 25.1255 10.1439C25.1709 10.1563 25.2169 10.1623 25.2631 10.1686C27.1602 10.3167 30.3066 10.5578 30.3913 10.5578C31.1107 10.5578 31.6997 10.0079 31.6997 9.32224C31.6997 9.24791 31.6736 9.07513 31.6736 9.07513C31.4838 7.32664 30.9218 4.56516 29.234 3.00191C27.1991 1.1177 21.5928 0.172363 15.9999 0.172363ZM15.9999 16.2355C14.5542 16.2355 13.3833 17.3413 13.3833 18.7067C13.3833 20.0721 14.5542 21.1778 15.9999 21.1778C17.4456 21.1778 18.6165 20.0721 18.6165 18.7067C18.6165 17.3413 17.4456 16.2355 15.9999 16.2355ZM14.0375 10.6751V9.13061C14.0375 8.2781 13.3047 7.58613 12.4021 7.58613C11.4995 7.58613 10.7668 8.27817 10.7668 9.13061V10.6751L1.94189 19.5779C1.33378 20.1402 0.954269 20.9245 0.954269 21.7897V24.2671C0.954269 25.6325 2.12528 26.7383 3.57089 26.7383H4.22509V28.2829C4.22509 29.1354 4.9579 29.8273 5.8605 29.8273C6.76309 29.8273 7.49583 29.1354 7.49583 28.2829V26.7383H24.504V28.2829C24.504 29.1354 25.2365 29.8273 26.1394 29.8273C27.042 29.8273 27.7746 29.1354 27.7746 28.2829V26.7383H28.4288C29.8745 26.7383 31.0454 25.6325 31.0454 24.2671V21.7897C31.0454 20.9245 30.6659 20.1401 30.0578 19.5779L21.2332 10.6751V9.13061C21.2332 8.2781 20.5003 7.58613 19.5977 7.58613C18.6951 7.58613 17.9625 8.27817 17.9625 9.13061V10.6751H14.0375ZM15.9999 13.7643C18.8913 13.7643 21.2332 15.976 21.2332 18.7067C21.2332 21.4375 18.8913 23.6494 15.9999 23.6494C13.1085 23.6494 10.7667 21.4375 10.7667 18.7067C10.7667 15.976 13.1085 13.7643 15.9999 13.7643Z"
+              />
             </svg>
           </span>
           <span class="contact__link-text contact__link-text--blue">8 800 555-86-28</span>
@@ -89,8 +87,6 @@
           <span class="contact__link-icon contact__link-icon--mail">
             <svg
               class="contact__link-img contact__link-img--mail"
-              version="1.1"
-              id="Layer_1"
               xmlns="http://www.w3.org/2000/svg"
               xmlns:xlink="http://www.w3.org/1999/xlink"
               x="0px"
@@ -148,8 +144,18 @@
         <span class="level__level">level</span>
       </div>
 
-
-      <img src="img/demin-desktop@1x.jpg" width="100" height="100" alt="Ваше фото" class="personal-info__avatar">
+      <picture>
+        <source
+          media="(min-width: 768px)"
+          srcset="img/photo-account-tablet@1x.jpg 1x, img/photo-account-tablet@2x.jpg 2x"
+        >
+        <img
+          class="personal-info__avatar"
+          src="img/photo-account-mobile@1x.jpg"
+          srcset="img/photo-account-mobile@1x.jpg 1x, img/photo-account-mobile@2x.jpg 2x"
+          alt="Ваше фото"
+        >
+      </picture>
 
       <div class="personal-info__button-wrapper">
         <input
@@ -157,11 +163,12 @@
           class="personal-info__add-photo visually-hidden"
           name="photo" id="photo-field"
           accept="image/*,image/jpeg">
-        <label class="personal-info__button" for="photo-field">Cменить фото</label>
+        <label class="personal-info__button" for="photo-field">
+          <span class="personal-info__button-letter">Cменить</span> фото</label>
       </div>
 
       <p class="personal-info__item personal-info__item--tags">
-        <label for="tags-field" class="personal-info__title">Тэги</label>
+        <label for="tags-field" class="personal-info__title personal-info__title--tags">Тэги</label>
         <textarea
           class="personal-info__tags"
           id="tags-field"
@@ -186,8 +193,6 @@
               <span class="visually-hidden">Авиаперелет</span>
               <svg
                 class="transport-field__img"
-                version="1.1"
-                id="Layer_1"
                 xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink"
                 x="0px"
@@ -245,15 +250,13 @@
               name="transport"
               id="transport-cycle"
               value="cycle"
-              class="visually-hidden companions-form__input">
+              class="visually-hidden transport-field__input">
             <label
               class="transport-field__label"
               for="transport-cycle">
               <span class="visually-hidden">Велосипед</span>
               <svg
                 class="transport-field__img"
-                version="1.1"
-                id="Layer_1"
                 xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink"
                 x="0px"
@@ -309,7 +312,6 @@
         </div>
       </div>
     </div>
-    </div>
   </form>
 
   <section class="my-plans">
@@ -322,7 +324,7 @@
           <div class="my-plans__wrapper">
             <p class="my-plans__companions">3 попутчика</p>
             <p class="my-plans__dates">26 мар — 29 мар</p>
-            <a href="" class="my-plans__button">Изменить</a>
+            <a href="plans.html" class="my-plans__button">Изменить</a>
           </div>
         </li>
         <li class="my-plans__item">
@@ -330,7 +332,7 @@
           <div class="my-plans__wrapper">
             <p class="my-plans__companions">1 попутчик</p>
             <p class="my-plans__dates">1 июл — 15 июл</p>
-            <a href="" class="my-plans__button">Изменить</a>
+            <a href="plans.html" class="my-plans__button">Изменить</a>
           </div>
         </li>
       </ol>
@@ -349,541 +351,562 @@
         </ul>
       </div>
 
-      <section class="plan__step">
-        <h3 class="plan__title">Шаг 1.<br> Даты пребывания</h3>
+      <section id="dates" class="plan__step">
+        <div class="plan__step-header">
+          <h3 class="plan__title">Шаг 1.<br> Даты пребывания</h3>
 
-        <p class="plan__text">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку
-          и ее предполагаемую длительность.</p>
+          <ul class="plan__step-list">
+            <li class="plan__step-list-item plan__step-list-item--active">Даты</li>
+            <li class="plan__step-list-item">Маршрут</li>
+            <li class="plan__step-list-item">Развлечения</li>
+          </ul>
 
-        <div class="plan__item">
-          <label class="plan__label" for="companions-field">Ищу попутчиков:</label>
-          <span class="plan__unit">чел.</span>
+          <p class="plan__text">Укажите предпочтительное количество попутчиков, которых<br> вы хотели бы позвать в поездку
+            и ее предполагаемую длительность.</p>
+        </div>
 
-          <div class="plan-number plan__number">
-            <button class="plan-number__button plan-number__button--minus">
-              <span class="visually-hidden">Минус</span>
-              <svg
-                class="plan-number__button-img"
-                version="1.1"
-                id="Layer_1"
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                x="0px"
-                y="0px"
-                viewBox="0 0 20 2"
-                style="enable-background:new 0 0 20 2;"
-                xml:space="preserve">
+        <div class="plan__items">
+          <div class="plan__item plan__item--companions">
+            <label class="plan__label" for="companions-field">Ищу попутчиков:</label>
+            <span class="plan__unit">чел.</span>
+
+            <div class="plan-number plan__number">
+              <button type="button" class="plan-number__button plan-number__button--minus">
+                <span class="visually-hidden">Минус</span>
+                <svg
+                  class="plan-number__button-img"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  x="0px"
+                  y="0px"
+                  viewBox="0 0 20 2"
+                  style="enable-background:new 0 0 20 2;"
+                  xml:space="preserve">
                 <rect class="st0" width="20" height="2"/>
-                <rect class="st0" width="20" height="2"/>
+                  <rect class="st0" width="20" height="2"/>
               </svg>
-            </button>
-            <input
-              type="text"
-              name="companions"
-              id="companions-field"
-              class="plan-number__input"
-              placeholder="2">
-            <button class="plan-number__button plan-number__button--plus">
-              <span class="visually-hidden">Плюс</span>
-              <svg
-                class="plan-number__button-img"
-                version="1.1"
-                id="Layer_1"
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                x="0px"
-                y="0px"
-                viewBox="0 0 20 20"
-                style="enable-background:new 0 0 20 20;"
-                xml:space="preserve">>
+              </button>
+              <input
+                type="text"
+                name="companions"
+                id="companions-field"
+                class="plan-number__input"
+                placeholder="2">
+              <button type="button" class="plan-number__button plan-number__button--plus">
+                <span class="visually-hidden">Плюс</span>
+                <svg
+                  class="plan-number__button-img"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  x="0px"
+                  y="0px"
+                  viewBox="0 0 20 20"
+                  style="enable-background:new 0 0 20 20;"
+                  xml:space="preserve">
                 <polygon class="st0" points="20,9 11,9 11,0 9,0 9,9 0,9 0,11 9,11 9,20 11,20 11,11 20,11 "/>
               </svg>
-            </button>
+              </button>
+            </div>
           </div>
-        </div>
 
-        <div class="plan__item">
-          <label class="plan__label" for="duration-field">Длительность:</label>
-          <span class="plan__unit">дн.</span>
+          <div class="plan__item plan__item--time">
+            <label class="plan__label" for="duration-field">Длительность:</label>
+            <span class="plan__unit">дн.</span>
 
-          <div class="plan-number plan__number">
-            <button class="plan-number__button plan-number__button--minus">
-              <span class="visually-hidden">Минус</span>
-              <svg
-                class="plan-number__button-img"
-                version="1.1"
-                id="Layer_1"
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                x="0px"
-                y="0px"
-                viewBox="0 0 20 2"
-                style="enable-background:new 0 0 20 2;"
-                xml:space="preserve">
+            <div class="plan-number plan__number">
+              <button type="button" class="plan-number__button plan-number__button--minus">
+                <span class="visually-hidden">Минус</span>
+                <svg
+                  class="plan-number__button-img"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  x="0px"
+                  y="0px"
+                  viewBox="0 0 20 2"
+                  style="enable-background:new 0 0 20 2;"
+                  xml:space="preserve">
                 <rect class="st0" width="20" height="2"/>
-                <rect class="st0" width="20" height="2"/>
+                  <rect class="st0" width="20" height="2"/>
               </svg>
-            </button>
-            <input
-              type="text"
-              name="duration"
-              id="duration-field"
-              class="plan-number__input"
-              placeholder="2">
-            <button class="plan-number__button plan-number__button--plus">
-              <span class="visually-hidden">Плюс</span>
-              <svg
-                class="plan-number__button-img"
-                version="1.1"
-                id="Layer_1"
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                x="0px"
-                y="0px"
-                viewBox="0 0 20 20"
-                style="enable-background:new 0 0 20 20;"
-                xml:space="preserve">>
+              </button>
+              <input
+                type="text"
+                name="duration"
+                id="duration-field"
+                class="plan-number__input"
+                placeholder="2">
+              <button type="button" class="plan-number__button plan-number__button--plus">
+                <span class="visually-hidden">Плюс</span>
+                <svg
+                  class="plan-number__button-img"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  x="0px"
+                  y="0px"
+                  viewBox="0 0 20 20"
+                  style="enable-background:new 0 0 20 20;"
+                  xml:space="preserve">
                 <polygon class="st0" points="20,9 11,9 11,0 9,0 9,9 0,9 0,11 9,11 9,20 11,20 11,11 20,11 "/>
               </svg>
-            </button>
+              </button>
+            </div>
+          </div>
+
+          <div class="plan__item plan__item--children">
+            <input
+              type="checkbox"
+              name="with-children"
+              id="with-children-field"
+              class="plan__checkbox visually-hidden"
+              checked>
+            <label for="with-children-field" class="plan__checkbox-label">Можно с детьми</label>
+          </div>
+
+          <div class="plan-calendar plan__calendar">
+            <div class="plan-calendar__header">
+              <button type="button" class="plan-calendar__button plan-calendar__button--back">
+                <span class="visually-hidden">Назад</span>
+              </button>
+              <p class="plan-calendar__month">Март 2019</p>
+              <button type="button" class="plan-calendar__button plan-calendar__button--forward">
+                <span class="visually-hidden">Вперед</span>
+              </button>
+            </div>
+
+            <table class="plan-calendar__table">
+              <tbody>
+              <tr class="plan-calendar__week">
+                <th class="plan-calendar__day">П<span class="plan-calendar__letter">н</span></th>
+                <th class="plan-calendar__day">В<span class="plan-calendar__letter">с</span></th>
+                <th class="plan-calendar__day">С<span class="plan-calendar__letter">р</span></th>
+                <th class="plan-calendar__day">Ч<span class="plan-calendar__letter">т</span></th>
+                <th class="plan-calendar__day">П<span class="plan-calendar__letter">т</span></th>
+                <th class="plan-calendar__day plan-calendar__day--weekend">С<span class="plan-calendar__letter">б</span>
+                </th>
+                <th class="plan-calendar__day plan-calendar__day--weekend">В<span class="plan-calendar__letter">с</span>
+                </th>
+              </tr>
+              <tr class="plan-calendar__row">
+                <td class="plan-calendar__date">
+                  <input
+                    class="plan-calendar__input visually-hidden"
+                    type="checkbox"
+                    name="date"
+                    id="date-23-last-mount"
+                    value="23">
+                  <label class="plan-calendar__label" for="date-23-last-mount">23</label>
+                </td>
+                <td class="plan-calendar__date">
+                  <input
+                    class="plan-calendar__input visually-hidden"
+                    type="checkbox"
+                    name="date"
+                    id="date-24-last-mount"
+                    value="24">
+                  <label class="plan-calendar__label" for="date-24-last-mount">24</label>
+                </td>
+                <td class="plan-calendar__date">
+                  <input
+                    class="plan-calendar__input visually-hidden"
+                    type="checkbox"
+                    name="date"
+                    id="date-25-last-mount"
+                    value="25">
+                  <label class="plan-calendar__label" for="date-25-last-mount">25</label>
+                </td>
+                <td class="plan-calendar__date">
+                  <input
+                    class="plan-calendar__input visually-hidden"
+                    type="checkbox"
+                    name="date"
+                    id="date-26-last-mount"
+                    value="26">
+                  <label class="plan-calendar__label" for="date-26-last-mount">26</label>
+                </td>
+                <td class="plan-calendar__date">
+                  <input
+                    class="plan-calendar__input visually-hidden"
+                    type="checkbox"
+                    name="date"
+                    id="date-27-last-mount"
+                    value="27">
+                  <label class="plan-calendar__label" for="date-27-last-mount">27</label>
+                </td>
+                <td class="plan-calendar__date">
+                  <input
+                    class="plan-calendar__input visually-hidden"
+                    type="checkbox"
+                    name="date"
+                    id="date-28-last-mount"
+                    value="28">
+                  <label class="plan-calendar__label" for="date-28-last-mount">28</label>
+                </td>
+                <td class="plan-calendar__date">
+                  <input
+                    class="plan-calendar__input visually-hidden"
+                    type="checkbox"
+                    name="date"
+                    id="date-1" value="1">
+
+                  <label class="plan-calendar__label" for="date-1">
+                    1 <span class="plan-calendar__letter plan-calendar__letter--dt">мар</span>
+                  </label>
+                </td>
+              </tr>
+              <tr class="plan-calendar__row">
+                <td class="plan-calendar__date">
+                  <input
+                    class="plan-calendar__input visually-hidden"
+                    type="checkbox"
+                    name="date"
+                    id="date-2" value="2">
+
+                  <label class="plan-calendar__label" for="date-2">2</label>
+                </td>
+                <td class="plan-calendar__date">
+                  <input
+                    class="plan-calendar__input visually-hidden"
+                    type="checkbox"
+                    name="date"
+                    id="date-3" value="3">
+
+                  <label class="plan-calendar__label" for="date-3">3</label>
+                </td>
+                <td class="plan-calendar__date">
+                  <input
+                    class="plan-calendar__input visually-hidden"
+                    type="checkbox"
+                    name="date"
+                    id="date-4" value="4">
+
+                  <label class="plan-calendar__label" for="date-4">4</label>
+                </td>
+                <td class="plan-calendar__date">
+                  <input
+                    class="plan-calendar__input visually-hidden"
+                    type="checkbox"
+                    name="date"
+                    id="date-5" value="5">
+
+                  <label class="plan-calendar__label" for="date-5">5</label>
+                </td>
+                <td class="plan-calendar__date">
+                  <input
+                    class="plan-calendar__input visually-hidden"
+                    type="checkbox"
+                    name="date"
+                    id="date-6" value="6">
+
+                  <label class="plan-calendar__label" for="date-6">6</label>
+                </td>
+                <td class="plan-calendar__date">
+                  <input
+                    class="plan-calendar__input visually-hidden"
+                    type="checkbox"
+                    name="date"
+                    id="date-7" value="7">
+
+                  <label class="plan-calendar__label" for="date-7">7</label>
+                </td>
+                <td class="plan-calendar__date">
+                  <input
+                    class="plan-calendar__input visually-hidden"
+                    type="checkbox"
+                    name="date"
+                    id="date-8" value="8">
+
+                  <label class="plan-calendar__label" for="date-8">8</label>
+                </td>
+              </tr>
+              <tr class="plan-calendar__row">
+                <td class="plan-calendar__date">
+                  <input
+                    class="plan-calendar__input visually-hidden"
+                    type="checkbox"
+                    name="date"
+                    id="date-9" value="9">
+
+                  <label class="plan-calendar__label" for="date-9">9</label>
+                </td>
+                <td class="plan-calendar__date">
+                  <input
+                    class="plan-calendar__input visually-hidden"
+                    type="checkbox"
+                    name="date"
+                    id="date-10" value="10"
+                  >
+                  <label class="plan-calendar__label" for="date-10">10</label>
+                </td>
+                <td class="plan-calendar__date">
+                  <input
+                    class="plan-calendar__input visually-hidden"
+                    type="checkbox"
+                    name="date"
+                    id="date-11" value="11"
+                  >
+                  <label class="plan-calendar__label" for="date-11">11</label>
+                </td>
+                <td class="plan-calendar__date">
+                  <input
+                    class="plan-calendar__input visually-hidden"
+                    type="checkbox"
+                    name="date"
+                    id="date-12" value="12"
+                  >
+                  <label class="plan-calendar__label" for="date-12">12</label>
+                </td>
+                <td class="plan-calendar__date">
+                  <input
+                    class="plan-calendar__input visually-hidden"
+                    type="checkbox"
+                    name="date"
+                    id="date-13" value="13"
+                  >
+                  <label class="plan-calendar__label" for="date-13">13</label>
+                </td>
+                <td class="plan-calendar__date">
+                  <input
+                    class="plan-calendar__input visually-hidden"
+                    type="checkbox"
+                    name="date"
+                    id="date-14" value="14"
+                  >
+                  <label class="plan-calendar__label" for="date-14">14</label>
+                </td>
+                <td class="plan-calendar__date">
+                  <input
+                    class="plan-calendar__input visually-hidden"
+                    type="checkbox"
+                    name="date"
+                    id="date-15" value="15"
+                  >
+                  <label class="plan-calendar__label" for="date-15">15</label>
+                </td>
+              </tr>
+              <tr class="plan-calendar__row">
+                <td class="plan-calendar__date">
+                  <input
+                    class="plan-calendar__input visually-hidden"
+                    type="checkbox"
+                    name="date"
+                    id="date-16" value="16"
+                  >
+                  <label class="plan-calendar__label" for="date-16">16</label>
+                </td>
+                <td class="plan-calendar__date">
+                  <input
+                    class="plan-calendar__input visually-hidden"
+                    type="checkbox"
+                    name="date"
+                    id="date-17" value="17"
+                  >
+                  <label class="plan-calendar__label" for="date-17">17</label>
+                </td>
+                <td class="plan-calendar__date">
+                  <input
+                    class="plan-calendar__input visually-hidden"
+                    type="checkbox"
+                    name="date"
+                    id="date-18" value="18"
+                  >
+                  <label class="plan-calendar__label" for="date-18">18</label>
+                </td>
+                <td class="plan-calendar__date">
+                  <input
+                    class="plan-calendar__input visually-hidden"
+                    type="checkbox"
+                    name="date"
+                    id="date-19" value="19"
+                  >
+                  <label class="plan-calendar__label" for="date-19">19</label>
+                </td>
+                <td class="plan-calendar__date">
+                  <input
+                    class="plan-calendar__input visually-hidden"
+                    type="checkbox"
+                    name="date"
+                    id="date-20" value="20"
+                  >
+                  <label class="plan-calendar__label" for="date-20">20</label>
+                </td>
+                <td class="plan-calendar__date">
+                  <input
+                    class="plan-calendar__input visually-hidden"
+                    type="checkbox"
+                    name="date"
+                    id="date-21" value="21"
+                  >
+                  <label class="plan-calendar__label" for="date-21">21</label>
+                </td>
+                <td class="plan-calendar__date">
+                  <input
+                    class="plan-calendar__input visually-hidden"
+                    type="checkbox"
+                    name="date"
+                    id="date-22" value="22"
+                  >
+                  <label class="plan-calendar__label" for="date-22">22</label>
+                </td>
+              </tr>
+              <tr class="plan-calendar__row">
+                <td class="plan-calendar__date">
+                  <input
+                    class="plan-calendar__input visually-hidden"
+                    type="checkbox"
+                    name="date"
+                    id="date-23" value="23"
+                  >
+                  <label class="plan-calendar__label" for="date-23">23</label>
+                </td>
+                <td class="plan-calendar__date">
+                  <input
+                    class="plan-calendar__input visually-hidden"
+                    type="checkbox"
+                    name="date"
+                    id="date-24" value="24"
+                  >
+                  <label class="plan-calendar__label" for="date-24">24</label>
+                </td>
+                <td class="plan-calendar__date">
+                  <input
+                    class="plan-calendar__input visually-hidden"
+                    type="checkbox"
+                    name="date"
+                    id="date-25" value="25"
+                  >
+                  <label class="plan-calendar__label" for="date-25">25</label>
+                </td>
+                <td class="plan-calendar__date">
+                  <input
+                    class="plan-calendar__input visually-hidden"
+                    type="checkbox"
+                    name="date"
+                    id="date-26" value="26"
+                    checked
+                  >
+                  <label class="plan-calendar__label plan-calendar__label--selected" for="date-26">
+                    26<span class="plan-calendar__letter plan-calendar__letter--dt"><br>Заезд</span>
+                  </label>
+                </td>
+                <td class="plan-calendar__date">
+                  <input
+                    class="plan-calendar__input visually-hidden"
+                    type="checkbox"
+                    name="date"
+                    id="date-27" value="27"
+                    checked
+                  >
+                  <label class="plan-calendar__label plan-calendar__label--selected" for="date-27">27</label>
+                </td>
+                <td class="plan-calendar__date">
+                  <input
+                    class="plan-calendar__input visually-hidden"
+                    type="checkbox"
+                    name="date"
+                    id="date-28" value="28"
+                    checked
+                  >
+                  <label class="plan-calendar__label plan-calendar__label--selected" for="date-28">
+                    28<span class="plan-calendar__letter plan-calendar__letter--dt"><br>Выезд</span>
+                  </label>
+                </td>
+                <td class="plan-calendar__date">
+                  <input
+                    class="plan-calendar__input visually-hidden"
+                    type="checkbox"
+                    name="date"
+                    id="date-29" value="29"
+                  >
+                  <label class="plan-calendar__label plan-calendar__label--suggested" for="date-29">29</label>
+                </td>
+              </tr>
+              <tr class="plan-calendar__row ">
+                <td class="plan-calendar__date">
+                  <input
+                    class="plan-calendar__input visually-hidden"
+                    type="checkbox"
+                    name="date"
+                    id="date-30" value="30"
+                  >
+                  <label class="plan-calendar__label plan-calendar__label--suggested" for="date-30">30</label>
+                </td>
+                <td class="plan-calendar__date">
+                  <input
+                    class="plan-calendar__input visually-hidden"
+                    type="checkbox"
+                    name="date"
+                    id="date-31" value="31"
+                  >
+                  <label class="plan-calendar__label plan-calendar__label--suggested" for="date-31">31</label>
+                </td>
+                <td class="plan-calendar__date">
+                  <input
+                    class="plan-calendar__input visually-hidden"
+                    type="checkbox"
+                    name="date"
+                    id="date-1-next-mount"
+                    value="1">
+                  <label class="plan-calendar__label plan-calendar__label--suggested" for="date-1-next-mount">
+                    1 <span class="plan-calendar__letter plan-calendar__letter--dt">апр</span>
+                  </label>
+                </td>
+                <td class="plan-calendar__date">
+                  <input
+                    class="plan-calendar__input visually-hidden"
+                    type="checkbox"
+                    name="date"
+                    id="date-2-next-mount"
+                    value="2">
+                  <label class="plan-calendar__label plan-calendar__label--suggested" for="date-2-next-mount">2</label>
+                </td>
+                <td class="plan-calendar__date">
+                  <input
+                    class="plan-calendar__input visually-hidden"
+                    type="checkbox"
+                    name="date"
+                    id="date-3-next-mount"
+                    value="3">
+                  <label class="plan-calendar__label plan-calendar__label--suggested" for="date-3-next-mount">3</label>
+                </td>
+                <td class="plan-calendar__date">
+                  <input
+                    class="plan-calendar__input visually-hidden"
+                    type="checkbox"
+                    name="date"
+                    id="date-4-next-mount"
+                    value="4">
+                  <label class="plan-calendar__label plan-calendar__label--suggested" for="date-4-next-mount">4</label>
+                </td>
+                <td class="plan-calendar__date">
+                  <input
+                    class="plan-calendar__input visually-hidden"
+                    type="checkbox"
+                    name="date"
+                    id="date-5-next-mount"
+                    value="5">
+                  <label class="plan-calendar__label plan-calendar__label--suggested" for="date-5-next-mount">5</label>
+                </td>
+              </tr>
+              </tbody>
+            </table>
           </div>
         </div>
 
-        <div class="plan__item">
-          <input
-            type="checkbox"
-            name="with-children"
-            id="with-children-field"
-            class="plan__checkbox visually-hidden"
-            checked>
-          <label for="with-children-field" class="plan__checkbox-label">Можно с детьми</label>
-        </div>
-
-        <div class="plan-calendar plan__calendar">
-          <div class="plan-calendar__header">
-            <button class="plan-calendar__button plan-calendar__button--back">
-              <span class="visually-hidden">Назад</span>
-            </button>
-            <p class="plan-calendar__month">Март 2019</p>
-            <button class="plan-calendar__button plan-calendar__button--forward">
-              <span class="visually-hidden">Вперед</span>
-            </button>
-          </div>
-
-          <table class="plan-calendar__table">
-            <tbody>
-            <tr class="plan-calendar__week">
-              <th class="plan-calendar__day">П</th>
-              <th class="plan-calendar__day">В</th>
-              <th class="plan-calendar__day">С</th>
-              <th class="plan-calendar__day">Ч</th>
-              <th class="plan-calendar__day">П</th>
-              <th class="plan-calendar__day plan-calendar__day--weekend">С</th>
-              <th class="plan-calendar__day plan-calendar__day--weekend">В</th>
-            </tr>
-            <tr class="plan-calendar__row">
-              <td class="plan-calendar__date">
-                <input
-                  class="plan-calendar__input visually-hidden"
-                  type="checkbox"
-                  name="date"
-                  id="date-23-last-mount"
-                  value="23">
-                <label class="plan-calendar__label" for="date-23-last-mount">23</label>
-              </td>
-              <td class="plan-calendar__date">
-                <input
-                  class="plan-calendar__input visually-hidden"
-                  type="checkbox"
-                  name="date"
-                  id="date-24-last-mount"
-                  value="24">
-                <label class="plan-calendar__label" for="date-24-last-mount">24</label>
-              </td>
-              <td class="plan-calendar__date">
-                <input
-                  class="plan-calendar__input visually-hidden"
-                  type="checkbox"
-                  name="date"
-                  id="date-25-last-mount"
-                  value="25">
-                <label class="plan-calendar__label" for="date-25-last-mount">25</label>
-              </td>
-              <td class="plan-calendar__date">
-                <input
-                  class="plan-calendar__input visually-hidden"
-                  type="checkbox"
-                  name="date"
-                  id="date-26-last-mount"
-                  value="26">
-                <label class="plan-calendar__label" for="date-26-last-mount">26</label>
-              </td>
-              <td class="plan-calendar__date">
-                <input
-                  class="plan-calendar__input visually-hidden"
-                  type="checkbox"
-                  name="date"
-                  id="date-27-last-mount"
-                  value="27">
-                <label class="plan-calendar__label" for="date-27-last-mount">27</label>
-              </td>
-              <td class="plan-calendar__date">
-                <input
-                  class="plan-calendar__input visually-hidden"
-                  type="checkbox"
-                  name="date"
-                  id="date-28-last-mount"
-                  value="28">
-                <label class="plan-calendar__label" for="date-28-last-mount">28</label>
-              </td>
-              <td class="plan-calendar__date">
-                <input
-                  class="plan-calendar__input visually-hidden"
-                  type="checkbox"
-                  name="date"
-                  id="date-1" value="1">
-
-                <label class="plan-calendar__label" for="date-1">1</label>
-              </td>
-            </tr>
-            <tr class="plan-calendar__row">
-              <td class="plan-calendar__date">
-                <input
-                  class="plan-calendar__input visually-hidden"
-                  type="checkbox"
-                  name="date"
-                  id="date-2" value="2">
-
-                <label class="plan-calendar__label" for="date-2">2</label>
-              </td>
-              <td class="plan-calendar__date">
-                <input
-                  class="plan-calendar__input visually-hidden"
-                  type="checkbox"
-                  name="date"
-                  id="date-3" value="3">
-
-                <label class="plan-calendar__label" for="date-3">3</label>
-              </td>
-              <td class="plan-calendar__date">
-                <input
-                  class="plan-calendar__input visually-hidden"
-                  type="checkbox"
-                  name="date"
-                  id="date-4" value="4">
-
-                <label class="plan-calendar__label" for="date-4">4</label>
-              </td>
-              <td class="plan-calendar__date">
-                <input
-                  class="plan-calendar__input visually-hidden"
-                  type="checkbox"
-                  name="date"
-                  id="date-5" value="5">
-
-                <label class="plan-calendar__label" for="date-5">5</label>
-              </td>
-              <td class="plan-calendar__date">
-                <input
-                  class="plan-calendar__input visually-hidden"
-                  type="checkbox"
-                  name="date"
-                  id="date-6" value="6">
-
-                <label class="plan-calendar__label" for="date-6">6</label>
-              </td>
-              <td class="plan-calendar__date">
-                <input
-                  class="plan-calendar__input visually-hidden"
-                  type="checkbox"
-                  name="date"
-                  id="date-7" value="7">
-
-                <label class="plan-calendar__label" for="date-7">7</label>
-              </td>
-              <td class="plan-calendar__date">
-                <input
-                  class="plan-calendar__input visually-hidden"
-                  type="checkbox"
-                  name="date"
-                  id="date-8" value="8">
-
-                <label class="plan-calendar__label" for="date-8">8</label>
-              </td>
-            </tr>
-            <tr class="plan-calendar__row">
-              <td class="plan-calendar__date">
-                <input
-                  class="plan-calendar__input visually-hidden"
-                  type="checkbox"
-                  name="date"
-                  id="date-9" value="9">
-
-                <label class="plan-calendar__label" for="date-9">9</label>
-              </td>
-              <td class="plan-calendar__date">
-                <input
-                  class="plan-calendar__input visually-hidden"
-                  type="checkbox"
-                  name="date"
-                  id="date-10" value="10"
-                >
-                <label class="plan-calendar__label" for="date-10">10</label>
-              </td>
-              <td class="plan-calendar__date">
-                <input
-                  class="plan-calendar__input visually-hidden"
-                  type="checkbox"
-                  name="date"
-                  id="date-11" value="11"
-                >
-                <label class="plan-calendar__label" for="date-11">11</label>
-              </td>
-              <td class="plan-calendar__date">
-                <input
-                  class="plan-calendar__input visually-hidden"
-                  type="checkbox"
-                  name="date"
-                  id="date-12" value="12"
-                >
-                <label class="plan-calendar__label" for="date-12">12</label>
-              </td>
-              <td class="plan-calendar__date">
-                <input
-                  class="plan-calendar__input visually-hidden"
-                  type="checkbox"
-                  name="date"
-                  id="date-13" value="13"
-                >
-                <label class="plan-calendar__label" for="date-13">13</label>
-              </td>
-              <td class="plan-calendar__date">
-                <input
-                  class="plan-calendar__input visually-hidden"
-                  type="checkbox"
-                  name="date"
-                  id="date-14" value="14"
-                >
-                <label class="plan-calendar__label" for="date-14">14</label>
-              </td>
-              <td class="plan-calendar__date">
-                <input
-                  class="plan-calendar__input visually-hidden"
-                  type="checkbox"
-                  name="date"
-                  id="date-15" value="15"
-                >
-                <label class="plan-calendar__label" for="date-15">15</label>
-              </td>
-            </tr>
-            <tr class="plan-calendar__row">
-              <td class="plan-calendar__date">
-                <input
-                  class="plan-calendar__input visually-hidden"
-                  type="checkbox"
-                  name="date"
-                  id="date-16" value="16"
-                >
-                <label class="plan-calendar__label" for="date-16">16</label>
-              </td>
-              <td class="plan-calendar__date">
-                <input
-                  class="plan-calendar__input visually-hidden"
-                  type="checkbox"
-                  name="date"
-                  id="date-17" value="17"
-                >
-                <label class="plan-calendar__label" for="date-17">17</label>
-              </td>
-              <td class="plan-calendar__date">
-                <input
-                  class="plan-calendar__input visually-hidden"
-                  type="checkbox"
-                  name="date"
-                  id="date-18" value="18"
-                >
-                <label class="plan-calendar__label" for="date-18">18</label>
-              </td>
-              <td class="plan-calendar__date">
-                <input
-                  class="plan-calendar__input visually-hidden"
-                  type="checkbox"
-                  name="date"
-                  id="date-19" value="19"
-                >
-                <label class="plan-calendar__label" for="date-19">19</label>
-              </td>
-              <td class="plan-calendar__date">
-                <input
-                  class="plan-calendar__input visually-hidden"
-                  type="checkbox"
-                  name="date"
-                  id="date-20" value="20"
-                >
-                <label class="plan-calendar__label" for="date-20">20</label>
-              </td>
-              <td class="plan-calendar__date">
-                <input
-                  class="plan-calendar__input visually-hidden"
-                  type="checkbox"
-                  name="date"
-                  id="date-21" value="21"
-                >
-                <label class="plan-calendar__label" for="date-21">21</label>
-              </td>
-              <td class="plan-calendar__date">
-                <input
-                  class="plan-calendar__input visually-hidden"
-                  type="checkbox"
-                  name="date"
-                  id="date-22" value="22"
-                >
-                <label class="plan-calendar__label" for="date-22">22</label>
-              </td>
-            </tr>
-            <tr class="plan-calendar__row">
-              <td class="plan-calendar__date">
-                <input
-                  class="plan-calendar__input visually-hidden"
-                  type="checkbox"
-                  name="date"
-                  id="date-23" value="23"
-                >
-                <label class="plan-calendar__label" for="date-23">23</label>
-              </td>
-              <td class="plan-calendar__date">
-                <input
-                  class="plan-calendar__input visually-hidden"
-                  type="checkbox"
-                  name="date"
-                  id="date-24" value="24"
-                >
-                <label class="plan-calendar__label" for="date-24">24</label>
-              </td>
-              <td class="plan-calendar__date">
-                <input
-                  class="plan-calendar__input visually-hidden"
-                  type="checkbox"
-                  name="date"
-                  id="date-25" value="25"
-                >
-                <label class="plan-calendar__label" for="date-25">25</label>
-              </td>
-              <td class="plan-calendar__date">
-                <input
-                  class="plan-calendar__input visually-hidden"
-                  type="checkbox"
-                  name="date"
-                  id="date-26" value="26"
-                  checked
-                >
-                <label class="plan-calendar__label plan-calendar__label--selected" for="date-26">26</label>
-              </td>
-              <td class="plan-calendar__date">
-                <input
-                  class="plan-calendar__input visually-hidden"
-                  type="checkbox"
-                  name="date"
-                  id="date-27" value="27"
-                  checked
-                >
-                <label class="plan-calendar__label plan-calendar__label--selected" for="date-27">27</label>
-              </td>
-              <td class="plan-calendar__date">
-                <input
-                  class="plan-calendar__input visually-hidden"
-                  type="checkbox"
-                  name="date"
-                  id="date-28" value="28"
-                  checked
-                >
-                <label class="plan-calendar__label plan-calendar__label--selected" for="date-28">28</label>
-              </td>
-              <td class="plan-calendar__date">
-                <input
-                  class="plan-calendar__input visually-hidden"
-                  type="checkbox"
-                  name="date"
-                  id="date-29" value="29"
-                >
-                <label class="plan-calendar__label plan-calendar__label--suggested" for="date-29">29</label>
-              </td>
-            </tr>
-            <tr class="plan-calendar__row ">
-              <td class="plan-calendar__date">
-                <input
-                  class="plan-calendar__input visually-hidden"
-                  type="checkbox"
-                  name="date"
-                  id="date-30" value="30"
-                >
-                <label class="plan-calendar__label plan-calendar__label--suggested" for="date-30">30</label>
-              </td>
-              <td class="plan-calendar__date">
-                <input
-                  class="plan-calendar__input visually-hidden"
-                  type="checkbox"
-                  name="date"
-                  id="date-31" value="31"
-                >
-                <label class="plan-calendar__label plan-calendar__label--suggested" for="date-31">31</label>
-              </td>
-              <td class="plan-calendar__date">
-                <input
-                  class="plan-calendar__input visually-hidden"
-                  type="checkbox"
-                  name="date"
-                  id="date-1-next-mount"
-                  value="1">
-                <label class="plan-calendar__label plan-calendar__label--suggested" for="date-1-next-mount">1</label>
-              </td>
-              <td class="plan-calendar__date">
-                <input
-                  class="plan-calendar__input visually-hidden"
-                  type="checkbox"
-                  name="date"
-                  id="date-2-next-mount"
-                  value="2">
-                <label class="plan-calendar__label plan-calendar__label--suggested" for="date-2-next-mount">2</label>
-              </td>
-              <td class="plan-calendar__date">
-                <input
-                  class="plan-calendar__input visually-hidden"
-                  type="checkbox"
-                  name="date"
-                  id="date-3-next-mount"
-                  value="3">
-                <label class="plan-calendar__label plan-calendar__label--suggested" for="date-3-next-mount">3</label>
-              </td>
-              <td class="plan-calendar__date">
-                <input
-                  class="plan-calendar__input visually-hidden"
-                  type="checkbox"
-                  name="date"
-                  id="date-4-next-mount"
-                  value="4">
-                <label class="plan-calendar__label plan-calendar__label--suggested" for="date-4-next-mount">4</label>
-              </td>
-              <td class="plan-calendar__date">
-                <input
-                  class="plan-calendar__input visually-hidden"
-                  type="checkbox"
-                  name="date"
-                  id="date-5-next-mount"
-                  value="5">
-                <label class="plan-calendar__label plan-calendar__label--suggested" for="date-5-next-mount">5</label>
-              </td>
-            </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <a href="#" class="plan__button-next-step">Следующий шаг</a>
+        <a href="#place" class="button plan__button-next-step">Следующий шаг</a>
       </section>
-      <section class="plan__step">
-        <h3 class="plan__title">Шаг 2.<br> Маршрут</h3>
+      <section id="place" class="plan__step plan__step--place">
+        <div class="plan__step-header">
+          <h3 class="plan__title">Шаг 2.<br> Маршрут</h3>
 
-        <p class="plan__text">Укажите страны, которые вы хотели посетить. Это может быть одна или сразу несколько.</p>
+          <ul class="plan__step-list">
+            <li class="plan__step-list-item">Даты</li>
+            <li class="plan__step-list-item  plan__step-list-item--active">Маршрут</li>
+            <li class="plan__step-list-item">Развлечения</li>
+          </ul>
+
+          <p class="plan__text plan__text--countries">Укажите страны, которые вы хотели посетить.<br> Это может быть одна
+            или сразу несколько.</p>
+        </div>
 
         <div class="plan-countries plan__countries">
           <div class="plan-countries__add-countries">
@@ -907,9 +930,9 @@
               Добавить страну
             </button>
 
-            <div class="plan-countries__list">
-              <div class="countries__alphabet-wrapper plan-countries__alphabet-wrapper">
-                <ul class="countries-alphabet plan-countries__alphabet">
+            <div class="plan-countries__list plan-countries__list--active">
+              <div class="plan-countries__alphabet-wrapper">
+                <ul class="countries-alphabet countries-alphabet--white plan-countries__alphabet">
                   <li><a href="#" class="countries-alphabet__item countries-alphabet__item--active">А</a></li>
                   <li><a href="#" class="countries-alphabet__item">Б</a></li>
                   <li><a href="#" class="countries-alphabet__item">В</a></li>
@@ -938,8 +961,8 @@
                 </ul>
               </div>
 
-              <div class="countries-filter plan-countries__filter">
-                <div class="countries-filter__item countries-filter__item--active countries__item">
+              <div class="countries-filter countries-filter--mini-in-desktop plan-countries__filter">
+                <div class="countries-filter__item countries-filter__item--active">
                   <h3 class="countries-filter__title">А</h3>
 
                   <ul class="countries-filter__list">
@@ -956,7 +979,7 @@
                     <li><a href="#" class="countries-filter__link">Афганистан</a></li>
                   </ul>
                 </div>
-                <div class="countries-filter__item countries__item">
+                <div class="countries-filter__item">
                   <h3 class="countries-filter__title">Б</h3>
 
                   <ul class="countries-filter__list">
@@ -979,7 +1002,7 @@
                     <li><a href="#" class="countries-filter__link">Бутан</a></li>
                   </ul>
                 </div>
-                <div class="countries-filter__item countries__item">
+                <div class="countries-filter__item">
                   <h3 class="countries-filter__title">В</h3>
 
                   <ul class="countries-filter__list">
@@ -991,7 +1014,7 @@
                     <li><a href="#" class="countries-filter__link">Вьетнам</a></li>
                   </ul>
                 </div>
-                <div class="countries-filter__item countries__item">
+                <div class="countries-filter__item">
                   <h3 class="countries-filter__title">Г</h3>
 
                   <ul class="countries-filter__list">
@@ -1010,7 +1033,7 @@
                     <li><a href="#" class="countries-filter__link">Грузия</a></li>
                   </ul>
                 </div>
-                <div class="countries-filter__item countries__item">
+                <div class="countries-filter__item">
                   <h3 class="countries-filter__title">Д</h3>
 
                   <ul class="countries-filter__list">
@@ -1020,14 +1043,14 @@
                     <li><a href="#" class="countries-filter__link">Доминикана</a></li>
                   </ul>
                 </div>
-                <div class="countries-filter__item countries__item">
+                <div class="countries-filter__item">
                   <h3 class="countries-filter__title">Е</h3>
 
                   <ul class="countries-filter__list">
                     <li><a href="#" class="countries-filter__link">Египет</a></li>
                   </ul>
                 </div>
-                <div class="countries-filter__item countries__item">
+                <div class="countries-filter__item">
                   <h3 class="countries-filter__title">З</h3>
 
                   <ul class="countries-filter__list">
@@ -1035,7 +1058,7 @@
                     <li><a href="#" class="countries-filter__link">Зимбабве</a></li>
                   </ul>
                 </div>
-                <div class="countries-filter__item countries__item">
+                <div class="countries-filter__item">
                   <h3 class="countries-filter__title">И</h3>
 
                   <ul class="countries-filter__list">
@@ -1051,7 +1074,7 @@
                     <li><a href="#" class="countries-filter__link">Италия</a></li>
                   </ul>
                 </div>
-                <div class="countries-filter__item countries__item">
+                <div class="countries-filter__item">
                   <h3 class="countries-filter__title">К</h3>
 
                   <ul class="countries-filter__list">
@@ -1069,7 +1092,7 @@
                     <li><a href="#" class="countries-filter__link">Колумбия</a></li>
                   </ul>
                 </div>
-                <div class="countries-filter__item countries__item">
+                <div class="countries-filter__item">
                   <h3 class="countries-filter__title">Л</h3>
 
                   <ul class="countries-filter__list">
@@ -1084,7 +1107,7 @@
                     <li><a href="#" class="countries-filter__link">Люксембург</a></li>
                   </ul>
                 </div>
-                <div class="countries-filter__item countries__item">
+                <div class="countries-filter__item">
                   <h3 class="countries-filter__title">М</h3>
 
                   <ul class="countries-filter__list">
@@ -1099,7 +1122,7 @@
                     <li><a href="#" class="countries-filter__link">Марокко</a></li>
                   </ul>
                 </div>
-                <div class="countries-filter__item countries__item">
+                <div class="countries-filter__item">
                   <h3 class="countries-filter__title">Н</h3>
 
                   <ul class="countries-filter__list">
@@ -1114,7 +1137,7 @@
                     <li><a href="#" class="countries-filter__link">Норвегия</a></li>
                   </ul>
                 </div>
-                <div class="countries-filter__item countries__item">
+                <div class="countries-filter__item">
                   <h3 class="countries-filter__title">О</h3>
 
                   <ul class="countries-filter__list">
@@ -1122,7 +1145,7 @@
                     <li><a href="#" class="countries-filter__link">Оман</a></li>
                   </ul>
                 </div>
-                <div class="countries-filter__item countries__item">
+                <div class="countries-filter__item">
                   <h3 class="countries-filter__title">П</h3>
 
                   <ul class="countries-filter__list">
@@ -1136,7 +1159,7 @@
                     <li><a href="#" class="countries-filter__link">Португалия</a></li>
                   </ul>
                 </div>
-                <div class="countries-filter__item countries__item">
+                <div class="countries-filter__item">
                   <h3 class="countries-filter__title">Р</h3>
 
                   <ul class="countries-filter__list">
@@ -1145,7 +1168,7 @@
                     <li><a href="#" class="countries-filter__link">Россия</a></li>
                   </ul>
                 </div>
-                <div class="countries-filter__item countries__item">
+                <div class="countries-filter__item">
                   <h3 class="countries-filter__title">С</h3>
 
                   <ul class="countries-filter__list">
@@ -1163,7 +1186,7 @@
                     <li><a href="#" class="countries-filter__link">США</a></li>
                   </ul>
                 </div>
-                <div class="countries-filter__item countries__item">
+                <div class="countries-filter__item">
                   <h3 class="countries-filter__title">Т</h3>
 
                   <ul class="countries-filter__list">
@@ -1179,7 +1202,7 @@
                     <li><a href="#" class="countries-filter__link">Турция</a></li>
                   </ul>
                 </div>
-                <div class="countries-filter__item countries__item">
+                <div class="countries-filter__item">
                   <h3 class="countries-filter__title">У</h3>
 
                   <ul class="countries-filter__list">
@@ -1189,7 +1212,7 @@
                     <li><a href="#" class="countries-filter__link">Уругвай</a></li>
                   </ul>
                 </div>
-                <div class="countries-filter__item countries__item">
+                <div class="countries-filter__item">
                   <h3 class="countries-filter__title">Ф</h3>
 
                   <ul class="countries-filter__list">
@@ -1199,14 +1222,14 @@
                     <li><a href="#" class="countries-filter__link">Франция</a></li>
                   </ul>
                 </div>
-                <div class="countries-filter__item countries__item">
+                <div class="countries-filter__item">
                   <h3 class="countries-filter__title">Х</h3>
 
                   <ul class="countries-filter__list">
                     <li><a href="#" class="countries-filter__link">Хорватия</a></li>
                   </ul>
                 </div>
-                <div class="countries-filter__item countries__item">
+                <div class="countries-filter__item">
                   <h3 class="countries-filter__title">Ч</h3>
 
                   <ul class="countries-filter__list">
@@ -1216,7 +1239,7 @@
                     <li><a href="#" class="countries-filter__link">Чили</a></li>
                   </ul>
                 </div>
-                <div class="countries-filter__item countries__item">
+                <div class="countries-filter__item">
                   <h3 class="countries-filter__title">Ш</h3>
 
                   <ul class="countries-filter__list">
@@ -1225,7 +1248,7 @@
                     <li><a href="#" class="countries-filter__link">Шри-Ланка</a></li>
                   </ul>
                 </div>
-                <div class="countries-filter__item countries__item">
+                <div class="countries-filter__item">
                   <h3 class="countries-filter__title">Э</h3>
 
                   <ul class="countries-filter__list">
@@ -1236,7 +1259,7 @@
                     <li><a href="#" class="countries-filter__link">Эфиопия</a></li>
                   </ul>
                 </div>
-                <div class="countries-filter__item countries__item">
+                <div class="countries-filter__item">
                   <h3 class="countries-filter__title">Ю</h3>
 
                   <ul class="countries-filter__list">
@@ -1244,7 +1267,7 @@
                     <li><a href="#" class="countries-filter__link">Южный Судан</a></li>
                   </ul>
                 </div>
-                <div class="countries-filter__item countries__item">
+                <div class="countries-filter__item">
                   <h3 class="countries-filter__title">Я</h3>
 
                   <ul class="countries-filter__list">
@@ -1258,16 +1281,26 @@
         </div>
 
 
-        <a href="#" class="plan__button-next-step">Следующий шаг</a>
-        <a href="#" class="plan__button-last-step">На шаг назад</a>
+        <div class="plan__button-wrapper">
+          <a href="#countries" class="button plan__button-next-step">Следующий шаг</a>
+          <a href="#dates" class="plan__button-last-step">На шаг назад</a>
+        </div>
 
       </section>
-      <section class="plan__step">
-        <h3 class="plan__title">Шаг 3.<br> Развлечения</h3>
+      <section id="countries" class="plan__step">
+        <div class="plan__step-header">
+          <h3 class="plan__title">Шаг 3.<br> Развлечения</h3>
 
-        <p class="plan__text">
-          Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.
-        </p>
+          <ul class="plan__step-list">
+            <li class="plan__step-list-item">Даты</li>
+            <li class="plan__step-list-item">Маршрут</li>
+            <li class="plan__step-list-item  plan__step-list-item--active">Развлечения</li>
+          </ul>
+
+          <p class="plan__text">
+            Наконец, расскажите о своих планах времяпровождения.<br> Можно писать в свободной форме и ставить тэги.
+          </p>
+        </div>
 
         <ul class="plan-list plan__list">
           <li class="plan-list__item">
@@ -1291,8 +1324,11 @@
           </li>
         </ul>
 
-        <button type="submit" class="plan__button-next-step">Отправить</button>
-        <a href="#" class="plan__button-last-step">На шаг назад</a>
+        <div class="plan__button-wrapper">
+          <button type="submit" class="button plan__button-next-step button plan__button-next-step--send">Отправить
+          </button>
+          <a href="#place" class="plan__button-last-step">На шаг назад</a>
+        </div>
       </section>
     </div>
   </form>
@@ -1303,9 +1339,19 @@
   <div class="container footer__wrapper">
     <a href="index.html" class="site-logo footer__logo">
       <picture>
-        <source media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.png">
-        <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png">
-        <img src="img/logo-mobile-blue@1x.png" alt="Погнали">
+        <source
+          media="(min-width: 1440px)"
+          srcset="img/logo-desktop-blue@1x.png 1x, img/logo-desktop-blue@2x.png 2x"
+        >
+        <source
+          media="(min-width: 768px)"
+          srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x"
+        >
+        <img
+          src="img/logo-mobile-blue@1x.png"
+          srcset="img/logo-mobile-blue@1x.png 1x, img/logo-mobile-blue@2x.png 2x"
+          alt="Погнали"
+        >
       </picture>
     </a>
 

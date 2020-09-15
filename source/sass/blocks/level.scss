@@ -85,6 +85,7 @@
     display: block;
     padding-top: 2px;
     padding-left: 4px;
+    border-top: 1px solid $basic-white;
   }
 }
 
@@ -94,6 +95,12 @@
   background-size: 100px 100px;
   padding-top: 20px;
   padding-left: 29px;
+
+  @media (min-width: $desktop-width) {
+    color: $basic-white;
+    padding-top: 28px;
+    padding-left: 27px;
+  }
 
   .level__number {
     font-size: 38px;
@@ -116,6 +123,8 @@
       width: 51px;
       height: 1px;
       background-color: $special-grey;
+      top: -4px;
+      left: 0;
     }
   }
 }
