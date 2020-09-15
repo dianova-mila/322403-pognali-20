@@ -1,12 +1,13 @@
 .title {
   position: relative;
-  background-color: $basic-blue-darken;
+  background-color: $basic-blue-dark;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   padding-top: 16px;
   padding-bottom: 11px;
 
   @media (min-width: $tablet-width) {
+    background-color: $basic-blue-darken;
     padding-top: 84px;
     padding-bottom: 67px;
     border-bottom-left-radius: 60px;
@@ -14,6 +15,7 @@
   }
 
   @media (min-width: $desktop-width) {
+    background-color: $basic-blue-dark;
     padding-top: 117px;
   }
 }

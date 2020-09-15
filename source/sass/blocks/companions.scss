@@ -62,6 +62,11 @@
   @media (min-width: $desktop-width) {
     padding-top: 210px;
     padding-bottom: 53px;
+    background-position: 190px 466px, 546px 214px;
+
+    &::before {
+      left: 59px;
+    }
   }
 }
 

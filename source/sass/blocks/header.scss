@@ -8,6 +8,10 @@
   @media (min-width: $tablet-width) {
     background-color: $basic-blue-darken;
   }
+
+  @media (min-width: $desktop-width) {
+    background-color: $basic-blue-dark;
+  }
 }
 
 .header__wrapper {

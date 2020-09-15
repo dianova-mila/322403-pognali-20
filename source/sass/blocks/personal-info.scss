@@ -21,6 +21,12 @@
       border-bottom-left-radius: 60px;
     }
   }
+
+  @media (min-width: $desktop-width) {
+    &::before {
+      background-color: $basic-blue-dark;
+    }
+  }
 }
 
 
