@@ -1,10 +1,7 @@
 .transport-field {
   display: flex;
-  padding-bottom: 5px;
-
-  @media (min-width: $tablet-width) {
-    padding-top: 4px;
-  }
+  padding-bottom: 11px;
+  padding-top: 4px;
 
   @media (min-width: $desktop-width) {
     margin-top: -15px;
@@ -16,10 +13,14 @@
 
     @media (min-width: $desktop-width) {
       margin-top: 0;
+      padding-top: 12px;
     }
   }
 }
 
+.transport-field__item {
+  margin: 0;
+}
 
 .transport-field__label {
   display: block;

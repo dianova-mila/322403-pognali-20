@@ -1,5 +1,5 @@
 .directions {
-  background-color: $basic-blue-light;
+  background-color: #edeff6;
   color: $special-grey;
   padding-top: 151px;
   padding-bottom: 34px;
@@ -28,7 +28,7 @@
       position: absolute;
       width: 141px;
       height: 141px;
-      background: #E2E5F2;
+      background: #e2e5f2;
       border-radius: 20px;
       z-index: -1;
       top: 41%;
@@ -38,7 +38,13 @@
 
   @media (min-width: $desktop-width) {
     padding-top: 241px;
-    padding-bottom: 97px;
+    padding-bottom: 95px;
+    background-position: 1093px 166px;
+
+    &::after {
+      top: 20%;
+      left: 59px;
+    }
   }
 }
 

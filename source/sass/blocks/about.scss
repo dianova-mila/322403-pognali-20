@@ -68,6 +68,10 @@
   padding-right: 25px;
   padding-left: 25px;
 
+  & br:last-child {
+    display: none;
+  }
+
   @media (min-width: $tablet-width) {
     width: 50%;
     font-size: 28px;
@@ -78,6 +82,10 @@
 
     & br {
       display: none;
+
+      &:last-child {
+        display: inline;
+      }
     }
   }
 
@@ -85,6 +93,10 @@
     padding-left: 70px;
     padding-right: 0;
     width: 700px;
+
+    & br:last-child {
+      display: none;
+    }
   }
 
   &--bold {

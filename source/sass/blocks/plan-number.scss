@@ -19,6 +19,10 @@
     height: 70px;
   }
 
+  @media (min-width: $desktop-width) {
+    width: 180px;
+  }
+
   &:hover {
     border: 1px solid $another-blue-darken;
   }
