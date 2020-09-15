@@ -9,6 +9,7 @@ const csso = require("gulp-csso");
 const rename = require("gulp-rename");
 const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
+const svgstore = require("gulp-svgstore");
 const sync = require("browser-sync").create();
 
 // Styles
@@ -45,12 +46,21 @@ const optimize_images = () => {
 exports.optimize_images = optimize_images;
 
 const create_webp = () => {
-  return gulp.src("source/img/**/*.{jpg,png}")
+  return gulp.src("build/img/**/*.{jpg,png}")
     .pipe(webp({quality: 90}))
     .pipe(gulp.dest("build/img"));
 }
 
 exports.create_webp = create_webp;
+
+const sprite = () => {
+  return gulp.src("build/img/**/icon-*.svg")
+    .pipe(svgstore())
+    .pipe(rename("sprite.svg"))
+    .pipe(gulp.dest("build/img"));
+}
+
+exports.sprite = sprite;
 
 // Clean build
 
@@ -77,7 +87,7 @@ exports.copy = copy;
 // Build
 
 exports.build = gulp.series(
-  clean, copy, styles, optimize_images, create_webp
+  clean, copy, styles, optimize_images, create_webp, sprite
 );
 
 // Server
@@ -99,8 +109,8 @@ exports.server = server;
 // Watcher
 
 const watcher = () => {
-  gulp.watch("source/sass/**/*.scss", gulp.series(clean, copy, styles, create_webp));
-  gulp.watch("source/*.html").on("change", gulp.series(clean, copy, styles, create_webp, sync.reload));
+  gulp.watch("source/sass/**/*.scss", gulp.series(clean, copy, styles, create_webp, sprite));
+  gulp.watch("source/*.html").on("change", gulp.series(clean, copy, styles, create_webp, sprite, sync.reload));
 }
 
 exports.start = gulp.series(
