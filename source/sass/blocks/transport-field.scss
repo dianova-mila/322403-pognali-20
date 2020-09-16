@@ -71,7 +71,7 @@
   }
 
   &:active {
-    +.transport-field__label {
+    + .transport-field__label {
       background-color: $another-blue-lighten;
 
       .transport-field__img {
