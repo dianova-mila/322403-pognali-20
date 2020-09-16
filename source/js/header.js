@@ -1,8 +1,10 @@
 var header = document.querySelector(".header");
+var main = document.querySelector(".main");
 var headerButton = document.querySelector(".header__button");
 var headerNav = document.querySelector(".main-nav");
 
 header.classList.remove("header--nojs");
+main.classList.remove("main--nojs");
 
 headerButton.addEventListener("click", function() {
   header.classList.toggle("header--opened");

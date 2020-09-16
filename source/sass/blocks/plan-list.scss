@@ -31,6 +31,10 @@
     &::before {
       display: none;
     }
+
+    &:last-child {
+      margin-bottom: 27px;
+    }
   }
 
 
@@ -191,6 +195,7 @@
     padding-top: 18px;
     padding-right: 30px;
     padding-left: 20px;
+    margin-bottom: 14px;
 
     &::placeholder {
       font-size: 20px;

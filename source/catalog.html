@@ -24,7 +24,7 @@
 <header class="header header--nojs">
   <div class="container header__wrapper">
     <a href="index.html" class="site-logo header__logo">
-      <picture class="header__logo-img">
+      <picture>
         <source
           type="image/webp"
           media="(min-width: 1440px)"
@@ -48,6 +48,7 @@
           srcset="img/logo-tablet-white@1x.png 1x, img/logo-tablet-white@2x.png 2x"
         >
         <img
+          class="header__logo-img"
           src="img/logo-mobile-white@1x.png"
           srcset="img/logo-mobile-white@1x.png 1x, img/logo-mobile-white@2x.png 2x"
           alt="Погнали"
@@ -131,7 +132,7 @@
 </header>
 
 
-<main class="main">
+<main class="main main--nojs">
   <div class="title">
     <div class="container title__wrapper">
       <h1 class="big-title title__text">Попутчики</h1>
@@ -633,10 +634,14 @@
         </div>
 
         <div class="companions-form__group">
-          <button type="button" class="companions-form__title companions-form__title--active">Транспорт:</button>
+          <button
+            type="button"
+            class="companions-form__title companions-form__title--transport companions-form__title--active">
+            Транспорт:
+          </button>
 
           <div class="companions-form__list companions-form__list--active">
-            <div class="transport-field">
+            <div class="transport-field companions-form__transport">
               <p class="transport-field__item">
                 <input
                   type="checkbox"
@@ -799,13 +804,17 @@
           </a>
           <a href="#" class="catalog__name">Таня Фирсова</a>
           <p class="catalog__tags">&#35;ЗОЖ &#35;ПП &#35;Фитнес &#35;пляж &#35;авокадо &#35;смузи</p>
-          <h3 class="catalog__title catalog__title--countries">хочет посетить:</h3>
+          <h3 class="catalog__title catalog__title--countries">
+            <span class="catalog__title-text">хочет посетить:</span>
+          </h3>
           <ul class="catalog-countries catalog__countries">
             <li class="catalog-countries__item catalog-countries__item__sri-lanka">Шри-ланка</li>
             <li class="catalog-countries__item catalog-countries__item__thailand">Тайланд</li>
             <li class="catalog-countries__item catalog-countries__item__seychelles">Сейшелы</li>
           </ul>
-          <h3 class="catalog__title catalog__title--transport">транспорт:</h3>
+          <h3 class="catalog__title catalog__title--transport">
+            <span class="catalog__title-text">транспорт:</span>
+          </h3>
           <ul class="transport transport--bg-blue catalog__transport">
             <li class="transport__item transport__item--plane transport__item--active">
               <span class="visually-hidden">Авиаперелет</span>
@@ -820,7 +829,11 @@
               <span class="visually-hidden">Пешком</span>
             </li>
           </ul>
-          <h3 class="catalog__title catalog__title--level">левел:</h3>
+          <h3 class="catalog__title catalog__title--level">
+            <span class="catalog__title-text">
+            левел:
+            </span>
+          </h3>
           <div class="catalog__level-wrapper">
             <div class="level level--99">
               <span class="level__number">99</span>
@@ -873,12 +886,16 @@
           </a>
           <a href="#" class="catalog__name">Петя Демин</a>
           <p class="catalog__tags">&#35;бургер &#35;бар &#35;футбол &#35;концерт &#35;крафт</p>
-          <h3 class="catalog__title catalog__title--countries">хочет посетить:</h3>
+          <h3 class="catalog__title catalog__title--countries">
+            <span class="catalog__title-text">хочет посетить:</span>
+          </h3>
           <ul class="catalog-countries catalog__countries">
             <li class="catalog-countries__item catalog-countries__item__belgium">Бельгия</li>
             <li class="catalog-countries__item catalog-countries__item__czechia">Чехия</li>
           </ul>
-          <h3 class="catalog__title catalog__title--transport">транспорт:</h3>
+          <h3 class="catalog__title catalog__title--transport">
+            <span class="catalog__title-text">транспорт:</span>
+          </h3>
           <ul class="transport transport--bg-blue catalog__transport">
             <li class="transport__item transport__item--plane transport__item--active">
               <span class="visually-hidden">Авиаперелет</span>
@@ -893,7 +910,11 @@
               <span class="visually-hidden">Пешком</span>
             </li>
           </ul>
-          <h3 class="catalog__title catalog__title--level">левел:</h3>
+          <h3 class="catalog__title catalog__title--level">
+            <span class="catalog__title-text">
+            левел:
+            </span>
+          </h3>
           <div class="catalog__level-wrapper">
             <div class="level level--80">
               <span class="level__number">80</span>
@@ -946,13 +967,17 @@
           </a>
           <a href="#" class="catalog__name">Марк Смолов</a>
           <p class="catalog__tags">&#35;рэп &#35;тату &#35;хайпбист &#35;кроссовки &#35;суприм</p>
-          <h3 class="catalog__title catalog__title--countries">хочет посетить:</h3>
+          <h3 class="catalog__title catalog__title--countries">
+            <span class="catalog__title-text">хочет посетить:</span>
+          </h3>
           <ul class="catalog-countries catalog__countries">
             <li class="catalog-countries__item catalog-countries__item__usa">США</li>
             <li class="catalog-countries__item catalog-countries__item__australia">Австралия</li>
             <li class="catalog-countries__item catalog-countries__item__dominica">Доминика</li>
           </ul>
-          <h3 class="catalog__title catalog__title--transport">транспорт:</h3>
+          <h3 class="catalog__title catalog__title--transport">
+          <span class="catalog__title-text">транспорт:</span>
+          </h3>
           <ul class="transport transport--bg-blue catalog__transport">
             <li class="transport__item transport__item--plane transport__item--active">
               <span class="visually-hidden">Авиаперелет</span>
@@ -967,7 +992,11 @@
               <span class="visually-hidden">Пешком</span>
             </li>
           </ul>
-          <h3 class="catalog__title catalog__title--level">левел:</h3>
+          <h3 class="catalog__title catalog__title--level">
+            <span class="catalog__title-text">
+            левел:
+            </span>
+          </h3>
           <div class="catalog__level-wrapper">
             <div class="level level--25">
               <span class="level__number">25</span>
@@ -1020,13 +1049,17 @@
           </a>
           <a href="#" class="catalog__name catalog__name--online">Лариса Роговая</a>
           <p class="catalog__tags">&#35;образование &#35;карьера &#35;учеба &#35;линкедин</p>
-          <h3 class="catalog__title catalog__title--countries">хочет посетить:</h3>
+          <h3 class="catalog__title catalog__title--countries">
+            <span class="catalog__title-text">хочет посетить:</span>
+          </h3>
           <ul class="catalog-countries catalog__countries">
             <li class="catalog-countries__item catalog-countries__item__uk">Великобритания</li>
             <li class="catalog-countries__item catalog-countries__item__germany">Германия</li>
           </ul>
           <ul class="catalog__countries"></ul>
-          <h3 class="catalog__title catalog__title--transport">транспорт:</h3>
+          <h3 class="catalog__title catalog__title--transport">
+            <span class="catalog__title-text">транспорт:</span>
+          </h3>
           <ul class="transport transport--bg-blue catalog__transport">
             <li class="transport__item transport__item--plane transport__item--active">
               <span class="visually-hidden">Авиаперелет</span>
@@ -1041,7 +1074,11 @@
               <span class="visually-hidden">Пешком</span>
             </li>
           </ul>
-          <h3 class="catalog__title catalog__title--level">левел:</h3>
+          <h3 class="catalog__title catalog__title--level">
+            <span class="catalog__title-text">
+            левел:
+            </span>
+          </h3>
           <div class="catalog__level-wrapper">
             <div class="level level--50">
               <span class="level__number">50</span>

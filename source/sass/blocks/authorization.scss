@@ -37,19 +37,46 @@
 
 .authorization__text {
   margin: 0;
-  padding-left: 31px;
+  padding-left: 21px;
   padding-right: 27px;
-  margin-bottom: 18px;
 
   @media (min-width: $tablet-width) {
     font-size: 28px;
     line-height: 32px;
-    margin-bottom: 40px;
+    padding-left: 28px;
 
-    & br:first-child {
+    & br {
       display: none;
     }
   }
+
+  &--link {
+    padding-left: 25px;
+    padding-right: 24px;
+
+    @media (min-width: $tablet-width) {
+      padding-left: 47px;
+    }
+  }
+
+  &--questions {
+    padding-left: 22px;
+    padding-right: 20px;
+    margin-bottom: 17px;
+    letter-spacing: 0.01em;
+
+    @media (min-width: $tablet-width) {
+      padding-left: 28px;
+      padding-right: 20px;
+      margin-bottom: 39px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-left: 10px;
+      margin-bottom: 43px;
+    }
+  }
+
 }
 
 .authorization__link {
@@ -73,7 +100,7 @@
   margin-bottom: 29px;
 
   @media (min-width: $tablet-width) {
-    margin-top: 66px;
+    margin-top: 64px;
     margin-left: 36px;
     margin-right: 36px;
     margin-bottom: 59px;

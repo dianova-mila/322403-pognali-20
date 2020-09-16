@@ -76,13 +76,32 @@
     background-image: url("../img/flag-czech.svg");
   }
 
-  &__usa::before {
-    background-image: url("../img/flag-usa.svg");
+  &__usa {
+    margin-bottom: 9px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 5px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 12px;
+    }
+
+    &::before {
+      background-image: url("../img/flag-usa.svg");
+    }
   }
 
-  &__australia::before {
-    background-image: url("../img/flag-australia.svg");
+  &__australia {
+    &::before {
+      background-image: url("../img/flag-australia.svg");
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 9px;
+    }
   }
+
 
   &__dominica::before {
     background-image: url("../img/flag-dominica.svg");

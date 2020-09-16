@@ -24,7 +24,7 @@
 <header class="header header--nojs">
   <div class="container header__wrapper">
     <a href="#" class="site-logo header__logo">
-      <picture class="header__logo-img">
+      <picture>
         <source
           type="image/webp"
           media="(min-width: 1440px)"
@@ -48,6 +48,7 @@
           srcset="img/logo-tablet-white@1x.png 1x, img/logo-tablet-white@2x.png 2x"
         >
         <img
+          class="header__logo-img"
           src="img/logo-mobile-white@1x.png"
           srcset="img/logo-mobile-white@1x.png 1x, img/logo-mobile-white@2x.png 2x"
           alt="Погнали"
@@ -131,7 +132,7 @@
 </header>
 
 
-<main class="main">
+<main class="main main--nojs">
   <h1 class="visually-hidden">"Погнали" - сервис для поиска попутчиков для путешествий.</h1>
 
 
@@ -452,7 +453,9 @@
       <h2 class="basic-title authorization__title">Заинтересовались?</h2>
 
       <p class="authorization__text">
-        Зарегистрируйтесь,<br> это быстро и бесплатно!<br>
+        Зарегистрируйтесь,<br> это быстро и бесплатно!
+      </p>
+      <p class="authorization__text authorization__text--link">
         Уже зарегистрированы? Тогда скорее <a href="authorization.html" class="authorization__link">авторизуйтесь</a>.
       </p>
 
@@ -468,7 +471,7 @@
         </button>
       </form>
 
-      <p class="authorization__text">Остались вопросы?<br> Мы с радостью на них ответим!</p>
+      <p class="authorization__text authorization__text--questions">Остались вопросы?<br> Мы с радостью на них ответим!</p>
 
       <ul class="contact authorization__contact">
         <li class="contact__item">
