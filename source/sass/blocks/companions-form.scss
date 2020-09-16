@@ -280,7 +280,9 @@
 }
 
 .companions-form__level {
-  padding-left: 15px;
+  @media (min-width: $tablet-width) {
+    padding-left: 15px;
+  }
 
   @media (min-width: $desktop-width) {
     padding-left: 0;
