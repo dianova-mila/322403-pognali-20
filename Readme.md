@@ -1,52 +1,35 @@
-# Личный проект «Погнали» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
+# Личный проект «Погнали» 
 
 * Студент: [Мила Дианова](https://up.htmlacademy.ru/adaptive/20/user/322403).
 * Наставник: [Ирина Шашева](https://htmlacademy.ru/profile/id130615).
 
 ---
 
-**Обратите внимание, что папка с вашими исходными файлами — `source/`.**
+### О проекте
 
-Полезный файл:
+Cайт по поиску попутчиков для путешествий.
 
-- [Contributing.md](Contributing.md) — руководство по внесению изменений.
+> На сайте реализована адаптивная верстка главной страницы и страниц "Направления" и "Попутчики"
 
-_Не удаляйте и не обращайте внимание на файлы:_<br>
-_`.editorconfig`, `.gitattributes`, `.gitignore`, `.stylelintrc`, `.travis.yml`, `package-lock.json`, `package.json`._
+#### Используемые технологии
 
----
+- CSS (Flexbox, CSS Grid)
+- SCSS
+- HTML
+- BEM
+- Gulp
 
-### Памятка
+#### GitHab Pages
+- [Главная страница](https://dianova-mila.github.io/322403-pognali-20/)
+- [Направления](https://dianova-mila.github.io/322403-pognali-20/form.html)
+- [Попутчики](https://dianova-mila.github.io/322403-pognali-20/catalog.html)
 
-#### 1. Зарегистрируйтесь на Гитхабе
-
-Если у вас ещё нет аккаунта на [github.com](https://github.com/join), скорее зарегистрируйтесь.
-
-#### 2. Создайте форк
-
-[Откройте мастер-репозиторий](https://github.com/htmlacademy-adaptive/322403-pognali-20) и нажмите кнопку «Fork» в правом верхнем углу. Репозиторий из Академии будет скопирован в ваш аккаунт.
-
-<img width="800" alt="" src="https://user-images.githubusercontent.com/10909/60808227-6eee8a00-a190-11e9-9b7e-06ce2b06ba16.jpg">
-
-Получится вот так:
-
-<img width="800" alt="" src="https://user-images.githubusercontent.com/10909/60808229-6eee8a00-a190-11e9-8b67-371cd191fc0d.jpg">
-
-#### 3. Клонируйте репозиторий на свой компьютер
-
-Будьте внимательны: нужно клонировать свой репозиторий (форк), а не репозиторий Академии. Также обратите внимание, что клонировать репозиторий нужно через SSH, а не через HTTPS. Нажмите зелёную кнопку в правой части экрана, чтобы скопировать SSH-адрес вашего репозитория:
-
-<img width="800" alt="" src="https://user-images.githubusercontent.com/10909/60808230-6eee8a00-a190-11e9-8575-9080503a6017.jpg">
-
-Клонировать репозиторий можно так:
+#### Сборка
 
 ```
-git clone SSH-адрес_вашего_форка
+npm i
+npm run build
 ```
-
-Команда клонирует репозиторий на ваш компьютер и подготовит всё необходимое для старта работы.
-
-#### 4. Начинайте обучение!
 
 ---
 
